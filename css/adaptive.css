@@ -91,6 +91,13 @@ span.size{ display: none; }
     max-width: 710px;
   }
 
+.modal-interest .modal-lg{
+    max-width: 1018px;
+  }
+.modal-hash .modal-lg{
+    max-width: 850px;
+  }
+
 @media (min-width: 1200px) { /* xl */
     .container-fluid {
         border: 1px solid orange;       
@@ -126,6 +133,10 @@ span.size{ display: none; }
     display: inline-block !important;
   }
 
+  .modal-interest .modal-lg{
+    max-width: 100%;
+  }
+
  }
 
 
@@ -148,6 +159,9 @@ span.size{ display: none; }
     width: 100%;
     margin-left: 0;
     position: relative;
+  }
+  .modal-interest .modal-lg{
+    max-width: 100%;
   }
   
  }
@@ -173,12 +187,18 @@ span.size{ display: none; }
     margin-left: 0;
     position: relative;
   }
+  .modal-interest .modal-lg{
+    max-width: 100%;
+  }
  }
 
 
  @media (max-width: 575.98px) { /* xs */
   .container-fluid{
     border: 1px solid green;
+  }
+  .modal-interest .modal-lg{
+    max-width: 100%;
   }
  
  }

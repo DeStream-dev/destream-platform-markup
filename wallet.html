@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-select.min.css" />	
+	<link rel="stylesheet" href="css/fonts.css" />    
+	<link rel="stylesheet" href="css/dropzone.css" />      
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <title>Destream Portal Wallet</title>
+  </head>
+  <body>
+  <div class="top-menu">
+  	<a class="menu-toggle" href="#">
+	    <img src="img/ham.svg" width="18" height="12" alt="" />
+	</a>			        
+	<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+  </div>
+  	<header> 
+  		<div class="container-fluid"> 
+		  	<div class="row">
+			    <div class="col col-md-3">
+			        
+			    </div>
+			    <div class="col-md-4 col-lg-4 col-xl-5">
+			      	<div class="search-panel">
+			            <div class="search-input">
+			                <input type="search" placeholder="Search" />  
+			                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+			            </div>                 
+			        </div>
+			    </div>
+			    <div class="col col-md-5 col-lg-5 col-xl-4">			     	
+			     	<div class="user-btn-cont">
+			     		<a href="#" class="icon dropdown-toggle" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			     			<img src="img/live-icon1.png" width="40" height="40" alt="" />
+			     		</a>
+			     			<div class="dropdown-menu" aria-labelledby="account-link">
+						    <ul>
+				    			<li><a href="#" data-target=".modal-auth" data-toggle="modal"><span class="icon my-channel"><svg><use xlink:href="img/vectors.svg#my-channel"></use></svg></span> My channel</a></li>
+				    			<li><a href="#"><span class="icon wallet"><svg><use xlink:href="img/vectors.svg#wallet"></use></svg></span> Wallet</a></li>
+				    			<li><a href="#"><span class="icon overlays"><svg><use xlink:href="img/vectors.svg#overlays"></use></svg></span> Overlays</a></li>
+				    			<li><a href="#" data-target=".modal-interest" data-toggle="modal"><span class="icon settings"><svg><use xlink:href="img/vectors.svg#settings"></use></svg></span> Settings</a></li>
+				    			<li><a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
+				    		</ul>
+						</div>
+			     	</div>
+			     	<div class="create-btn-cont">
+			     		<a class="btn create dropdown-toggle" id="create" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</a>
+			     			<div class="dropdown-menu" aria-labelledby="create">
+						    <ul>
+				    			<li><a href="#">Create 1</a></li>
+				    			<li><a href="#">Create 2</a></li>
+				    			<li><a href="#">Create 3</a></li>
+				    		</ul>
+						</div>
+			     	</div>
+			     	<div class="notifications-cont">
+			    		<a class="dropdown-toggle" data-counter="6" href="#" id="notification-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg><use xlink:href="img/vectors.svg#notifications"></use></svg></a>
+			    		<div class="dropdown-menu" aria-labelledby="notification-link">
+						    <ul>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    		</ul>
+				    		<div class="view-all-cont"><a class="view-all" href="#">View all</a></div>
+						</div>			    		
+			    	</div>
+			    </div>
+		  </div>
+		</div>
+    </header>
+
+    <div class="content">
+    	<aside class="main-sidebar">
+    		<div class="block account">
+    			<div class="status">+12%</div>
+    			<div class="score">2 850 000</div>
+    			<div class="money">475 000 $</div>
+    			<div class="btns">
+    				<a href="#" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg></a>
+    				<a href="#" class="put"><svg><use xlink:href="img/vectors.svg#arrow-put"></use></svg></a>
+    				<a href="#" class="add"><svg><use xlink:href="img/vectors.svg#arrow-add"></use></svg>
+						<span class="ds-tooltip">+ Add DST</span>
+    				</a>
+    			</div>
+    		</div>
+    		<div class="block people">
+	    		<div class="title">
+	    			<input type="search" placeholder="People" />  
+				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+	    		</div>
+	    		<ul>
+	    			<li>
+	    				<a href="#" class="item">
+		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+		    				<span class="description">
+			    				<span class="name">Tachat</span>
+						    	<span class="status online">25 538</span>
+						    	<span class="stream">Name of stream</span>		
+					    	</span>
+				    	</a>
+	    			</li>
+	    			<li>
+	    				<a href="#" class="item">
+		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+		    				<span class="description">
+			    				<span class="name">Tachat</span>
+						    	<span class="status online">25 538</span>
+						    	<span class="stream">Name of stream</span>		
+					    	</span>
+				    	</a>
+	    			</li>
+	    			<li>
+	    				<a href="#" class="item">
+		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+		    				<span class="description">
+			    				<span class="name">Tachat</span>
+						    	<span class="status online">25 538</span>
+						    	<span class="stream">Name of stream</span>		
+					    	</span>
+				    	</a>
+	    			</li>
+	    			<li>
+	    				<a href="#" class="item">
+		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+		    				<span class="description">
+			    				<span class="name">Tachat</span>
+						    	<span class="status online">25 538</span>
+						    	<span class="stream">Name of stream</span>		
+					    	</span>
+				    	</a>
+	    			</li>
+	    			<li>
+	    				<a href="#" class="item">
+		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+		    				<span class="description">
+			    				<span class="name">Tachat</span>
+						    	<span class="status">offline</span>
+						    	<span class="stream">Name of stream</span>		
+					    	</span>
+				    	</a>
+	    			</li>
+	    			<li>
+	    				<a href="#" class="item">
+		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+		    				<span class="description">
+			    				<span class="name">Tachat</span>
+						    	<span class="status">offline</span>
+						    	<span class="stream">Name of stream</span>		
+					    	</span>
+				    	</a>
+	    			</li>
+	    		</ul>
+	    		<a class="more" href="#"><svg><use xlink:href="img/vectors.svg#arrow-more"></use></svg>More people</a>
+	    	</div>
+    		<div class="block game">
+	    		<div class="title">
+	    			<input type="search" placeholder="Game" />  
+				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+	    		</div>
+	    		<ul>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">H…Grand Theft Auto V</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Rise of the Tomb Raidghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Ведьмак 3</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Battlefield 1</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Assassin’s Creed: Rogdffgfgfvbvbfgdghghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Assassin’s Creed Origiffgdfgdghghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Watch Dogs 2</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">The Witcher 3: Wild Hdfghghghgfhghhfgfgfg2</span>
+	    				</a>
+	    			</li>
+	    		</ul>
+	    		<a class="more" href="#"><svg><use xlink:href="img/vectors.svg#arrow-more"></use></svg>More game</a>
+    		</div>
+
+    		<div class="block lifestyle">
+    			<div class="title">
+	    			<input type="search" placeholder="Life style" />  
+				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+	    		</div>
+	    			    		<ul>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">H…Grand Theft Auto V</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Rise of the Tomb Raidghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Ведьмак 3</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Battlefield 1</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Assassin’s Creed: Rogdffgfgfvbvbfgdghghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Assassin’s Creed Origiffgdfgdghghghgh</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">Watch Dogs 2</span>
+	    				</a>
+	    			</li>
+	    			<li>
+	    				<a class="item" href="#">
+	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name">The Witcher 3: Wild Hdfghghghgfhghhfgfgfg2</span>
+	    				</a>
+	    			</li>
+	    		</ul>
+	    		<a class="more" href="#"><svg><use xlink:href="img/vectors.svg#arrow-more"></use></svg>More life style</a>
+    		</div>
+
+          	<footer>
+	            <div class="social">
+	          		<a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#facebook"></use></svg></a>
+                    <a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitch"></use></svg></a>
+                    <a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube"></use></svg></a>
+	            </div>
+	            <a href="#">Usage Rules</a>
+	            <div class="copyrights">&copy; 2018 DeStream, LLC</div>
+            </footer>
+    	</aside>
+    	<section class="main-content">
+	    	<div class="page wallet">
+    		<div class="head">
+	    		<div class="in-wallet">
+		    		<div class="title">wallet</div>
+	    			<div class="status">+12%</div>
+	    			<div class="score">+12 500 000 DST</div>
+	    			<div class="money">475 000 $</div>	    			
+		    	</div>
+	    		<div class="btns">
+	    			<a href="#" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg>Add</a>
+	    			<a href="#" class="put"><svg><use xlink:href="img/vectors.svg#arrow-put"></use></svg>Withdraw</a>
+	    			<a href="#" class="add"><svg><use xlink:href="img/vectors.svg#arrow-add"></use></svg>Transfer</a>
+	    		</div>
+    		</div>
+    		<div class="payment-history">
+    			<div class="setup">
+		    		<div class="row">
+			    		<div class="col-12 col-sm-3">
+			    			<div class="title">Payment history</div>
+			    		</div>
+			    		<div class="col-12 col-sm-3">
+			    			<div class="search-input">
+				                <input type="search" placeholder="Search" />  
+				                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				            </div> 
+			    		</div>
+			    		<div class="col-12 col-sm-3">
+			    			<select class="selectpicker ds-dropdown" title="All time">
+			    				<option value="Item 1">Item 1</option>
+			    				<option value="Item 2">Filter 2</option>
+			    				<option value="Item 3">Filter 3</option>
+			    			</select>		    				
+			    		</div>
+			    		<div class="col-12 col-sm-3">
+			    			<select class="selectpicker ds-dropdown" title="All transaction">
+			    				<option value="Item 1">Sort 1</option>
+			    				<option value="Item 2">Sort 2</option>
+			    				<option value="Item 3">Sort 3</option>
+			    			</select>		    				
+			    		</div>
+		    		</div>
+	    		</div>
+    			    
+	    			
+    			<div class="list">
+    				<div class="per-day">
+    					<div class="date">21 may 2018</div>
+
+    					<dl class="item">
+                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+                            <dd class="status expectation">Expectation</dd>
+                            <dd class="value">+ 12 500 DST</dd>
+                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+                        </dl>
+
+                        <dl class="item">
+                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+                            <dd class="status dismiss">Dismiss</dd>
+                            <dd class="value">+ 80 200 500 DST</dd>
+                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+                        </dl>
+
+                        <dl class="item">
+                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+                            <dd class="status done">Done</dd>
+                            <dd class="value">- 25 000 DST</dd>
+                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+                        </dl>
+
+                        <dl class="item">
+                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+                            <dd class="status expectation">Expectation</dd>
+                            <dd class="value">+ 14 800 DST</dd>
+                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+                        </dl>
+
+                        <dl class="item">
+                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+                            <dd class="status expectation">Expectation</dd>
+                            <dd class="value">+ 320 600 DST</dd>
+                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+                        </dl>
+
+                        <dl class="item">
+                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+                            <dd class="status expectation">Done</dd>
+                            <dd class="value">+ 80 200 500 DST</dd>
+                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+                        </dl>
+                      	</div>
+                      	<div class="per-day">
+	                    	<div class="date">25 may 2018</div>
+
+	    					<dl class="item">
+	                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+	                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+	                            <dd class="status expectation">Expectation</dd>
+	                            <dd class="value">+ 12 500 DST</dd>
+	                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+	                        </dl>
+
+	                        <dl class="item">
+	                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+	                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+	                            <dd class="status dismiss">Dismiss</dd>
+	                            <dd class="value">+ 12 500 DST</dd>
+	                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+	                        </dl>
+
+	                        <dl class="item">
+	                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+	                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+	                            <dd class="status done">Done</dd>
+	                            <dd class="value">+ 12 500 DST</dd>
+	                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+	                        </dl>
+
+	                        <dl class="item">
+	                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+	                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+	                            <dd class="status expectation">Expectation</dd>
+	                            <dd class="value">+ 12 500 DST</dd>
+	                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+	                        </dl>
+
+	                        <dl class="item">
+	                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+	                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+	                            <dd class="status expectation">Expectation</dd>
+	                            <dd class="value">+ 12 500 DST</dd>
+	                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+	                        </dl>
+
+	                        <dl class="item">
+	                            <dd class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></dd>
+	                            <dd class="description">The user <b>Tachat donated</b> to video <a href="#">Japanese dancing</a></dd>
+	                            <dd class="status expectation">Done</dd>
+	                            <dd class="value">+ 12 500 DST</dd>
+	                            <dd class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></dd>
+	                        </dl>
+                        </div>
+    				</div>
+    			</div>
+    			<div class="bottom">
+		    		<div class="navigation">
+	                  <div class="pages">
+	                    <a href="#">1</a>
+	                    <span>...</span>
+	                    <a href="#">5</a>
+	                    <a href="#">6</a>
+	                    <span class="active">7</span>
+	                    <a href="#">8</a>
+	                    <a href="#">9</a>
+	                    <span>...</span>
+	                    <a href="#">63</a>           
+	                  </div>
+	                </div>
+	                <div class="total">
+	                	Total: 
+	                	<div class="outcome">- 50 000 000 DST</dd>
+	                	<div class="income">+ 48 000 060 DST</dd>
+	                </div>
+    			</div>
+    		
+    		</div>
+    	</section>
+    </div>
+
+<!--hash to translation window-->
+<div class="modal-form modal-hash modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-hash" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Hash to translation +1200 DST</div>
+                <div class="data">
+                <dl>
+                    <dd class="key">TxHash:</dd>
+                    <dd class="value">
+                    	<span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span>
+                    	0x60bc5597d81988dd5c87f29b18bd29f31809e830683172dc201b2e3bdc30a02d
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="key">TxReceipt Status:</dd>
+                    <dd class="value">Success</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Block Height:</dd>
+                    <dd class="value">5730143 (63103 block confirmations)</dd>
+                </dl>
+                <dl>
+                    <dd class="key">TimeStamp:</dd>
+                    <dd class="value">11 days 2 hrs ago (Jun-04-2018 09:57:42 AM +UTC)</dd>
+                </dl>
+                <dl>
+                    <dd class="key">From:</dd>
+                    <dd class="value">
+                    	<span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span>
+                    	0x6772c7c7d3c272b3c35c65d7074a8da10328c422
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="key">To:</dd>
+                    <dd class="value">
+                    	<span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span>
+                    	0x9182481129089f9cd11eb8eb0d1c6ea9ae23ed1a
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="key">Value:</dd>
+                    <dd class="value">0.41803558 Ether</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Gas Limit:</dd>
+                    <dd class="value">21000</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Gas Used By Txn:</dd>
+                    <dd class="value">21000</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Gas Price:</dd>
+                    <dd class="value">0.000000014 Ether (14 Gwei)</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Actual Tx Cost/Fee:</dd>
+                    <dd class="value">0.000294 Ether ($0.14)</dd>
+                </dl>
+                  
+				</div>               
+            </div>
+        </div>
+    </div>
+</div>
+<!--hash to translation window end-->
+
+
+<!--buy dst window-->
+<div class="modal-form modal-buydst modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-buydst" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Buy DST</div>
+					<div class="converter">
+				        <div class="half">
+				        	<div class="name">The amount of DST</div>
+				        	<div class="input">
+				        		<div class="label">DST</div>
+                            	<input type="text" value="8000" />
+                            </div>
+                            <div class="info"><b>Commission 0,7%</b> 12 DST</div>
+                        </div>
+                        <a class="go" href="#"><svg class="icon"><use xlink:href="img/vectors.svg#double-arrow"></use></svg></a>
+                        <div class="half">
+                        	<div class="name">Total $</div>
+                        	<div class="input">
+                            	<div class="label">
+                            		<select class="form-control selectpicker ds-dropdown currency-select" title="$">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                            	</div>                            	
+                            	<input type="text" value="5000" />
+                            </div>
+                            <div class="info">Exchange rate <b>1DST = 0.006$</b></div>
+                        </div>
+                 </div> 
+
+                 <div class="buttons">
+			        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-target=".modal-equiring" data-toggle="modal">Next</button>
+			    </div>                                    
+            </div>
+        </div>
+    </div>
+</div>
+<!--buy dst window end-->
+
+
+<!--equiring window-->
+<div class="modal-form modal-equiring modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-equiring" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Select equiring system</div>
+
+                 <div class="row">
+	                 <div class="col-6 col-sm-4">
+	                 	<a href="#" class="item"><img src="img/equiring/1.png" alt="" /></a>
+	                 </div>
+	                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/2.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/3.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/4.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/5.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/6.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/7.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/8.png" alt="" /></a>
+                 </div>
+                 <div class="col-6 col-sm-4">
+                 	<a href="#" class="item"><img src="img/equiring/9.png" alt="" /></a>
+                 </div>
+                </div>                               
+            </div>
+        </div>
+    </div>
+</div>
+<!--equiring window end-->
+
+<!--transaction-successful window-->
+<div class="modal-form modal-transaction-successful modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-transaction-successful" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Transaction successful</div>
+				<div class="text">A reference to a hash <span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span></div>                              
+            </div>
+        </div>
+    </div>
+</div>
+<!--transaction-successful window end-->
+
+<!--transfer dst window-->
+<div class="modal-form modal-transfer modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-transfer" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Transfer DST</div>
+					<div class="converter">
+				        <div class="half">
+				        	<div class="name">The amount of DST</div>
+				        	<div class="input">
+				        		<div class="label">DST</div>
+                            	<input type="text" value="8000" />
+                            </div>
+                            <div class="info"><b>Commission 0,7%</b> 12 DST</div>
+                        </div>
+                        <a class="go" href="#"><svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>
+                        <div class="half">
+                        	<div class="name">Email or wallet ID</div>
+                        	<div class="input">
+                            	<input type="text" value="5000" />
+                            </div>   
+                        </div>
+                 </div> 
+
+                 <div class="buttons">
+			        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-dismiss="modal" data-target=".modal-equiring" data-toggle="modal">Next</button>
+			    </div>                                    
+            </div>
+        </div>
+    </div>
+</div>
+<!--transfer dst window end-->
+
+	<!--transfer-2 dst window-->
+	<div class="modal-form modal-transfer modal-transfer-2 modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-transfer" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+	                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+	               </button>
+	            </div>
+	            <div class="modal-body">
+		            <div class="form">
+		            	<form class="dropzone" id="transferform" action="/file-upload" method="post" enctype="multipart/form-data">
+			                <div class="title">15 000 DST will be transferred to the user</div>
+							<div class="converter">
+							    <div class="half user">
+							       		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							        	<div>
+								        	<div class="name">Gavr</div>
+								        	<div class="email">gavr@mutant.com</div>
+							        	</div>
+			                        </div>
+			                        <div class="half">
+			                        	<div class="name">Wallet</div>
+			                        	<div class="value">2589 9654 4425 0002</div>   
+			                        </div>
+			                </div> 
+			                <div class="confirm-transfer">
+			                	<div class="subtitle">Confirm the transfer</div>
+			                		<div class="form-group form-group-radio form-check-inline">
+		                               	<label><input type="radio" checked="checked" name="key" value="key"><span></span>Key</label>
+		                            </div>
+		                            <div class="form-group form-group-radio form-check-inline">
+		                               	<label><input type="radio" name="key" value="key-file"><span></span>Key file</label>
+		                            </div>
+		                            <div class="field key-field">
+		                            	<input type="text" />
+		                            </div>
+		                            <div class="field key-file-field">
+		                            	<div class="dz-default dz-message">
+											<span>
+												Drag your key here or select key file
+											</span>
+										</div>
+										<div class="fallback">
+										    <input name="file" type="file" multiple />
+										</div>
+										<div class="preview"></div>
+										<div class="ok">Ok!</div>
+										<div class="error">Error</div>
+		                            </div>
+			                </div>
+
+			                <div class="buttons">
+						        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+						        <button type="button" class="btn btn-next">Confirm Transfer</button>
+						    </div> 
+					    </form>                                   
+		            </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!--transfer-2 dst window end-->
+
+
+
+    <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
+    <script type='text/javascript' src="js/popper.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/jquery-ui.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mousewheel.min.js"></script>
+    <script type='text/javascript' src="js/jquery.touchSwipe.min.js"></script>
+    <script type='text/javascript' src="js/jquery.interpolate.min.js"></script>
+	<script type='text/javascript' src="js/jquery.coverflow.js"></script>
+    <script type='text/javascript' src="js/svg4everybody.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type='text/javascript' src="js/dropzone.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+	<script>
+     $(function () {
+        
+     	$('.modal-transfer-2').modal('show');
+
+        $('.modal-transfer').modal('show');        
+
+        $('.modal-transaction-successful').modal('show');
+
+        $('.modal-equiring').modal('show');
+
+        $('.modal-buydst').modal('show');
+
+        $('.modal-hash').modal('show');
+
+       });
+    </script>
+
+
+  </body>
+</html>

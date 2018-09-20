@@ -127,6 +127,31 @@ $('.quantity a').click(function(){
 })
 
 
-
+$('.confirm-transfer input[name="key"]').on("change",function(){
+  var val = $(this).val();
+  $('.field').hide();
+  $('.'+ val +'-field').show();
+});
 
 });
+
+
+
+Dropzone.options.transferform = { // The camelized version of the ID of the form element
+
+  // The configuration we've talked about above
+  autoProcessQueue: false,
+  uploadMultiple: false,
+  parallelUploads: 1,
+  maxFiles: 1,
+  createImageThumbnails: false,
+  addRemoveLinks: false,
+  previewsContainer: ".preview",
+  previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n ",
+
+  init: function() {
+    var myDropzone = this;
+    this.on("addedfile", function(file) {$('.confirm-transfer .key-file-field').addClass("file-added");$('.confirm-transfer .key-file-field .ok').show();});
+  }
+ 
+}
