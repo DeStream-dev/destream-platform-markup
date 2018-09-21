@@ -72,7 +72,7 @@ h3{
   float: left;
   font-size: 0;
   width: auto;
-  margin: 7px 0 0 28px;
+  margin: 10px 0 0 28px;
   border: none;
   position: relative;
   }
@@ -365,6 +365,55 @@ header .user-btn-cont .dropdown-toggle:after{
     background-color: #f05a00;
 }
 
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover svg,
+.slick-prev:focus svg,
+.slick-next:hover svg,
+.slick-next:focus svg{
+    opacity: 1;
+}
+.slick-prev.slick-disabled svg,
+.slick-next.slick-disabled svg{
+    opacity: .25;
+    cursor: default;
+}
+.slick-prev{
+    left: -25px;
+}
+.slick-prev svg, .slick-next svg{
+  width: 12px;
+  height: 20px;
+}
+.slick-next{
+    right: -30px;
+}
+
+
 .main-sidebar{
   width: 250px;
   float: left;
@@ -439,7 +488,7 @@ body > .content > .container-fluid{
 header .search-panel{
   width: 100%;
   max-width: 530px;
-  padding-top: 3px;
+  padding-top: 4px;
   margin: auto;
 } 
 .search-input {
@@ -701,6 +750,11 @@ header .btn.login{
   line-height: 19px;
   font-weight: bold;
   margin-top: 3px;
+  padding-right: 65px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 .main-sidebar .block.people .item .stream{
   padding-left: 0;
@@ -1147,22 +1201,22 @@ footer .social {
   margin: 5px 0 15px;
   padding-bottom: 0;
 }
-.list-announcement-tile .nearest{
+.list-announcement-tile .large{
   margin: 7px 0;
 }
-.list-announcement-tile .nearest .description{
+.list-announcement-tile .large .description{
   padding-left: 5px;
   padding-top: 15px;
   padding-right: 25px;
 }
-.list-announcement-tile .nearest .icon{
+.list-announcement-tile .large .icon{
   width: 30px;
   height: 30px;
   position: relative;
   display: inline-block;
   top: 8px;
 }
-.list-announcement-tile .nearest .item .name{
+.list-announcement-tile .large .item .name{
   margin-left: 0;
   padding-left: 10px;
   display: inline-block;
@@ -1171,11 +1225,15 @@ footer .social {
   font-size: 13px;
   line-height: 19px;
 }
-.list-announcement-tile .nearest .item .text{
+.list-announcement-tile .large .item .text{
   padding-top: 20px;
   margin-left: 0;
+  height: 80px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 19px;
 }
-.list-announcement-tile .nearest .item .date{
+.list-announcement-tile .large .item .date{
  margin-left: 0;
  display: inline-block;
  font-size: 16px;
@@ -1183,12 +1241,12 @@ footer .social {
  line-height: 17px;
  vertical-align: bottom;
 }
-.list-announcement-tile .nearest .item .bottom{
+.list-announcement-tile .large .item .bottom{
  position: absolute;
  bottom: 3px;
  width: calc(100% - 25px);
 }
-.list-announcement-tile .nearest .item .alarm{
+.list-announcement-tile .large .item .alarm{
   position: relative;
   left: auto;
   right: auto;
@@ -1198,10 +1256,10 @@ footer .social {
   left: -7px;
   background-color: transparent;
 }
-.list-announcement-tile .nearest .item .alarm:hover{
+.list-announcement-tile .large .item .alarm:hover{
   background-color: transparent;
 }
-.list-announcement-tile .nearest .item .share{
+.list-announcement-tile .large .item .share{
   display: inline-block;
   float: right;
   margin-right: 25px;
@@ -1209,29 +1267,29 @@ footer .social {
   top: -10px;
   vertical-align: bottom;
 }
-.list .others .item{
+.list .small .item{
   background-color:  transparent;
   margin: 20px 0;
 }
-.list .others .item .name, .list .others .item .date{
+.list .small .item .name, .list .small .item .date{
   margin-left: 0;
 }
-.list .others .item .name{
+.list .small .item .name{
   color: #737c85;
   font-size: 13px;
   padding-top: 10px;
 }
-.list .others .item .date{
+.list .small .item .date{
   color: #dbe0e6;
   font-size: 14px;
   font-weight: bold;
   padding-top: 3px;
   display: inline-block;
 }
-.list .others .item .share{
+.list .small .item .share{
   padding-top: 8px;
 }
-.list .others .alarm{
+.list .small .alarm{
   position: relative;
   display: inline-block;
   top: 0;
@@ -1239,14 +1297,15 @@ footer .social {
   left: -7px;
   background-color: transparent;
 }
-.list .others .item .alarm:hover{
+.list .small .item .alarm:hover{
   background-color: transparent;
 }
-.list .others {
+.list .small {
   padding-bottom: 20px;
 }
 .list-announcement-tile .setup{
-  right: 10px;
+  right: 55px;
+  top: 37px;
 }
 .list-announcement-tile {
   padding-bottom: 45px;
@@ -1362,6 +1421,7 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
   left: 6px;
   top: 1px;
 }
+
 .slides img{
   width: 100%;
   height: auto;
@@ -2767,6 +2827,170 @@ button.close {
     margin-left: 10px;
 }
 
+
+/************************  MY CHANNEL  *******************************/
+.page.mychannel{
+  padding: 0;
+}
+.page.mychannel .head{
+  height: 370px;s
+  background-image: url("../img/mychannel.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  margin-bottom: 60px;
+}
+.page.mychannel .head .user-info{
+  position: absolute;
+  width: 100%;
+  bottom: -60px;
+  padding-left: 55px;
+}
+.page.mychannel .head .user-info:after{
+  content: "";
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  height: 60px;
+  background-color: #282d33;
+}
+.page.mychannel .head .user-info:before{
+  content: "";
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  bottom: 60px;
+  top: auto;
+  width: 100%;
+  height: 103px;
+  background-color: #000e1e;
+  background: -moz-linear-gradient(180deg, rgba(0, 14, 30, 0.0001) 1.88%, #000e1e 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0, 14, 30, 0.0001) 1.88%, #000e1e 100%);
+  background:  linear-gradient(180deg, rgba(0, 14, 30, 0.0001) 1.88%, #000e1e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000e1e', endColorstr='#000e1e',GradientType=1 );
+  opacity: 0.4;
+}
+.page.mychannel .head .user-info > div{
+  display: inline-block;
+  position: relative;
+  padding-left: 15px;
+  z-index: 9;
+}
+.page.mychannel .head .user-info .name{
+  font-size: 27px;
+  line-height: 33px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  top: -60px;
+}
+
+.page.mychannel .head .user-info .likes,
+.page.mychannel .head .user-info .subscribe{
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  color: #c6ced5;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  top: -22px;
+  margin-right: 25px;
+}
+.page.mychannel .head .icon{
+  width: 163px;
+  height: 163px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #b42192;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  z-index: 8;
+}
+.page.mychannel .head .icon img{
+  width: 100%;
+  height: auto;
+}
+.page.mychannel .myblocks{
+  background-color: #383e44;
+  padding: 30px 55px;
+}
+.myblocks .row{
+  margin: 0 -10px;
+  }
+.myblocks div[class*='col-']{
+  padding: 0 10px;
+}
+.page.mychannel .list-announcement-tile {
+  background-color: #444c54;
+}
+.page.mychannel .list-announcement-tile .item{
+  margin: 0 10px;
+}
+.list-announcement-tile .large  {
+  margin: 0 -10px;
+}
+.large .list-announcement-tile .item{height: 180px;}
+
+.large .item .slides img{
+  height: 180px;
+  width: auto;
+}
+.myblocks img{
+  width: 100%;
+  height: auto;
+}
+.myblocks .item{
+  margin-bottom: 25px;
+  display: block;
+}
+.myblocks .small .item .img{
+  height: 100px;
+  overflow: hidden;
+  display: block;
+}
+.myblocks .small .item img{
+  height: 100%;
+  width: 100%
+}
+.myblocks .small .text{
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #c6ced5;
+}
+.myblocks .small .text a{
+  text-decoration: underline;
+  color: #c6ced5;
+} 
+.myblocks .small .text a:hover{
+  text-decoration: none;
+} 
+
+.myblocks .add-block{
+  background-color: #444c54;
+  border: 1px dashed #aab1b8;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c6ced5;
+  font-weight: bold;
+  height: 100px;
+  width: 100%;
+  display: inline-block;
+  line-height: 100px;
+  vertical-align: middle;
+
+}
 
 
 a, a:after, a:before, a svg, nav li a, .btn, button, .btn:after,.list-announcement .item,

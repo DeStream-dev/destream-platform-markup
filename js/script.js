@@ -80,6 +80,25 @@ var options = {
 smallSlider.slick(options);
 
 
+var channelSlider = $('.mychannel .list-announcement-tile .large'); 
+var channelSliderOptions = {
+  dots: false,
+  arrows: true,
+  prevArrow: "<a class='slick-prev'><svg><use xlink:href='img/vectors.svg#arrow-prev'></use></svg></a>",
+  nextArrow: "<a class='slick-next'><svg><use xlink:href='img/vectors.svg#arrow-next'></use></svg></a>",
+  infinite: false,
+  speed: 700,
+  slidesToShow: 2,
+  centerMode: false,
+  variableWidth: false,
+  adaptiveHeight: false,
+  autoplay: false,
+  responsive: true
+};
+channelSlider.slick(channelSliderOptions);
+
+
+
 $('.modal .links a').click(function(){  
   if($(this).hasClass("reg-link")){
     $('.modal-auth .nav-pills li a').removeClass("active");

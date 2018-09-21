@@ -311,5 +311,16 @@
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M8.47803 14.5317V3C6.31084 4.97353 4.18537 6.89145 2.00018 8.80361C3.22746 9.87704 4.43533 10.9496 5.63999 12.0193L5.64202 12.0211C6.58603 12.8594 7.52808 13.6959 8.47803 14.5317Z" stroke="#AAB1B8" stroke-width="2"/>
 	</g>
 
+	<g viewBox="0 0 12 20" opacity="0.5" id="arrow-prev">
+		<path d="M9.78378 2.21622L2.18847 9.81153" stroke="#AAB1B8" stroke-width="2" stroke-linecap="square"/>
+		<path d="M9.78378 17.7838L2.18847 10.1885" stroke="#AAB1B8" stroke-width="2" stroke-linecap="square"/>
+	</g>
+
+	<g viewBox="0 0 12 20" opacity="0.5" id="arrow-next">
+		<path d="M2.21622 2.21622L9.81153 9.81153" stroke="#AAB1B8" stroke-width="2" stroke-linecap="square"/>
+		<path d="M2.21622 17.7838L9.81153 10.1885" stroke="#AAB1B8" stroke-width="2" stroke-linecap="square"/>
+	</g>
+
+
 	
 </svg>
