@@ -35,11 +35,43 @@ $('.form form').validator().on('submit', function (e) {
    }
 });
 */
+/**************** выезд главного меню при скролле *******************/
+      
+      var wasAnimate = false; 
+      var offset = parseInt($('header').height()); 
+      var ta;
+      var place = function(){   
+      var dy = $(window).scrollTop();
+          
+      if (dy > offset){       
+        if(wasAnimate == false){
+          ta = setTimeout(function(){
+          $('body').addClass('fixedHeader');
+          $('header, .top-menu').css("top","-60px").animate({"top":0},500);
+          },300);
+          
+          wasAnimate = true;
+        }    
+      }
+      else{
+      $('body').removeClass('fixedHeader');
+      clearTimeout(ta);
+      wasAnimate = false;
+      }
+    
+    };
+  place();        
+    
+  $(window).scroll(function(){       
+        place();    
+    });
+
 
 $('.menu-toggle').on("click",function(){
   $('body').toggleClass("sidebar-collapse");
    setTimeout(function(){
     $('.slider').coverflow('refresh');
+    $('.slick-slider').slick('resize');
   },300);
 });
 
@@ -59,7 +91,7 @@ function screen(){
 $(window).resize(function() {
       screen();
       setTimeout(function(){
-        $('.slider').refresh();
+        $('.slider').refresh();      
       },300);
  });
 
@@ -154,7 +186,7 @@ $('.confirm-transfer input[name="key"]').on("change",function(){
 
 });
 
-
+if(Dropzone != undefined){
 
 Dropzone.options.transferform = { // The camelized version of the ID of the form element
 
@@ -173,4 +205,6 @@ Dropzone.options.transferform = { // The camelized version of the ID of the form
     this.on("addedfile", function(file) {$('.confirm-transfer .key-file-field').addClass("file-added");$('.confirm-transfer .key-file-field .ok').show();});
   }
  
+}
+
 }
