@@ -98,6 +98,10 @@ span.size{ display: none; }
     max-width: 850px;
   }
 
+.modal-addblock .modal-lg{
+    max-width: 465px;
+  }
+
 @media (min-width: 1200px) { /* xl */
     .container-fluid {
         border: 1px solid orange;       

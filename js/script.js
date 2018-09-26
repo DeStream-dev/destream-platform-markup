@@ -90,9 +90,11 @@ function screen(){
 
 $(window).resize(function() {
       screen();
+      if( $('.slider').lehgth){
       setTimeout(function(){
         $('.slider').refresh();      
       },300);
+    }
  });
 
 
@@ -112,8 +114,8 @@ var options = {
 smallSlider.slick(options);
 
 
-var channelSlider = $('.mychannel .list-announcement-tile .large'); 
-var channelSliderOptions = {
+var announcementSlider = $('.large.carousel'); 
+var announcementliderOptions = {
   dots: false,
   arrows: true,
   prevArrow: "<a class='slick-prev'><svg><use xlink:href='img/vectors.svg#arrow-prev'></use></svg></a>",
@@ -127,7 +129,7 @@ var channelSliderOptions = {
   autoplay: false,
   responsive: true
 };
-channelSlider.slick(channelSliderOptions);
+announcementSlider.slick(announcementliderOptions);
 
 
 
@@ -184,27 +186,66 @@ $('.confirm-transfer input[name="key"]').on("change",function(){
   $('.'+ val +'-field').show();
 });
 
+$.trumbowyg.svgPath = 'img/text-editor/icons.svg';
+$('#trumbowyg-demo').trumbowyg({
+  btns: ['unorderedList', 'orderedList', 'em', 'strong', 'link'],
+  autogrow: true
 });
 
-if(Dropzone != undefined){
 
-Dropzone.options.transferform = { // The camelized version of the ID of the form element
+});
 
-  // The configuration we've talked about above
+
+
+Dropzone.options.transferform = { 
   autoProcessQueue: false,
   uploadMultiple: false,
   parallelUploads: 1,
-  maxFiles: 1,
+  maxFiles: 200,
   createImageThumbnails: false,
   addRemoveLinks: false,
-  previewsContainer: ".preview",
+  previewsContainer: ".modal-transfer .preview",
   previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n ",
 
   init: function() {
     var myDropzone = this;
-    this.on("addedfile", function(file) {$('.confirm-transfer .key-file-field').addClass("file-added");$('.confirm-transfer .key-file-field .ok').show();});
+    var newfile = "";
+
+    this.on("addedfile", function(file) {
+      if(newfile) {
+        $('.confirm-transfer .key-file-field .preview .dz-preview:first-of-type').remove();
+      }
+      newfile = $('.confirm-transfer .key-file-field [data-dz-name]').html();
+      $('.confirm-transfer .key-file-field').addClass("file-added");
+      $('.confirm-transfer .key-file-field .ok').show();
+     });
   }
  
 }
 
+Dropzone.options.addblockform = { 
+  autoProcessQueue: false,
+  uploadMultiple: false,
+  parallelUploads: 1,
+  maxFiles: 200,
+  createImageThumbnails: true,
+  addRemoveLinks: false,
+  thumbnailWidth: null,
+  thumbnailHeight: null,
+  previewsContainer: ".modal-addblock .preview",
+  previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-image\"><img data-dz-thumbnail /></div>\n  </div>",
+
+  init: function() {
+    var myDropzone = this; 
+    var newfile = "";
+    this.on("addedfile", function(file) {
+       if(newfile) {
+        $('.modal-addblock .preview .dz-preview:first-of-type').remove();
+      }
+      newfile = $('.modal-addblock [data-dz-name]').html();
+      $('.modal-addblock .dropzone').addClass("file-added");
+
+    });
+  }
+ 
 }

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/trumbowyg.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
-    <title>Destream Portal My Channel</title>
+    <title>Destream Portal Live Settings</title>
   </head>
   <body>
   <div class="top-menu">
@@ -317,180 +317,537 @@
             </footer>
     	</aside>
     	<section class="main-content">
-	    	<div class="page mychannel">
-	    		<div class="head" style="background-image: url('img/mychannel.png');">
-	    			<div class="user-info">
+	    	<div class="page settings">
+	    		<div class="title">Settings</div>
+	    		<ul class="nav nav-pills" role="tablist">
+				  <li class="nav-item">
+				    <a class="nav-link active" href="#personal" id="personal-tab" data-toggle="tab" role="tab" aria-controls="personal" aria-selected="true">Personal</a>
+				  </li>
+				  <li class="nav-item">
+				   <a class="nav-link" id="integration-tab" data-toggle="tab" href="#integration" role="tab" aria-controls="integration" aria-selected="false">Integration</a>
+				  </li>	
+				  <li class="nav-item">
+				   <a class="nav-link" id="notification-tab" data-toggle="tab" href="#notification" role="tab" aria-controls="notification" aria-selected="false">Notification</a>
+				  </li>	
+				  <li class="nav-item">
+				   <a class="nav-link" id="interest-tab" data-toggle="tab" href="#interest" role="tab" aria-controls="interest" aria-selected="false">Interest</a>
+				  </li>	
+				  <li class="nav-item">
+				   <a class="nav-link" id="subscription-tab" data-toggle="tab" href="#subscription" role="tab" aria-controls="subscription" aria-selected="false">Subscription</a>
+				  </li>	
+				  <li class="nav-item">
+				   <a class="nav-link" id="servicecatalog-tab" data-toggle="tab" href="#servicecatalog" role="tab" aria-controls="servicecatalog" aria-selected="false">Service catalog</a>
+				  </li>		 
+				</ul>
+
+				<div class="tab-content">
+				  <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+				  		<div class="form personal">
+				  		<form data-toggle="validator" role="form">
+				  		<div class="user-info">
 		    			<span class="icon"><img src="img/anar.png" width="461" height="614" alt="" /></span>
-						<div>
-						   	<div class="name">Zavr</div>
-					       	<div class="likes">Like 165</div>
-					       	<div class="subscribe">Subscribe 276</div>
-					   	</div>
-				   </div>
-	    		</div>
-	    		<div class="list list-announcement-tile">
-    				<div class="title">Stream anons</div>
-	    				<div class="large carousel">
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
-	    					
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения их количества полезна как для хождения поисковых ключей в тексте и определения их количества полезна</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
-	    					
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
-	    					
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
-	    					</div>
-	    		</div>
-	    		<div class="myblocks">
-		    		<div class="large">
-		    			<div class="row">
-			    			<div class="col-12 col-sm-4">
-			    				<div class="item">
-					    			<a class="img" href="#"><img src="img/mychannel/1.png" width="320" height="320" alt="" /></a>
-					    		</div>
-			    			</div>
-			    			<div class="col-12 col-sm-4">
-			    				<div class="item">
-					    			<a href="#" class="img"><img src="img/mychannel/2.png" width="320" height="320" alt="" /></a>
-					    		</div>
-			    			</div>
-			    			<div class="col-12 col-sm-4">
-			    				<div class="item">
-					    			<a href="#" class="img"><img src="img/mychannel/3.png" width="320" height="320" alt="" /></a>
-					    		</div>
-			    			</div>
-		    			</div>			    		
-		    		</div>
-		    		<div class="small">
-		    			<div class="row">
-			    			<div class="col-12 col-sm-4">
-			    				<div class="item">
-					    			<a href="#" class="img"><img src="img/mychannel/4.png" width="320" height="100" alt="" /></a>
-					    			<div class="text">К малым блокам возможно добавлять текст описания с <a href="#">ссылками</a>.</div>
-					    		</div>
-			    			</div>
-			    			<div class="col-12 col-sm-4">
-			    				<div class="item">
-					    			<a href="#" class="img"><img src="img/mychannel/5.png" width="320" height="100" alt="" /></a>
-					    			<div class="text">К малым блокам возможно добавлять текст описания с <a href="#">ссылками</a>.</div>
-					    		</div>
-			    			</div>
-			    			<div class="col-12 col-sm-4">
-			    				<a class="item add-block" href="#" data-target=".modal-addblock" data-toggle="modal">
-					    			+ Add block
-					    		</a>
-			    			</div>
 		    			</div>
-		    		</div>
-		        
-		        </div>    		
+							<div class="form-group" aria-required="true">
+                                <label class="control-label" for="login">Nickname</label>
+                                <input type="text" id="login" class="form-control" required placeholder="Nickname">
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required placeholder="Email">
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="password">New password</label>
+                                <input type="password" id="password" class="form-control" required placeholder="New password"> 
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="reenterpassword">Reenter new password</label>
+                                <input type="password" id="reenterpassword" class="form-control" required placeholder="Reenter new password"> 
+                            </div>
+                            <div class="form-group" aria-required="true">
+                            <a href="#" class="btn btn-transparent btn-changepassword">Change password</a>
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="donate">Minimal donate</label>
+                                <div class="input">
+                            	<div class="label">
+                            		<select class="form-control selectpicker ds-dropdown currency-select" title="DST">
+                                        <option>EST</option>
+                                        <option>$</option>
+                                        <option>QWE</option>
+                                        <option>RUB</option>
+                                        <option>ETH</option>
+                                    </select>
+                            	</div>                            	
+                            	<input type="text" id="donate" class="form-control" required value="1200">
+                            </div>
+                                
+                            </div>
+
+                            <div class="buttons">                            
+			            		<button type="button" class="btn btn-save">Save</button>
+			            		<button type="button" class="btn btn-transparent">Cancel</button>
+			            	</div>
+
+
+			            	<a href="#" class="delete-account">Delete account</a>
+
+			
+				   		</form>
+				   		</div>
+				  </div>
+				  <div class="tab-pane fade" id="integration" role="tabpanel" aria-labelledby="integration-tab">
+				  		<div class="form integration">
+				  			<form data-toggle="validator" role="form">
+					  			<div class="item">
+					  				<div class="form-group form-group-checkbox">
+		                                <label><input type="checkbox" name="fb-integration" value="fb-integration"><span></span></label>
+		                            </div>
+		                            <div class="icon facebook"><svg><use xlink:href="img/vectors.svg#fb-white"></use></svg></div>
+		                            <div class="description">
+			                            <div class="title">Facebook</div>
+			                            <div class="text">
+			                            	<b>One-click log in to Twitch with your Facebook account</b>
+			                            	By connecting your account with Facebook, you acknowledge and agree that information you choose to share will be uploaded to these services and may be viewed by these services and other users of these services.
+			                            </div>
+		                            </div>
+					  			</div>
+
+					  			<div class="item">
+					  				<div class="form-group form-group-checkbox">
+		                                <label><input type="checkbox" name="tw-integration" value="tw-integration"><span></span></label>
+		                            </div>
+		                            <div class="icon twitter"><svg><use xlink:href="img/vectors.svg#twitter-white"></use></svg></div>
+		                            <div class="description">
+			                            <div class="title">Twitter</div>
+			                            <div class="text">
+			                            	<b>Tweet your Channel Feed posts to your followers.</b>
+			                            	By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.
+			                            </div>
+		                            </div>
+					  			</div>
+
+					  			<div class="item">
+					  				<div class="form-group form-group-checkbox">
+		                                <label><input type="checkbox" name="yt-integration" value="yt-integration"><span></span></label>
+		                            </div>
+		                            <div class="icon youtube"><svg><use xlink:href="img/vectors.svg#youtube-white"></use></svg></div>
+		                            <div class="description">
+			                            <div class="title">Youtube</div>
+			                            <div class="text">
+			                            	<b>Export archives</b>
+			                            	By connecting your account with your YouTube account, you acknowledge and agree that information you choose to share will be uploaded to YouTube and may be viewed by YouTube and other YouTube users. Also, your YouTube account information may be used by Twitch. Twitch will not publicly display your YouTube account information. If you no longer want to share this information, please disconnect your YouTube account.
+			                            </div>
+		                            </div>
+					  			</div>
+
+					  			<div class="item">
+					  				<div class="form-group form-group-checkbox">
+		                                <label><input type="checkbox" name="twitch-integration" value="twitch-integration"><span></span></label>
+		                            </div>
+		                            <div class="icon twitch"><svg><use xlink:href="img/vectors.svg#twitch-white"></use></svg></div>
+		                            <div class="description">
+			                            <div class="title">Twitch</div>
+			                            <div class="text">
+			                            	<b>Tweet your Channel Feed posts to your followers.</b>
+			                            	By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.
+			                            </div>
+		                            </div>
+					  			</div>
+
+					  		</form>
+				  		</div>
+				  </div>
+				  <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+						<div class="form notification">
+				  			<form data-toggle="validator" role="form">
+				  					<dl class="item header">
+			                            <dd class="event-name"></dd>
+			                            <dd class="site-push">Site push</dd>
+			                            <dd class="desktop-push">Desktop push</dd>
+			                            <dd class="mobile-push">Mobile push</dd>
+			                            <dd class="email">Email</dd>
+			                            <dd class="telegram">Telegram</dd>
+	                        		</dl>
+
+				  					<dl class="item">
+			                            <dd class="event-name">Event name</dd>
+			                            <dd class="site-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+		                            		</div>
+		                            	</dd>
+			                            <dd class="desktop-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="mobile-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="email">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="telegram">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+	                        		</dl>
+
+	                        		<dl class="item">
+			                            <dd class="event-name">Event name</dd>
+			                            <dd class="site-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+		                            		</div>
+		                            	</dd>
+			                            <dd class="desktop-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="mobile-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="email">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="telegram">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+	                        		</dl>
+
+	                        		<dl class="item">
+			                            <dd class="event-name">Event name</dd>
+			                            <dd class="site-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+		                            		</div>
+		                            	</dd>
+			                            <dd class="desktop-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="mobile-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="email">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="telegram">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+	                        		</dl>
+
+	                        		<dl class="item">
+			                            <dd class="event-name">Event name</dd>
+			                            <dd class="site-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+		                            		</div>
+		                            	</dd>
+			                            <dd class="desktop-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="mobile-push">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="email">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+			                            <dd class="telegram">
+			                            	<div class="form-group form-group-checkbox">
+		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+		                            		</div>
+			                            </dd>
+	                        		</dl>
+
+				  			</form>
+				  		</div>
+				  </div>
+				  <div class="tab-pane fade" id="interest" role="tabpanel" aria-labelledby="interest-tab">
+				  	<div class="form interest">
+	               		<form data-toggle="validator"> 
+	               			<div class="search-panel">   
+	               				<div class="row">
+		               				<div class="col-12 col-sm-4">
+		               					<div class="text">Choose what you like and we will try to give you the most interesting selection.</div>
+		               				</div>
+		               				<div class="col-12 col-sm-3">
+			               				<div class="filter">
+			               					<div class="form-group form-group-checkbox">
+			                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
+			                            	</div>
+			                            	<div class="form-group form-group-checkbox">
+			                                	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
+			                            	</div>
+			               				</div>
+		               				</div>
+		               				<div class="col-12 col-sm-5">
+			               				<div class="search-input">
+							                <input type="search" placeholder="Search" />  
+							                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+						            	</div> 
+					            	</div>
+				            	</div>
+				            </div>
+				            <div class="list">
+				            	<div class="row">
+		               				<div class="col-12 col-sm-7">
+		               					<div class="title">Game</div>
+		               					<div class="items-game">
+		               					<div class="row">
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-12 col-sm-6 col-md-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+			               				</div>
+		               				  </div>
+		               				</div>
+		               				<div class="col-12 col-sm-5">
+		               					<div class="title">Life style</div>
+		               					<div class="items-lifestyle">
+			               					<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+					                                <img src="img/interest/lifestyle1.png" alt="" />
+					                                <i>Very long and simple name of lifestyle rubric</i>
+				                                </label>
+				                            </div>
+
+				                            <div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+				                                	<img src="img/interest/lifestyle2.png" alt="" />
+					                                <i>Name of lifestyle rubric</i>
+					                             </label>
+				                            </div>
+				                           	<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+					                                <img src="img/interest/lifestyle1.png" alt="" />
+					                                <i>Very long and simple name of lifestyle rubric</i>
+				                                </label>
+				                            </div>
+
+				                            <div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+				                                	<img src="img/interest/lifestyle2.png" alt="" />
+					                                <i>Name of lifestyle rubric</i>
+					                             </label>
+				                            </div>
+				                           	<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+					                                <img src="img/interest/lifestyle1.png" alt="" />
+					                                <i>Very long and simple name of lifestyle rubric</i>
+				                                </label>
+				                            </div>
+
+			                            </div>
+		               				</div>
+		               			</div>
+		               			<div class="loading text-center"><a href="#"><svg><use xlink:href="img/vectors.svg#loading"></use></svg><span>Loading...</span></a></div>
+				            </div>				            
+	               		</form>
+               		</div>
+				  </div>
+				  <div class="tab-pane fade" id="subscription" role="tabpanel" aria-labelledby="subscription-tab">
+					<div class="form subscription">
+						<div class="search-input">
+							<input type="search" placeholder="Search" />  
+							<button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+						</div> 
+	               		<div class="row">
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+	               			<div class="col-12 col-sm-6 col-md-3">
+		               			<div class="item">
+		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
+		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="unsubscribe">Unsubscribe</a>
+		               			</div>
+	               			</div>
+
+	               		</div>
+	               	</div>
+				  </div>
+				  <div class="tab-pane fade" id="servicecatalog" role="tabpanel" aria-labelledby="servicecatalog-tab">
+					<div class="form servicecatalog">
+	               		<form data-toggle="validator"> 
+	               		 <div class="form-group" aria-required="true">
+                                <input type="text" class="form-control" required placeholder="Enter catalog name">
+                                <button class="btn" type="submit">Create</button>  
+                            </div>
+		               		<div class="text">
+		               			In this section, you can add service catalogs for different types of streams.<br>
+		               			By attaching catalogs to the broadcast, you can earn more.
+		               		</div>
+	               		</form>
+	               	</div>
+				  </div>
+				</div>
+
     		</div>
     	</section>
     </div>
@@ -709,10 +1066,7 @@
 </div>
 <!--interest window end-->
 
-
-
-
-    <!-- Popup modal window auth -->
+<!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
@@ -811,9 +1165,6 @@
 </div>
 <!-- Popup modal window auth end -->
 
-
-
-
 <!--Recovery password ok window-->
 <div class="modal-form modal-recovery-password-ok modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-recovery-password-ok" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -868,6 +1219,60 @@
 </div>
 <!--Recovery password window end-->
 
+<!--Email change window-->
+<div class="modal-form modal-email-change modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-email-change" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Email change</div>
+                <div class="form">                    
+                    <div class="text">
+                        A confirmation email has been sent to your new email address. After confirmation email will be changed.
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Email change window end-->
+
+
+<!--Change save window-->
+<div class="modal-form modal-change-save modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-change-save" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Change save</div>
+                <div class="form">    
+                <form data-toggle="validator">                
+                    <div class="text">
+                        To apply the changes, enter your password
+                    </div>
+                    <div class="form-group required" aria-required="true">
+                      <label class="control-label" for="oldpassword">Enter old password</label>
+                      <input type="password" id="oldpassword" class="form-control" required>
+                    </div>
+                    <div class="form-group text-center" aria-required="true">
+                    <button class="btn" data-dismiss="modal">Save</button>  
+                    <!--button class="btn" type="submit">Save</button-->   
+                    </div>                       
+                   </form>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Change save window end-->
 
 
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
@@ -888,7 +1293,10 @@
 	<script>
      $(function () {
         
-     	//$('.modal-addblock').modal('show');
+     	//$('.modal-change-save').modal('show');
+
+     	//$('.modal-email-change').modal('show');
+
 
         });
     </script>
