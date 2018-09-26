@@ -26,3 +26,15 @@ Update 20.09.2018
 	- Pop-up Transaction successful
 	- Pop-up Transfer DST
 	- Pop-up 15 000 DST will be transferred to the user with functioning of choosing key type (file/text), connecting a plugin for file drag-and-drop and ok/error messages which appear after choosing a file
+
+Update 26.09
+1. Pages My Channel with 2 pop-ups for add/edit block including functional for text editor
+2. Page Live Broadcast without stream player yet
+3. Page Messages
+4. Page Setting with 6 Tabs:
+	- Profile with 2 popups (Change save, Email change)
+	- Integration
+	- Notification
+	- Interests
+	- Subscription
+	- Service catalog
