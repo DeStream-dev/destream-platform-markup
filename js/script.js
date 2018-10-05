@@ -5,18 +5,20 @@ $('a[disabled]').bind("click",function(){
 });
 
 svg4everybody();
+   setTimeout(function(){
+    $('.slider').coverflow({
+    duration:   1000,
+    index:      1,
+    innerAngle: 75,
+    innerScale: 1,
+    visible:    'density',
+    selectedCss:  { opacity: 1  },
+    outerCss:   { opacity: 1 }
+  });
+  },100);
 
-$('.slider').coverflow({
-  duration:   1000,
-  index:      1,
-  innerAngle: 75,
-  innerScale: 1,
-  visible:    'density',
-  selectedCss:  { opacity: 1  },
-  outerCss:   { opacity: .5 }
-});
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
   $('.selectpicker').selectpicker('mobile');
 }
 /*
@@ -186,11 +188,52 @@ $('.confirm-transfer input[name="key"]').on("change",function(){
   $('.'+ val +'-field').show();
 });
 
-$.trumbowyg.svgPath = 'img/text-editor/icons.svg';
-$('#trumbowyg-demo').trumbowyg({
-  btns: ['unorderedList', 'orderedList', 'em', 'strong', 'link'],
-  autogrow: true
+if($('.text-editor').length){
+  $.trumbowyg.svgPath = 'img/text-editor/icons.svg';
+  $('.text-editor').trumbowyg({
+    btns: ['unorderedList', 'orderedList', 'em', 'strong', 'link'],
+    autogrow: true
+  });
+
+}
+
+
+
+$('.services .list a').on("click",function(){
+ var this_a = $(this);
+ var this_item = $(this).parents('.list');
+ if(!this_item.hasClass("open")){
+  $('.services .list a').each(function(i){
+    var this_a1 = $(this);   
+    var this_item1 = $(this).parents('.list');;   
+      if(this_item1.hasClass("open")) {
+        $(this).next(".units").slideUp();
+        this_item1.removeClass("open");
+      }    
+  });
+}
+    $(this).next(".units").slideToggle(300,function(){
+      this_item.toggleClass("open");
+    });
+
+   return false;
 });
+
+var player = new Plyr('.live-broadcast .player video');
+var player1 = new Plyr('.player1 video');
+var player2 = new Plyr('.player2 video');
+var player3 = new Plyr('.player3 video');
+var player4 = new Plyr('.player4 video');
+var player5 = new Plyr('.player5 video');
+
+
+
+$('.widget .side-group .colors a').each(function(){
+  if($(this).data('color')){
+    $(this).css("background",$(this).data('color'));
+  }
+});
+
 
 
 });

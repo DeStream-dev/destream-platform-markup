@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/bootstrap-select.min.css" />	
 	<link rel="stylesheet" href="css/fonts.css" />    
-	<link rel="stylesheet" href="css/dropzone.css" />      
+	<link rel="stylesheet" href="css/dropzone.css" /> 
+	<link rel="stylesheet" href="css/trumbowyg.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <title>Destream Portal</title>
@@ -337,11 +339,58 @@
     	</aside>
     	<section class="main-content">
     		<div class="slider">
-				<a class="cover" href="#"><img src="img/slider/slide1.png"/></a>
-				<a class="cover" href="#"><img src="img/slider/slide2.png"/></a>
-				<a class="cover" href="#"><img src="img/slider/slide3.png"/>
-				<a class="cover" href="#"><img src="img/slider/slide1.png"/>
-				<a class="cover" href="#"><img src="img/slider/slide2.png"/>		
+				
+				<div class="player player1 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player2 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player3 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player4 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player5 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+
 			</div>
 
     		<div class="list list-live">
@@ -1699,6 +1748,8 @@
     <script type='text/javascript' src="js/svg4everybody.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type='text/javascript' src="js/dropzone.js"></script>
+    <script type="text/javascript" src="js/trumbowyg.min.js"></script>
+    <script type="text/javascript" src="js/plyr.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
 

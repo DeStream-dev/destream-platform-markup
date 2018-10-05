@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/fonts.css" />    
 	<link rel="stylesheet" href="css/dropzone.css" /> 
 	<link rel="stylesheet" href="css/trumbowyg.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <title>Destream Portal Live Broadcast</title>
@@ -320,7 +321,13 @@
 	    	<div class="page live-broadcast">
 	    		<div class="head">
 	    		<div class="player">
-	    		<img src="img/live-broadcast/broadcast.png" width="881" height="495" alt="" />
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
 	    		</div>
 	    			<div class="user-info">
 		    			<span class="icon"><img src="img/anar.png" width="461" height="614" alt="" /></span>
@@ -335,7 +342,7 @@
 	    		</div>
 
 	    		<div class="services-catalog">
-	    			<div class="title">Catalogue of services </div>
+	    			<div class="title">Catalogue of services</div>
 	    			<div class="list">
 	    				<div class="row">
 			    			<div class="col-12 col-sm-3">
@@ -987,6 +994,7 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type='text/javascript' src="js/dropzone.js"></script>
     <script type="text/javascript" src="js/trumbowyg.min.js"></script>
+    <script type="text/javascript" src="js/plyr.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
 	<script>
