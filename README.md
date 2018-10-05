@@ -38,3 +38,12 @@ Update 26.09
 	- Interests
 	- Subscription
 	- Service catalog
+
+Update 05.10
+1. Page Services on Tab Service Catalog of Page Settings 
+2. Popup New Service with working dropdown list, text editor and file drag-and-drop 
+3. Markup for video player
+4. Adding video player on Page Live Broadcast
+5. Adding video players into the slider on Home Page
+6. Page Overlays.
+7. Popup New overlay
