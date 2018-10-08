@@ -39,14 +39,18 @@
 		</div>
     </header>
     <div class="content">
-    	<aside class="main-sidebar">
+    	    	<aside class="main-sidebar">
     		<div class="block account">
     			<div class="status">+12%</div>
     			<div class="score">2 850 000</div>
     			<div class="money">475 000 $</div>
     			<div class="btns">
-    				<a href="#" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg></a>
-    				<a href="#" class="put"><svg><use xlink:href="img/vectors.svg#arrow-put"></use></svg></a>
+    				<a href="#" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg>
+    				<span class="ds-tooltip">Tooltip1</span>
+    				</a>
+    				<a href="#" class="put"><svg><use xlink:href="img/vectors.svg#arrow-put"></use></svg>
+    					<span class="ds-tooltip">Tooltip2</span>
+    				</a>
     				<a href="#" class="add"><svg><use xlink:href="img/vectors.svg#arrow-add"></use></svg>
 						<span class="ds-tooltip">+ Add DST</span>
     				</a>
@@ -54,8 +58,11 @@
     		</div>
     		<div class="block people">
 	    		<div class="title">
-	    			<input type="search" placeholder="People" />  
+	    			People
+	    			<div class="search-input minimize">
+	    			<input type="search" placeholder="Find people" />  
 				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				    </div>
 	    		</div>
 	    		<ul>
 	    			<li>
@@ -123,8 +130,11 @@
 	    	</div>
     		<div class="block game">
 	    		<div class="title">
-	    			<input type="search" placeholder="Game" />  
+	    			Game
+	    			<div class="search-input minimize">
+	    			<input type="search" placeholder="Find game" />  
 				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				    </div>
 	    		</div>
 	    		<ul>
 	    			<li>
@@ -187,10 +197,13 @@
 
     		<div class="block lifestyle">
     			<div class="title">
-	    			<input type="search" placeholder="Life style" />  
+    				Life style
+	    			<div class="search-input minimize">
+	    			<input type="search" placeholder="Find life style" />  
 				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				    </div>
 	    		</div>
-	    			    		<ul>
+	    		<ul>
 	    			<li>
 	    				<a class="item" href="#">
 	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
@@ -261,20 +274,66 @@
     	</aside>
     	<section class="main-content">
     		<div class="slider">
-				<a class="cover" href="#"><img src="img/slider/slide1.png"/></a>
-				<a class="cover" href="#"><img src="img/slider/slide2.png"/></a>
-				<a class="cover" href="#"><img src="img/slider/slide3.png"/>
-				<a class="cover" href="#"><img src="img/slider/slide1.png"/>
-				<a class="cover" href="#"><img src="img/slider/slide2.png"/>		
+				
+				<div class="player player1 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player2 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player3 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player4 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+	    		<div class="player player5 cover">
+	    			<video controls crossorigin playsinline poster="img/poster.png">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+		                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+	    				<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            		</video>
+	    		</div>
+
+
 			</div>
 
     		<div class="list list-live">
     			<div class="title">Live</div>
     			<div class="row">
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live1.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live1.png')">
 			    				<span class="count">338 512 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -284,10 +343,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live2.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live2.png')">
 			    				<span class="count">123 512 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -297,10 +355,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live3.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live3.png')">
 			    				<span class="count">3 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -310,10 +367,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">			    			
-			    			<a class="img" href="#">
-			    				<img src="img/live4.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live4.png')">
 			    				<span class="count">254 512 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -323,10 +379,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live5.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live5.png')">
 			    				<span class="count">13 512 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -336,10 +391,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live6.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live6.png')">
 			    				<span class="count">6 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -349,10 +403,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live7.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live7.png')">
 			    				<span class="count">412 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -362,10 +415,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		    			<div class="item">
-			    			<a class="img" href="#">
-			    				<img src="img/live8.png" width="255" height="143" alt="" />
+			    			<a class="img" href="#" style="background-image:url('img/live8.png')">
 			    				<span class="count">2 312 viewers</span>
 			    			</a>
 			    			<div class="description">
@@ -382,11 +434,9 @@
     		<div class="list list-news">
     			<div class="title">News</div>
     			<div class="row">
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
-			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal">
-			    				<img src="img/news1.png" width="255" height="144" alt="" />
-			    			</a>
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news1.png')"></a>
 			    			<div class="description">
 				    			<span class="date">21.05.2018</span>
 				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
@@ -397,11 +447,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
-			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal">
-			    				<img src="img/news2.png" width="255" height="144" alt="" />
-			    			</a>
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news2.png')"></a>
 			    			<div class="description">
 				    			<span class="date">21.05.2018</span>
 				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
@@ -412,11 +460,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
-			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal">
-			    				<img src="img/news3.png" width="255" height="144" alt="" />
-			    			</a>
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news3.png')"></a>
 			    			<div class="description">
 				    			<span class="date">21.05.2018</span>
 				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
@@ -427,11 +473,9 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-3">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
-			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal">
-			    				<img src="img/news4.png" width="255" height="144" alt="" />
-			    			</a>
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news4.png')"></a>
 			    			<div class="description">
 				    			<span class="date">21.05.2018</span>
 				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
@@ -448,10 +492,10 @@
 
     		<div class="list list-announcement">
     			<div class="row">
-	    			<div class="d-none d-sm-block col-sm-4 col-md-5">
+	    			<div class="d-none d-sm-block col-sm-4">
 	    				<div class="img"><img src="img/anons1.png" width="415" height="553" alt="" /></div>
 	    			</div>
-	    			<div class="col-12 col-sm-8 col-md-7">
+	    			<div class="col-12 col-sm-8">
 	    				<div class="title">Stream anons</div>
 	    				<div class="setup">
 	    					<div class="filter">
@@ -612,6 +656,7 @@
 	    					</li>	    					
 	    				</ul>
 	    				<div class="loading text-center"><a href="#"><svg><use xlink:href="img/vectors.svg#loading"></use></svg><span>Loading...</span></a></div>
+	    				<div class="loading text-center"><a class="spin" href="#"><svg><use xlink:href="img/vectors.svg#loading"></use></svg><span>Loading...</span></a></div>
 	    			</div>
 	    		</div>
     		</div>
@@ -636,128 +681,104 @@
 	    				</div>
 	    			<div class="large">
 	    				<div class="row">
-	    					<div class="col-12 col-sm-6">
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
+	    					<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<div class="description">
+		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
+						    			<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
+									    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
+									    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
 	    					</div>
 
-							<div class="col-12 col-sm-6">
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
+							<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<div class="description">
+		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
+						    			<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
+									    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
+									    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
 	    					</div>
 
-							<div class="col-12 col-sm-6">
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
+							<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<div class="description">
+		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
+						    			<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
+									    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
+									    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
 	    					</div>
 
-							<div class="col-12 col-sm-6">
-	    						<div class="item">
-	    							<div class="row">
-	    								<div class="col-12 col-sm-3">
-	    									<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    									</div>
-	    								</div>
-	    								<div class="col-12 col-sm-9">
-	    									<div class="description">
-		    									<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    					<span class="name">Soda CmonBruh</span>
-									    		<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
-									    		<div class="bottom">
-									    			<span class="date">21.05.2018 at 21:50</span>
-									    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-										    		<span class="share">
-										    			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-											    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-											    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
-										    		</span>
-									    		</div>	
-								    		</div>							    		
-					    				</div>
-					    			</div>
-	    						</div>
+							<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<div class="description">
+		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
+						    			<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
+									    		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
+									    		<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
 	    					</div>
 	    				</div>
 	    			</div>
@@ -766,10 +787,10 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>   								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
@@ -783,10 +804,27 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>      								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
+								   		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>   								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
@@ -800,10 +838,27 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>      								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
+								   		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
 	    							</div>   								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
@@ -817,10 +872,10 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>   								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
@@ -834,11 +889,11 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>  								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
 								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -851,11 +906,11 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>    								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
 								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -868,11 +923,11 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>     								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
 								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -885,11 +940,11 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>    								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
 								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -902,11 +957,11 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>      								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
 								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -919,45 +974,11 @@
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
 	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
-	    							<span class="name">Soda CmonBruh</span>
-								    <span class="date">21.05.2018 at 21:50</span>
-								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-								  	<span class="share">
-								  		<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-								   		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-							    	</span>
-							    </div>
-	    					</div>
-	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-	    						<div class="item">
-	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
-	    							<span class="name">Soda CmonBruh</span>
-								    <span class="date">21.05.2018 at 21:50</span>
-								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
-								  	<span class="share">
-								  		<span class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</span>
-								   		<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</span>
-							    	</span>
-							    </div>
-	    					</div>
-	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-	    						<div class="item">
-	    							<div class="slides">
-	    										<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
-			    								<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
-	    							</div>   								
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>     								
 	    							<span class="name">Soda CmonBruh</span>
 								    <span class="date">21.05.2018 at 21:50</span>
 								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -1030,7 +1051,7 @@
 		  </div>
 		   <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
 		   		    <div class="form">
-                        <form  data-toggle="validator" role="form"> 
+                        <form data-toggle="validator" role="form"> 
                             <div class="social">                            	
                             	<a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a>
                     			<a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a>
@@ -1626,7 +1647,6 @@
     <script type="text/javascript" src="js/trumbowyg.min.js"></script>
     <script type="text/javascript" src="js/plyr.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-
 
 
 	<script>

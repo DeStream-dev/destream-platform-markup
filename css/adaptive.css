@@ -124,7 +124,7 @@ span.size{ display: none; }
     z-index: 100;
     top: -60px;
     height: calc(100% + 60px);
-    background-color: rgba(44,50,56,0.9);
+    background-color: rgba(44,50,56,0.8);
     padding-top: 60px;
   }
   .main-content{
@@ -140,7 +140,33 @@ span.size{ display: none; }
   .modal-interest .modal-lg{
     max-width: 100%;
   }
-
+  .list .item .img{
+    height: 160px;
+  }
+  .list-announcement-tile .item .img{
+    height: 190px;
+  }
+  .list-announcement-tile .small .item .img{
+  height: 220px;
+  }
+  .list .item .share span{
+    margin-right: 3px;
+    font-size: 10px;
+  }
+  .list .item .share span svg{
+    margin-right: 3px;
+  }
+  .list-announcement-tile .large .item .date{
+    font-size: 11px;
+  }
+  .list-announcement-tile .large .description{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .list-announcement-tile .large .item .share{
+    margin-right: 5px;
+    padding-top: 21px;
+  }
  }
 
 
@@ -148,7 +174,12 @@ span.size{ display: none; }
   .container-fluid{
     border: 1px solid cyan; 
   }
-
+  header .create-btn-cont .btn.create{
+    padding: 0 25px 0 15px;
+  }
+  header .create-btn-cont .dropdown-toggle:after{
+    right: 8px;
+   }
   .main-sidebar{
     position: absolute;
     left: 0;
@@ -156,7 +187,7 @@ span.size{ display: none; }
     z-index: 100;
     top: -60px;
     height: calc(100% + 60px);
-    background-color: rgba(44,50,56,0.9);
+    background-color: rgba(44,50,56,0.8);
     padding-top: 60px;
   }
   .main-content{
@@ -166,6 +197,16 @@ span.size{ display: none; }
   }
   .modal-interest .modal-lg{
     max-width: 100%;
+  }
+  .list .item .img{
+    height: 180px;
+  }
+
+  .list-announcement-tile .item .img{
+    height: 190px;
+  }
+  .list-announcement-tile .small .item .img{
+  height: 220px;
   }
   
  }
@@ -175,7 +216,12 @@ span.size{ display: none; }
   .container-fluid{
     border: 1px solid magenta;
   }
-
+ header .create-btn-cont .btn.create{
+    padding: 0 25px 0 15px;
+  }
+   header .create-btn-cont .dropdown-toggle:after{
+    right: 8px;
+   }
   .main-sidebar{
     position: absolute;
     left: 0;
@@ -183,7 +229,7 @@ span.size{ display: none; }
     z-index: 100;
     top: -60px;
     height: calc(100% + 60px);
-    background-color: rgba(44,50,56,0.9);
+    background-color: rgba(44,50,56,0.8);
     padding-top: 60px;
   }
   .main-content{
@@ -193,6 +239,34 @@ span.size{ display: none; }
   }
   .modal-interest .modal-lg{
     max-width: 100%;
+  }
+
+  .list .item .img{
+    height: 180px;
+  }
+  .list-announcement-tile .item .img{
+    height: 190px;
+  }
+  .list-announcement-tile .small .item .img{
+  height: 220px;
+  }
+  .list .item .share span{
+    margin-right: 3px;
+    font-size: 10px;
+  }
+  .list .item .share span svg{
+    margin-right: 3px;
+  }
+  .list-announcement-tile .large .item .date{
+    font-size: 11px;
+  }
+  .list-announcement-tile .large .description{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .list-announcement-tile .large .item .share{
+    margin-right: 5px;
+    padding-top: 21px;
   }
  }
 
@@ -204,5 +278,80 @@ span.size{ display: none; }
   .modal-interest .modal-lg{
     max-width: 100%;
   }
- 
+  header .create-btn-cont .btn.create{
+    padding: 0 25px 0 15px;
+  }
+   header .create-btn-cont .dropdown-toggle:after{
+    right: 8px;
+   }
+  .main-sidebar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    top: -60px;
+    height: calc(100% + 60px);
+    background-color: rgba(44,50,56,0.8);
+    padding-top: 60px;
+  }
+   .main-content{
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+  }
+
+  .list .item .img{
+    height: 210px;
+  }
+  .list-announcement-tile .item .img{
+    height: 190px;
+  }
+  .list-announcement-tile .small .item .img{
+    height: 220px;
+  }
+  .list{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .list .setup{
+    position: relative;
+    right: auto;
+    top: 0;
+    left: -8px;
+  }
+.list .alarm{
+  right: 35px;
  }
+.list-announcement-tile .large .item{
+  height: unset;
+  overflow: visible;
+  padding-top: 15px;
+}
+ .list-announcement-tile .large .item .bottom{
+  position: relative;
+  padding-top: 20px;
+   width: 100%;
+ }
+
+ .list-announcement-tile .large .slides{
+  margin-left: 25px;
+  float: none;
+  width: 140px;
+ }
+.list-announcement-tile .large .description{
+  width: 100%;
+  height: unset;
+}
+.list-announcement-tile .large .item .share{
+  float: none;
+  display: block;
+}
+.list .small .item .date{
+  font-size: 12px;
+  display: block;
+}
+.list .small .item .share{
+  float: right;
+}
+
+}

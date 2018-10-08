@@ -50,7 +50,9 @@
 						</div>
 			     	</div>
 			     	<div class="create-btn-cont">
-			     		<a class="btn create dropdown-toggle" id="create" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</a>
+			     		<a class="btn create dropdown-toggle" id="create" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			     		<span class="plus d-lg-none">+</span>
+			     		<span class="d-none d-lg-block">Create</a>
 			     			<div class="dropdown-menu" aria-labelledby="create">
 						    <ul>
 				    			<li><a href="#">Create 1</a></li>
@@ -97,14 +99,18 @@
     </header>
 
     <div class="content">
-    	<aside class="main-sidebar">
+    	    	<aside class="main-sidebar">
     		<div class="block account">
     			<div class="status">+12%</div>
     			<div class="score">2 850 000</div>
     			<div class="money">475 000 $</div>
     			<div class="btns">
-    				<a href="#" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg></a>
-    				<a href="#" class="put"><svg><use xlink:href="img/vectors.svg#arrow-put"></use></svg></a>
+    				<a href="#" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg>
+    				<span class="ds-tooltip">Tooltip1</span>
+    				</a>
+    				<a href="#" class="put"><svg><use xlink:href="img/vectors.svg#arrow-put"></use></svg>
+    					<span class="ds-tooltip">Tooltip2</span>
+    				</a>
     				<a href="#" class="add"><svg><use xlink:href="img/vectors.svg#arrow-add"></use></svg>
 						<span class="ds-tooltip">+ Add DST</span>
     				</a>
@@ -112,8 +118,11 @@
     		</div>
     		<div class="block people">
 	    		<div class="title">
-	    			<input type="search" placeholder="People" />  
+	    			People
+	    			<div class="search-input minimize">
+	    			<input type="search" placeholder="Find people" />  
 				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				    </div>
 	    		</div>
 	    		<ul>
 	    			<li>
@@ -181,8 +190,11 @@
 	    	</div>
     		<div class="block game">
 	    		<div class="title">
-	    			<input type="search" placeholder="Game" />  
+	    			Game
+	    			<div class="search-input minimize">
+	    			<input type="search" placeholder="Find game" />  
 				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				    </div>
 	    		</div>
 	    		<ul>
 	    			<li>
@@ -245,10 +257,13 @@
 
     		<div class="block lifestyle">
     			<div class="title">
-	    			<input type="search" placeholder="Life style" />  
+    				Life style
+	    			<div class="search-input minimize">
+	    			<input type="search" placeholder="Find life style" />  
 				    <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+				    </div>
 	    		</div>
-	    			    		<ul>
+	    		<ul>
 	    			<li>
 	    				<a class="item" href="#">
 	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
