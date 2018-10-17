@@ -47,3 +47,12 @@ Update 05.10
 5. Adding video players into the slider on Home Page
 6. Page Overlays.
 7. Popup New overlay
+
+Update 17.10
+1. Adding corrections to the Home page overlay in accordance with the comments of the designer
+2. Changes in markup of two main site panels side panel and base panel. Now each of them has its own scrollbar.
+3. Adding dropdown list with search options when start type text in the search field
+4. Changes in principle of work for slider on Home page. In addition functional of playing video only in active slide is added. Others players hidden with static images.
+5. Markup for Overlays general page
+6. Markup for Overlays widget page
+7. Adding murkup and styles for correct display in iPad for pages index.html, messages.html, overlays.html, live-broadcast.html, wallet.html, mychannel.html, settings.html
