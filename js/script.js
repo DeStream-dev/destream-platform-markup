@@ -5,7 +5,7 @@ $('a[disabled]').bind("click",function(){
 });
 
 svg4everybody();
-   setTimeout(function(){
+  /* setTimeout(function(){
     $('.slider').coverflow({
     duration:   1000,
     index:      1,
@@ -17,7 +17,7 @@ svg4everybody();
   });
     
   },1000);
-
+*/
 /*if (typeof ContentFlowGlobal != 'undefined') {
     new ContentFlowAddOn('ImageSelectAddOn', {
         ContentFlowConf : {
