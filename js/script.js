@@ -15,7 +15,45 @@ svg4everybody();
     selectedCss:  { opacity: 1  },
     outerCss:   { opacity: 1 }
   });
-  },100);
+    
+  },1000);
+
+/*if (typeof ContentFlowGlobal != 'undefined') {
+    new ContentFlowAddOn('ImageSelectAddOn', {
+        ContentFlowConf : {
+           onMakeActive: function(item) {
+            alert(8);
+            var player = new Plyr($(item.element).find(".player").find("video"));
+            player.play();
+            player.toggleControls(false);
+            },
+            onReachTarget : function(item) {
+                this.conf.onclickActiveItem(item);
+            }
+        }
+    });
+    ContentFlowGlobal.setAddOnConf("ImageSelectAddOn");
+    
+
+}*/
+
+
+ /*var cf = new ContentFlow('contentFlow', {
+    visibleItems: 3,
+    scrollWheelSpeed : 0,
+    reflectionHeight: 0,
+    circularFlow: false,
+    scaleFactorLandscape: 3.3,
+    flowSpeedFactor: 0.3,
+    maxItemHeight: 400,
+    onInit: function() {
+      var player1 = new Plyr('.ContentFlow .flow .item.active .player video');
+    },
+    onclickActiveItem: function(arg){
+      //  alert(2);
+        console.log(arg);
+    }
+  });*/
 
 
  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
@@ -38,7 +76,7 @@ $('.form form').validator().on('submit', function (e) {
 });
 */
 /**************** выезд главного меню при скролле *******************/
-      
+     /* 
       var wasAnimate = false; 
       var offset = parseInt($('header').height()); 
       var ta;
@@ -67,7 +105,7 @@ $('.form form').validator().on('submit', function (e) {
   $(window).scroll(function(){       
         place();    
     });
-
+*/
 
 $('.menu-toggle').on("click",function(){
   $('body').toggleClass("sidebar-collapse");
@@ -78,6 +116,7 @@ $('.menu-toggle').on("click",function(){
    return false;
 });
 
+
 function screen(){
   $('.main-content').css("min-height","unset");
   var wH = $(window).height();
@@ -87,14 +126,14 @@ function screen(){
       else  $('.main-content').css("min-height",(wH - hH)+"px");     
 } 
 
- setTimeout(function(){
+/* setTimeout(function(){
   screen();
 },100);
-
+*/
 $(window).resize(function() {
-       setTimeout(function(){
+     /*  setTimeout(function(){
         screen();    
-      },300)
+      },300);*/
       if( $('.slider').lehgth){
       setTimeout(function(){
         $('.slider').refresh();      
@@ -132,7 +171,29 @@ var announcementliderOptions = {
   variableWidth: false,
   adaptiveHeight: false,
   autoplay: false,
-  responsive: true
+      responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 };
 announcementSlider.slick(announcementliderOptions);
 
@@ -205,22 +266,41 @@ if($('.text-editor').length){
 $('.services .list a').on("click",function(){
  var this_a = $(this);
  var this_item = $(this).parents('.list');
- if(!this_item.hasClass("open")){
-  $('.services .list a').each(function(i){
-    var this_a1 = $(this);   
-    var this_item1 = $(this).parents('.list');;   
-      if(this_item1.hasClass("open")) {
-        $(this).next(".units").slideUp();
-        this_item1.removeClass("open");
-      }    
-  });
-}
-    $(this).next(".units").slideToggle(300,function(){
-      this_item.toggleClass("open");
+ 
+     this_item.find(".units").slideToggle(300,function(){
+     this_item.toggleClass("open");
     });
 
    return false;
 });
+
+$('.bars').each(function(){
+  var this_bar = $(this);
+  if(this_bar.hasClass("open")){      
+      this_bar.find(".contain").show();
+    }
+});
+$('.bars a').on("click",function(){
+ var this_a = $(this);
+ var this_item = $(this).parents('.bars');
+ 
+   $('.bars').each(function(){
+    var this_bar = $(this);
+    if(this_bar.hasClass("open")){      
+      this_bar.find(".contain").slideUp(300,function(){
+       this_bar.removeClass("open");
+      });
+    }
+   });
+if(!this_item.hasClass("open")){
+   this_item.find(".contain").slideDown(300,function(){
+     this_item.addClass("open");
+     });
+}
+   return false;
+});
+
+
 
 var player = new Plyr('.live-broadcast .player video');
 var player1 = new Plyr('.player1 video');
@@ -239,12 +319,46 @@ $('.widget .side-group .colors a').each(function(){
 
 $('.main-sidebar .block .title .search-input .btn').on("click", function(){
   $(this).parents(".search-input").removeClass("minimize");
+  $(this).parents(".search-input").css({'width':'100%'});
   $(this).parents(".search-input").find("input[type='search']").focus();
 });
 
 $(".main-sidebar .block .title .search-input input[type='search']").on("blur", function(){
-  $(this).parents(".search-input").addClass("minimize");
+
+  $(this).parents(".search-input").animate({'width': '40px'},300,function(){
+    $(this).addClass("minimize");
+  });
+
+
+ // $(this).parents(".search-input").addClass("minimize");
 });
+
+
+
+var availableTags = [
+      "The Witcher 3: Wild H…Grand Theft",
+      "Auto V",
+      "Rise of the Tomb Raider",
+      "Ведьмак 3",
+      "Battlefield 1",
+      "Fortnite",
+      "For honor",
+      "Новости",
+      "Мультики",
+      "Forza Horizon 4"
+    ];
+    $( "header .search-input input, .main-sidebar .block .title .search-input input" ).autocomplete({
+      source: availableTags,
+       open: function( event, ui ) {
+        var input = event.target;
+        $(input).parents(".search-input").addClass("search-active");
+       },
+       close: function( event, ui ) {
+        var input = event.target;
+        $(input).parents(".search-input").removeClass("search-active");
+       }
+    });
+
 
 
 

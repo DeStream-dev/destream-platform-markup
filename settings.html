@@ -8,22 +8,21 @@
 	<link rel="stylesheet" href="css/fonts.css" />    
 	<link rel="stylesheet" href="css/dropzone.css" /> 
 	<link rel="stylesheet" href="css/trumbowyg.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/simplebar.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <title>Destream Portal Settings</title>
   </head>
   <body>
-  <div class="top-menu">
-  	<a class="menu-toggle" href="#">
-	    <img src="img/ham.svg" width="18" height="12" alt="" />
-	</a>			        
-	<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
-  </div>
-  	<header> 
+  <header> 
   		<div class="container-fluid"> 
 		  	<div class="row">
 			    <div class="col col-md-3">
-			        
+			        <a class="menu-toggle" href="#">
+					    <img src="img/ham.svg" width="18" height="12" alt="" />
+					</a>			        
+					<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
 			    </div>
 			    <div class="col-md-4 col-lg-4 col-xl-5">
 			      	<div class="search-panel">
@@ -97,8 +96,32 @@
 		</div>
     </header>
 
-    <div class="content">
-    	    	<aside class="main-sidebar">
+    <!--header> 
+  		<div class="container-fluid"> 
+		  	<div class="row">
+			    <div class="col col-md-3">
+			        <a class="menu-toggle" href="#">
+					    <img src="img/ham.svg" width="18" height="12" alt="" />
+					</a>			        
+					<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+			    </div>
+			    <div class="col-md-7">
+			      	<div class="search-panel">
+			            <div class="search-input">
+			                <input type="search" placeholder="Search" />  
+			                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+			            </div>                 
+			        </div>
+			    </div>
+			    <div class="col col-md-2">			     	
+			     	<a href="#" data-target=".modal-auth" data-toggle="modal" class="btn login">Log in</a>
+			    </div>
+		  </div>
+		</div>
+    </header-->
+   
+    	<aside class="main-sidebar" data-simplebar>
+    	  <div class="main-sidebar-content">
     		<div class="block account">
     			<div class="status">+12%</div>
     			<div class="score">2 850 000</div>
@@ -330,8 +353,10 @@
 	            <a href="#">Usage Rules</a>
 	            <div class="copyrights">&copy; 2018 DeStream, LLC</div>
             </footer>
+            </div>
     	</aside>
-    	<section class="main-content">
+    	
+    	<section class="main-content" data-simplebar>
 	    	<div class="page settings">
 	    		<div class="title">Settings</div>
 	    		<ul class="nav nav-pills" role="tablist">
@@ -608,10 +633,10 @@
 	               		<form data-toggle="validator"> 
 	               			<div class="search-panel">   
 	               				<div class="row">
-		               				<div class="col-12 col-sm-4">
+		               				<div class="col-12 col-sm-6 col-lg-4">
 		               					<div class="text">Choose what you like and we will try to give you the most interesting selection.</div>
 		               				</div>
-		               				<div class="col-12 col-sm-3">
+		               				<div class="col-12 col-sm-6 col-lg-3">
 			               				<div class="filter">
 			               					<div class="form-group form-group-checkbox">
 			                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
@@ -621,7 +646,8 @@
 			                            	</div>
 			               				</div>
 		               				</div>
-		               				<div class="col-12 col-sm-5">
+		               				<div class="d-none d-md-block col-md-6 d-lg-none"></div>
+		               				<div class="col-12 col-sm-6 col-lg-5">
 			               				<div class="search-input">
 							                <input type="search" placeholder="Search" />  
 							                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
@@ -631,76 +657,76 @@
 				            </div>
 				            <div class="list">
 				            	<div class="row">
-		               				<div class="col-12 col-sm-7">
+		               				<div class="col-12 col-sm-6 col-lg-7">
 		               					<div class="title">Game</div>
 		               					<div class="items-game">
 		               					<div class="row">
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><img src="img/interest/game1.png" alt="" /></label>
 			                            		</div>
 				               				</div>
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><img src="img/interest/game2.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><img src="img/interest/game1.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><img src="img/interest/game2.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><img src="img/interest/game2.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><img src="img/interest/game1.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><img src="img/interest/game1.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><img src="img/interest/game2.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><img src="img/interest/game2.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><img src="img/interest/game2.png" alt="" /></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-md-4">
+				               				<div class="col-12 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
 			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
 			                            		</div>
@@ -708,7 +734,7 @@
 			               				</div>
 		               				  </div>
 		               				</div>
-		               				<div class="col-12 col-sm-5">
+		               				<div class="col-12 col-sm-6 col-lg-5">
 		               					<div class="title">Life style</div>
 		               					<div class="items-lifestyle">
 			               					<div class="form-group form-group-checkbox">
@@ -759,84 +785,84 @@
 							<button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
 						</div> 
 	               		<div class="row">
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-3">
+	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
 		               				<a href="#" class="name">I.m. Khankishiev </a>
@@ -866,7 +892,7 @@
 				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
 				                        <div class="units">
 				                           	<div class="row">
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item1.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -875,7 +901,7 @@
 										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item2.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -884,7 +910,7 @@
 										    			<div class="price">700 DST <em>(15.4$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item3.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -893,7 +919,7 @@
 										    			<div class="price">2700 DST <em>(55$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item4.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -911,7 +937,7 @@
 				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
 				                        <div class="units">
 				                           	<div class="row">
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item1.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -920,7 +946,7 @@
 										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item2.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -929,7 +955,7 @@
 										    			<div class="price">700 DST <em>(15.4$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item3.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -938,7 +964,7 @@
 										    			<div class="price">2700 DST <em>(55$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item4.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -956,7 +982,7 @@
 				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
 				                        <div class="units">
 				                           	<div class="row">
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item1.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -965,7 +991,7 @@
 										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item2.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -974,7 +1000,7 @@
 										    			<div class="price">700 DST <em>(15.4$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item3.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -983,7 +1009,7 @@
 										    			<div class="price">2700 DST <em>(55$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-3">
+								    			<div class="col-12 col-sm-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item4.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -1004,7 +1030,6 @@
 
     		</div>
     	</section>
-    </div>
 
     <!--add-service window-->
 <div class="modal-form modal-addblock modal-addservice modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addservice" aria-hidden="true">
@@ -1055,7 +1080,7 @@
 
 
                             <div class="form-group" aria-required="true">
-                                <label class="control-label" for="pagelink">Description</label>
+                                <label class="control-label">Description</label>
                                 <textarea class="form-control text-editor" ></textarea>
                             </div>
                             <div class="form-group form-group-checkbox">
@@ -1138,148 +1163,150 @@
             	<div class="title">Select interest</div>
             	<div class="form interest">
                		<form data-toggle="validator"> 
-               			<div class="search-panel">   
-               				<div class="row">
-	               				<div class="col-12 col-sm-4">
-	               					<div class="text">Choose what you like and we will try to give you the most interesting selection.</div>
-	               				</div>
-	               				<div class="col-12 col-sm-3">
-		               				<div class="filter">
-		               					<div class="form-group form-group-checkbox">
-		                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
-		                            	</div>
-		                            	<div class="form-group form-group-checkbox">
-		                                	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
-		                            	</div>
+							<div class="search-panel">   
+	               				<div class="row">
+		               				<div class="col-12 col-sm-6 col-lg-4">
+		               					<div class="text">Choose what you like and we will try to give you the most interesting selection.</div>
 		               				</div>
-	               				</div>
-	               				<div class="col-12 col-sm-5">
-		               				<div class="search-input">
-						                <input type="search" placeholder="Search" />  
-						                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
-					            	</div> 
+		               				<div class="col-12 col-sm-6 col-lg-3">
+			               				<div class="filter">
+			               					<div class="form-group form-group-checkbox">
+			                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
+			                            	</div>
+			                            	<div class="form-group form-group-checkbox">
+			                                	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
+			                            	</div>
+			               				</div>
+		               				</div>
+		               				<div class="d-none d-md-block col-md-6 d-lg-none"></div>
+		               				<div class="col-12 col-sm-6 col-lg-5">
+			               				<div class="search-input">
+							                <input type="search" placeholder="Search" />  
+							                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+						            	</div> 
+					            	</div>
 				            	</div>
-			            	</div>
-			            </div>
-			            <div class="list">
-			            	<div class="row">
-	               				<div class="col-12 col-sm-7">
-	               					<div class="title">Game</div>
-	               					<div class="items-game">
-	               					<div class="row">
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><img src="img/interest/game1.png" alt="" /></label>
-		                            		</div>
-			               				</div>
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="game2" value="game2"><span></span><img src="img/interest/game2.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				            </div>
+				            <div class="list">
+				            	<div class="row">
+		               				<div class="col-12 col-sm-6 col-lg-7">
+		               					<div class="title">Game</div>
+		               					<div class="items-game">
+		               					<div class="row">
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><img src="img/interest/game1.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><img src="img/interest/game2.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="game5" value="game5"><span></span><img src="img/interest/game2.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="game6" value="game6"><span></span><img src="img/interest/game1.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><img src="img/interest/game1.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><img src="img/interest/game2.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><img src="img/interest/game2.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><img src="img/interest/game2.png" alt="" /></label>
-		                            		</div>
-			               				</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 
-			               				<div class="col-12 col-sm-6 col-md-4">
-			               					<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
-		                            		</div>
+				               				<div class="col-12 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                            		</div>
+				               				</div>
 			               				</div>
+		               				  </div>
 		               				</div>
-	               				  </div>
-	               				</div>
-	               				<div class="col-12 col-sm-5">
-	               					<div class="title">Life style</div>
-	               					<div class="items-lifestyle">
-		               					<div class="form-group form-group-checkbox">
-			                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-				                                <img src="img/interest/lifestyle1.png" alt="" />
-				                                <i>Very long and simple name of lifestyle rubric</i>
-			                                </label>
-			                            </div>
+		               				<div class="col-12 col-sm-6 col-lg-5">
+		               					<div class="title">Life style</div>
+		               					<div class="items-lifestyle">
+			               					<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+					                                <img src="img/interest/lifestyle1.png" alt="" />
+					                                <i>Very long and simple name of lifestyle rubric</i>
+				                                </label>
+				                            </div>
 
-			                            <div class="form-group form-group-checkbox">
-			                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
-			                                	<img src="img/interest/lifestyle2.png" alt="" />
-				                                <i>Name of lifestyle rubric</i>
-				                             </label>
-			                            </div>
-			                           	<div class="form-group form-group-checkbox">
-			                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-				                                <img src="img/interest/lifestyle1.png" alt="" />
-				                                <i>Very long and simple name of lifestyle rubric</i>
-			                                </label>
-			                            </div>
+				                            <div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+				                                	<img src="img/interest/lifestyle2.png" alt="" />
+					                                <i>Name of lifestyle rubric</i>
+					                             </label>
+				                            </div>
+				                           	<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+					                                <img src="img/interest/lifestyle1.png" alt="" />
+					                                <i>Very long and simple name of lifestyle rubric</i>
+				                                </label>
+				                            </div>
 
-			                            <div class="form-group form-group-checkbox">
-			                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
-			                                	<img src="img/interest/lifestyle2.png" alt="" />
-				                                <i>Name of lifestyle rubric</i>
-				                             </label>
-			                            </div>
-			                           	<div class="form-group form-group-checkbox">
-			                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-				                                <img src="img/interest/lifestyle1.png" alt="" />
-				                                <i>Very long and simple name of lifestyle rubric</i>
-			                                </label>
-			                            </div>
+				                            <div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+				                                	<img src="img/interest/lifestyle2.png" alt="" />
+					                                <i>Name of lifestyle rubric</i>
+					                             </label>
+				                            </div>
+				                           	<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+					                                <img src="img/interest/lifestyle1.png" alt="" />
+					                                <i>Very long and simple name of lifestyle rubric</i>
+				                                </label>
+				                            </div>
 
-		                            </div>
-	               				</div>
-	               			</div>
-			            </div>
+			                            </div>
+		               				</div>
+		               			</div>
+		               			
+				            </div>
 			            <div class="buttons text-center">
 			            	<button type="button" class="btn btn-white btn-loadmore">Load more</button>
 			            	<button type="button" class="btn btn-finish" data-dismiss="modal">Finish</button>
@@ -1514,6 +1541,7 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type='text/javascript' src="js/dropzone.js"></script>
     <script type="text/javascript" src="js/trumbowyg.min.js"></script>
+    <script type="text/javascript" src="js/simplebar.js"></script>
     <script type="text/javascript" src="js/plyr.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-select.min.css" />	
+	<link rel="stylesheet" href="css/fonts.css" />    
+	<link rel="stylesheet" href="css/dropzone.css" /> 
+	<link rel="stylesheet" href="css/trumbowyg.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <title>Destream Portal Widget</title>
+  </head>
+  <body class="widget">
+  	<header> 
+  		   <h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+			    <div class="user-panel">			     	
+			     	<div class="user-btn-cont">
+			     		<a href="#" class="icon dropdown-toggle" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			     			<img src="img/live-icon1.png" width="40" height="40" alt="" />
+			     		</a>
+			     			<div class="dropdown-menu" aria-labelledby="account-link">
+						    <ul>
+				    			<li><a href="mychannel.html"><span class="icon my-channel"><svg><use xlink:href="img/vectors.svg#my-channel"></use></svg></span> My channel</a></li>
+				    			<li><a href="wallet.html"><span class="icon wallet"><svg><use xlink:href="img/vectors.svg#wallet"></use></svg></span> Wallet</a></li>
+				    			<li><a href="#"><span class="icon overlays"><svg><use xlink:href="img/vectors.svg#overlays"></use></svg></span> Overlays</a></li>
+				    			<li><a href="#" data-target=".modal-interest" data-toggle="modal"><span class="icon settings"><svg><use xlink:href="img/vectors.svg#settings"></use></svg></span> Settings</a></li>
+				    			<li><a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
+				    		</ul>
+						</div>
+			     	</div>
+
+			     	<div class="notifications-cont">
+			    		<a class="dropdown-toggle" data-counter="6" href="#" id="notification-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg><use xlink:href="img/vectors.svg#notifications"></use></svg></a>
+			    		<div class="dropdown-menu" aria-labelledby="notification-link">
+						    <ul>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+				    			</li>
+				    		</ul>
+				    		<div class="view-all-cont"><a class="view-all" href="#">View all</a></div>
+						</div>			    		
+			    	</div>
+			    </div>
+
+			    <div class="top-panel">
+			      		<div class="btn-group">
+			      			<a class="btn btn-transparent" href="#">+Add widget</a>
+			      				</div>
+			      		<div class="btn-group">
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#undo"></use></svg></span></a>
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#redo"></use></svg></span></a>
+			      		</div>
+			      		<div class="btn-group">
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#zoomin"></use></svg></span></a>
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#zoomout"></use></svg></span></a>
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#fullscreen"></use></svg></span></a>
+			      		</div>
+			      		<div class="btn-group">
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#save"></use></svg></span></a>
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#note"></use></svg></span></a>
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#plain"></use></svg></span></a>
+			      		</div>
+			      		<div class="btn-group">
+			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#lifering"></use></svg></span></a>
+			      		</div>
+			      	</div>
+
+	</header>
+
+    <div class="content">
+    	<aside class="main-sidebar">
+	    	<div class="setup">
+		    	<div class="side-group">
+		    		<div class="title big">Overlay name</div>
+		    		<div class="form-group form-group-radio form-check-inline">
+			            <label><input type="radio" checked="checked" name="overlay-type" value="game"><span></span>Game</label>
+			        </div>
+			        <div class="form-group form-group-radio form-check-inline">
+			          	<label><input type="radio" name="overlay-type" value="lifestyle"><span></span>Lifestyle</label>
+			        </div>
+		    	</div>
+
+		    	<div class="side-group">
+		    		<div class="title">Skin</div>
+		    		<select class="selectpicker" title="Dark zavr">
+			    		<option value="Dark zavr">Dark zavr1</option>
+			    		<option value="Skin 2">Skin 2</option>
+			    		<option value="Skin 3">Skin 3</option>
+			    	</select>
+		    	</div>
+
+		    	<div class="side-group">
+		    		<div class="title">Place</div>
+		    		<select class="selectpicker" title="Youtube">
+			    		<option value="Youtube">Youtube</option>
+			    		<option value="Skin 2">Skin 2</option>
+			    		<option value="Skin 3">Skin 3</option>
+			    	</select>
+		    	</div>
+
+		    	<div class="side-group">
+		    		<div class="title">Color scheme</div>
+		    		<div class="colors">
+		    		<a href="#" data-color="#c0fa34"></a>
+		    		<a href="#" data-color="#f0c5da"></a>
+		    		</div>
+ 		    	</div>
+	    	</div>
+
+	    	<div class="widget-panel">
+	    		<div class="head">
+		    		<div class="title">Widget</div>
+			    	<a href="#" class="add">+Add</a>
+		    	</div>
+		    	<ul>
+		    		<li><a href="">Name of widget</a></li>
+		    		<li><a href="">Loader</a></li>
+		    		<li><a href="">Name of widget</a></li>
+		    		<li><a href="">Downloader</a></li>
+		    	</ul>
+	    	</div>
+
+    	</aside>
+    	<section class="main-content">
+	    	<div class="page">
+		    	<div class="img">
+		    		<img src="img/widget-main.png" alt="" />
+		    	</div>		    				
+    		</div>
+    	</section>
+    </div>
+
+    <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
+    <script type='text/javascript' src="js/popper.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/jquery-ui.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mousewheel.min.js"></script>
+    <script type='text/javascript' src="js/jquery.touchSwipe.min.js"></script>
+    <script type='text/javascript' src="js/jquery.interpolate.min.js"></script>
+	<script type='text/javascript' src="js/jquery.coverflow.js"></script>
+    <script type='text/javascript' src="js/svg4everybody.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type='text/javascript' src="js/dropzone.js"></script>
+    <script type="text/javascript" src="js/trumbowyg.min.js"></script>
+    <script type="text/javascript" src="js/simplebar.js"></script>
+    <script type="text/javascript" src="js/plyr.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>
