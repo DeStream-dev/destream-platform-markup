@@ -252,6 +252,17 @@ $('.confirm-transfer input[name="key"]').on("change",function(){
   $('.'+ val +'-field').show();
 });
 
+$('.switch input[name="switch"]').on("change",function(){
+ var val = $(this).val();
+  if(val == '1'){
+    $('.is-voting').show();
+  }
+    else $('.is-voting').hide();
+  
+});
+
+
+
 if($('.text-editor').length){
   $.trumbowyg.svgPath = 'img/text-editor/icons.svg';
   $('.text-editor').trumbowyg({
@@ -360,7 +371,9 @@ var availableTags = [
     });
 
 
-
+$('.form .tags span').on('click', function(){
+  //alert(0);
+});
 
 });
 

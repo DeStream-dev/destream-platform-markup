@@ -365,5 +365,21 @@
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M8.55469 0.777344H4.66602V2.33203H8.55469V0.777344ZM0.777344 3.11133H1.55469V4.66602H0.777344V3.11133ZM11.666 4.66602V14H1.55469V4.66602H3.11035V12.4434H10.1104V4.66602H11.666ZM11.666 4.66602V3.11133H12.4443V4.66602H11.666ZM4.66602 6.22266H6.22168V10.8887H4.66602V6.22266ZM8.55566 6.22266H7V10.8887H8.55566V6.22266Z" />
 	</g>
 
+	<g viewBox="0 0 15 6" id="move">
+		<rect opacity="0.4" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.4" x="2" y="3" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.4" x="4" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.4" x="6" y="3" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.4" x="8" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.4" x="12" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.4" x="10" y="3" width="2" height="2" fill="#AAB1B8"/>
+		<rect opacity="0.5" x="1" y="1" width="2" height="2" fill="black"/>
+		<rect opacity="0.5" x="3" y="4" width="2" height="2" fill="black"/>
+		<rect opacity="0.5" x="5" y="1" width="2" height="2" fill="black"/>
+		<rect opacity="0.5" x="7" y="4" width="2" height="2" fill="black"/>
+		<rect opacity="0.5" x="9" y="1" width="2" height="2" fill="black"/>
+		<rect opacity="0.5" x="13" y="1" width="2" height="2" fill="black"/>
+		<rect opacity="0.5" x="11" y="4" width="2" height="2" fill="black"/>
+	</g>
 
 </svg>

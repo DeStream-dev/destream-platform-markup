@@ -70,21 +70,21 @@
 			      			<a class="btn btn-transparent" href="#">+Add widget</a>
 			      				</div>
 			      		<div class="btn-group">
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#undo"></use></svg></span></a>
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#redo"></use></svg></span></a>
+			      			<a href="#"><span class="icon undo"><svg><use xlink:href="img/vectors.svg#undo"></use></svg></span></a>
+			      			<a href="#"><span class="icon redo"><svg><use xlink:href="img/vectors.svg#redo"></use></svg></span></a>
 			      		</div>
 			      		<div class="btn-group">
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#zoomin"></use></svg></span></a>
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#zoomout"></use></svg></span></a>
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#fullscreen"></use></svg></span></a>
+			      			<a href="#"><span class="icon zoomin"><svg><use xlink:href="img/vectors.svg#zoomin"></use></svg></span></a>
+			      			<a href="#"><span class="icon zoomout"><svg><use xlink:href="img/vectors.svg#zoomout"></use></svg></span></a>
+			      			<a href="#"><span class="icon fullscreen"><svg><use xlink:href="img/vectors.svg#fullscreen"></use></svg></span></a>
 			      		</div>
 			      		<div class="btn-group">
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#save"></use></svg></span></a>
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#note"></use></svg></span></a>
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#plain"></use></svg></span></a>
+			      			<a href="#"><span class="icon save"><svg><use xlink:href="img/vectors.svg#save"></use></svg></span></a>
+			      			<a href="#"><span class="icon note"><svg><use xlink:href="img/vectors.svg#note"></use></svg></span></a>
+			      			<a href="#"><span class="icon plane"><svg><use xlink:href="img/vectors.svg#plane"></use></svg></span></a>
 			      		</div>
 			      		<div class="btn-group">
-			      			<a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#lifering"></use></svg></span></a>
+			      			<a href="#"><span class="icon lifering"><svg><use xlink:href="img/vectors.svg#lifering"></use></svg></span></a>
 			      		</div>
 			      	</div>
 
@@ -153,6 +153,213 @@
     	</section>
     </div>
 
+
+
+    <!--Add widget window-->
+<div class="modal-form modal-widget modal-add-widget modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-add-widget" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+            <div class="form">
+                        <form  data-toggle="validator" role="form">    
+            	<div class="row">
+					<div class="col-12 col-sm-5">
+						<div class="widget-panel">
+			            	<div class="title">Add widget</div>
+
+			            	<div class="search-panel">
+					            <div class="search-input">
+					                <input type="search" placeholder="Search" />  
+					                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+					            </div>                 
+					        </div>
+
+					        <div class="menu">
+							            <ul>
+								        	<li>
+								        		<a href="#">Elements</a>
+									        	<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>
+													<li><a href="#">Counters</a></li>
+													<li><a href="#">Goals</a></li>
+													<li><a href="#">Trains</a></li>
+													<li><a href="#">Miscellaneous</a></li>
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+								        	</li>
+											<li>
+												<a href="#">Alerts</a>
+												<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>
+													<li><a href="#">Goals</a></li>
+													<li><a href="#">Trains</a></li>
+													<li><a href="#">Miscellaneous</a></li>
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+											</li>
+											<li>
+												<a href="#">Labels</a>
+												<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>
+													<li><a href="#">Counters</a></li>
+													<li><a href="#">Goals</a></li>
+									        	</ul>
+											</li>
+											<li>
+												<a href="#">Counters</a>
+												<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>
+													<li><a href="#">Goals</a></li>
+													<li><a href="#">Trains</a></li>
+													<li><a href="#">Miscellaneous</a></li>
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+											</li>
+											<li>
+												<a href="#">Goals</a>
+												<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>
+													<li><a href="#">Counters</a></li>
+													<li><a href="#">Goals</a></li>
+													<li><a href="#">Trains</a></li>
+													<li><a href="#">Miscellaneous</a></li>
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+											</li>
+											<li>
+												<a href="#">Trains</a>
+												<ul class="submenu">
+									        		<li><a href="#">Goals</a></li>
+													<li><a href="#">Trains</a></li>
+													<li><a href="#">Miscellaneous</a></li>
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+											</li>
+											<li>
+												<a href="#">Miscellaneous</a>
+												<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>
+													<li><a href="#">Counters</a></li>
+													<li><a href="#">Goals</a></li>
+													<li><a href="#">Trains</a></li>
+													<li><a href="#">Miscellaneous</a></li>
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+											</li>
+											<li>
+												<a href="#">Overlay</a>
+												<ul class="submenu">
+									        		<li><a href="#">Alerts</a></li>
+													<li><a href="#">Labels</a></li>													
+													<li><a href="#">Overlay</a></li>
+									        	</ul>
+											</li>
+								        </ul>
+					        </div>
+			            </div>
+					</div>
+					<div class="col-12 col-sm-7">
+						<div class="current-content">
+							<div class="inner">
+				            	<div class="title">Counters / super chat counter</div>
+
+				            	<div class="text">			            		
+				            		In this section, you can add service catalogs for different types of streams. By attaching catalogs to the broadcast.
+				            	</div>
+				            	<div class="example">
+				            	<div class="inner"><img src="img/widget.svg" width="378" height="67" />
+									</div>
+				            	</div>
+	                            <div class="form-group text-center">                                
+	                                <button class="btn" type="submit">Add</button>                                    
+	                            </div>
+                            </div>
+			            </div>
+					</div>
+            	</div>             	
+            	</form>
+            	</div>
+
+                          
+            </div>
+        </div>
+    </div>
+</div>
+<!--Add widget window end-->
+
+
+    <!--Widget FX window-->
+<div class="modal-form modal-widget modal-widget-fx modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-widget-fx" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+            <div class="form">
+                        <form  data-toggle="validator" role="form">    
+            	<div class="row">
+					<div class="col-12 col-sm-3">
+						<div class="widget-panel">
+			            	<div class="title">Animation</div>
+				            	<div class="menu one-level">
+							            <ul>
+								        	<li><a href="#">None</a></li>
+											<li><a href="#">Bounce in</a></li>
+											<li><a href="#">Fade in</a></li>
+											<li><a href="#">Flip in X</a></li>
+											<li><a href="#">Flip in Y</a></li>
+											<li><a href="#">Light speed in</a></li>
+											<li><a href="#">Zoom in</a></li>
+											<li><a href="#">Roll in</a></li>
+								        </ul>
+					        </div>
+			            </div>
+					</div>
+					<div class="col-12 col-sm-9">
+						<div class="current-content">
+							<div class="inner">
+				            	<div class="title">Flip in x</div>
+
+				            	<div class="text">			            		
+				            		In this section, you can add service catalogs for different types of streams. By attaching catalogs to the broadcast.
+				            	</div>
+				            	<div class="example">
+				            		<div class="inner">
+				            			<span class="txt">Player</span><img src="img/widget.svg" width="378" height="67" />
+				            		</div>
+				            	</div>
+	                            <div class="form-group text-center">                                
+	                                <button class="btn" type="submit">Add</button>                                    
+	                            </div>
+                            </div>
+			            </div>
+					</div>
+            	</div>             	
+            	</form>
+            	</div>
+
+                          
+            </div>
+        </div>
+    </div>
+</div>
+<!--WidgetFX window end-->
+
+
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
@@ -169,6 +376,15 @@
     <script type="text/javascript" src="js/simplebar.js"></script>
     <script type="text/javascript" src="js/plyr.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+
+    <script>
+     $(function () {
+
+	    $('.modal-add-widget').modal('show');
+	     $('.modal-widget-fx').modal('show');
+
+       });
+    </script>
 
   </body>
 </html>

@@ -1777,7 +1777,7 @@
 
                             <div class="form-group" aria-required="true">
                                 <label class="control-label">Attach server catalog</label>
-                                <div class="service-catalog">
+                                <div class="server-catalog">
 	                                <select class="selectpicker" title="Select server catalog">
 			    						<option value="cat1">Catalog 1</option>
 			    						<option value="cat2">Catalog 2</option>
@@ -1790,28 +1790,29 @@
 						        </div> 
                             </div>
 
-                            <div class="form-group" aria-required="true">
+                            <div class="form-group voting" aria-required="true">
                                 <label class="control-label">Voting</label>
-                                <div class="switch">
-                                	<div class="radio form-group form-group-radio">
-	                                    <label>
-	                                   	    <input type="radio" name="switch" checked="checked" value="Yes"><span></span>
-	                                        Yes
-	                                    </label>
-	                                </div>
+                                <div class="switch">                                	
 	                            	<div class="radio form-group form-group-radio">
 	                                    <label>
-	                                   	    <input type="radio" name="switch" value="No"><span></span>
+	                                   	    <input type="radio" name="switch" value="0"><span></span>
 	                                        No
 	                                    </label>
 	                                </div>
+	                                <div class="radio form-group form-group-radio">
+	                                    <label>
+	                                   	    <input type="radio" name="switch" checked="checked" value="1"><span></span>
+	                                        Yes
+	                                    </label>
+	                                </div>
                                 </div>
-
-                                <input type="text" class="form-control" placeholder="Option">
-
-                                <input type="text" class="form-control" placeholder="Option">
-                                <div class="add-option"><span></span>Add option</div>
                             </div>
+                                <div class="is-voting">
+                                <input type="text" class="form-control" placeholder="Option">
+
+                                <input type="text" class="form-control" placeholder="Option">
+                                <a href="#" class="add-option">Add option</a>
+                           
 
                             <div class="limits">
                             	<div class="radio form-group form-group-radio">
@@ -1827,8 +1828,8 @@
                                     </label>
                                 </div>
                             </div>
-
-                            <div class="form-group">                                
+                            </div>
+                            <div class="form-group text-center">                                
                                 <button class="btn" type="submit">Create</button>                                    
                             </div>
                            </form>
@@ -1873,7 +1874,7 @@
 
      // $('.modal-auth').modal('show');
 
-     //$('.modal-create-future-stream').modal('show');
+     $('.modal-create-future-stream').modal('show');
 
        });
     </script>
