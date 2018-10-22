@@ -56,3 +56,8 @@ Update 17.10
 5. Markup for Overlays general page
 6. Markup for Overlays widget page
 7. Adding murkup and styles for correct display in iPad for pages index.html, messages.html, overlays.html, live-broadcast.html, wallet.html, mychannel.html, settings.html
+
+Update 18.10
+1. Popup window Create Future Stream with function for toggle voting. 
+2. Popup window Add widget. 
+3. Popup window Widget animation
