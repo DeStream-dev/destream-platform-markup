@@ -61,3 +61,8 @@ Update 18.10
 1. Popup window Create Future Stream with function for toggle voting. 
 2. Popup window Add widget. 
 3. Popup window Widget animation
+
+Update 22.10
+1. Popup windows Audio, Add audio. 
+2. Adding murkup and styles for correct display in iPad for pages of widget: widget.html, widget2.html. 
+3. Adding script in function of range element from widget setup options
