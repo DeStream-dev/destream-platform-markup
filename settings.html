@@ -383,9 +383,21 @@
 				<div class="tab-content">
 				  <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
 				  		<div class="form personal">
-				  		<form data-toggle="validator" role="form">
+				  		<form data-toggle="validator" role="form" class="dropzone" id="personaltabform" action="/file-upload" method="post" enctype="multipart/form-data">
 				  		<div class="user-info">
 		    			<span class="icon"><img src="img/anar.png" width="461" height="614" alt="" /></span>
+		    						<div class="change-photo">
+						            		<div class="dz-default dz-message">
+														<span>
+															<b>Drag the image here</b> or select on computer
+														</span>
+													</div>
+													<div class="fallback">
+													    <input name="file" type="file" multiple />
+													</div>
+													<div class="preview"></div>
+					            		</div>
+
 		    			</div>
 							<div class="form-group" aria-required="true">
                                 <label class="control-label" for="login">Nickname</label>

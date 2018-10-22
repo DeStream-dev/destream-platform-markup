@@ -15,6 +15,9 @@
   <body class="widget">
   	<header> 
   		   <h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+  		   <a class="menu-toggle d-block d-xl-none" href="#">
+					    <img src="img/ham.svg" width="18" height="12" alt="" />
+				</a>
 			    <div class="user-panel">			     	
 			     	<div class="user-btn-cont">
 			     		<a href="#" class="icon dropdown-toggle" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,6 +68,8 @@
 			    	</div>
 			    </div>
 
+			    
+
 			    <div class="top-panel">
 			      		<div class="btn-group">
 			      			<a class="btn btn-transparent" href="#">+Add widget</a>
@@ -89,9 +94,9 @@
 			      	</div>
 
 	</header>
-
     <div class="content">
     	<aside class="main-sidebar">
+    	  <div class="main-sidebar-content">
 	    	<div class="setup">
 		    	<div class="side-group">
 		    		<div class="title big">Overlay name</div>
@@ -142,7 +147,7 @@
 		    		<li><a href="">Downloader</a></li>
 		    	</ul>
 	    	</div>
-
+	    	</div>
     	</aside>
     	<section class="main-content">
 	    	<div class="page">
@@ -281,7 +286,7 @@
 				            	<div class="inner"><img src="img/widget.svg" width="378" height="67" />
 									</div>
 				            	</div>
-	                            <div class="form-group text-center">                                
+	                            <div>                                
 	                                <button class="btn" type="submit">Add</button>                                    
 	                            </div>
                             </div>
@@ -299,7 +304,7 @@
 <!--Add widget window end-->
 
 
-    <!--Widget FX window-->
+<!--Widget FX window-->
 <div class="modal-form modal-widget modal-widget-fx modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-widget-fx" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
@@ -342,7 +347,7 @@
 				            			<span class="txt">Player</span><img src="img/widget.svg" width="378" height="67" />
 				            		</div>
 				            	</div>
-	                            <div class="form-group text-center">                                
+	                            <div>                                
 	                                <button class="btn" type="submit">Add</button>                                    
 	                            </div>
                             </div>
@@ -350,14 +355,164 @@
 					</div>
             	</div>             	
             	</form>
-            	</div>
-
-                          
+            	</div>                          
             </div>
         </div>
     </div>
 </div>
 <!--WidgetFX window end-->
+
+<!--Audio window-->
+<div class="modal-form modal-widget modal-audio modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-audio" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+            
+            	<div class="row">
+					<div class="col-12 col-sm-4">
+						<div class="widget-panel">
+			            	<div class="title">Audio</div>
+			            	<a class="add-audio" href="#">+ Add audio</a>
+			            	<div class="search-panel">
+					            <div class="search-input">
+					                <input type="search" placeholder="Search" />  
+					                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+					            </div>                 
+					        </div>
+				            	<div class="menu one-level">
+							            <ul>
+								        	<li><a href="#">My audio</a></li>
+											<li><a href="#">System audio</a></li>
+											<li><a href="#">BEEP</a></li>
+											<li><a href="#">Sound gallery</a></li>
+								        </ul>
+					        </div>
+			            </div>
+					</div>
+					<div class="col-12 col-sm-8">
+						<div class="current-content">
+							<div class="inner">
+							<div class="adding-audio-cont">
+								<div class="title">Add audio</div>
+								<div class="form">
+					            	<form class="dropzone" id="addaudioform" action="/file-upload" method="post" enctype="multipart/form-data">
+						            	<div class="form-group">
+						            		<div class="dz-default dz-message">
+														<span>
+															<b>Drag your audio here</b> or select on computer
+														</span>
+													</div>
+													<div class="fallback">
+													    <input name="file" type="file" multiple />
+													</div>
+													<div class="preview"></div>
+					            		</div>
+					            		<div class="form-group" aria-required="true">
+			                                <label class="control-label" for="bylink">By link</label>
+			                                <input type="text" id="bylink" class="form-control" placeholder="Enter your Audio URL here">
+			                            </div>
+
+			                             <div>                                
+	                                <button class="btn" type="submit">Add</button>                                    
+	                            </div>
+					            	</form>
+					            </div>
+							</div>
+				            	<div class="title">My audio</div>
+				            	<div class="items">
+				            		<dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl class="selected">
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+			                        <dl>
+			                            <dd class="play"></dd>
+			                            <dd class="name">Name of file</dd>
+			                            <dd class="size">23.2 Mb</dd>
+			                            <dd class="duration">2 sec</dd>
+			                        </dl>
+
+				            	</div>
+                            </div>
+			            </div>
+					</div>
+            	
+            	</div>                          
+            </div>
+        </div>
+    </div>
+</div>
+<!--Audio window end-->
 
 
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
@@ -380,8 +535,9 @@
     <script>
      $(function () {
 
-	    $('.modal-add-widget').modal('show');
-	     $('.modal-widget-fx').modal('show');
+	   // $('.modal-add-widget').modal('show');
+	   // $('.modal-widget-fx').modal('show');
+	  // $('.modal-audio').modal('show');
 
        });
     </script>

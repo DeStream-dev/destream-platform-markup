@@ -106,6 +106,10 @@ span.size{ display: none; }
     .container-fluid {
         border: 1px solid orange;       
     }
+    .widget header .user-panel{
+      width: unset;
+      margin-left: 70px;
+    }
 }
 
 
@@ -162,6 +166,54 @@ span.size{ display: none; }
     margin-right: 5px;
     padding-top: 21px;
   }
+  body.widget > .content{
+  height: calc(100% - 120px);
+}
+.main-content .page{
+  padding-left: 50px;
+  padding-right: 50px;
+  position: absolute;
+  top: 50%;
+   -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    max-height: 100%;
+    overflow: hidden;
+}
+.widget header .top-panel{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  background-color: #282d33;
+  padding: 10px 0;
+  text-align: center;
+}
+body.widget > .content{
+  z-index: 121;
+}
+.widget .menu-toggle{
+  float: right;
+  margin-left: 100px;
+  margin-right: 15px;
+}
+.widget {
+  overflow: hidden;
+}
+.widget.sidebar-collapse .main-sidebar{
+  right: -307px;
+
+}
+.widget.sidebar-collapse .main-content{
+  width: 100%;
+}
+
+.widget .main-sidebar{
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
  }
 
 
@@ -310,9 +362,18 @@ header  div[class*='col-']{
   padding: 20px 50px;
 
 }
+
+body.widget > .content{
+  height: calc(100% - 120px);
+}
 .main-content .page{
   padding-left: 50px;
   padding-right: 50px;
+  position: absolute;
+  top: 50%;
+   -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 .payment-history .item dd.link{
   top: 20px;
@@ -493,7 +554,40 @@ text-align: left;
 .modal-auth .forget-password a{
   top: 82px;
 }
+.widget header .top-panel{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  background-color: #282d33;
+  padding: 10px 0;
+  text-align: center;
+}
+body.widget > .content{
+  z-index: 121;
+}
+.widget .menu-toggle{
+  float: right;
+  margin-left: 100px;
+  margin-right: 15px;
+}
+.widget {
+  overflow: hidden;
+}
+.widget.sidebar-collapse .main-sidebar{
+  right: -307px;
 
+}
+.widget.sidebar-collapse .main-content{
+  width: 100%;
+}
+
+.widget .main-sidebar{
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 
 }
 

@@ -375,6 +375,35 @@ $('.form .tags span').on('click', function(){
   //alert(0);
 });
 
+$('.modal-audio .add-audio').on('click', function(){
+  $('.modal-audio').toggleClass('adding-audio')
+  $('.modal-audio .adding-audio-cont').fadeToggle();
+  return false;
+});
+$('.adding-audio-cont .btn').on('click', function(){
+  $('.modal-audio').removeClass('adding-audio')
+  $('.modal-audio .adding-audio-cont').fadeOut();
+  return false;
+});
+
+$('.page.mychannel .head .user-info .name a').on('click', function(){
+  $('.page.mychannel .head .user-info .name span').attr('contenteditable',"true").focus();
+  return false;
+});
+
+$('.range .val').each(function(){
+  $(this).html($(this).parents('.range').find('input[type="range"]').val());
+});
+$('.range input[type="range"]').on("change", function(){
+  var val = $(this).val();
+  var txt = $(this).parents('.range').find('span')
+  txt.html(val);
+});
+$('input[type=range]').on('input', function () {
+    $(this).trigger('change');
+    $(this).attr('value', $(this).val());
+});
+
 });
 
 
@@ -383,7 +412,7 @@ Dropzone.options.transferform = {
   autoProcessQueue: false,
   uploadMultiple: false,
   parallelUploads: 1,
-  maxFiles: 200,
+  maxFiles: 1,
   createImageThumbnails: false,
   addRemoveLinks: false,
   previewsContainer: ".modal-transfer .preview",
@@ -403,13 +432,13 @@ Dropzone.options.transferform = {
      });
   }
  
-}
+};
 
 Dropzone.options.addblockform = { 
   autoProcessQueue: false,
   uploadMultiple: false,
   parallelUploads: 1,
-  maxFiles: 200,
+  maxFiles: 1,
   createImageThumbnails: true,
   addRemoveLinks: false,
   thumbnailWidth: null,
@@ -430,4 +459,61 @@ Dropzone.options.addblockform = {
     });
   }
  
+};
+
+
+
+Dropzone.options.personaltabform = { 
+  autoProcessQueue: false,
+  uploadMultiple: false,
+  parallelUploads: 1,
+  maxFiles: 1,
+  createImageThumbnails: true,
+  addRemoveLinks: false,
+  thumbnailWidth: null,
+  thumbnailHeight: null,
+  previewsContainer: ".settings .personal .preview",
+  previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-image\"><img data-dz-thumbnail /></div>\n  </div>",
+
+  init: function() {
+    var myDropzone = this; 
+    var newfile = "";
+    this.on("addedfile", function(file) {
+       if(newfile) {
+        $('.settings .personal .preview .dz-preview:first-of-type').remove();
+      }
+      newfile = $('.settings .personal [data-dz-name]').html();
+      $('.settings .personal .change-photo').addClass("added");
+
+    });
+  }
+ 
+};
+
+
+Dropzone.options.addaudioform = { 
+  autoProcessQueue: false,
+  uploadMultiple: false,
+  parallelUploads: 1,
+  maxFiles: 1,
+  createImageThumbnails: false,
+  addRemoveLinks: false,
+  previewsContainer: ".modal-audio .preview",
+  previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n ",
+
+  init: function() {
+    var myDropzone = this;
+    var newfile = "";
+
+    this.on("addedfile", function(file) {
+      if(newfile) {
+        $('.modal-audio .preview .dz-preview:first-of-type').remove();
+      }
+      newfile = $('.modal-audio [data-dz-name]').html();
+      $('.confirm-transfer .key-file-field').addClass("file-added");
+      $('.confirm-transfer .key-file-field .ok').show();
+     });
+  }
+ 
 }
+
