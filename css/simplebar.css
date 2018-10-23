@@ -44,16 +44,16 @@
 
 .simplebar-scrollbar {
     position: absolute;
-    right: 2px;
-    width: 7px;
+    right: 5px;
+    width: 4px;
     min-height: 10px;
 }
 
 .simplebar-scrollbar:before {
     position: absolute;
     content: "";
-    background: black;
-    border-radius: 7px;
+    background: #aab1b8;
+    border-radius: 2px;
     left: 0;
     right: 0;
     opacity: 0;
@@ -62,7 +62,7 @@
 
 .simplebar-track .simplebar-scrollbar.visible:before {
     /* When hovered, remove all transitions from drag handle */
-    opacity: 0.5;
+    opacity: 0.7;
     transition: opacity 0 linear;
 }
 

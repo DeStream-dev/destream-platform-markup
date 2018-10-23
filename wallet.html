@@ -15,16 +15,16 @@
     <title>Destream Portal Wallet</title>
   </head>
   <body>
-  <header> 
+ <header> 
   		<div class="container-fluid"> 
 		  	<div class="row">
-			    <div class="col col-md-3">
+			    <div class="col-12 col-sm-3 col-lg-3">
 			        <a class="menu-toggle" href="#">
 					    <img src="img/ham.svg" width="18" height="12" alt="" />
 					</a>			        
 					<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
 			    </div>
-			    <div class="col-md-4 col-lg-4 col-xl-5">
+			    <div class="col-12 col-sm-5 col-lg-4 col-xl-5">
 			      	<div class="search-panel">
 			            <div class="search-input">
 			                <input type="search" placeholder="Search" />  
@@ -32,7 +32,7 @@
 			            </div>                 
 			        </div>
 			    </div>
-			    <div class="col col-md-5 col-lg-5 col-xl-4">			     	
+			    <div class="col-12 col-sm-4 col-lg-5 col-xl-4">			     	
 			     	<div class="user-btn-cont">
 			     		<a href="#" class="icon dropdown-toggle" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			     			<img src="img/live-icon1.png" width="40" height="40" alt="" />
@@ -43,7 +43,7 @@
 				    			<li><a href="wallet.html"><span class="icon wallet"><svg><use xlink:href="img/vectors.svg#wallet"></use></svg></span> Wallet</a></li>
 				    			<li><a href="overlays.html"><span class="icon overlays"><svg><use xlink:href="img/vectors.svg#overlays"></use></svg></span> Overlays</a></li>
 				    			<li><a href="settings.html"><span class="icon settings"><svg><use xlink:href="img/vectors.svg#settings"></use></svg></span> Settings</a></li>
-				    			<li><a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
+				    			<li><a href="#" data-target=".modal-interest" data-toggle="modal"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
 				    		</ul>
 						</div>
 			     	</div>
@@ -95,31 +95,6 @@
 		  </div>
 		</div>
     </header>
-
-    <!--header> 
-  		<div class="container-fluid"> 
-		  	<div class="row">
-			    <div class="col col-md-3">
-			        <a class="menu-toggle" href="#">
-					    <img src="img/ham.svg" width="18" height="12" alt="" />
-					</a>			        
-					<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
-			    </div>
-			    <div class="col-md-7">
-			      	<div class="search-panel">
-			            <div class="search-input">
-			                <input type="search" placeholder="Search" />  
-			                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
-			            </div>                 
-			        </div>
-			    </div>
-			    <div class="col col-md-2">			     	
-			     	<a href="#" data-target=".modal-auth" data-toggle="modal" class="btn login">Log in</a>
-			    </div>
-		  </div>
-		</div>
-    </header-->
-   
     	<aside class="main-sidebar" data-simplebar>
     	  <div class="main-sidebar-content">
     		<div class="block account">
@@ -797,8 +772,11 @@
 		                            </div>
 		                            <div class="field key-file-field">
 		                            	<div class="dz-default dz-message">
-											<span>
-												Drag your key here or select key file
+											<span class="msg-lg d-none d-lg-block">
+											Drag your key here or select key file
+											</span>
+											<span class="msg-md d-block d-lg-none">
+												 Select key file
 											</span>
 										</div>
 										<div class="fallback">

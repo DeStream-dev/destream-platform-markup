@@ -121,6 +121,9 @@ span.size{ display: none; }
     z-index: 4;
     position: relative;
   }
+  .widget header{
+    z-index: 124;
+  }
   .main-sidebar{
    /* position: absolute;*/
     position: fixed;
@@ -217,7 +220,7 @@ body.widget > .content{
  }
 
 
-@media (min-width: 768px) and (max-width: 991.98px) { /* md */
+@media (min-width: 768px) and (max-width: 991.98px) { /* md  ipad*/
   .container-fluid{
     border: 1px solid cyan; 
   }
@@ -365,8 +368,9 @@ header  div[class*='col-']{
 
 body.widget > .content{
   height: calc(100% - 120px);
+  min-height: calc(100% - 120px);
 }
-.main-content .page{
+body.widget .main-content .page{
   padding-left: 50px;
   padding-right: 50px;
   position: absolute;
@@ -388,6 +392,58 @@ body.widget > .content{
   width: 145px;
   height: 145px;
 }
+.settings .personal .change-photo{
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 111, 121, 0.5);
+  left: 50%;
+  margin-left: -35px;
+  top: auto;
+  bottom: 10px;
+}
+.settings .personal .change-photo span.msg-md{
+  font-size: 14px;
+  color: #aab1b8;
+  top: -1px;
+  height: unset;
+}
+.modal-addblock .dropzone.file-added .dz-message span.msg-md{
+  top: 28px;
+}
+.modal-addblock .preview{
+  position: relative;
+  width: 100%;
+  left: 0;
+  margin: -60px 0 0;
+  overflow: visible;
+  height: 67px;
+}
+.modal-addblock .dropzone.file-added .preview{
+  height: 109px;
+}
+
+.modal-addblock .dropzone .dz-message span.msg-md{
+  text-transform: uppercase;
+  color: #444c54;
+  font-size: 14px;
+  border: 1px solid #cdd0d2;
+  border-radius: 20px;
+  padding: 10px 70px;
+  height: unset;
+  width: unset;
+  font-weight: bold;
+  display: inline-block !important;
+}
+.modal-addblock .dropzone.file-added .dz-message span{
+  background-color: #ffffff;
+}
+.dropzone .dz-preview.dz-image-preview{
+  left: 0;
+  width: 100%;
+}
+
 .settings .nav-item{
   margin-right: unset;
   -webkit-flex: 1 1 auto; 
@@ -505,9 +561,6 @@ text-align: left;
   margin: 0 3.5%;
  }
 
- input[type="text"], input[type="search"], input[type="email"], input[type="password"], input[type="number"], textarea, button, .destream-dropdown.bootstrap-select .btn{
-  border-radius: 0;
- }
  .modal .form input[type="text"], .modal .form input[type="email"], .modal .form input[type="password"], .modal .form input[type="number"], .modal .form textarea,
  .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
   left: 0;
@@ -589,6 +642,19 @@ body.widget > .content{
   overflow-x: hidden;
 }
 
+.settings .personal .change-photo{
+  opacity: 1;
+}
+
+.settings .personal .dropzone .dz-message span.msg-lg{
+  display: none !important
+}
+.confirm-transfer .key-file-field .ok, .confirm-transfer .key-file-field .error{
+  left: 15px;
+}
+.dropzone .dz-preview{left: 60px;}
+.modal-addservice .input .label{border-radius: 0;right: 5px;}
+
 }
 
 
@@ -596,58 +662,431 @@ body.widget > .content{
   .container-fluid{
     border: 1px solid magenta;
   }
- header .create-btn-cont .btn.create{
+   header .row{
+    margin: 0;
+  }
+header  div[class*='col-']{
+  padding: 0;
+}
+.logo{
+
+  white-space: nowrap;
+}
+.logo img{width: 90%;}
+.logo{margin: 8px 0 0 18px;}
+
+  header .create-btn-cont .btn.create{
     padding: 0 25px 0 15px;
   }
-   header .create-btn-cont .dropdown-toggle:after{
+  header .create-btn-cont .dropdown-toggle:after{
     right: 8px;
    }
+   header .user-btn-cont{
+    margin-right: 35px;
+   }
+  header .create-btn-cont{
+    margin-right: 25px;
+   }
+   header .notifications-cont{
+    margin-right: 37px;
+   }
   .main-sidebar{
-    position: fixed;/*absolute;*/
+    position: fixed;/* absolute;*/
     left: 0;
     top: 0;
     z-index: 100;
-    top: -60px;
-    height: calc(100% + 60px);
+    height: 100%;
     background-color: rgba(44,50,56,0.8);
     padding-top: 60px;
   }
   .main-content{
     width: 100%;
     margin-left: 0;
-  /*  position: relative;*/
+   /* position: relative;*/
   }
   .modal-interest .modal-lg{
     max-width: 100%;
   }
-
   .list .item .img{
     height: 180px;
   }
+
   .list-announcement-tile .item .img{
     height: 190px;
   }
   .list-announcement-tile .small .item .img{
   height: 220px;
   }
-  .list .item .share span{
-    margin-right: 3px;
-    font-size: 10px;
+  .myblocks .item a{ 
+  height: 210px;
+}
+.myblocks .small .item a,.myblocks .add-block{
+  height: 65px;
+  line-height: 65px;
+}
+.page.live-broadcast .head .user-info .name{
+  margin-right: 50px;
+}
+.page.live-broadcast .head .player, .list{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.page.live-broadcast .head .user-info,.page.mychannel .head .user-info{
+  padding-left: 50px;
+}
+.page.live-broadcast .head .user-info > div{
+  width: calc(100% - 100px);
+}
+.page.mychannel .head .user-info > div{
+  width: calc(100% - 200px);
   }
-  .list .item .share span svg{
-    margin-right: 3px;
+  .page.mychannel .head .icon{
+    width: 150px;
+    height: 150px;
   }
-  .list-announcement-tile .large .item .date{
-    font-size: 11px;
+.modal-header button.close{
+  right: 33px;
+  position: fixed;
+}
+.close svg{
+  stroke: #9b9b9b;
+}
+.modal-lg, .modal-md{
+  max-width: unset !important;
+  width: 100%;
+}
+.modal-content, .modal-addblock .dropzone .dz-message span{
+  border-radius: 0;
+}
+.in-wallet .score{
+  font-size: 21px;
+ }
+ .wallet .btns a{
+  width: auto;
+  margin-right: 7px;
+  padding-left: 18px;
+  padding-right: 18px;
+ }
+ .payment-history .setup .row{
+  margin: 0 -7px;
+ }
+ .payment-history .setup div[class*='col-']{
+  padding: 0 7px;
+ }
+
+ .payment-history .item .description{
+    width: calc(65% - 40px);
+ }
+ .payment-history .item .value{
+  font-size: 16px;
+  text-align: right;
+  line-height: 20px;
+  padding-right: 40px;
+  width: 30%;
+  position: relative;
+  top: -10px;
+ }
+  .payment-history .item .status{
+    padding-right: 23px;
+    padding-left: 0;
+    width: unset;
+    float: right;
+    right: 120px;
+    position: absolute;
+    top: 45px;
   }
-  .list-announcement-tile .large .description{
-    padding-left: 15px;
-    padding-right: 15px;
+ .payment-history .item .status:after{
+    right: 0;
+    left: auto;
+ }
+.payment-history .item{
+  padding: 20px 50px;
+
+}
+
+body.widget > .content{
+  height: calc(100% - 120px);
+}
+body.widget .main-content .page{
+  padding-left: 50px;
+  padding-right: 50px;
+  position: absolute;
+  top: 50%;
+   -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.payment-history .item dd.link{
+  top: 20px;
+}
+.wallet .total{
+  font-size: 16px;
+}
+.wallet .total .income, .wallet .total .outcome{
+  margin-left: 15px;
+}
+.settings .personal .icon{
+  width: 145px;
+  height: 145px;
+}
+.settings .personal .change-photo{
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 111, 121, 0.5);
+  left: 50%;
+  margin-left: -35px;
+  top: auto;
+  bottom: 10px;
+}
+.settings .personal .change-photo span.msg-md{
+  font-size: 14px;
+  color: #aab1b8;
+  top: -1px;
+  height: unset;
+}
+.modal-addblock .dropzone.file-added .dz-message span.msg-md{
+  top: 28px;
+}
+.modal-addblock .preview{
+  position: relative;
+  width: 100%;
+  left: 0;
+  margin: -60px 0 0;
+  overflow: visible;
+  height: 67px;
+}
+.modal-addblock .dropzone.file-added .preview{
+  height: 109px;
+}
+
+.modal-addblock .dropzone .dz-message span.msg-md{
+  text-transform: uppercase;
+  color: #444c54;
+  font-size: 14px;
+  border: 1px solid #cdd0d2;
+  border-radius: 20px;
+  padding: 10px 70px;
+  height: unset;
+  width: unset;
+  font-weight: bold;
+  display: inline-block !important;
+}
+.modal-addblock .dropzone.file-added .dz-message span{
+  background-color: #ffffff;
+}
+.dropzone .dz-preview.dz-image-preview{
+  left: 0;
+  width: 100%;
+}
+
+.settings .nav-item{
+  margin-right: unset;
+  -webkit-flex: 1 1 auto; 
+  -ms-flex: 1 1 auto; 
+  flex: 1 1 auto; 
+  text-align: center;
+}
+.settings .nav-item a{
+  display: inline-block;
+}
+/*.settings .nav-item:first-child{
+text-align: left;
   }
-  .list-announcement-tile .large .item .share{
-    margin-right: 5px;
-    padding-top: 21px;
+.settings .nav-item:last-child{
+  margin-right: 0;
+  text-align: right;
+}
+*/
+.settings .personal{
+  padding-left: 190px;
+  width: calc(100% - 30px);
+}
+
+.settings .integration .item .description{
+  padding-left: 75px;
+}
+.settings .integration .item .form-group-checkbox{
+  left: 7px;
+  top: 45px;
+}
+.settings .integration .item .icon{
+  left: 10px;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+}
+.settings .integration .item .icon svg{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.settings .integration .form-group input[type="checkbox"] + span{
+  width: 45px;
+  height: 25px;
+}
+.settings .notification .form-group input[type="checkbox"] + span{
+  width: 45px;
+  height: 25px;
+  margin-left: -22px;
+}
+.settings .integration .form-group input[type="checkbox"] + span:after,.settings .notification .form-group input[type="checkbox"] + span:after{
+  width: 21px;
+  height: 21px;
+}
+.settings .integration .form-group input[type="checkbox"]:checked + span:after,.settings .notification .form-group input[type="checkbox"]:checked + span:after{
+  left: 22px;
+}
+.settings .notification .item dd.event-name{
+  width: 20%;
+}
+.settings .services-catalog .form-control{
+  width: 50%;
+}
+.services-catalog .list.open .item{
+  padding-bottom: 20px;
+}
+.services .list.open{
+  padding-bottom: 10px;
+}
+.services-catalog .list .item .text{
+  margin-top: 0;
+  padding-top: 5px;
+}
+.form.interest .search-panel .search-input input[type="search"]{
+  width: 100%;
+}
+.form.interest .search-panel .form-group-checkbox{
+  margin-right: 25px;
+}
+.form.interest .list .form-group-checkbox label{
+  height: 240px;
+}
+.form.interest .items-lifestyle .form-group-checkbox label{
+  height: 188px;
+}
+.modal-interest .form.interest .list .form-group-checkbox label{
+  height: 230px;
+}
+.modal-interest .form.interest .items-lifestyle .form-group-checkbox label{
+  height: 180px;
+}
+.form.interest .list .form-group-checkbox label:after{
+  background-color: #dbe0e6;
+}
+.form.interest .list .form-group-checkbox label i{
+  color: #383e44;
+}
+ .modal-auth .form button, .modal-recovery-password .btn.recovery-send{
+  left: 0;
+  width: unset;
+  margin: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+ }
+ .or{
+  width: 60%;
+  margin: auto;
+ }
+ .modal-auth .social{
+  width: 70%;
+  margin: auto;
+ }
+ .modal-auth .social a{
+  margin: 0 3.5%;
+ }
+
+ .modal .form input[type="text"], .modal .form input[type="email"], .modal .form input[type="password"], .modal .form input[type="number"], .modal .form textarea,
+ .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+ }
+.modal .form button{
+  left: 0;
+ }
+ .modal-transfer-2 .btn-next{
+  margin-right: 0;
+ }
+ .converter .go{
+  margin-left: 18px;
+  margin-right: 18px;
+ }
+ .bootstrap-select>.dropdown-toggle,.converter .label{
+  border-radius: 0;
+ }
+ .votes input[type="number"]{
+  border-radius: 20px;
+ }
+   .modal-announcement .remindme{
+    margin-right: 45px;
   }
+
+  .modal-dialog, .modal-dialog-centered{
+    margin: 0 auto;
+    background-color: #f8f8f9;
+    min-height: 100%;
+
+  }
+.modal-content{
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+.modal-auth .modal-content{
+  padding-left: 110px;
+  padding-right: 110px;
+  }
+.modal-auth .forget-password a{
+  top: 82px;
+}
+.widget header .top-panel{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  background-color: #282d33;
+  padding: 10px 0;
+  text-align: center;
+}
+body.widget > .content{
+  z-index: 121;
+}
+.widget .menu-toggle{
+  float: right;
+  margin-left: 100px;
+  margin-right: 15px;
+}
+.widget {
+  overflow: hidden;
+}
+.widget.sidebar-collapse .main-sidebar{
+  right: -307px;
+
+}
+.widget.sidebar-collapse .main-content{
+  width: 100%;
+}
+
+.widget .main-sidebar{
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.settings .personal .change-photo{
+  opacity: 1;
+}
+
+.settings .personal .dropzone .dz-message span.msg-lg{
+  display: none !important
+}
+
 
  }
 
