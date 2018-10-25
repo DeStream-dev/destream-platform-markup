@@ -375,6 +375,8 @@ $('.adding-audio-cont .btn').on('click', function(){
   return false;
 });
 
+
+
 });
 
 
@@ -386,7 +388,7 @@ Dropzone.options.transferform = {
   maxFiles: 1,
   createImageThumbnails: false,
   addRemoveLinks: false,
-  previewsContainer: ".modal-transfer .preview",
+  previewsContainer: ".modal-transfer-2 .preview",
   previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n ",
 
   init: function() {
@@ -498,7 +500,11 @@ if($('[data-rangeslider]').length){
         function valueOutput(element) {
             var value = element.value;
             var output = element.parentNode.getElementsByTagName('output')[0] || element.parentNode.parentNode.getElementsByTagName('output')[0];
-            output[textContent] = value;
+            if(output) output[textContent] = value;
+            if($(element).data("for") != undefined){
+              output = $('#'+$(element).data("for"));
+              output.val(value);
+            }
         }
 
         $document.on('input', 'input[type="range"], ' + selector, function(e) {

@@ -978,7 +978,7 @@ footer .social {
   color: #f05a00;
 }
 .modal-body{
-  padding-bottom: 20px;
+  padding: 20px;
 }
 .modal-recovery-password-ok .modal-body{
   padding-bottom: 40px;  
@@ -990,7 +990,7 @@ footer .social {
   padding: 25px 0;
   font-size: 15px;
   text-transform: uppercase;
-  color: #152a3c;
+  color: #0b1f30;
   font-weight: bold;
 }
 .modal-auth .social{
@@ -2788,7 +2788,7 @@ button.close {
   fill: #737c85;
 }
 
-.modal-buydst .title, .modal-transfer .title{
+.modal-buydst .title, .modal-transfer .title, .modal-transfer-2 .title{
   border-bottom: 1px solid #dbe0e6;
   opacity: 0.7;
 }
@@ -2810,9 +2810,9 @@ button.close {
   opacity: 0.7;
   padding: 20px 0 10px;
   }
-.converter .info{
+.converter .info, .form .info{
   font-size: 12px;
-  color: #666f79;
+  color: #0b1f30;
   text-transform: uppercase;
   font-weight: bold;
   padding: 20px 0;
@@ -2887,16 +2887,16 @@ button.close {
   position: relative;
   top: -1px;
 }
-.modal-buydst .buttons, .modal-transfer .buttons {
+.modal-buydst .buttons, .modal-transfer .buttons, .modal-transfer-2 .buttons {
  border-top: 1px solid #dbe0e6;
  padding-top: 30px;
  padding-bottom: 15px;
 }
 
-.modal-buydst .buttons .btn, .modal-transfer .buttons .btn{
+.modal-buydst .buttons .btn, .modal-transfer .buttons .btn, .modal-transfer-2 .buttons .btn{
   width: unset;
 }
-.modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next{
+.modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next, .modal-transfer-2 .buttons .btn-next{
   float: right;
 }
 
@@ -2908,6 +2908,9 @@ button.close {
   width: 100%;
   position: relative;  
   margin-bottom: 15px;
+}
+.modal-equiring .items{
+  margin-bottom: -15px;
 }
 .modal-equiring .item img{
   width: auto;
@@ -5314,7 +5317,7 @@ header .search-input{
  background-color: #eef0f1;
  border-radius: 15px;
  font-weight: 500;
- padding: 0;
+ padding: 3px 0;
  text-align: center;
  font-size: 13px;
  line-height: 24px;
@@ -5434,6 +5437,12 @@ header .search-input{
   width: calc(100% - 40px);
   display: inline-block;
 }
+.range.full input[type=range], .range.full .rangeslider--horizontal{
+  width: 100%;
+  display: block;
+  margin: 40px 0;
+}
+
 .range output{
   display: inline-block;
   width: 35px;

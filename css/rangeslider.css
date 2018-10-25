@@ -107,3 +107,28 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   -webkit-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
   box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
 }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* md  ipad*/
+
+.rangeslider {
+  background: #dbe0e6;
+}
+.rangeslider--horizontal{
+  border-bottom: none;
+}
+.rangeslider__handle:after {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eaeaea), color-stop(100%, #f5f7f8));
+  background-image: -moz-linear-gradient(180deg, #eaeaea 0%, #f5f7f8 100%);
+  background-image: -webkit-linear-gradient(180deg, #eaeaea 0%, #f5f7f8 100%);
+  background-image: linear-gradient(180deg, #eaeaea 0%, #f5f7f8 100%);
+  border-color: #dbe0e6;
+  -moz-box-shadow:  0px 1px 2px rgba(115, 124, 133, 0.5);
+  -webkit-box-shadow:  0px 1px 2px rgba(115, 124, 133, 0.5);
+  box-shadow:  0px 1px 2px rgba(115, 124, 133, 0.5);
+ }
+ .rangeslider--horizontal .rangeslider__handle {
+  top: -8px;
+}
+
+}
