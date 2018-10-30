@@ -298,8 +298,11 @@
 .plyr--video .plyr__controls .plyr__control[aria-expanded=true] svg {
     fill: #f05a00;
 }
+.plyr.plyr--audio{
+    min-width: unset;
+}
 .plyr--audio .plyr__controls {
-    background: olive;/* #fff;*/
+    background: transparent;
     border-radius: inherit;
     color: #4f5b5f;
     padding: 10px

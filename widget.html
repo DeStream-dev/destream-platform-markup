@@ -141,7 +141,7 @@
 	    	<div class="widget-panel">
 	    		<div class="head">
 		    		<div class="title">Widget</div>
-			    	<a href="#" class="add">+Add</a>
+			    	<a href="#" class="add"  data-target=".modal-add-widget " data-toggle="modal">+Add</a>
 		    	</div>
 		    	<ul>
 		    		<li><a href="">Name of widget</a></li>
@@ -178,7 +178,7 @@
             <div class="form">
                         <form  data-toggle="validator" role="form">    
             	<div class="row">
-					<div class="col-12 col-sm-5">
+					<div class="col-12 col-sm-4 col-lg-5">
 						<div class="widget-panel">
 			            	<div class="title">Add widget</div>
 
@@ -279,7 +279,7 @@
 					        </div>
 			            </div>
 					</div>
-					<div class="col-12 col-sm-7">
+					<div class="col-12 col-sm-8 col-lg-7">
 						<div class="current-content">
 							<div class="inner">
 				            	<div class="title">Counters / super chat counter</div>
@@ -311,7 +311,7 @@
 
 <!--Widget FX window-->
 <div class="modal-form modal-widget modal-widget-fx modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-widget-fx" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg one-level-menu" role="document">
         <div class="modal-content">
             <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" aria-label="close">
@@ -325,7 +325,7 @@
 					<div class="col-12 col-sm-3">
 						<div class="widget-panel">
 			            	<div class="title">Animation</div>
-				            	<div class="menu one-level">
+				            	<div class="menu">
 							            <ul>
 								        	<li><a href="#">None</a></li>
 											<li><a href="#">Bounce in</a></li>
@@ -369,7 +369,7 @@
 
 <!--Audio window-->
 <div class="modal-form modal-widget modal-audio modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-audio" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg one-level-menu" role="document">
         <div class="modal-content">
             <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" aria-label="close">
@@ -389,7 +389,7 @@
 					                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
 					            </div>                 
 					        </div>
-				            	<div class="menu one-level">
+				            	<div class="menu">
 							            <ul>
 								        	<li><a href="#">My audio</a></li>
 											<li><a href="#">System audio</a></li>
@@ -429,79 +429,135 @@
 					            </div>
 							</div>
 				            	<div class="title">My audio</div>
+				            	
 				            	<div class="items">
 				            		<dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">			                            	
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl class="selected">
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
 			                        </dl>
 
 			                        <dl>
-			                            <dd class="play"></dd>
+			                            <dd class="play">
+			                            	<audio class="audioplayer" controls data-plyr-config='{ "controls": ["play"] }'>
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
+											    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.ogg" type="audio/ogg">
+											</audio>
+			                            </dd>
 			                            <dd class="name">Name of file</dd>
 			                            <dd class="size">23.2 Mb</dd>
 			                            <dd class="duration">2 sec</dd>
@@ -525,25 +581,24 @@
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type='text/javascript' src="js/jquery-ui.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
-    <script type='text/javascript' src="js/jquery.mousewheel.min.js"></script>
-    <script type='text/javascript' src="js/jquery.touchSwipe.min.js"></script>
-    <script type='text/javascript' src="js/jquery.interpolate.min.js"></script>
-	<script type='text/javascript' src="js/jquery.coverflow.js"></script>
     <script type='text/javascript' src="js/svg4everybody.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type='text/javascript' src="js/dropzone.js"></script>
     <script type="text/javascript" src="js/trumbowyg.min.js"></script>
-    <script type="text/javascript" src="js/simplebar.js"></script>
-    <script type="text/javascript" src="js/plyr.js"></script>    
-    <script type="text/javascript" src="js/rangeslider.min.js"></script>    
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/simplebar.js"></script>    
+    <script type="text/javascript" src="js/plyr.js"></script>
+    <script type="text/javascript" src="js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="js/rangetouch.js"></script>
+    <script type="text/javascript" src="js/contentflow.js"></script>
+    <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
+    <script type="text/javascript" src="js/script.js"></script> 
 
     <script>
      $(function () {
 
-	   // $('.modal-add-widget').modal('show');
-	   // $('.modal-widget-fx').modal('show');
-	  // $('.modal-audio').modal('show');
+	  //  $('.modal-add-widget').modal('show');
+	   $('.modal-widget-fx').modal('show');
+	   $('.modal-audio').modal('show');
 
        });
     </script>

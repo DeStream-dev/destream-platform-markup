@@ -314,6 +314,7 @@ header  div[class*='col-']{
   right: 33px;
   top: 60px;
   position: fixed;
+  z-index: 30;
 }
 .close svg{
   stroke: #9b9b9b;
@@ -677,6 +678,9 @@ body.widget > .content{
   top: 38px;
   border: none;
 }
+.modal-widget .modal-dialog-centered{
+  align-items: start;
+}
 header .btn.login{
   margin-right: 20px;
   padding-left: 15px;
@@ -694,6 +698,107 @@ header .btn.login{
 }
 .form .info{
   text-align: center;
+}
+
+
+.modal-widget:after{
+  position: absolute;
+  left: calc(33.333333% + 15px);
+  top: 0;
+  height: 100%;
+  width: calc(66.666667% - 15px);
+  content: "";
+  background-color: #edeeef;
+  z-index: 1;
+}
+.modal-widget:before{
+  position: absolute;
+  width: calc(33.333333% + 15px);
+  top: 0;
+  height: 100%;
+  left: 0;
+  content: "";
+  background-color: #f8f8f9;
+  z-index: 1;
+}
+.modal-widget-fx:after{
+  left: calc(25% + 15px);
+  width: calc(75% - 15px);
+}
+.modal-widget-fx:before{
+  width: calc(25% + 15px);
+  left: 0;
+}
+
+
+.modal-widget .modal-dialog{
+  position: relative;
+}
+.modal-widget .modal-dialog:after{
+  position: absolute;
+  left: 0;
+  top: 160px;
+  height: calc(100% - 160px);
+  width: calc(16.6666667% + 16px);
+  border-right: 1px solid #e6e8ec;
+  content: "";
+  background-color: #ffffff;
+  z-index: 1;
+}
+.modal-widget .modal-dialog.one-level-menu:after{
+  display: none;
+  }
+
+.modal-widget .widget-panel .menu ul{
+  left: -40px;
+  width: calc(100% + 62px);
+}
+.modal-widget .widget-panel .menu ul > li{
+  width: calc(50% + 8px);
+}
+.modal-widget .widget-panel .menu li .submenu{
+  width: calc(50% - 8px);
+  left: calc(50% + 8px);
+}
+.modal-widget .current-content:after{
+  display: none;
+}
+.modal-widget .modal-content,.modal-widget .current-content{
+  background-color: transparent;
+}
+.modal-widget .modal-header button.close{
+  top: 40px;
+}
+.modal-widget .modal-dialog{
+  position: relative;
+  z-index: 5;
+  background-color: transparent;
+}
+.modal-widget .search-panel{
+  width: calc(100% - 15px);
+  left: 0;
+}
+.modal-widget .modal-body{
+  padding: 25px;
+}
+.modal-widget .search-input input[type="search"]{
+ border-radius: 0;
+ padding-left: 43px;
+ left: 0;
+}
+.modal-widget .form .search-input .btn{
+  left: 15px;
+}
+.modal-widget .current-content > .inner{
+  padding-left: 35px;
+}
+.modal-widget .current-content button[type="submit"]{
+  position: fixed;
+  bottom: 70px;
+  left: calc(66.666667% + 20px);
+}
+.modal-widget .widget-panel .menu:after,.modal-widget .widget-panel .menu:before{
+  display: none;
 }
 }
 
