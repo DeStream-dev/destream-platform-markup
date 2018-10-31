@@ -800,6 +800,29 @@ header .btn.login{
 .modal-widget .widget-panel .menu:after,.modal-widget .widget-panel .menu:before{
   display: none;
 }
+
+.modal-create-future-stream .search-input input[type="search"]{
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.server-catalog .bootstrap-select>.dropdown-toggle{
+  width: 100%;
+}
+.form .tags{
+  left: 0;
+  width: 100%;
+}
+.modal-create-future-stream .is-voting .field input{
+  width: calc(100% - 30px);
+}
+.modal-create-future-stream .is-voting .field .remove{
+  right: 0;
+}
+.server-catalog .dropdown-menu{
+  border-radius: 0;
+  width: 100%;
+  }
 }
 
 .rotate-warning{display: none;}

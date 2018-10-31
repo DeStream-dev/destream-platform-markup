@@ -362,6 +362,11 @@ $('.modal-audio .items dl').on('click', function(){
 });
 
 
+  $('.dropdown .dropdown-menu.inner').each(function(){
+    new SimpleBar($(this)[0]);
+  });
+
+
 });
 
 
