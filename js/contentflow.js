@@ -603,7 +603,7 @@ ContentFlow.prototype = {
                    currentPlayer.play();
                    currentPlayer.volume = 0;
                    currentPlayer.toggleControls(false);
-                }, 100);
+                }, 400);
               }            
         },
         onReachTarget: function(A) { },

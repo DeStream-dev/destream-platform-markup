@@ -18,14 +18,16 @@
   <header> 
   		<div class="container-fluid"> 
 		  	<div class="row">
-			    <div class="col-12 col-sm-3 col-lg-3">
+			    <div class="col-3 col-sm-3">
 			        <a class="menu-toggle" href="#">
-					    <img src="img/ham.svg" width="18" height="12" alt="" />
+			        	<svg><use xlink:href="img/vectors.svg#ham"></use></svg>
 					</a>			        
 					<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
 			    </div>
-			    <div class="col-12 col-sm-5 col-lg-4 col-xl-5">
-			      				      	<div class="search-panel">
+			    <div class="col-1 col-sm-1 col-md-5 col-lg-4 col-xl-5">
+			    	
+			      	<div class="search-panel">
+			      		<a class="close d-md-none"></a>
 			            <div class="search-input">
 			                <input type="search" placeholder="Search" />  
 			                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
@@ -139,7 +141,7 @@
 			            </div>              
 			        </div>
 			    </div>
-			    <div class="col-12 col-sm-4 col-lg-5 col-xl-4">			     	
+			    <div class="col-8 col-sm-8 col-md-4 col-lg-5 col-xl-4">			     	
 			     	<div class="user-btn-cont">
 			     		<a href="#" class="icon dropdown-toggle" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			     			<img src="img/live-icon1.png" width="40" height="40" alt="" />
@@ -154,10 +156,11 @@
 				    		</ul>
 						</div>
 			     	</div>
-			     	<div class="create-btn-cont">
+			     	<a class="search-btn d-md-none" href="#"><svg><use xlink:href="img/vectors.svg#search"></use></svg></a>
+			    	<div class="create-btn-cont">
 			     		<a class="btn create dropdown-toggle" id="create" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			     		<span class="plus d-lg-none">+</span>
-			     		<span class="d-none d-lg-block">Create</a>
+			     		<span class="d-none d-lg-block">Create</span></a>
 			     			<div class="dropdown-menu" aria-labelledby="create">
 						    <ul>
 				    			<li><a href="#">Create 1</a></li>
@@ -166,7 +169,7 @@
 				    		</ul>
 						</div>
 			     	</div>
-			     	<div class="notifications-cont">
+			     	<div class="notifications-cont d-none d-md-block">
 			    		<a class="dropdown-toggle" data-counter="6" href="#" id="notification-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg><use xlink:href="img/vectors.svg#notifications"></use></svg></a>
 			    		<div class="dropdown-menu" aria-labelledby="notification-link">
 						    <ul>
@@ -202,8 +205,11 @@
 		  </div>
 		</div>
     </header>
-    	<aside class="main-sidebar" data-simplebar>
+
+   	<aside class="main-sidebar" data-simplebar>
     	  <div class="main-sidebar-content">
+    	  <a class="close d-md-none"></a>
+    	  <h1 class="logo  d-md-none"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
     		<div class="block account">
     			<div class="status">+12%</div>
     			<div class="score">2 850 000</div>
@@ -303,56 +309,65 @@
 	    		<ul>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">H…Grand Theft Auto V</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Grand Theft Auto V</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/3.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Rise of the Tomb Raidghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Rise of the Tomb Raidghghgh</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/2.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Ведьмак 3</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Ведьмак 3</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Battlefield 1</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon4.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Battlefield 1</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/2.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Assassin’s Creed: Rogdffgfgfvbvbfgdghghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon5.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Assassin’s Creed: Rogdffgf</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Assassin’s Creed Origiffgdfgdghghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Assassin’s Creed Origiffgd</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/3.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Watch Dogs 2</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Watch Dogs 2</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">The Witcher 3: Wild Hdfghghghgfhghhfgfgfg2</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/2.png')"></span>
 	    				</a>
 	    			</li>
 	    		</ul>
@@ -370,56 +385,83 @@
 	    		<ul>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hffgdfgdghghghgh</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">H…Grand Theft Auto V</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">H…Grand Theft Auto V</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Rise of the Tomb Raidghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Rise of the Tomb Raidghghgh</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Ведьмак 3</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Ведьмак 3</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Battlefield 1</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Battlefield 1</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Assassin’s Creed: Rogdffgfgfvbvbfgdghghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Assassin’s Creed: Rogdffgfgfvbvbfgdghghghgh</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Assassin’s Creed Origiffgdfgdghghghgh</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Assassin’s Creed Origiffgdfgdghghghgh</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">Watch Dogs 2</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">Watch Dogs 2</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    			<li>
 	    				<a class="item" href="#">
-	    					<span class="icon"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
-	    					<span class="name">The Witcher 3: Wild Hdfghghghgfhghhfgfgfg2</span>
+	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
+	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hdfghghghgfhghhfgfgfg2</span>
+	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
+					            <i>Cooking</i>
+					        </span>
 	    				</a>
 	    			</li>
 	    		</ul>
@@ -437,7 +479,7 @@
             </footer>
             </div>
     	</aside>
-    	
+   	
     	<section class="main-content" data-simplebar>
 	    	<div class="page live-broadcast">
 	    		<div class="head">
