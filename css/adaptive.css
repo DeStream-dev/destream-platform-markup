@@ -115,6 +115,13 @@ span.size{ display: none; }
       width: unset;
       margin-left: 70px;
     }
+     header .search-panel{
+      position: relative;
+     
+    }
+    header.user-is-logged .search-panel{    
+       margin-left: -55px;
+    }
 }
 
 
@@ -122,6 +129,16 @@ span.size{ display: none; }
   .container-fluid{
     border: 1px solid yellow;
   }
+    header .search-panel{
+      position: relative;
+    }
+   header.user-is-logged .search-panel{    
+      margin-left: -95px;
+      width: calc(100% + 90px);
+   }
+    header .user-btn-cont{margin-right: 35px;}
+    header .create-btn-cont{margin-right: 28px;}
+    header .notifications-cont{margin-right: 40px;}
   header{
     z-index: 4;
     position: relative;
@@ -230,6 +247,15 @@ body.widget > .content{
   .container-fluid{
     border: 1px solid cyan; 
   }
+   header .search-panel{
+      position: relative;
+      left: 10px;
+    }
+   header.user-is-logged .search-panel{    
+      margin-left: -55px;
+      width: calc(100% + 50px);
+      left: 0;
+   }
   .widget header{
     z-index: 124;
   }
@@ -686,9 +712,9 @@ body.widget > .content{
   align-items: start;
 }
 header .btn.login{
-  margin-right: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-right: 0;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 .modal-equiring .item{
   margin-bottom: 100px;
