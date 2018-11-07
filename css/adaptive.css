@@ -952,7 +952,7 @@ header .btn.login{
   header .create-btn-cont .create .plus{
     font-size: 32px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 27px;
   }
   header .search-panel{
     display: none;
@@ -1190,7 +1190,275 @@ header .btn.login{
     .menu-toggle svg{
       fill: #737c85;
     }
+    .list{
+      padding-top: 35px;
+    }
+    .list .item{
+      padding-bottom: 28px;
+    }
+    .list .item .img{
+      height: 200px;
+    }
+    .list-news .item .share{
+      padding-top: 10px;
+    }
+   .list-news .item .img{
+      height: 96px;
+    }
+    .list .item .img .count{
+      width: 50%;
+    }
+    .list .icon{
+      width: 30px;
+      height: 30px;
+    }
+    .list .item .name, .list .item .date,.list .item .text{
+      margin-left: 45px;
+    }
+    .list-news .item .text, .list-news .item .date{
+      margin-left: 0;
+    }
+    .list .item .description{
+      padding-top: 15px;
+    }
+    .list .more{
+        display: block;
+        text-align: center;
+        padding: 9px 0;
+        background-color: #444c54;
+        border: 1px solid #666f79;
+        margin: 0;
+        color: #aab1b8;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .list.list-news{
+      background-color: #383e44;
+    }
+    .list .setup {
+      position: absolute;
+      top: -5px;
+      right: 20px;
+    }
+    .list .setup > a svg{
+      width: 25px;
+      height: 20px;
+    }
+    .list-announcement-tile {
+      background-color: #383e44;
+    }
 
+    .list-announcement-tile .item,  .list-announcement .item{
+      position: relative;
+      padding-bottom: 18px;
+      padding-top: 18px;
+    }
+    .list-announcement-tile .item:after,.list-announcement .item:after{
+      position: absolute;
+      content: "";
+      width: calc(100% - 110px);
+      left: 55px;
+      top: auto;
+      bottom: 0;
+      height: 1px;
+      z-index: 70;
+      background-color: #666f79;
+    }
+    .list-announcement-tile .item .img{
+      width: 110px;
+      height: 146px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .list-announcement-tile .item .description{
+      display: inline-block;
+      width: calc(100% - 110px - 0.3em);
+      padding-left: 15px;
+      vertical-align: top;
+      padding-top: 2px;
+      float: none;
+    }
+     .list-announcement-tile .item .name, .list-announcement-tile .item .text, .list-announcement-tile .item .date{
+      margin-left: 0;
+     }
+     .list-announcement-tile .item .date{
+        padding-top: 20px;
+        display: block;
+      }
+     .list-announcement-tile .item .share{
+      float: left;
+      padding-top: 20px;
+      display: block;
+     }
+      .list-announcement-tile .alarm{
+        top: auto;
+        bottom: 20px;
+        right: 10px;
+      }
+      .list-announcement-tile .setup{
+        top: 30px;
+        right: 20px;
+      }
+      .list-announcement-tile .large .item{
+        background-color: transparent;
+        height: unset;
+        overflow: visible;
+        padding: 20px 55px;
+        margin: 0 0 0 -55px;
+        width: calc(100% + 110px);
+
+      }
+      .list-announcement-tile .large .item .name{
+        padding-left: 0;
+        position: relative;
+        top: -5px;
+      }
+      .list-announcement-tile .large .item .text{
+        padding-top: 0;
+        font-size: 13px;
+        height: unset;
+        overflow: visible;
+        line-height: 17px;
+      }
+      .list-announcement-tile .large .item .bottom{
+        position: static;
+        width: 100%;
+      }
+      .list-announcement-tile .large .description{
+        padding-right: 0;
+        min-height: unset;
+      }
+      .list-announcement-tile .large .item .share{
+        float: none;
+        padding-top: 30px;
+        margin: 0;
+        display: block;
+      }
+
+      .list-announcement-tile .title{
+        padding-bottom: 0;
+      }
+      
+      .list .loading{
+        padding: 25px 0;
+      }
+      .list-announcement .item {
+        padding: 20px 55px;
+        margin-left: -55px;
+        width: calc(100% + 110px);
+      }
+      .list-announcement .icon{
+        width: 49px;
+        height: 49px;
+      }
+    .list-announcement .item .description{
+      display: inline-block;
+      width: 100%;
+      padding-left: 65px;
+      vertical-align: top;
+      padding-top: 2px;
+    }
+
+     .list-announcement .item .name, .list-announcement .item .text, .list-announcement .item .date{
+      margin-left: 0;
+     }
+     .list-announcement .item .date{
+        padding-top: 15px;
+        float: none;
+        display: block;
+      }
+     .list-announcement .item .share{
+      float: left;
+      padding-top: 12px;
+     }
+      .list-announcement .alarm{
+        top: auto;
+        bottom: 22px;
+        right: 55px;
+      }
+    .list-announcement-tile .large .item .alarm{
+      position: absolute;
+      background-color: #444c54;
+      top: auto;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      z-index: 200;
+     }
+     .list-announcement-tile .large .item .alarm:hover{
+      background-color: #dbe0e6;
+      }
+    .list-announcement .img{
+      padding-right: 0;
+    }
+
+    .modal-header button.close{
+      right: 15px;
+      top: 30px;
+      position: fixed;
+      z-index: 30;
+    }
+    .close svg{
+      stroke: #9b9b9b;
+    }
+    .modal-lg, .modal-md{
+      max-width: unset !important;
+      width: 100%;
+    }
+    .modal-content, .modal-addblock .dropzone .dz-message span{
+      border-radius: 0;
+    }
+    .modal-dialog{
+      margin: 0;
+    }
+    .modal-dialog-centered{
+      align-items: stretch;
+    }
+    .modal-content{
+      padding: 10px;
+    }
+  
+    .modal-auth .social{
+      padding-top: 5px;
+    }
+    .modal-auth .or{padding-bottom: 25px;}
+    .modal-auth .forget-password a{
+      top: 82px;
+    }
+
+    .modal .form button{
+      position: fixed;
+      width: calc(100% - 60px);
+      top: auto;
+      left: 30px;
+      bottom: 30px;
+    }
+
+  .modal .form input[type="text"], .modal .form input[type="email"], .modal .form input[type="password"], .modal .form input[type="number"], .modal .form textarea,
+  .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+   }
+  .modal-auth .social{
+    width: calc(120% - 40px);
+    margin: auto;
+    margin-left: calc((40px - 20%)/2);
+    margin-right: calc((40px - 20%)/2);
+    white-space: nowrap;
+    letter-spacing: -0.3em;
+   }
+   .modal-auth .social div{
+    margin: 0;
+    width: 20%;
+    letter-spacing: normal;
+   }
+   .modal-auth .social a:first-child{
+    margin-left: 0;
+   }
+   .modal-auth .social a:last-child{
+    margin-right: 0;
+   }
  }
 
 
@@ -1310,7 +1578,7 @@ header .btn.login{
   header .create-btn-cont .create .plus{
     font-size: 32px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 27px;
   }
   header .search-panel{
     display: none;
@@ -1548,7 +1816,392 @@ header .btn.login{
     .menu-toggle svg{
       fill: #737c85;
     }
+    .list{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 35px;
+    }
+    .list .item{
+      padding-bottom: 28px;
+    }
+    .list .item .img{
+      height: 200px;
+    }
+    .list-news .item .share{
+      padding-top: 10px;
+    }
+   .list-news .item .img{
+      height: 96px;
+    }
+    .list .item .img .count{
+      width: 50%;
+    }
+    .list .icon{
+      width: 30px;
+      height: 30px;
+    }
+    .list .item .name, .list .item .date,.list .item .text{
+      margin-left: 45px;
+    }
+    .list-news .item .text, .list-news .item .date{
+      margin-left: 0;
+    }
+    .list .item .description{
+      padding-top: 15px;
+    }
+    .list .more{
+        display: block;
+        text-align: center;
+        padding: 9px 0;
+        background-color: #444c54;
+        border: 1px solid #666f79;
+        margin: 0;
+        color: #aab1b8;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .list.list-news{
+      background-color: #383e44;
+    }
+    .list .setup {
+      position: absolute;
+      top: -5px;
+      right: 20px;
+    }
+    .list .setup > a svg{
+      width: 25px;
+      height: 20px;
+    }
+    .list-announcement-tile {
+      background-color: #383e44;
+    }
 
+    .list-announcement-tile .item,  .list-announcement .item{
+      position: relative;
+      padding-bottom: 18px;
+      padding-top: 18px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: calc(100% + 20px);
+      margin-left: -10px;
+    }
+    .list-announcement-tile .item:after,.list-announcement .item:after{
+      position: absolute;
+      content: "";
+      width: calc(100% - 20px);
+      left: 10px;
+      top: auto;
+      bottom: 0;
+      height: 1px;
+      z-index: 70;
+      background-color: #666f79;
+    }
+    .list-announcement-tile .item .img{
+      width: 110px;
+      height: 146px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .list-announcement-tile .item .description{
+      display: inline-block;
+      width: calc(100% - 110px - 0.3em);
+      padding-left: 7px;
+      vertical-align: top;
+      padding-top: 2px;
+      float: none;
+    }
+     .list-announcement-tile .item .name, .list-announcement-tile .item .text, .list-announcement-tile .item .date{
+      margin-left: 0;
+     }
+     .list-announcement-tile .item .date{
+        padding-top: 20px;
+        display: block;
+      }
+     .list-announcement-tile .item .share{
+      float: left;
+      padding-top: 20px;
+     }
+      .list-announcement-tile .alarm{
+        top: auto;
+        bottom: 20px;
+        right: 10px;
+      }
+      .list-announcement-tile .setup{
+        top: 30px;
+        right: 20px;
+      }
+      .list-announcement-tile .large .item{
+        background-color: transparent;
+        height: unset;
+        overflow: visible;
+        margin: 0 0 0 -10px;
+        padding-bottom: 10px;
+      }
+      .list-announcement-tile .large .item .name{
+        padding-left: 0;
+        position: relative;
+        top: -5px;
+      }
+      .list-announcement-tile .large .item .text{
+        padding-top: 0;
+        font-size: 13px;
+        height: unset;
+        overflow: visible;
+        line-height: 17px;
+      }
+      .list-announcement-tile .large .item .bottom{
+        position: static;
+        width: 100%;
+      }
+      .list-announcement-tile .large .description{
+        padding-right: 0;
+        min-height: unset;
+      }
+      .list-announcement-tile .large .item .share{
+        float: none;
+        padding-top: 30px;
+        margin: 0;
+        display: block;
+      }
+
+      .list-announcement-tile .title{
+        padding-bottom: 0;
+      }
+      
+      .list .loading{
+        padding: 25px 0;
+      }
+      .list-announcement .item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .list-announcement .icon{
+        width: 49px;
+        height: 49px;
+      }
+    .list-announcement .item .description{
+      display: inline-block;
+      width: 100%;
+      padding-left: 65px;
+      vertical-align: top;
+      padding-top: 2px;
+    }
+
+     .list-announcement .item .name, .list-announcement .item .text, .list-announcement .item .date{
+      margin-left: 0;
+     }
+     .list-announcement .item .date{
+        padding-top: 15px;
+        float: none;
+        display: block;
+      }
+     .list-announcement .item .share{
+      float: left;
+      padding-top: 12px;
+     }
+      .list-announcement .alarm{
+        top: auto;
+        bottom: 22px;
+        right: 10px;
+      }
+    .list-announcement-tile .large .item .alarm{
+      position: absolute;
+      background-color: #444c54;
+      top: auto;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      z-index: 200;
+     }
+     .list-announcement-tile .large .item .alarm:hover{
+      background-color: #dbe0e6;
+      }
+    .list-announcement .img{
+      padding-right: 0;
+    }
+
+    .modal-header button.close{
+      right: 15px;
+      top: 30px;
+      position: fixed;
+      z-index: 30;
+    }
+    .close svg{
+      stroke: #9b9b9b;
+    }
+    .modal-lg, .modal-md{
+      max-width: unset !important;
+      width: 100%;
+    }
+    .modal-content, .modal-addblock .dropzone .dz-message span{
+      border-radius: 0;
+    }
+    .modal-dialog{
+      margin: 0;
+    }
+    .modal-dialog-centered{
+      align-items: stretch;
+    }
+    .modal-content{
+      padding: 35px 10px 10px;
+    }
+    .modal-body{
+      padding: 0;
+    }
+    .modal-auth .social{
+      padding-top: 5px;
+    }
+    .modal-auth .or{padding-bottom: 25px;}
+    .modal-auth .forget-password a{
+      top: 82px;
+    }
+
+    .modal .form button{
+      position: fixed;
+      width: calc(100% - 20px);
+      top: auto;
+      left: 10px;
+      bottom: 30px;
+    }
+
+  .modal .form input[type="text"], .modal .form input[type="email"], .modal .form input[type="password"], .modal .form input[type="number"], .modal .form textarea,
+  .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+   }
+  .modal-auth .social{
+    width: calc(120% - 40px);
+    margin: auto;
+    margin-left: calc((40px - 20%)/2);
+    margin-right: calc((40px - 20%)/2);
+    white-space: nowrap;
+    letter-spacing: -0.3em;
+   }
+   .modal-auth .social div{
+    margin: 0;
+    width: 20%;
+    letter-spacing: normal;
+   }
+   .modal-auth .social a:first-child{
+    margin-left: 0;
+   }
+   .modal-auth .social a:last-child{
+    margin-right: 0;
+   }
+
+   .page.mychannel .head{
+    height: 303px;
+    position: relative;
+    margin-bottom: 40px;
+   }
+   .page.mychannel .head:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2,8,14,0.6);
+   }
+   .page.mychannel .head .icon{
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 60px;
+    left: 50%;
+    margin-left: -80px;
+    border: 3px solid #383E44;;
+   }
+   .page.mychannel .head .user-info:after{
+    bottom: -40px;
+    height: 40px;
+   }
+   .page.mychannel .head .user-info .name{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+  }
+   .page.mychannel .head .user-info .name span{
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     -webkit-transform: translate(-50%,-50%);
+     -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+   }
+   .page.mychannel .head .user-info .donate{
+      position: absolute;
+      top: 240px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .page.mychannel .head .user-info .donate .btn{
+      padding-left: 55px;
+      padding-right: 55px;
+   }
+   .page.mychannel .head .user-info{
+    padding-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+   }
+   .page.mychannel .head .user-info:before{
+    display: none;
+   }
+   .page.mychannel .head .user-info > div{
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   }
+   .page.mychannel .head .user-info .likes{
+    font-size: 12px;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    left: auto;
+    top: auto;
+    }
+    .page.mychannel .head .user-info .subscribe{
+      position: absolute;
+      left: 10px;
+      bottom: -33px;
+      top: auto;
+      font-size: 12px;
+   }
+   .page.mychannel .head .user-info .unsubscribe{
+      display: none;
+   }
+   .page.mychannel .list-announcement-tile{
+    background-color: #383e44;
+   }
+   .page.mychannel .myblocks{
+    padding: 10px 10px 20px;
+    background-color: #444c54;
+   }
+   .myblocks .item{
+    margin-bottom: 10px;
+   }
+   .myblocks .small .text{
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {

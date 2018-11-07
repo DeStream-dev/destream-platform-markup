@@ -1021,6 +1021,10 @@ footer .social {
   text-align: center;
   padding-bottom: 20px;
 }
+.modal-auth .social div{
+  display: inline-block;
+  vertical-align: middle;
+}
 .modal-auth #registration .social{
   padding-bottom: 15px;
 }
@@ -1676,6 +1680,7 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 40;
 }
 .modal-auth .forget-password a{
   color: #f05a00;
@@ -3341,6 +3346,11 @@ button.close {
   font-weight: 500;
   color: #c6ced5;
 }
+
+.myblocks .small .text ul{
+  padding-top: 10px;
+  margin: 0;
+}
 .myblocks .small .text a{
   text-decoration: underline;
   color: #c6ced5;
@@ -3361,6 +3371,7 @@ button.close {
   display: inline-block;
   line-height: 100px;
   vertical-align: middle;
+  font-size: 12px;
 }
 
 .modal-addblock .title{
