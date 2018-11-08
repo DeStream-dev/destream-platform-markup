@@ -2587,7 +2587,6 @@ button.close {
   margin-right: 13px;
   position: relative;
   line-height: 38px;
-  position: relative;
   color: #ffffff;
 }
 .wallet .btns a:last-child{
@@ -3198,6 +3197,7 @@ button.close {
   top: -3px;
   margin-left: 7px;
 }
+
 .page.mychannel .item {
   position: relative;
 }
@@ -6087,7 +6087,7 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
 .ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
 .form-group input[type="checkbox"] + span, .settings .personal .change-photo,
-.search-results .group li, .modal-audio .items dl{
+.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;

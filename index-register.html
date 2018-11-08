@@ -1162,7 +1162,6 @@
     		</div>
     	</section>
 
-
     <!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -1185,6 +1184,15 @@
 		<div class="tab-content auth-tab-content">
 		  <div class="tab-pane fade show active" id="auth" role="tabpanel" aria-labelledby="auth-tab">
 		  		    <div class="form">
+		  		    	<div class="social d-md-none">                            	
+                            	<div><a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a></div>
+                            </div> 
+                            <div class="or d-md-none">or</div>
+
                         <form  data-toggle="validator" role="form">    
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="login">Nickname or email</label>
@@ -1203,28 +1211,30 @@
                             <div class="form-group">                                
                                 <button class="btn" type="submit">Log in</button>                                    
                             </div>
-                            <div class="or">or</div>
-                            <div class="social">                            	
-                            	<a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a>
-                    			<a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a>
-                    			<a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a>
-                    			<a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a>
-                    			<a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a>
-                            </div>                           
+                                                
                         </form>
+                        <div class="or d-none d-md-block">or</div>
+                            <div class="social d-none d-md-block">                            	
+                            	<div><a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a></div>
+                            </div>       
                     </div>
 		  </div>
 		   <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
 		   		    <div class="form">
-                        <form data-toggle="validator" role="form"> 
-                            <div class="social">                            	
-                            	<a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a>
-                    			<a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a>
-                    			<a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a>
-                    			<a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a>
-                    			<a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a>
+		   		     	<div class="social">                            	
+                            	<div><a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a></div>
                             </div> 
                             <div class="or">or</div>
+                        <form data-toggle="validator" role="form"> 
+                           
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="login">Nickname</label>
                                 <input type="text" id="login" class="form-control" required placeholder="Nickname">
@@ -1876,9 +1886,8 @@
                                 </div>
                             </div>
                                 <div class="is-voting">
-                                <input type="text" class="form-control" placeholder="Option">
-
-                                <input type="text" class="form-control" placeholder="Option">
+                                	<div class="field"><input type="text" class="form-control" placeholder="Option"><a class="remove" href="#"></a></div>
+                                	<div class="field"><input type="text" class="form-control" placeholder="Option"><a class="remove" href="#"></a></div>
                                 <a href="#" class="add-option">Add option</a>
                            
 
@@ -1907,6 +1916,7 @@
     </div>
 </div>
 <!--Create future stream window end-->
+
 
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>

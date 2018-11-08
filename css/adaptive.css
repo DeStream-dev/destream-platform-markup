@@ -1,7 +1,7 @@
 .container-fluid {
  /* max-width: 1800px;*/
   width: 100%;
- border: none !important;
+ /*border: none !important;*/
 }
 
 span.size{ display: none; }
@@ -195,7 +195,7 @@ span.size{ display: none; }
   height: calc(100% - 120px);
   overflow: hidden;
 }
-.main-content .page{
+body.widget .main-content .page{
   padding-left: 50px;
   padding-right: 50px;
   position: absolute;
@@ -1240,7 +1240,7 @@ header .btn.login{
       top: -5px;
       right: 20px;
     }
-    .list .setup > a svg{
+    .setup > a svg{
       width: 25px;
       height: 20px;
     }
@@ -1321,7 +1321,8 @@ header .btn.login{
         line-height: 17px;
       }
       .list-announcement-tile .large .item .bottom{
-        position: static;
+        position: relative;
+        bottom: auto;
         width: 100%;
       }
       .list-announcement-tile .large .description{
@@ -1380,7 +1381,7 @@ header .btn.login{
       position: absolute;
       background-color: #444c54;
       top: auto;
-      bottom: 0;
+      bottom: 12px;
       right: 0;
       left: auto;
       z-index: 200;
@@ -1459,6 +1460,163 @@ header .btn.login{
    .modal-auth .social a:last-child{
     margin-right: 0;
    }
+      .page.mychannel .head{
+    height: 303px;
+    position: relative;
+    margin-bottom: 40px;
+   }
+   .page.mychannel .head:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2,8,14,0.6);
+   }
+   .page.mychannel .head .icon{
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 60px;
+    left: 50%;
+    margin-left: -80px;
+    border: 3px solid #383E44;;
+   }
+   .page.mychannel .head .user-info:after{
+    bottom: -40px;
+    height: 40px;
+   }
+   .page.mychannel .head .user-info .name{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+  }
+   .page.mychannel .head .user-info .name span{
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     -webkit-transform: translate(-50%,-50%);
+     -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+   }
+   .page.mychannel .head .user-info .donate{
+      position: absolute;
+      top: 240px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .page.mychannel .head .user-info .donate .btn{
+      padding-left: 55px;
+      padding-right: 55px;
+   }
+   .page.mychannel .head .user-info{
+    padding-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+   }
+   .page.mychannel .head .user-info:before{
+    display: none;
+   }
+   .page.mychannel .head .user-info > div{
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   }
+   .page.mychannel .head .user-info .likes{
+    font-size: 12px;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    left: auto;
+    top: auto;
+    }
+    .page.mychannel .head .user-info .subscribe{
+      position: absolute;
+      left: 10px;
+      bottom: -31px;
+      top: auto;
+      font-size: 12px;
+   }
+   .page.mychannel .head .user-info .unsubscribe{
+      display: none;
+   }
+   .page.mychannel .list-announcement-tile{
+    background-color: #383e44;
+    padding-top: 25px;
+    padding-bottom: 25px;
+   }
+   .page.mychannel .myblocks{
+    padding: 10px 10px 20px;
+    background-color: #444c54;
+   }
+   .myblocks .item{
+    margin-bottom: 10px;
+   }
+   .myblocks .small .text{
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   }
+   
+    .page.mychannel .list-announcement-tile .large .item{
+      margin: 0;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+     .page.mychannel .list-announcement-tile .large .icon{
+      display: none;
+    }
+    .page.mychannel .list-announcement-tile .item:after{
+      display: none;
+    }
+    .large.carousel .slick-dots{
+      bottom: -10px;
+    }
+    .large.carousel .slick-dots li button:before{
+      width: 5px;
+      height: 5px;
+      background-color: #737c85;
+      border-color: #737c85;
+    }
+    .large.carousel .slick-dots li.slick-active button:before{
+      background-color: #f05a00;
+      border-color: #f05a00;
+    }
+    .large.carousel .slick-dots li{
+      margin: 0;
+    }
+    .page.mychannel .head .user-info .name a{
+      position: absolute;
+      top: -5px;
+      left: auto;
+      margin-left: 0;
+      right: -40px;
+    }
+    .myblocks .item a{
+      height: 500px;
+    }
+    .myblocks .small .item a{
+      height: 200px;
+    }
  }
 
 
@@ -1868,7 +2026,7 @@ header .btn.login{
       top: -5px;
       right: 20px;
     }
-    .list .setup > a svg{
+    .setup > a svg{
       width: 25px;
       height: 20px;
     }
@@ -1950,7 +2108,8 @@ header .btn.login{
         line-height: 17px;
       }
       .list-announcement-tile .large .item .bottom{
-        position: static;
+        position: relative;
+        bottom: auto;
         width: 100%;
       }
       .list-announcement-tile .large .description{
@@ -2008,7 +2167,7 @@ header .btn.login{
       position: absolute;
       background-color: #444c54;
       top: auto;
-      bottom: 0;
+      bottom: 12px;
       right: 0;
       left: auto;
       z-index: 200;
@@ -2056,7 +2215,7 @@ header .btn.login{
       top: 82px;
     }
 
-    .modal .form button{
+    .modal .form .form-group > button{
       position: fixed;
       width: calc(100% - 20px);
       top: auto;
@@ -2180,7 +2339,7 @@ header .btn.login{
     .page.mychannel .head .user-info .subscribe{
       position: absolute;
       left: 10px;
-      bottom: -33px;
+      bottom: -31px;
       top: auto;
       font-size: 12px;
    }
@@ -2189,6 +2348,8 @@ header .btn.login{
    }
    .page.mychannel .list-announcement-tile{
     background-color: #383e44;
+    padding-top: 25px;
+    padding-bottom: 25px;
    }
    .page.mychannel .myblocks{
     padding: 10px 10px 20px;
@@ -2202,6 +2363,182 @@ header .btn.login{
     padding-top: 10px;
     padding-bottom: 10px;
    }
+   
+    .page.mychannel .list-announcement-tile .large .item{
+      margin: 0;
+      padding-top: 5px;
+    }
+
+     .page.mychannel .list-announcement-tile .large .icon{
+      display: none;
+    }
+    .page.mychannel .list-announcement-tile .item:after{
+      display: none;
+    }
+    .large.carousel .slick-dots{
+      bottom: -10px;
+    }
+    .large.carousel .slick-dots li button:before{
+      width: 5px;
+      height: 5px;
+      background-color: #737c85;
+      border-color: #737c85;
+    }
+    .large.carousel .slick-dots li.slick-active button:before{
+      background-color: #f05a00;
+      border-color: #f05a00;
+    }
+    .large.carousel .slick-dots li{
+      margin: 0;
+    }
+    .page.mychannel .head .user-info .name a{
+      position: absolute;
+      top: -5px;
+      left: auto;
+      margin-left: 0;
+      right: -40px;
+    }
+    .myblocks .item a{
+      height: 350px;
+    }
+    .myblocks .small .item a{
+      height: 110px;
+    }
+    .page.mychannel .item .edit{
+      right: 10px;
+      top: 10px;
+    }
+    .page.mychannel .list-announcement-tile .large .item .text{
+      padding-right: 35px;
+    }
+
+    .modal-addblock .dropzone.file-added .dz-message span.msg-md{
+      top: 28px;
+    }
+    .modal-addblock .preview{
+      position: relative;
+      width: 100%;
+      left: 0;
+      margin: -60px 0 0;
+      overflow: visible;
+      height: 67px;
+    }
+    .modal-addblock .dropzone.file-added .preview{
+      height: 109px;
+    }
+
+    .modal-addblock .dropzone .dz-message span.msg-md{
+      text-transform: uppercase;
+      color: #444c54;
+      font-size: 12px;
+      border: 1px solid #cdd0d2;
+      border-radius: 20px;
+      padding: 10px 70px;
+      height: unset;
+      width: unset;
+      font-weight: bold;
+      display: inline-block !important;
+    }
+    .modal-addblock .dropzone.file-added .dz-message span{
+      background-color: #ffffff;
+    }
+    .dropzone .dz-preview.dz-image-preview{
+      left: 0;
+      width: 100%;
+    }
+
+
+    .in-wallet{
+      width: 100%;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .in-wallet .money{
+      position: absolute;
+      top: -2px;
+      right: 60px;
+    }
+    .in-wallet .score{float: right;font-size: 21px;line-height: 26px;}
+    .wallet .head{
+      padding-bottom: 20px;
+    }
+    .wallet .btns {
+      float: none;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #666f79;
+      padding-top: 20px;
+    }
+    .wallet .btns a{
+      display: inline-block;
+      vertical-align: middle;  
+      height: unset;
+      border-radius: unset;
+      border: none;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-right: 0;
+      position: relative;
+      line-height: 15px;
+      color: #dbe0e6;
+      width: 32%;
+    }
+    .wallet .btns a .icon{
+      display: block;
+      vertical-align: middle;  
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 1px solid #c6ced5;
+      text-align: center;
+      line-height: 38px;
+      margin: 0 auto 15px;
+    }
+    .wallet .btns a svg{
+      margin-right: 0;
+    }
+    .wallet .btns .get .icon{
+       border-color: #7ed321;
+    }
+    .wallet .btns .put .icon{
+       border-color: #f05a00;
+    }
+    .wallet .btns .get:hover .icon{
+      background-color: #7ed321;
+    }
+    .wallet .btns .put:hover .icon{
+      background-color: #f05a00;
+    }
+    .wallet .btns .add:hover .icon{
+      background-color: #c6ced5;
+    }
+    .wallet .btns .get:hover{
+      background-color: transparent;
+    }
+    .wallet .btns .put:hover{
+      background-color: transparent;
+    }
+    .wallet .btns .add:hover{
+      background-color: transparent;
+    }
+    .wallet .btns a:hover {
+      text-decoration: none;
+    }
+    .main-content .page{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  .wallet .payment-history{
+    position: relative;
+    padding-top: 0;
+  }
+  .wallet .payment-history .setup  a{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {

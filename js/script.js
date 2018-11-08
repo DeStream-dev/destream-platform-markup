@@ -152,14 +152,18 @@ var announcementliderOptions = {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 576,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
       }
     }
   ]
