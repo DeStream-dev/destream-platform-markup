@@ -350,13 +350,13 @@ $('.form .tags span').on('click', function(){
 $('.modal-audio .add-audio').on('click', function(){
   $('.modal-audio').toggleClass('adding-audio')
   $('.modal-audio .adding-audio-cont').fadeToggle();
-  $('.modal-audio .items').fadeToggle();
+ // $('.modal-audio .items').fadeToggle();
   return false;
 });
 $('.adding-audio-cont .btn').on('click', function(){
   $('.modal-audio').removeClass('adding-audio')
   $('.modal-audio .adding-audio-cont').fadeOut();
-  $('.modal-audio .items').fadeIn();
+//  $('.modal-audio .items').fadeIn();
   return false;
 });
 
@@ -401,6 +401,7 @@ Dropzone.options.transferform = {
   maxFiles: 1,
   createImageThumbnails: false,
   addRemoveLinks: false,
+  clickable: ".modal-transfer-2 .dropzone .dz-message",
   previewsContainer: ".modal-transfer-2 .preview",
   previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n ",
 
@@ -427,6 +428,7 @@ Dropzone.options.addblockform = {
   maxFiles: 1,
   createImageThumbnails: true,
   addRemoveLinks: false,
+  clickable: ".modal-addblock .dropzone .dz-message",
   thumbnailWidth: null,
   thumbnailHeight: null,
   previewsContainer: ".modal-addblock .preview",
@@ -456,6 +458,7 @@ Dropzone.options.personaltabform = {
   maxFiles: 1,
   createImageThumbnails: true,
   addRemoveLinks: false,
+  clickable: ".settings .personal .change-photo",
   thumbnailWidth: null,
   thumbnailHeight: null,
   previewsContainer: ".settings .personal .preview",
@@ -484,6 +487,7 @@ Dropzone.options.addaudioform = {
   maxFiles: 1,
   createImageThumbnails: false,
   addRemoveLinks: false,
+  clickable: ".modal-audio .dropzone .dz-message",
   previewsContainer: ".modal-audio .preview",
   previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n ",
 

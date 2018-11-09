@@ -1168,7 +1168,7 @@ footer .social {
   font-size: 12px;
   line-height: 17px;
   display: block;
-  margin-left: 55px;
+  padding-left: 55px;
 }
 .list .item .text{
   font-weight: normal;
@@ -1176,13 +1176,13 @@ footer .social {
   font-size: 13px;
   line-height: 17px;
   display: block;
-  margin-left: 55px;
+  padding-left: 55px;
 }
 .list-news .item .date{
   padding-bottom: 4px;
 }
 .list-news .item .text,.list-news .item .date{
-  margin-left: 0;
+  padding-left: 0;
  }
 .list .item .share {
   display: block;
@@ -1411,6 +1411,7 @@ footer .social {
   display: inline-block;
   top: 8px;
 }
+
 .list-announcement-tile .large .item .name{
   margin-left: 0;
   padding-left: 10px;
@@ -1422,14 +1423,14 @@ footer .social {
 }
 .list-announcement-tile .large .item .text{
   padding-top: 20px;
-  margin-left: 0;
+  padding-left: 0;
   height: 78px;
   overflow: hidden;
   font-size: 14px;
   line-height: 19px;
 }
 .list-announcement-tile .large .item .date{
- margin-left: 0;
+ padding-left: 0;
  display: inline-block;
  font-size: 16px;
  font-weight: bold;
@@ -1471,7 +1472,7 @@ footer .social {
   padding-bottom: 0;
 }
 .list .small .item .name, .list .small .item .date{
-  margin-left: 0;
+  padding-left: 0;
 }
 .list .small .item .name{
   color: #737c85;
@@ -2629,6 +2630,7 @@ button.close {
 
 .main-content .page{
   padding: 50px 55px;
+  position: relative;
 }
 .payment-history{
   padding-top: 30px;
@@ -2660,7 +2662,6 @@ button.close {
   color: #aab1b8;
   font-size: 13px;
   line-height: 19px;
-  flex-wrap: 900;
   padding: 6px 0;
   background-color: #31373c;
 }
@@ -2782,6 +2783,7 @@ button.close {
   display: inline-block;
   vertical-align: middle;
   margin-left: 30px;
+  float: right;
 }
 .modal-hash .title{
   border-bottom: 1px solid #dbe0e6;
@@ -3805,11 +3807,11 @@ button.close {
   font-weight: 700;
 }
 .messages .list .item .description .text{
-  margin-left: 60px;
+  padding-left: 60px;
 }
 .messages .list .item .description .date{
   padding-top: 2px;
-  margin-left: 60px;
+  padding-left: 60px;
   font-size: 13px;
 }
 .messages .list .loading{
@@ -3834,8 +3836,8 @@ button.close {
 .messages .setup a{
   text-transform: uppercase;
   color: #aab1b8;
-  font-weight: 500px;
-  font-size: 10px;
+  font-weight: 500;
+  font-size: 11px;
   line-height: 13px;
 }
 
@@ -3916,6 +3918,7 @@ button.close {
   top: 2px;
   z-index: 120;
   opacity: 0;
+  cursor: pointer;
 }
 .settings .personal .change-photo:hover{
   opacity: 0.9;
@@ -4506,6 +4509,10 @@ border-color: #c6ced5 transparent transparent transparent;
 .overlays .item .menu .dropdown-menu.show{
   right: -14px !important;
   left: auto !important;
+  -webkit-transform: none !important;
+    -ms-transform:  none !important;
+    transform: none !important;
+    top: 40px !important;
 }
 
 .plyr .btn, .plyr button{
@@ -6077,6 +6084,11 @@ color: #c4c8cc;
 }
 .dropdown-with-check .bootstrap-select .dropdown-menu li a span.text{
   display: inline;
+}
+
+
+.simplebar-content{
+  margin-left: -2px !important;
 }
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
