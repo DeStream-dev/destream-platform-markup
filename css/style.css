@@ -2319,7 +2319,7 @@ button.close {
   left: -20px;
 }
 .form.interest .search-panel {
-  padding: 30px 0;
+  padding: 0 0 30px;
   margin-top: 10px;
   border-bottom: 1px solid rgb(102,111,121,0.7);
 }
@@ -3695,7 +3695,7 @@ button.close {
 
 
 .services-catalog{
-  padding: 45px 55px 0;
+  padding: 0 55px;
 }
 .services-catalog .title{
   padding-bottom: 30px;
@@ -3707,7 +3707,7 @@ button.close {
 .services-catalog .list .item .img{
   height: 45px;
   background: unset;
-  overflow: visible;  
+  overflow: hidden;  
 }
 
 .services-catalog .list .item{
@@ -3721,6 +3721,7 @@ button.close {
   font-weight: 500;
   height: 85px;
   overflow: hidden;
+  padding-left: 0;
 }
 .services-catalog .list .item .price{
   font-size: 22px;
@@ -3883,6 +3884,11 @@ button.close {
 .settings .nav-item .nav-link.active:after, .settings .nav-item .nav-link:hover:after{
   opacity: 1;
 }
+
+.settings .tab-content{
+  padding-top: 40px;
+}
+
 .settings .personal .icon{
   width: 163px;
   height: 163px;
@@ -3901,12 +3907,17 @@ button.close {
 
 
 .settings .personal .dropzone .dz-message{
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+  background-color: #182129;
+  opacity: 0;
 }
 
 .settings .personal .change-photo{
-  background-color: #182129;
   color: #1b1e22;
   width: 165px;
   height: 165px;
@@ -3917,17 +3928,24 @@ button.close {
   left: -1px;
   top: 2px;
   z-index: 120;
-  opacity: 0;
   cursor: pointer;
 }
-.settings .personal .change-photo:hover{
-  opacity: 0.9;
+.settings .personal .dropzone .dz-preview.dz-image-preview{
+      height: 165px;
+      width: 165px;
+      top: 0;
+      left: 0;
+      background-color: #182129;
+    }
+
+.settings .personal .change-photo svg{
+  width: 21px;
+  height: 20px;
 }
-.settings .personal .change-photo.added{
-  opacity: 1;
-}
+
 .settings .personal .dropzone .dz-message span{
   background-color: transparent;
+  border-radius: 0;
   left: 0;
   width: 100%;
   color: #dbe0e6;
@@ -3936,6 +3954,9 @@ button.close {
   top: 10px;
   font-size: 12px;
   padding: 0;
+}
+.settings .personal .change-photo:hover .dz-message{
+  opacity: 0.9;
 }
 .settings .personal .dropzone .dz-message span b{
   font-weight: normal;
@@ -3955,14 +3976,14 @@ button.close {
   top: 0;
 }
 .settings .form.services-catalog{
-  margin: 40px 0;
+  margin: 0;
   padding-left: 0;
   padding-right: 0;
 }
 .settings .personal {
   padding-left: 240px;
   position: relative;
-  margin: 40px 45px;
+  margin: 0 45px;
   width: 62%;
 }
 .settings .personal .form-group label{
@@ -4103,6 +4124,7 @@ button.close {
 .settings .integration .item .description {
   padding-left: 185px;
   display: inline-block;
+  width: 100%;
 }
 
 .settings .integration .item .icon svg{
@@ -4175,16 +4197,16 @@ button.close {
   padding-top: 0;
 }
 .settings .notification .item:hover{
-  background-color: #444c54
+  background-color: #444c54;
 }
-.settings .notification .item dd{
+.settings .notification .item dd, .settings .notification .item dt{
     position: relative;
     display: inline-block;
     width: 15%;
     vertical-align: middle;
     margin: 0;
 }
-.settings .notification .item dd.event-name{
+.settings .notification .item dt.event-name{
   width: 22%;
   font-size: 13px;
   line-height: 19px;
@@ -4282,7 +4304,7 @@ button.close {
 .settings .subscription .search-input{
   margin-bottom: 30px;
 }
-.settings .services-catalog .form-control{
+.settings .services-catalog .cat-name .form-control{
    background-color: #2c3238;
    width: 30%;
    display: inline-block;
@@ -4468,6 +4490,7 @@ border-color: #c6ced5 transparent transparent transparent;
   line-height: 17px;
   color: #dbe0e6;
   padding-right: 40px;
+  padding-left: 0;
 }
 .overlays .list .item .bottom{
   position: relative;
@@ -6092,17 +6115,25 @@ color: #c4c8cc;
 }
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
-.slider, .dropdown-menu ul li,
-.form-group input[type="checkbox"] + span:after,
+.slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,
 .form-group input[type="radio"]:hover + span:after,
 .ds-tooltip, .payment-history .item, .messages .list .item, .settings .nav-item .nav-link:after,
 .settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
 .ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
 .form-group input[type="checkbox"] + span, .settings .personal .change-photo,
-.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon{
+.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+
+.settings .notification .item .name:before, .settings .notification .item .name:after{
+  -webkit-transition: border-top-color 0.3s ease-out;
+  -moz-transition: border-top-color 0.3s ease-out;
+  -ms-transition: border-top-color 0.3s ease-out;
+  -o-transition: border-top-color 0.3s ease-out;
+  transition: border-top-color 0.3s ease-out;
 }

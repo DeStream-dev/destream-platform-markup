@@ -250,6 +250,20 @@ $('.services .list a').on("click",function(){
    return false;
 });
 
+
+$('.settings .notification .item .name').on("click",function(){
+ var this_a = $(this);
+ var this_item = $(this).parents('.item');
+ 
+     this_item.find(".parameters").slideToggle(300,function(){
+     this_item.toggleClass("open");
+    });
+
+   return false;
+});
+
+
+
 $('.bars').each(function(){
   var this_bar = $(this);
   if(this_bar.hasClass("open")){      

@@ -515,8 +515,11 @@
 														<span class="msg-lg d-none d-lg-block">
 															<b>Drag the image here</b> or select on computer
 														</span>
-														<span class="msg-md d-block d-lg-none">
+														<span class="msg-md d-md-block d-lg-none">
 															Edit
+														</span>
+														<span class="msg-xs d-block d-md-none">
+															<svg><use xlink:href="img/vectors.svg#pencil"></use></svg>
 														</span>
 													</div>
 													<div class="fallback">
@@ -542,7 +545,7 @@
                                 <label class="control-label" for="reenterpassword">Reenter new password</label>
                                 <input type="password" id="reenterpassword" class="form-control" required placeholder="Reenter new password"> 
                             </div>
-                            <div class="form-group" aria-required="true">
+                            <div class="form-group buttons" aria-required="true">
                             <a href="#" class="btn btn-transparent btn-changepassword">Change password</a>
                             </div>
                             <div class="form-group" aria-required="true">
@@ -586,7 +589,7 @@
 			                            <div class="title">Facebook</div>
 			                            <div class="text">
 			                            	<b>One-click log in to Twitch with your Facebook account</b>
-			                            	By connecting your account with Facebook, you acknowledge and agree that information you choose to share will be uploaded to these services and may be viewed by these services and other users of these services.
+			                            	<span class="d-none d-md-block">By connecting your account with Facebook, you acknowledge and agree that information you choose to share will be uploaded to these services and may be viewed by these services and other users of these services.</span>
 			                            </div>
 		                            </div>
 					  			</div>
@@ -600,7 +603,7 @@
 			                            <div class="title">Twitter</div>
 			                            <div class="text">
 			                            	<b>Tweet your Channel Feed posts to your followers.</b>
-			                            	By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.
+			                            	<span class="d-none d-md-block">By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.</span>
 			                            </div>
 		                            </div>
 					  			</div>
@@ -614,7 +617,7 @@
 			                            <div class="title">Youtube</div>
 			                            <div class="text">
 			                            	<b>Export archives</b>
-			                            	By connecting your account with your YouTube account, you acknowledge and agree that information you choose to share will be uploaded to YouTube and may be viewed by YouTube and other YouTube users. Also, your YouTube account information may be used by Twitch. Twitch will not publicly display your YouTube account information. If you no longer want to share this information, please disconnect your YouTube account.
+			                            	<span class="d-none d-md-block">By connecting your account with your YouTube account, you acknowledge and agree that information you choose to share will be uploaded to YouTube and may be viewed by YouTube and other YouTube users. Also, your YouTube account information may be used by Twitch. Twitch will not publicly display your YouTube account information. If you no longer want to share this information, please disconnect your YouTube account.</span>
 			                            </div>
 		                            </div>
 					  			</div>
@@ -628,7 +631,7 @@
 			                            <div class="title">Twitch</div>
 			                            <div class="text">
 			                            	<b>Tweet your Channel Feed posts to your followers.</b>
-			                            	By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.
+			                            	<span class="d-none d-md-block">By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.</span>
 			                            </div>
 		                            </div>
 					  			</div>
@@ -637,10 +640,10 @@
 				  		</div>
 				  </div>
 				  <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
-						<div class="form notification">
+						<div class="form notification d-none d-md-block">
 				  			<form data-toggle="validator" role="form">
 				  					<dl class="item header">
-			                            <dd class="event-name"></dd>
+			                            <dt class="event-name"></dt>
 			                            <dd class="site-push">Site push</dd>
 			                            <dd class="desktop-push">Desktop push</dd>
 			                            <dd class="mobile-push">Mobile push</dd>
@@ -649,7 +652,7 @@
 	                        		</dl>
 
 				  					<dl class="item">
-			                            <dd class="event-name">Event name</dd>
+			                            <dt class="event-name">Event name</dt>
 			                            <dd class="site-push">
 			                            	<div class="form-group form-group-checkbox">
 		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
@@ -678,7 +681,7 @@
 	                        		</dl>
 
 	                        		<dl class="item">
-			                            <dd class="event-name">Event name</dd>
+			                            <dt class="event-name">Event name</dt>
 			                            <dd class="site-push">
 			                            	<div class="form-group form-group-checkbox">
 		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
@@ -707,7 +710,7 @@
 	                        		</dl>
 
 	                        		<dl class="item">
-			                            <dd class="event-name">Event name</dd>
+			                            <dt class="event-name">Event name</dt>
 			                            <dd class="site-push">
 			                            	<div class="form-group form-group-checkbox">
 		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
@@ -736,7 +739,7 @@
 	                        		</dl>
 
 	                        		<dl class="item">
-			                            <dd class="event-name">Event name</dd>
+			                            <dt class="event-name">Event name</dt>
 			                            <dd class="site-push">
 			                            	<div class="form-group form-group-checkbox">
 		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
@@ -764,6 +767,155 @@
 			                            </dd>
 	                        		</dl>
 
+				  			</form>
+				  		</div>
+
+				  		<div class="form notification d-block d-md-none">
+				  			<form data-toggle="validator" role="form">
+					  			<div class="item">
+					  				<div class="name">Event name</div>
+					  				<div class="parameters">
+						  				<div>
+						  					<span>Site push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Desktop push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Mobile push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+							  				<span>Email</span>
+							  				<div class="form-group form-group-checkbox">
+							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+							  				</div>
+							  			</div>
+						  				<div>
+						  					<span>Telegram</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+					  				</div>
+					  			</div>
+
+					  			<div class="item">
+					  				<div class="name">Event name</div>
+					  				<div class="parameters">
+						  				<div>
+						  					<span>Site push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Desktop push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Mobile push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+							  				<span>Email</span>
+							  				<div class="form-group form-group-checkbox">
+							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+							  				</div>
+							  			</div>
+						  				<div>
+						  					<span>Telegram</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+					  				</div>
+					  			</div>
+
+					  			<div class="item">
+					  				<div class="name">Event name</div>
+					  				<div class="parameters">
+						  				<div>
+						  					<span>Site push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Desktop push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Mobile push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+							  				<span>Email</span>
+							  				<div class="form-group form-group-checkbox">
+							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+							  				</div>
+							  			</div>
+						  				<div>
+						  					<span>Telegram</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+					  				</div>
+					  			</div>
+
+					  			<div class="item">
+					  				<div class="name">Event name</div>
+					  				<div class="parameters">
+						  				<div>
+						  					<span>Site push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Desktop push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+						  					<span>Mobile push</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+						  				<div>
+							  				<span>Email</span>
+							  				<div class="form-group form-group-checkbox">
+							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
+							  				</div>
+							  			</div>
+						  				<div>
+						  					<span>Telegram</span>
+						  					<div class="form-group form-group-checkbox">
+						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
+						  					</div>
+						  				</div>
+					  				</div>
+					  			</div>
+				  					
 				  			</form>
 				  		</div>
 				  </div>
@@ -934,21 +1086,21 @@
 	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></a>
-		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="name">Екатерина Болтинская</a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
 	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></a>
-		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="name">Александр Гаврилов</a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
 	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 		               			<div class="item">
 		               				<a href="#" class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></a>
-		               				<a href="#" class="name">I.m. Khankishiev </a>
+		               				<a href="#" class="name">Никита Жмылев</a>
 		               				<a href="#" class="unsubscribe">Unsubscribe</a>
 		               			</div>
 	               			</div>
@@ -1015,7 +1167,7 @@
 				  <div class="tab-pane fade" id="servicecatalog" role="tabpanel" aria-labelledby="servicecatalog-tab">
 					<div class="form services-catalog">
 	               		<form data-toggle="validator"> 
-	               		 <div class="form-group" aria-required="true">
+	               		 <div class="form-group cat-name" aria-required="true">
                                 <input type="text" class="form-control" required placeholder="Enter catalog name">
                                 <button class="btn" type="submit">Create</button>  
                             </div>
@@ -1031,7 +1183,7 @@
 				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
 				                        <div class="units">
 				                           	<div class="row">
-								    			<div class="col-12 col-sm-4 col-lg-3">
+								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item1.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -1040,7 +1192,7 @@
 										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
+								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item2.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -1049,7 +1201,7 @@
 										    			<div class="price">700 DST <em>(15.4$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
+								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item3.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">
@@ -1058,7 +1210,7 @@
 										    			<div class="price">2700 DST <em>(55$)</em></div>
 										    		</div>
 								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
+								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								    				<div class="item">
 										    			<div class="img"><img src="img/live-broadcast/item4.png" width="320" height="56" alt="" /></div>
 										    			<div class="text">

@@ -247,6 +247,11 @@ body.widget > .content{
   .list-announcement-tile .large .icon.d-md-block{
   display: inline-block !important;
 }
+
+.settings .nav-item{
+    margin-right: 65px;
+}
+
 }
 
 
@@ -436,22 +441,52 @@ body.widget .main-content .page{
   height: 145px;
 }
 .settings .personal .change-photo{
-  width: 70px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 20px;
-  border: 1px solid rgba(102, 111, 121, 0.5);
-  left: 50%;
-  margin-left: -35px;
-  top: auto;
-  bottom: 10px;
-}
-.settings .personal .change-photo span.msg-md{
-  font-size: 14px;
-  color: #aab1b8;
-  top: -1px;
-  height: unset;
-}
+      width: 145px;
+      height: 145px;
+      line-height: 150px;
+      left: 50%;
+      margin-left: -73px;
+      opacity: 1;
+      background-color: transparent;
+    }
+    .settings .personal .change-photo span.msg-md{
+      stroke: #737c85;
+      top: -1px;
+       font-size: 14px;
+      height: unset;
+      display: block;
+      width: 70px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #182129;
+      border-radius: 20px;
+      border: 1px solid rgba(102, 111, 121, 0.5);
+      position: absolute;
+      left: 50%;
+      margin-left: -35px;
+      top: auto;
+      bottom: 10px;
+    }
+    .settings .personal .dropzone .dz-message{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 400;
+      background-color: transparent;
+      opacity: 1;
+    }
+    .settings .personal .dropzone .dz-preview.dz-image-preview{
+      height: 145px;
+      width: 145px;
+    }
+     .settings .personal .dropzone .preview{
+      z-index: 120 !important;
+     }
+    
+
+
 .modal-addblock .dropzone.file-added .dz-message span.msg-md{
   top: 28px;
 }
@@ -544,7 +579,7 @@ text-align: left;
 .settings .integration .form-group input[type="checkbox"]:checked + span:after,.settings .notification .form-group input[type="checkbox"]:checked + span:after{
   left: 22px;
 }
-.settings .notification .item dd.event-name{
+.settings .notification .item dt.event-name{
   width: 20%;
 }
 .settings .services-catalog .form-control{
@@ -1860,7 +1895,7 @@ header .btn.login{
       text-align: center;
     }
     .settings .personal .change-photo{
-      /*6display: none !important;*/
+      /*display: none !important;*/
     }
 
     .settings .nav{
@@ -1914,6 +1949,203 @@ header .btn.login{
     .settings .personal .input .label{
       right: 16px;
     }
+    .settings .personal .dropzone .dz-message span.msg-lg, .settings .personal .dropzone .dz-message span.msg-md{
+        display: none !important;
+      }
+    .settings .personal .change-photo{
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      left: 50%;
+      margin-left: -75px;
+      opacity: 1;
+      background-color: transparent;
+    }
+    .settings .personal .change-photo span.msg-xs{
+      stroke: #737c85;
+      top: -4px;
+      height: unset;
+      display: block;
+       width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #182129;
+      border-radius: 50%;
+      border: 1px solid rgba(102, 111, 121, 0.5);
+      position: absolute;
+      left: 50%;
+      margin-left: -20px;
+      top: auto;
+      bottom: 10px;
+    }
+    .settings .personal .dropzone .dz-message{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 400;
+      background-color: transparent;
+      opacity: 1;
+    }
+    .settings .personal .dropzone .dz-preview.dz-image-preview{
+      height: 150px;
+      width: 150px;
+    }
+     .settings .personal .dropzone .preview{
+      z-index: 120 !important;
+     }
+    .modal-addblock .dropzone.file-added .dz-message span.msg-sm{
+      top: 28px;
+    }
+    .settings .integration .item .form-group-checkbox{
+      left: auto;
+      right: 0;
+      width: 36px;
+    }
+    .settings .integration .item .icon{
+      left: 0;
+      width: 47px;
+      height: 47px;
+    }
+
+    .settings .integration .item .icon svg{
+      width: 42px;
+      height: 42px;
+      fill: #ffffff;
+       -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        position: relative;
+        top: -12px;
+    }
+    .main-content .page.settings .title{
+      margin-bottom: 10px;
+    }
+    .settings .integration .item .description{
+      padding-left: 63px;
+      padding-right: 50px;
+    }
+    .settings .integration .form-group input[type="checkbox"] + span{
+      width: 36px;
+      height: 18px;
+    }
+    .settings .integration .form-group input[type="checkbox"] + span:after{
+      width: 14px;
+      height: 14px;
+    }
+    .settings .integration .form-group input[type="checkbox"]:checked + span:after{
+      left: 19px;
+    }
+
+
+    .settings .notification{
+      margin-top: -40px;
+    }
+    .settings .notification .form-group input[type="checkbox"] + span {
+      width: 36px;
+      height: 18px;
+      margin-left: 0;
+      left: auto;
+      right: 5px;
+      cursor: pointer;
+    }
+    .settings .notification .form-group input[type="checkbox"] + span:after{
+      width: 14px;
+      height: 14px;
+    }
+    .settings .notification .form-group input[type="checkbox"]:checked + span:after{
+      left: 19px;
+    }
+
+    .settings .notification .item .parameters > div{
+      position: relative;
+      padding: 9px 0;
+    }
+    .settings .notification .item .parameters .form-group-checkbox{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+     .settings .notification .item{
+      margin-left: -10px;
+      padding: 10px;
+      width: calc(100% + 20px);
+     }
+    .settings .notification .item:after{
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+      content: "";
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: #666f79;
+    }
+    .settings .notification .item .name{
+      font-size: 13px;
+      color: #f8f8f9;
+      padding: 13px 0;
+      position: relative;
+    }
+    .settings .notification .item .name:before {
+      content:"";
+      border-color: #383e44 transparent transparent transparent;
+      border-style: solid;
+      border-width: 7px;
+      width:0;
+      height:0;
+      position:absolute;
+      bottom: 7px;
+      right: 10px;
+      z-index:1;
+   }
+
+  .settings .notification .item:hover .name:before {
+    border-color: #444c54 transparent transparent transparent;
+  }
+  .settings .notification .item .name:after {
+    content:"";
+    border-color: #aab1b8 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px;
+    width:0;
+    height:0;
+    position:absolute;
+    bottom: 6px;
+    right: 10px;
+  }
+  .settings .notification .item.open .name:before {
+    border-top-color: transparent;
+    border-bottom-color: #383e44;
+    bottom: 14px;
+  }
+  .settings .notification .item.open:hover .name:before {
+    border-bottom-color: #444c54;
+  }
+  .settings .notification .item.open .name:after {
+   border-top-color: transparent;
+   border-bottom-color: #aab1b8;
+   bottom: 15px;
+  }
+  .settings .notification .item .parameters{
+      font-size: 13px;
+      color: #c6ced5;
+      padding-top: 5px;
+      display: none;
+    }
+  .settings .notification .item.open .parameters{
+      display: block;
+   }
+
+  .settings .services-catalog .cat-name .form-control{
+    width: calc(100% - 145px - 0.3em);
+  }
+  .settings .services-catalog .cat-name .btn{
+      width: 140px;
+      margin-left: 0;
+      float: right;
+  }
+
  }
 
 
@@ -2952,6 +3184,283 @@ header .btn.login{
     .settings .nav-item a{
       display: inline-block;
     }
+
+    .settings .personal .change-photo{
+      width: 150px;
+      height: 150px;
+      left: 50%;
+      margin-left: -75px;
+      opacity: 1;
+    }
+
+    .settings .personal{
+      padding-left: 0;
+      margin: 20px 10px;
+      width: 100%;
+    }
+    .settings .personal .user-info{
+      position: relative;
+      text-align: center;
+    }
+    .settings .personal .buttons{
+      text-align: center;
+    }
+    .settings .personal .change-photo{
+      /*display: none !important;*/
+    }
+
+    .settings .nav{
+      background-color: #31373c;
+      margin-left: -10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: calc(100% + 20px);
+      position: relative;
+    }
+    .main-content .page.settings{
+      position: relative;
+    }
+    .main-content .page.settings:after{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 60px;
+      left: 0;
+      top: 0;
+      background-color: #31373c;
+      z-index: 29;
+    }
+    .main-content .page.settings .title{
+      position: relative;
+      z-index: 30;
+    }
+    .settings .nav:after{
+      position: absolute;
+      content: "";
+      width: calc(100% - 20px);
+      height: 1px;
+      left: 10px;
+      top: 0;
+      background-color: #444c54;
+    }
+    .settings .nav-item .nav-link:after{
+      height: 2px;
+      top: 45px;
+    }
+    .settings .nav-item .nav-link{
+      padding: 20px 0 15px;
+    }
+    .settings .personal .form-control{
+      left: -10px;
+    }
+    .settings .personal .icon{
+      width: 150px;
+      height: 150px;
+    }
+    .settings .personal .input .label{
+      right: 16px;
+    }
+    .settings .personal .dropzone .dz-message span.msg-lg, .settings .personal .dropzone .dz-message span.msg-md{
+        display: none !important;
+      }
+    .settings .personal .change-photo{
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      left: 50%;
+      margin-left: -75px;
+      opacity: 1;
+      background-color: transparent;
+    }
+    .settings .personal .change-photo span.msg-xs{
+      stroke: #737c85;
+      top: -4px;
+      height: unset;
+      display: block;
+       width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #182129;
+      border-radius: 50%;
+      border: 1px solid rgba(102, 111, 121, 0.5);
+      position: absolute;
+      left: 50%;
+      margin-left: -20px;
+      top: auto;
+      bottom: 10px;
+    }
+    .settings .personal .dropzone .dz-message{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 400;
+      background-color: transparent;
+      opacity: 1;
+    }
+    .settings .personal .dropzone .dz-preview.dz-image-preview{
+      height: 150px;
+      width: 150px;
+    }
+     .settings .personal .dropzone .preview{
+      z-index: 120 !important;
+     }
+    .modal-addblock .dropzone.file-added .dz-message span.msg-xs{
+      top: 28px;
+    }
+
+    .settings .integration .item .form-group-checkbox{
+      left: auto;
+      right: 0;
+      width: 36px;
+    }
+    .settings .integration .item .icon{
+      left: 0;
+      width: 47px;
+      height: 47px;
+    }
+
+    .settings .integration .item .icon svg{
+      width: 42px;
+      height: 42px;
+      fill: #ffffff;
+       -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        position: relative;
+        top: -12px;
+    }
+    .main-content .page.settings .title{
+      margin-bottom: 10px;
+    }
+    .settings .integration .item .description{
+      padding-left: 63px;
+      padding-right: 50px;
+    }
+    .settings .integration .form-group input[type="checkbox"] + span{
+      width: 36px;
+      height: 18px;
+    }
+    .settings .integration .form-group input[type="checkbox"] + span:after{
+      width: 14px;
+      height: 14px;
+    }
+    .settings .integration .form-group input[type="checkbox"]:checked + span:after{
+      left: 19px;
+    }
+
+    .settings .notification{
+      margin-top: -40px;
+    }
+    .settings .notification .form-group input[type="checkbox"] + span {
+      width: 36px;
+      height: 18px;
+      margin-left: 0;
+      left: auto;
+      right: 5px;
+      cursor: pointer;
+    }
+    .settings .notification .form-group input[type="checkbox"] + span:after{
+      width: 14px;
+      height: 14px;
+    }
+    .settings .notification .form-group input[type="checkbox"]:checked + span:after{
+      left: 19px;
+    }
+
+    .settings .notification .item .parameters > div{
+      position: relative;
+      padding: 9px 0;
+    }
+    .settings .notification .item .parameters .form-group-checkbox{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+     .settings .notification .item{
+      margin-left: -10px;
+      padding: 10px;
+      width: calc(100% + 20px);
+     }
+    .settings .notification .item:after{
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+      content: "";
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: #666f79;
+    }
+    .settings .notification .item .name{
+      font-size: 13px;
+      color: #f8f8f9;
+      padding: 13px 0;
+      position: relative;
+    }
+    .settings .notification .item .name:before {
+      content:"";
+      border-color: #383e44 transparent transparent transparent;
+      border-style: solid;
+      border-width: 7px;
+      width:0;
+      height:0;
+      position:absolute;
+      bottom: 7px;
+      right: 10px;
+      z-index:1;
+   }
+
+.settings .notification .item:hover .name:before {
+  border-color: #444c54 transparent transparent transparent;
+}
+.settings .notification .item .name:after {
+    content:"";
+    border-color: #aab1b8 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px;
+    width:0;
+    height:0;
+    position:absolute;
+    bottom: 6px;
+    right: 10px;
+  }
+  .settings .notification .item.open .name:before {
+    border-top-color: transparent;
+    border-bottom-color: #383e44;
+    bottom: 14px;
+  }
+  .settings .notification .item.open:hover .name:before {
+    border-bottom-color: #444c54;
+  }
+  .settings .notification .item.open .name:after {
+   border-top-color: transparent;
+   border-bottom-color: #aab1b8;
+   bottom: 15px;
+  }
+  .settings .notification .item .parameters{
+      font-size: 13px;
+      color: #c6ced5;
+      padding-top: 5px;
+      display: none;
+    }
+  .settings .notification .item.open .parameters{
+      display: block;
+     }
+
+  .settings .services-catalog .cat-name .form-control{
+    width: calc(100% - 145px - 0.3em);
+  }
+  .settings .services-catalog .cat-name .btn{
+      width: 140px;
+      margin-left: 0;
+      float: right;
+  }
+
+
+  .services-catalog .list .item .img{
+    height: 65px;
+  }
 
 }
 
