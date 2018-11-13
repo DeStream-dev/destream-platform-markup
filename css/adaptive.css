@@ -318,7 +318,9 @@ header  div[class*='col-']{
   .list .item .img{
     height: 180px;
   }
-
+  .services-catalog .list .item .img{
+    height: 35px;
+  }
   .list-announcement-tile .item .img{
     height: 190px;
   }
@@ -522,13 +524,18 @@ body.widget .main-content .page{
   width: 100%;
 }
 
-.settings .nav-item{
-  margin-right: unset;
-  -webkit-flex: 1 1 auto; 
-  -ms-flex: 1 1 auto; 
-  flex: 1 1 auto; 
-  text-align: center;
-}
+ .settings .nav-item{
+    /*  -webkit-flex: 1 1 auto; 
+      -ms-flex: 1 1 auto; 
+      flex: 1 1 auto; */
+      -webkit-flex: none; 
+      -ms-flex: none; 
+      flex: none; 
+      float: left;
+      display: inline-block;
+      text-align: center;
+      margin-right: 30px;
+    }
 .settings .nav-item a{
   display: inline-block;
 }
@@ -594,6 +601,8 @@ text-align: left;
 .services-catalog .list .item .text{
   margin-top: 0;
   padding-top: 5px;
+  font-size: 13px;
+  line-height: 19px;
 }
 .form.interest .search-panel .search-input input[type="search"]{
   width: 100%;
@@ -1898,7 +1907,7 @@ header .btn.login{
       /*display: none !important;*/
     }
 
-    .settings .nav{
+    .settings .tabs{
       background-color: #31373c;
       margin-left: -10px;
       padding-left: 10px;
@@ -1923,7 +1932,7 @@ header .btn.login{
       position: relative;
       z-index: 30;
     }
-    .settings .nav:after{
+    .settings .tabs:after{
       position: absolute;
       content: "";
       width: calc(100% - 20px);
@@ -2145,6 +2154,42 @@ header .btn.login{
       margin-left: 0;
       float: right;
   }
+  .services-catalog .list .item .img{
+    height: 65px;
+  }
+
+  .modal-addservice .input .label{
+    border-radius: 0;
+    right: 4px;
+  }
+  .modal-addservice .form .form-group > button{
+  width: 100%;
+  margin-top: 15px;
+   position: relative;
+  left: unset;
+  top: unset;
+  bottom: unset;
+  }
+
+  .services-catalog .list .item .text{
+    height: unset;
+    overflow: visible;
+  }
+  .services-catalog .list .item .text{
+    font-size: 13px;
+    margin: 0 0 10px;
+    padding-top: 10px
+  }
+  .services .list .btn-transparent{
+    font-weight: bold;
+    font-size: 12px;
+    border-color: #737c85;
+    colotr: #aab1b8;
+  }
+  .services .list .units{
+    padding-top: 30px;
+  }
+
 
  }
 
@@ -3175,12 +3220,20 @@ header .btn.login{
     }
 
     .settings .nav-item{
-      margin-right: unset;
-      -webkit-flex: 1 1 auto; 
+    /*  -webkit-flex: 1 1 auto; 
       -ms-flex: 1 1 auto; 
-      flex: 1 1 auto; 
+      flex: 1 1 auto; */
+      -webkit-flex: none; 
+      -ms-flex: none; 
+      flex: none; 
+      float: left;
+      display: inline-block;
       text-align: center;
+      margin-right: 30px;
     }
+     .settings .nav-item:last-child{
+    /*  margin-right: 0;*/
+     }
     .settings .nav-item a{
       display: inline-block;
     }
@@ -3209,7 +3262,7 @@ header .btn.login{
       /*display: none !important;*/
     }
 
-    .settings .nav{
+    .settings .tabs{
       background-color: #31373c;
       margin-left: -10px;
       padding-left: 10px;
@@ -3234,7 +3287,7 @@ header .btn.login{
       position: relative;
       z-index: 30;
     }
-    .settings .nav:after{
+    .settings .tabs:after{
       position: absolute;
       content: "";
       width: calc(100% - 20px);
@@ -3461,6 +3514,39 @@ header .btn.login{
   .services-catalog .list .item .img{
     height: 65px;
   }
+
+  .modal-addservice .input .label{
+    border-radius: 0;
+    right: 4px;
+  }
+  .modal-addservice .form .form-group > button{
+  width: 100%;
+  margin-top: 15px;
+   position: relative;
+  left: unset;
+  top: unset;
+  bottom: unset;
+  }
+
+  .services-catalog .list .item .text{
+    height: unset;
+    overflow: visible;
+  }
+  .services-catalog .list .item .text{
+    font-size: 13px;
+    margin: 0 0 10px;
+    padding-top: 10px
+  }
+  .services .list .btn-transparent{
+    font-weight: bold;
+    font-size: 12px;
+    border-color: #737c85;
+    colotr: #aab1b8;
+  }
+  .services .list .units{
+    padding-top: 30px;
+  }
+
 
 }
 

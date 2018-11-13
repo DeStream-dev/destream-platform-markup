@@ -254,6 +254,7 @@ header .notifications-cont .dropdown-menu{
 
 header .notifications-cont .dropdown-menu ul li{
   padding: 0 25px;
+  position: relative;
 }
 .dropdown-menu ul li{
   padding: 0;  
@@ -267,6 +268,9 @@ header .notifications-cont .dropdown-menu ul li .icon{
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
+  position: absolute;
+  left: 25px;
+  top: 12px;
 }
 header .notifications-cont .dropdown-menu ul li .icon img{
   border-radius: 50%;
@@ -292,7 +296,7 @@ header .notifications-cont .dropdown-menu ul li .icon img{
   color: #ffffff;
 }
 header .notifications-cont .dropdown-menu ul li a{
-  padding: 15px;
+  padding: 15px 15px 15px 55px;
 }
 header .notifications-cont .dropdown-menu .view-all-cont {
   border-top: 1px solid #383E44;
@@ -786,12 +790,14 @@ padding: 0 25px;
 
 .main-sidebar .block .title {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .main-sidebar .block .title .search-input input[type="search"]{
   position: relative;
-  left: -20px;
-  width: calc(100% + 40px);
+  left: 0;
+  width: 100%;
+  padding-left: 50px;
+  color: rgb(170,177,184, 0.5);
 }
 
 
@@ -802,7 +808,7 @@ padding: 0 25px;
 
 .main-sidebar .block .title .btn{
   position: absolute;
-  left: -1px;
+  left: 18px;
   top: 10px;
   width: 19px;
   height: 20px;
@@ -820,6 +826,7 @@ padding: 0 25px;
   width: 19px; 
   height: 20px;
   fill: #aab1b8;
+  opacity: 0.5;
 }
 .main-sidebar .block {
   padding: 35px 0 0 0; 
@@ -3706,8 +3713,13 @@ button.close {
 
 .services-catalog .list .item .img{
   height: 45px;
-  background: unset;
   overflow: hidden;  
+  background-position: center;
+  background-repeat: no-repeat;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
 }
 
 .services-catalog .list .item{
@@ -4348,6 +4360,7 @@ button.close {
   right: 0;
   left: auto;
   top: 20px;
+  font-weight: bold;
 }
 .services .list a:before{
   content: "";
