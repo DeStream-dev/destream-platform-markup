@@ -1277,7 +1277,7 @@
                             <div class="form-group form-group-checkbox required">
                                 <label><input type="checkbox" name="remember" required><span></span>Remember me</label>
                             </div> 
-                            <div class="form-group">                                
+                            <div class="form-group form-group-btn">                                
                                 <button class="btn" type="submit">Log in</button>                                    
                             </div>
                                                 
@@ -1326,7 +1326,7 @@
 								<a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
                                 </label>
                             </div> 
-                            <div class="form-group">
+                            <div class="form-group form-group-btn ">
                                <button class="btn" type="submit">Register</button>
                             </div> 
                             
@@ -1359,6 +1359,9 @@
                     <div class="text">
                         Check your email %% we've sent you an email with instructions on how to reset your password
                     </div>
+                    <div class="form-group">
+                               <button class="btn" data-dismiss="modal">Ok</button>
+                            </div>
                </div>
             </div>
         </div>
@@ -1384,8 +1387,10 @@
                       <label class="control-label" for="nickname">Nickname or email</label>
                       <input type="text" id="nickname" class="form-control" required>
                     </div>
+                    <div class="form-group form-group-btn">
                     <button class="btn recovery-send" data-dismiss="modal" data-target=".modal-recovery-password-ok" data-toggle="modal">Recover</button>  
-                    <!--button class="btn recovery-send" type="submit">Recover</button-->                          
+                    <!--button class="btn recovery-send" type="submit">Recover</button-->
+                    </div>                          
                    </form>
                    <div class="links">
                    	<a href="#" class="auth-link" data-dismiss="modal" data-target=".modal-auth" data-toggle="modal">Log in</a>
@@ -1723,10 +1728,10 @@
 							<div class="search-panel">   
 	               				<div class="row">
 		               				<div class="col-12 col-sm-6 col-lg-4">
-		               					<div class="text">Choose what you like and we will try to give you the most interesting selection.</div>
+		               					<div class="text d-none d-md-block">Choose what you like and we will try to give you the most interesting selection.</div>
 		               				</div>
 		               				<div class="col-12 col-sm-6 col-lg-3">
-			               				<div class="filter">
+			               				<div class="filter d-none d-md-block">
 			               					<div class="form-group form-group-checkbox">
 			                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
 			                            	</div>
@@ -1750,122 +1755,132 @@
 		               					<div class="title">Game</div>
 		               					<div class="items-game">
 		               					<div class="row">
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><img src="img/interest/game2.png" alt="" /></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-12 col-sm-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><img src="img/interest/game2.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
 
-				               				<div class="col-12 col-sm-6 col-lg-4">
+				               				<div class="col-4 col-sm-6 col-lg-4">
 				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><img src="img/interest/game1.png" alt="" /></label>
+			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-sm-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
 			                            		</div>
 				               				</div>
 			               				</div>
+			               				<a class="more d-md-none" href="#">More game</a>
 		               				  </div>
 		               				</div>
 		               				<div class="col-12 col-sm-6 col-lg-5">
 		               					<div class="title">Life style</div>
 		               					<div class="items-lifestyle">
-			               					<div class="form-group form-group-checkbox">
-				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-					                                <img src="img/interest/lifestyle1.png" alt="" />
-					                                <i>Very long and simple name of lifestyle rubric</i>
-				                                </label>
+		               						<div class="row">
+					               				<div class="col-6 col-sm-12">
+					               					<div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+							                                <div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
+							                                <i>Very long and simple name of lifestyle rubric</i>
+						                                </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-sm-12">
+						                            <div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+						                                	<div class="img" style="background-image: url('img/interest/lifestyle2.png')"></div>
+							                                <i>Name of lifestyle rubric</i>
+							                             </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-sm-12">
+						                           	<div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+							                                <div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
+							                                <i>Very long and simple name of lifestyle rubric</i>
+						                                </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-sm-12">
+						                            <div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+						                                	<div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
+							                                <i>Name of lifestyle rubric</i>
+							                             </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-sm-12">
+						                           	<div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+							                                <div class="img" style="background-image: url('img/interest/lifestyle2.png')"></div>
+							                                <i>Very long and simple name of lifestyle rubric</i>
+						                                </label>
+						                            </div>
+					                            </div>
 				                            </div>
-
-				                            <div class="form-group form-group-checkbox">
-				                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
-				                                	<img src="img/interest/lifestyle2.png" alt="" />
-					                                <i>Name of lifestyle rubric</i>
-					                             </label>
-				                            </div>
-				                           	<div class="form-group form-group-checkbox">
-				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-					                                <img src="img/interest/lifestyle1.png" alt="" />
-					                                <i>Very long and simple name of lifestyle rubric</i>
-				                                </label>
-				                            </div>
-
-				                            <div class="form-group form-group-checkbox">
-				                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
-				                                	<img src="img/interest/lifestyle2.png" alt="" />
-					                                <i>Name of lifestyle rubric</i>
-					                             </label>
-				                            </div>
-				                           	<div class="form-group form-group-checkbox">
-				                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-					                                <img src="img/interest/lifestyle1.png" alt="" />
-					                                <i>Very long and simple name of lifestyle rubric</i>
-				                                </label>
-				                            </div>
-
+				                            <a class="more d-md-none" href="#">More lifestyle</a>
 			                            </div>
 		               				</div>
 		               			</div>
-		               			
-				            </div>
+		               		</div>
 			            <div class="buttons text-center">
-			            	<button type="button" class="btn btn-white btn-loadmore">Load more</button>
+			            	<button type="button" class="btn btn-white btn-loadmore d-none d-md-block">Load more</button>
 			            	<button type="button" class="btn btn-finish" data-dismiss="modal">Finish</button>
 			            </div>
                		</form>
@@ -1975,7 +1990,7 @@
                                 </div>
                             </div>
                             </div>
-                            <div class="form-group text-center">                                
+                            <div class="form-group form-group-btn text-center">                                
                                 <button class="btn" type="submit">Create</button>                                    
                             </div>
                            </form>
@@ -2009,19 +2024,19 @@
 	<script>
      $(function () {
 
-    //   $('.modal-interest').modal('show');
+     //  $('.modal-interest').modal('show');
 
     //  $('.modal-announcement').modal('show');
 
-   //    $('.modal-news-detail').modal('show');
+   //   $('.modal-news-detail').modal('show');
 
-    //   $('.modal-recovery-password-ok').modal('show');
+   //    $('.modal-recovery-password-ok').modal('show');
 
      //  $('.modal-recovery-password').modal('show');
 
-    //  $('.modal-auth').modal('show');
+      $('.modal-auth').modal('show');
 
-     //$('.modal-create-future-stream').modal('show');
+   //  $('.modal-create-future-stream').modal('show');
 
        });
     </script>

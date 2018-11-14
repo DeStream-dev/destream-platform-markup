@@ -1491,12 +1491,15 @@ header .btn.login{
       top: 82px;
     }
 
-    .modal .form .form-group > button{
+    .modal .form .form-group-btn {
+      margin-bottom: 50px;
+    }
+    .modal .form .form-group-btn > button{
       position: fixed;
-      width: calc(100% - 60px);
+      width: calc(100% - 20px);
       top: auto;
-      left: 30px;
-      bottom: 30px;
+      left: 10px;
+      bottom: 15px;
     }
 
   .modal .form input[type="text"], .modal .form input[type="email"], .modal .form input[type="password"], .modal .form input[type="number"], .modal .form textarea,
@@ -2029,8 +2032,10 @@ header .btn.login{
         top: -12px;
     }
     .main-content .page.settings .title{
-      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #444c54;
     }
+    .settings .nav{margin-top: 0;}
     .settings .integration .item .description{
       padding-left: 63px;
       padding-right: 50px;
@@ -2190,7 +2195,199 @@ header .btn.login{
     padding-top: 30px;
   }
 
+  .form.interest .search-panel .search-input input[type="search"]{
+    width: 100%;
+  }
+  .form.interest {
+    margin: -20px 0;
+  }
+  .form.interest .filter{
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .form.interest .search-panel{
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+  .form.interest .search-panel .form-group-checkbox{
+    display: block;
+    margin: 0;
+    padding: 11px 0;
+    border-top: 1px solid #666f79;   
+  }
+  .form.interest .search-panel .form-group-checkbox:last-child{
+     border-bottom: 1px solid #666f79;
+  }
+  .form.interest .search-panel .form-group-checkbox label{
+    display: block;
+    padding-left: 0;
+  }
+  .form.interest .form-group input[type="checkbox"] + span{
+    left: auto;
+    right: 5px;
+    top: 11px;
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
 
+.form.interest .list .form-group input[type="checkbox"] + span{
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    margin: 0;
+}
+.form.interest .list .form-group input[type="checkbox"] + span:after,.form.interest .list .form-group input[type="checkbox"]:checked + span:after{
+  display: none;
+}
+
+.form.interest .list .form-group input[type="checkbox"]:checked + span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f05a00;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+}
+.form.interest .list .more{
+  margin-bottom: 10px;
+}
+  .form.interest .list .form-group-checkbox label {
+    height: 146px;
+    cursor: pointer;
+  }
+  .form.interest .items-lifestyle .form-group-checkbox label {
+    height: 89px;
+    }
+    .form.interest .list .row{
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    .form.interest .list  div[class*='col-']{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .form.interest .list .form-group{
+      margin-bottom: 10px;
+    }
+    .form.interest .list .title{
+      padding-bottom: 20px;
+    }
+    .form.interest .list .form-group-checkbox label:after{
+      display: none;
+    }
+    .form.interest .list .items-lifestyle .form-group-checkbox label:after{
+      display: block;
+      height: 20px;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .form.interest .list .form-group-checkbox label i{
+      bottom: 2px;
+      left: 10px;
+      width: calc(100% - 20px);
+    }
+
+    .form.interest .form-group input[type="checkbox"] + span:after{
+       -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          width: 0.6em;
+          height: 1.1em;
+          color: #2c3238;
+    }
+     .form.interest .form-group input[type="checkbox"]:checked + span:after{
+      color: #f05a00;
+    }
+
+    .modal .inner{
+      padding: 0 10px;
+    }
+    .modal .text{
+      font-size: 12px;
+    }
+    .modal-news-detail .inner .title{
+      font-size: 16px;
+      padding-top: 35px;
+      line-height: 20px;
+    }
+    .modal-news-detail .inner .date{
+      padding-bottom: 10px;
+    }
+    .text p{
+      margin-bottom: 17px;
+    }
+    .modal .comments .item .text{
+      font-size: 12px;
+    }
+    .modal .comments .item{
+      padding-bottom: 25px;
+    }
+    .modal .comments .form{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .modal-interest .form.interest .search-panel{
+      border-top: none;
+      border-bottom: none;
+      padding: 15px 0 0;
+    }
+    .modal-interest .form.interest .search-panel .search-input input[type="search"]{
+      border-radius: 0;
+      background-color: #ffffff;
+    }
+     .modal-interest .form.interest .list .more{
+      background-color: #f8f8f9;
+      color: #666f79;
+      border-color: #cdd0d2;
+    }
+    .modal{
+       background-color: #f8f8f9;
+    }
+    .modal-interest .buttons .btn-finish{
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .modal-recovery-password-ok, .modal-recovery-password{
+    background-color: rgba(24,33,41, 0.9);
+    }
+    .modal-recovery-password-ok .title, modal-recovery-password .title{
+      padding-top: 0;
+    }
+    .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog{
+      align-items: center;
+    }
+    .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button{
+      position: relative;
+      left: auto;
+      top: auto;
+      bottom: auto;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body{
+      padding-bottom: 0;
+    }
  }
 
 
@@ -2782,6 +2979,10 @@ header .btn.login{
     }
     .modal-content{
       padding: 35px 10px 10px;
+      box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+
     }
     .modal-body{
       padding: 0;
@@ -2793,13 +2994,15 @@ header .btn.login{
     .modal-auth .forget-password a{
       top: 82px;
     }
-
-    .modal .form .form-group > button{
+    .modal .form .form-group-btn {
+      margin-bottom: 50px;
+    }
+    .modal .form .form-group-btn > button{
       position: fixed;
       width: calc(100% - 20px);
       top: auto;
       left: 10px;
-      bottom: 30px;
+      bottom: 15px;
     }
 
   .modal .form input[type="text"], .modal .form input[type="email"], .modal .form input[type="password"], .modal .form input[type="number"], .modal .form textarea,
@@ -3248,12 +3451,13 @@ header .btn.login{
 
     .settings .personal{
       padding-left: 0;
-      margin: 20px 10px;
+      margin: -20px 10px;
       width: 100%;
     }
     .settings .personal .user-info{
       position: relative;
       text-align: center;
+      padding-bottom: 20px;
     }
     .settings .personal .buttons{
       text-align: center;
@@ -3385,8 +3589,12 @@ header .btn.login{
         top: -12px;
     }
     .main-content .page.settings .title{
-      margin-bottom: 10px;
+      padding-bottom: 10px;
     }
+    .main-content .page.settings > .title{
+      border-bottom: 1px solid #444c54;
+    }
+    .settings .nav{margin-top: 0;}
     .settings .integration .item .description{
       padding-left: 63px;
       padding-right: 50px;
@@ -3546,8 +3754,198 @@ header .btn.login{
   .services .list .units{
     padding-top: 30px;
   }
+  .form.interest .search-panel .search-input input[type="search"]{
+    width: 100%;
+  }
+  .form.interest {
+    margin: -20px 0;
+  }
+  .form.interest .filter{
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .form.interest .search-panel{
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+  .form.interest .search-panel .form-group-checkbox{
+    display: block;
+    margin: 0;
+    padding: 11px 0;
+    border-top: 1px solid #666f79;   
+  }
+  .form.interest .search-panel .form-group-checkbox:last-child{
+     border-bottom: 1px solid #666f79;
+  }
+  .form.interest .search-panel .form-group-checkbox label{
+    display: block;
+    padding-left: 0;
+  }
+  .form.interest .form-group input[type="checkbox"] + span{
+    left: auto;
+    right: 5px;
+    top: 11px;
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
 
+.form.interest .list .form-group input[type="checkbox"] + span{
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    margin: 0;
+}
+.form.interest .list .form-group input[type="checkbox"] + span:after,.form.interest .list .form-group input[type="checkbox"]:checked + span:after{
+  display: none;
+}
+
+.form.interest .list .form-group input[type="checkbox"]:checked + span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f05a00;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+}
+.form.interest .list .more{
+  margin-bottom: 10px;
+}
+  .form.interest .list .form-group-checkbox label {
+    height: 146px;
+    cursor: pointer;
+  }
+  .form.interest .items-lifestyle .form-group-checkbox label {
+    height: 89px;
+    }
+    .form.interest .list .row{
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    .form.interest .list  div[class*='col-']{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .form.interest .list .form-group{
+      margin-bottom: 10px;
+    }
+    .form.interest .list .title{
+      padding-bottom: 20px;
+    }
+    .form.interest .list .form-group-checkbox label:after{
+      display: none;
+    }
+    .form.interest .list .items-lifestyle .form-group-checkbox label:after{
+      display: block;
+      height: 20px;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .form.interest .list .form-group-checkbox label i{
+      bottom: 2px;
+      left: 10px;
+      width: calc(100% - 20px);
+    }
+
+    .form.interest .form-group input[type="checkbox"] + span:after{
+       -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          width: 0.6em;
+          height: 1.1em;
+          color: #2c3238;
+    }
+     .form.interest .form-group input[type="checkbox"]:checked + span:after{
+      color: #f05a00;
+    }
+    .modal .inner{
+      padding: 0 10px;
+    }
+    .modal-news-detail .text{
+      font-size: 12px;
+    }
+    .modal-news-detail .inner .title{
+      font-size: 16px;
+      padding-top: 35px;
+      line-height: 20px;
+    }
+    .modal-news-detail .inner .date{
+      padding-bottom: 10px;
+    }
+    .text p{
+      margin-bottom: 17px;
+    }
+    .modal .comments .item .text{
+      font-size: 12px;
+    }
+    .modal .comments .item{
+      padding-bottom: 25px;
+    }
+    .modal .comments .form{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .modal-interest .form.interest .search-panel{
+      border-top: none;
+      border-bottom: none;
+      padding: 15px 0 0;
+    }
+    .modal-interest .form.interest .search-panel .search-input input[type="search"]{
+      border-radius: 0;
+      background-color: #ffffff;
+    }
+     .modal-interest .form.interest .list .more{
+      background-color: #f8f8f9;
+      color: #666f79;
+      border-color: #cdd0d2;
+    }
+    .modal{
+       background-color: #f8f8f9;
+    }
+    .modal-interest .buttons .btn-finish{
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  .modal-recovery-password-ok, .modal-recovery-password{
+    background-color: rgba(24,33,41, 0.9);
+    }
+    .modal-recovery-password-ok .title, modal-recovery-password .title{
+      padding-top: 0;
+    }
+    .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog{
+      align-items: center;
+    }
+    .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button{
+      position: relative;
+      left: auto;
+      top: auto;
+      bottom: auto;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body{
+      padding-bottom: 0;
+    }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
