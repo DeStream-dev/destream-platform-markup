@@ -664,7 +664,7 @@ text-align: left;
   margin-left: 18px;
   margin-right: 18px;
  }
- .bootstrap-select>.dropdown-toggle,.converter .label{
+ .modal .bootstrap-select>.dropdown-toggle,.modal .converter .label{
   border-radius: 0;
  }
  .votes input[type="number"]{
@@ -887,7 +887,7 @@ header .btn.login{
   width: 100%;
   border-radius: 0;
 }
-.server-catalog .bootstrap-select>.dropdown-toggle{
+.service-catalog .bootstrap-select>.dropdown-toggle{
   width: 100%;
 }
 .form .tags{
@@ -900,7 +900,7 @@ header .btn.login{
 .modal-create-future-stream .is-voting .field .remove{
   right: 0;
 }
-.server-catalog .dropdown-menu{
+.service-catalog .dropdown-menu{
   border-radius: 0;
   width: 100%;
   }
@@ -2212,7 +2212,7 @@ header .btn.login{
   .form.interest .search-panel .form-group-checkbox{
     display: block;
     margin: 0;
-    padding: 11px 0;
+    padding: 0;
     border-top: 1px solid #666f79;   
   }
   .form.interest .search-panel .form-group-checkbox:last-child{
@@ -2220,7 +2220,8 @@ header .btn.login{
   }
   .form.interest .search-panel .form-group-checkbox label{
     display: block;
-    padding-left: 0;
+    padding: 11px 0;
+    cursor: pointer;
   }
   .form.interest .form-group input[type="checkbox"] + span{
     left: auto;
@@ -2266,11 +2267,11 @@ header .btn.login{
   margin-bottom: 10px;
 }
   .form.interest .list .form-group-checkbox label {
-    height: 146px;
+    height: 236px;
     cursor: pointer;
   }
   .form.interest .items-lifestyle .form-group-checkbox label {
-    height: 89px;
+    height: 189px;
     }
     .form.interest .list .row{
       margin-left: -5px;
@@ -3771,7 +3772,7 @@ header .btn.login{
   .form.interest .search-panel .form-group-checkbox{
     display: block;
     margin: 0;
-    padding: 11px 0;
+    padding: 0;
     border-top: 1px solid #666f79;   
   }
   .form.interest .search-panel .form-group-checkbox:last-child{
@@ -3779,7 +3780,8 @@ header .btn.login{
   }
   .form.interest .search-panel .form-group-checkbox label{
     display: block;
-    padding-left: 0;
+    cursor: pointer;    
+    padding: 11px 0;
   }
   .form.interest .form-group input[type="checkbox"] + span{
     left: auto;
@@ -3860,11 +3862,12 @@ header .btn.login{
     }
 
     .form.interest .form-group input[type="checkbox"] + span:after{
-       -webkit-transform: scale(1)  rotate(45deg);
+      -webkit-transform: scale(1)  rotate(45deg);
       -ms-transform: scale(1)  rotate(45deg);
        -o-transform: scale(1)  rotate(45deg);
           transform: scale(1)  rotate(45deg);
           border-width: 0 .26em .26em 0;
+          border-style: solid;
           width: 0.6em;
           height: 1.1em;
           color: #2c3238;
@@ -3946,6 +3949,114 @@ header .btn.login{
     .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body{
       padding-bottom: 0;
     }
+
+    .input-with-label .label{
+      right: 5px;
+      border-radius: 0;
+    }
+    .service-catalog .bootstrap-select>.dropdown-toggle, .modal-create-future-stream .search-input input[type="search"], .form .tags{
+      width: 100%;
+      left: 0;
+      border-radius: 0;
+    }
+    .service-catalog .dropdown-menu{
+      width: 100%;
+      left: 0;
+    }
+    .modal-create-future-stream .is-voting .field input{
+      width: calc(100% - 30px);
+    }
+    .modal-create-future-stream .is-voting .field .remove{
+      right: 0;
+    }
+
+
+    .modal-create-future-stream .is-voting .limits .form-group input[type="radio"] + span{
+        left: auto;
+        right: 5px;
+        top: 11px;
+        background-color: transparent;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+    .modal-create-future-stream .is-voting .limits .form-group input[type="radio"] + span:after{
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          border-style: solid;
+          border-radius: 0;
+          width: 0.6em;
+          height: 1.1em;
+          color: transparent;          
+          background-color: transparent;
+    }
+    .modal-create-future-stream .is-voting .limits .form-group input[type="radio"]:checked + span:after{
+      color: #f05a00;
+
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+    }
+
+   .modal-create-future-stream .form .limits .form-group-radio{
+    display: block;
+    margin: 0;
+    padding: 11px 0;
+    border-top: 1px solid #dbe0e6;   
+  }
+ .modal-create-future-stream .form .limits .form-group-radio:last-child{
+     border-bottom: 1px solid #dbe0e6;
+  }
+  .modal-create-future-stream .form .limits .form-group-radio  label{
+    display: block;
+    padding-left: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .page.live-broadcast .myblocks,.services-catalog{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .page.live-broadcast{
+    padding: 0;
+  }
+
+  .page.live-broadcast .head .player{
+    padding: 0;
+  }
+  .page.live-broadcast .head{
+    margin-bottom: 183px;
+  }
+  .page.live-broadcast .head .user-info{
+    padding-left: 10px;
+    bottom: 0;
+  }
+  .services-catalog .title{
+    padding-top: 25px;
+  }
+  .page.live-broadcast .head .user-info:after{
+    height: 28px;
+    bottom: -28px;
+  }
+  .page.live-broadcast .head .icon{
+    top: auto;
+    bottom: -110px;
+    width: 45px;
+    height: 45px;
+  }
+  .page.live-broadcast .head .user-info .name{
+    position: absolute;
+    bottom: -110px;
+    top: auto;
+    font-size: 14px;
+    text-transform: none;
+  }
+
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
