@@ -279,7 +279,7 @@
     position: absolute;
     right: 0;
     transition: opacity .4s ease-in-out, transform .4s ease-in-out;
-    z-index: 2
+    z-index: 2;
 }
 
 .plyr--video .plyr__controls .plyr__control svg {
@@ -291,7 +291,10 @@
 .plyr--video .plyr__controls .plyr__control:hover,
 .plyr--video .plyr__controls .plyr__control[aria-expanded=true] {
     background: transparent;/*#1aafff;*/
-    color: #fff
+    color: #fff;
+      box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
 }
 .plyr--video .plyr__controls .plyr__control.plyr__tab-focus svg,
 .plyr--video .plyr__controls .plyr__control:hover svg,

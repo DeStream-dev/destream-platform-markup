@@ -3225,10 +3225,10 @@ button.close {
   margin-left: 7px;
 }
 
-.page.mychannel .item {
+.page.mychannel .item. .page.live-broadcast .item {
   position: relative;
 }
-.page.mychannel .item .edit{
+.page.mychannel .item .edit, .page.live-broadcast .item .edit{
   position: absolute;
   right: 20px;
   top: 20px;
@@ -3239,12 +3239,12 @@ button.close {
 .page.mychannel .item:hover .edit{
   display: inline-block;
 }
-.page.mychannel .edit svg{
+.page.mychannel .edit svg,.page.live-broadcast .edit svg{
   width: 23px;
   height: 21px;
   fill: #7c8083;
 }
-.page.mychannel .edit {
+.page.mychannel .edit, .page.live-broadcast .edit {
   display: none;
 }
 .page.mychannel .head .user-info .name .edit svg{
@@ -3274,8 +3274,8 @@ button.close {
 .page.mychannel .head .user-info a:hover svg{
   fill: #f05a00;
 }
-.page.mychannel .head .user-info .subscribe svg,
-.page.mychannel .head .user-info .unsubscribe svg{
+.subscribe svg,
+.unsubscribe svg{
   width: 19px;
   height: 19px;
   fill: #aab1b8;
@@ -3667,6 +3667,13 @@ button.close {
   top: 5px;
   margin-right: 60px;
 }
+.page.live-broadcast .head .user-info .status{
+  font-size: 11px;
+  line-height: normal;
+  color: #c6ced5;
+  text-transform: uppercase;
+  font-weight: normal;
+}
 
 .page.live-broadcast .head .user-info .likes,
 .page.live-broadcast .head .user-info .subscribe,
@@ -3681,6 +3688,9 @@ button.close {
   position: relative;
   top: 4px;
   margin-right: 25px;
+}
+.page.live-broadcast .head .user-info .likes svg{
+  fill: #aab1b8;
 }
 .page.live-broadcast .head .icon{
   width: 50px;
@@ -3723,6 +3733,7 @@ button.close {
   padding: 0 55px;
 }
 .services-catalog .title{
+  padding-top: 50px;
   padding-bottom: 30px;
 }
 .services-catalog .list{
@@ -3768,7 +3779,7 @@ button.close {
  background-color: transparent;
  border: 1px solid #f05a00;
  margin-top: 20px;
- display: table-cell;
+ display: table;
  vertical-align: middle;
  width: 49%;
  padding-left: 10px;
@@ -3778,16 +3789,25 @@ button.close {
 .services-catalog .list .item .btn-buy:hover{
   background-color: #f05a00;
 }
+.services-catalog .list .item .bottom{
+  position: relative;
+}
 .services-catalog .list .item .status{
- display: table-cell;
  vertical-align: middle;
- width: 49%;
+ width: 40%;
  padding-left: 20px;
  font-size: 11px;
  font-weight: bold;
  color: #c6ced5;
  text-transform: uppercase;
  min-width: 50px;
+ /*float: right;*/
+ position: absolute;
+ left: 49%;
+ top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 .services-catalog .list .more{
   text-align: center;
@@ -4573,6 +4593,12 @@ border-color: #c6ced5 transparent transparent transparent;
   width: unset;
   height: unset;
   padding: 30px !important;
+   box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.plyr__controls button{
+  padding: 20px !important;
 }
 .plyr__control.plyr__control--overlaid[data-plyr=play] svg{
   width: 40px;

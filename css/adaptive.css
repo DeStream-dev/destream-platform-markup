@@ -603,6 +603,7 @@ text-align: left;
   padding-top: 5px;
   font-size: 13px;
   line-height: 19px;
+  height: 82px;
 }
 .form.interest .search-panel .search-input input[type="search"]{
   width: 100%;
@@ -1686,7 +1687,10 @@ header .btn.login{
     .myblocks .small .item a{
       height: 200px;
     }
-
+    .myblocks .add-block{
+      height: 200px;
+      line-height: 200px;
+    }
 
     .in-wallet{
       width: 100%;
@@ -2160,7 +2164,7 @@ header .btn.login{
       float: right;
   }
   .services-catalog .list .item .img{
-    height: 65px;
+    height: 85px;
   }
 
   .modal-addservice .input .label{
@@ -2364,21 +2368,27 @@ header .btn.login{
       width: 100%;
       margin-bottom: 30px;
     }
-    .modal-recovery-password-ok, .modal-recovery-password{
+   .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay{
     background-color: rgba(24,33,41, 0.9);
     }
-    .modal-recovery-password-ok .title, modal-recovery-password .title{
+    .modal-recovery-password-ok .title, .modal-recovery-password .title, .modal-change-save .title, .modal-email-change .title,
+    .modal-addoverlay .title{
       padding-top: 0;
     }
-    .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog{
+    .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog, .modal-change-save .modal-dialog, 
+    .modal-email-change .modal-dialog, .modal-addoverlay .modal-dialog{
       align-items: center;
     }
-    .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close{
+    .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close, 
+    .modal-change-save .modal-header button.close, .modal-email-change .modal-header button.close,
+    .modal-addoverlay .modal-header button.close{
       position: absolute;
       right: 20px;
       top: 20px;
     }
-    .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button{
+    .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button,
+    .modal-change-save .form .form-group > button, .modal-email-change .form .form-group > button,
+    .modal-addoverlay .form .form-group > button{
       position: relative;
       left: auto;
       top: auto;
@@ -2386,9 +2396,266 @@ header .btn.login{
       margin-top: 20px;
       width: 100%;
     }
-    .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body{
+    .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body,  .modal-change-save .modal-body,
+    .modal-email-change .modal-body, .modal-addoverlay .modal-body{
       padding-bottom: 0;
     }
+    .input-with-label .label{
+      right: 5px;
+      border-radius: 0;
+    }
+    .service-catalog .bootstrap-select>.dropdown-toggle, .modal-create-future-stream .search-input input[type="search"], .form .tags{
+      width: 100%;
+      left: 0;
+      border-radius: 0;
+    }
+    .service-catalog .dropdown-menu{
+      width: 100%;
+      left: 0;
+    }
+    .modal-create-future-stream .is-voting .field input{
+      width: calc(100% - 30px);
+    }
+    .modal-create-future-stream .is-voting .field .remove{
+      right: 0;
+    }
+
+
+    .modal-create-future-stream .is-voting .limits .form-group input[type="radio"] + span{
+        left: auto;
+        right: 5px;
+        top: 11px;
+        background-color: transparent;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+    .modal-create-future-stream .is-voting .limits .form-group input[type="radio"] + span:after{
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          border-style: solid;
+          border-radius: 0;
+          width: 0.6em;
+          height: 1.1em;
+          color: transparent;          
+          background-color: transparent;
+    }
+    .modal-create-future-stream .is-voting .limits .form-group input[type="radio"]:checked + span:after{
+      color: #f05a00;
+
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+    }
+
+   .modal-create-future-stream .form .limits .form-group-radio{
+      display: block;
+      margin: 0;
+      padding: 11px 0;
+      border-top: 1px solid #dbe0e6;   
+    }
+   .modal-create-future-stream .form .limits .form-group-radio:last-child{
+       border-bottom: 1px solid #dbe0e6;
+    }
+    .modal-create-future-stream .form .limits .form-group-radio  label{
+      display: block;
+      padding-left: 0;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+
+
+  .page.live-broadcast .myblocks,.services-catalog{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .page.live-broadcast .myblocks{
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .page.live-broadcast{
+    padding: 0;
+  }
+
+  .page.live-broadcast .head .player{
+    padding: 0;
+  }
+  .page.live-broadcast .head{
+    margin-bottom: 0;
+    padding-bottom: 183px;
+    background-color: #31373c;
+  }
+  .page.live-broadcast .head .user-info{
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 183px;
+  }
+  .services-catalog{
+    background-color: #383e44;
+  }
+  
+  .services-catalog .title{
+    padding-top: 25px;
+  }
+  .services-catalog .list .item{
+    text-align: center;
+    padding-bottom: 45px;
+  }
+  .services-catalog .list .item .btn-buy{
+    display: inline-block;
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 10px;
+  }
+  .services-catalog .list .item .status{
+    position: static;
+    width: auto;
+    padding-top: 15px;
+  }
+  .services-catalog .slick-dots{
+      bottom: 15px;
+    }
+  .services-catalog .slick-dots li button:before{
+      width: 5px;
+      height: 5px;
+      background-color: #737c85;
+      border-color: #737c85;
+    }
+  .services-catalog .slick-dots li.slick-active button:before{
+      background-color: #f05a00;
+      border-color: #f05a00;
+    }
+  .services-catalog .slick-dots li{
+      margin: 0;
+    }
+
+
+  .page.live-broadcast .head .user-info:after{
+    height: 28px;
+    bottom: -28px;
+  }
+
+  .page.live-broadcast .head .icon{
+    top: auto;
+    bottom: -93px;
+    width: 45px;
+    height: 45px;
+  }
+  .page.live-broadcast .head .user-info .name{
+    position: absolute;
+    bottom: auto;
+    top: 45px;
+    font-size: 14px;
+    text-transform: none;
+    margin-right: 0;
+    padding-left: 60px;
+  }
+  a.likes svg{
+    margin-right: 7px;
+  }
+  .page.live-broadcast .head .user-info > div{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+  }
+  .page.live-broadcast .head .donate{
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    bottom: -143px;
+    top: auto;
+  }
+  .page.live-broadcast .head .donate:before{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #666F79;
+    opacity: 0.8;
+    left: 0;
+    top: -20px;
+    content: "";
+  }
+  .page.live-broadcast .head .donate .btn{
+    width: 100%;    
+  }
+  .page.live-broadcast .head .user-info .likes{
+    float: right;
+    margin-right: 0;
+    margin-top: 2px;
+    font-size: 0;
+  }
+  .page.live-broadcast .head .user-info .likes svg{
+    fill: #aab1b8;
+  }
+  .page.live-broadcast .head .user-info .subscribe{
+    float: left;
+  }
+  .page.live-broadcast .head .user-info .subscribe svg{
+    margin-right: 7px;
+  }
+
+  .page.live-broadcast .head .online{
+    font-size: 0;
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    margin-left: 25px;
+  }  
+  .page.live-broadcast .head .online:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ff0000;
+  }
+  .page.live-broadcast .head .user-info .likes span, .page.live-broadcast .head .user-info .subscribe, .page.live-broadcast .head .online span{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .page.live-broadcast .head .user-info a:hover{
+    text-decoration: none;
+  }
+
+  .plyr--video .plyr__controls{
+    padding: 10px 10px 0;
+  }
+  .plyr .btn, .plyr button{
+    padding: 20px !important;
+  }
+  .plyr__controls button{
+    padding: 10px !important;
+  }
+  .broadcast-mobile .nav{
+    background-color: #2c3238;
+  }
+  .broadcast-mobile .nav-pills .nav-link{
+    padding: 15px 0 10px;
+    border-bottom-color: transparent;
+    font-size: 11px;
+  }
+  .broadcast-mobile .nav-pills .nav-link.active, .broadcast-mobile .nav-pills .show>.nav-link, .broadcast-mobile .nav-pills .nav-link:hover{
+    color: #c6ced5;
+    border-bottom-color: #f05a00;
+  }
+  .broadcast-mobile .services-catalog .title{
+    padding-top: 30px;
+    padding-bottom: 12px;
+  }
+  .broadcast-mobile .services-catalog .list .item{
+    padding-bottom: 30px;
+  }
+
  }
 
 
@@ -3187,6 +3454,10 @@ header .btn.login{
     .myblocks .small .item a{
       height: 110px;
     }
+    .myblocks .add-block{
+      height: 110px;
+      line-height: 110px;
+    }
     .page.mychannel .item .edit{
       right: 10px;
       top: 10px;
@@ -3924,21 +4195,29 @@ header .btn.login{
       width: 100%;
       margin-bottom: 30px;
     }
-  .modal-recovery-password-ok, .modal-recovery-password{
+
+ 
+    .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay{
     background-color: rgba(24,33,41, 0.9);
     }
-    .modal-recovery-password-ok .title, modal-recovery-password .title{
+    .modal-recovery-password-ok .title, .modal-recovery-password .title, .modal-change-save .title, .modal-email-change .title,
+    .modal-addoverlay .title{
       padding-top: 0;
     }
-    .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog{
+    .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog, .modal-change-save .modal-dialog, 
+    .modal-email-change .modal-dialog, .modal-addoverlay .modal-dialog{
       align-items: center;
     }
-    .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close{
+    .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close, 
+    .modal-change-save .modal-header button.close, .modal-email-change .modal-header button.close,
+    .modal-addoverlay .modal-header button.close{
       position: absolute;
       right: 20px;
       top: 20px;
     }
-    .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button{
+    .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button,
+    .modal-change-save .form .form-group > button, .modal-email-change .form .form-group > button,
+    .modal-addoverlay .form .form-group > button{
       position: relative;
       left: auto;
       top: auto;
@@ -3946,7 +4225,8 @@ header .btn.login{
       margin-top: 20px;
       width: 100%;
     }
-    .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body{
+    .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body,  .modal-change-save .modal-body,
+    .modal-email-change .modal-body, .modal-addoverlay .modal-body{
       padding-bottom: 0;
     }
 
@@ -4022,6 +4302,10 @@ header .btn.login{
     padding-left: 10px;
     padding-right: 10px;
   }
+  .page.live-broadcast .myblocks{
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
   .page.live-broadcast{
     padding: 0;
   }
@@ -4030,31 +4314,178 @@ header .btn.login{
     padding: 0;
   }
   .page.live-broadcast .head{
-    margin-bottom: 183px;
+    margin-bottom: 0;
+    padding-bottom: 183px;
+    background-color: #31373c;
   }
   .page.live-broadcast .head .user-info{
     padding-left: 10px;
-    bottom: 0;
+    padding-right: 10px;
+    bottom: 183px;
   }
+  .services-catalog{
+    background-color: #383e44;
+  }
+  
   .services-catalog .title{
     padding-top: 25px;
   }
+  .services-catalog .list .item{
+    text-align: center;
+    padding-bottom: 45px;
+  }
+  .services-catalog .list .item .btn-buy{
+    display: inline-block;
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 10px;
+  }
+  .services-catalog .list .item .status{
+    position: static;
+    width: auto;
+    padding-top: 15px;
+  }
+  .services-catalog .slick-dots{
+      bottom: 15px;
+    }
+  .services-catalog .slick-dots li button:before{
+      width: 5px;
+      height: 5px;
+      background-color: #737c85;
+      border-color: #737c85;
+    }
+  .services-catalog .slick-dots li.slick-active button:before{
+      background-color: #f05a00;
+      border-color: #f05a00;
+    }
+  .services-catalog .slick-dots li{
+      margin: 0;
+    }
+
+
   .page.live-broadcast .head .user-info:after{
     height: 28px;
     bottom: -28px;
   }
+
   .page.live-broadcast .head .icon{
     top: auto;
-    bottom: -110px;
+    bottom: -93px;
     width: 45px;
     height: 45px;
   }
+
   .page.live-broadcast .head .user-info .name{
     position: absolute;
-    bottom: -110px;
-    top: auto;
+    bottom: auto;
+    top: 45px;
     font-size: 14px;
     text-transform: none;
+    margin-right: 0;
+    padding-left: 60px;
+  }
+  a.likes svg{
+    margin-right: 7px;
+  }
+  .page.live-broadcast .head .user-info > div{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+  }
+  .page.live-broadcast .head .donate{
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    bottom: -143px;
+    top: auto;
+  }
+   .page.live-broadcast .head .donate:before{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #666F79;
+    opacity: 0.8;
+    left: 0;
+    top: -20px;
+    content: "";
+  }
+  .page.live-broadcast .head .donate .btn{
+    width: 100%;    
+  }
+  .page.live-broadcast .head .user-info .likes{
+    float: right;
+    margin-right: 0;
+    margin-top: 2px;
+    font-size: 0;
+  }
+  .page.live-broadcast .head .user-info .likes svg{
+    fill: #aab1b8;
+  }
+  .page.live-broadcast .head .user-info .subscribe{
+    float: left;
+  }
+  .page.live-broadcast .head .user-info .subscribe svg{
+    margin-right: 7px;
+  }
+
+  .page.live-broadcast .head .online{
+    font-size: 0;
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    margin-left: 25px;
+  }  
+  .page.live-broadcast .head .online:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ff0000;
+  }
+  .page.live-broadcast .head .user-info .likes span, .page.live-broadcast .head .user-info .subscribe, .page.live-broadcast .head .online span{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .page.live-broadcast .head .user-info a:hover{
+    text-decoration: none;
+  }
+  .plyr--video .plyr__controls{
+    padding: 10px 10px 0;
+  }
+  .plyr .btn, .plyr button{
+    padding: 20px !important;
+  }
+  .plyr__controls button{
+    padding: 10px !important;
+  }
+  .broadcast-mobile .nav{
+    background-color: #2c3238;
+  }
+  .broadcast-mobile .nav-pills .nav-link{
+    padding: 15px 0 10px;
+    border-bottom-color: transparent;
+    font-size: 11px;
+  }
+  .broadcast-mobile .nav-pills .nav-link.active, .broadcast-mobile .nav-pills .show>.nav-link, .broadcast-mobile .nav-pills .nav-link:hover{
+    color: #c6ced5;
+    border-bottom-color: #f05a00;
+  }
+  .broadcast-mobile .services-catalog .title{
+    padding-top: 30px;
+    padding-bottom: 12px;
+  }
+  .broadcast-mobile .services-catalog .list .item{
+    padding-bottom: 30px;
+  }
+  .modal-addblock .form .btn{
+    width: 100%;
   }
 
 }

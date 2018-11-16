@@ -170,6 +170,62 @@ var announcementliderOptions = {
 };
 announcementSlider.slick(announcementliderOptions);
 
+
+var servicesSlider = $('.page.live-broadcast > .services-catalog .list .row'); 
+var servicesSliderOptions = {
+  dots: true,
+  arrows: false,
+  infinite: false,
+  speed: 700,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: false,
+  adaptiveHeight: true,
+  autoplay: false,
+ // responsive: true
+      responsive: [
+       {
+          breakpoint: 4200,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 992,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 768,
+          settings: {}
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            
+          }
+        }
+  ]
+};
+//servicesSlider.slick(servicesSliderOptions);
+$(window).resize(function() {
+ setServicesSlider();
+});
+
+setServicesSlider();
+
+var isSliderInit = false;
+
+function setServicesSlider(){
+   var winW = $(window).width();
+   if(winW <= 767){
+    if(!servicesSlider.hasClass('slick-initialized'))
+    servicesSlider.slick(servicesSliderOptions);
+  }
+  else {
+    // servicesSlider.slick('unslick');
+  }
+}
+
+
+
 $('.modal .links a').click(function(){  
   if($(this).hasClass("reg-link")){
     $('.modal-auth .nav-pills li a').removeClass("active");
