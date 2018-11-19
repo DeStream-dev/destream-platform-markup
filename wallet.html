@@ -805,40 +805,45 @@
                <button type="button" class="close" data-dismiss="modal" aria-label="close">
                    <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
                </button>
+               <a href="#" class="prev-step d-block d-md-none" data-dismiss="modal" data-target=".modal-buydst" data-toggle="modal"><svg class="icon"><use xlink:href="img/vectors.svg#prev-step"></use></svg></a>
             </div>
             <div class="modal-body">
                 <div class="title">Select equiring system</div>
                 <div class="items">
-                 <div class="row">
-	                 <div class="col-6 col-sm-4">
-	                 	<a href="#" class="item"><img src="img/equiring/1.png" alt="" /></a>
-	                 </div>
-	                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/2.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/3.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/4.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/5.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/6.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/7.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/8.png" alt="" /></a>
-                 </div>
-                 <div class="col-6 col-sm-4">
-                 	<a href="#" class="item"><img src="img/equiring/9.png" alt="" /></a>
-                 </div>
-                </div>   
-                </div>                           
+	                <div class="row">
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/1.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+	                 		<a href="#" class="item"><img src="img/equiring/2.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/3.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/4.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/5.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/6.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/7.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/8.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/9.png" alt="" /></a>
+		                 </div>
+	                </div>   
+                </div>
+                <div class="buttons">
+			        <button type="button" class="btn btn-transparent d-none d-md-block" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-target=".modal-transfer" data-toggle="modal">Next</button>
+			    </div>                              
             </div>
         </div>
     </div>
@@ -855,8 +860,13 @@
                </button>
             </div>
             <div class="modal-body">
+            <div class="form">
                 <div class="title">Transaction successful</div>
-				<div class="text">A reference to a hash <span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span></div>                              
+				<div class="text">A reference to a hash <span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span></div> 
+				<div class="form-group">
+                    <button class="btn" data-dismiss="modal">Ok</button>
+                </div> 
+                </div>                             
             </div>
         </div>
     </div>
@@ -871,6 +881,7 @@
                <button type="button" class="close" data-dismiss="modal" aria-label="close">
                    <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
                </button>
+               <a href="#" class="prev-step d-block d-md-none" data-dismiss="modal" data-target=".modal-equiring" data-toggle="modal"><svg class="icon"><use xlink:href="img/vectors.svg#prev-step"></use></svg></a>
             </div>
             <div class="modal-body">
                 <div class="title">Transfer DST</div>
@@ -896,8 +907,8 @@
                   
 
                  <div class="buttons">
-			        <button type="button" class="btn btn-transparent" data-dismiss="modal">Cancel</button>
-			        <button type="button" class="btn btn-next" data-dismiss="modal" data-target=".modal-equiring" data-toggle="modal">Next</button>
+			        <button type="button" class="btn btn-transparent d-none d-md-block" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-dismiss="modal" data-target=".modal-transfer-2" data-toggle="modal">Next</button>
 			    </div>  
 			    </div>                                  
             </div>
@@ -914,11 +925,17 @@
 	               <button type="button" class="close" data-dismiss="modal" aria-label="close">
 	                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
 	               </button>
+	               <a href="#" class="prev-step d-block d-md-none" data-dismiss="modal" data-target=".modal-transfer" data-toggle="modal"><svg class="icon"><use xlink:href="img/vectors.svg#prev-step"></use></svg></a>
 	            </div>
 	            <div class="modal-body">
 		            <div class="form">
 		            	<form class="dropzone" id="transferform" action="/file-upload" method="post" enctype="multipart/form-data">
-			                <div class="title">15 000 DST will be transferred to the user</div>
+
+			                <div class="title d-none d-md-block">15 000 DST will be transferred to the user</div>
+			                <div class="title d-block d-md-none">Transfer confirmation</div>
+
+
+			                <div class="comment-text d-block d-md-none">15 000 DST will be transferred to the user</div>
 							<div class="converter">
 							    <div class="half user">
 							       		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
@@ -962,7 +979,7 @@
 			                </div>
 
 			                <div class="buttons">
-						        <button type="button" class="btn btn-transparent" data-dismiss="modal">Cancel</button>
+						        <button type="button" class="btn btn-transparent d-none d-md-block" data-dismiss="modal">Cancel</button>
 						        <button type="submit" class="btn btn-next">Confirm Transfer</button>
 						    </div> 
 					    </form>                                   
@@ -1660,17 +1677,17 @@
 	<script>
      $(function () {
         
-     //	$('.modal-transfer-2').modal('show');
+     	$('.modal-transfer-2').modal('show');
 
-     //   $('.modal-transfer').modal('show');        
+        $('.modal-transfer').modal('show');        
 
-     //   $('.modal-transaction-successful').modal('show');
+        $('.modal-transaction-successful').modal('show');
 
-     //   $('.modal-equiring').modal('show');
+        $('.modal-equiring').modal('show');
 
        $('.modal-buydst').modal('show');
 
-     //   $('.modal-hash').modal('show');
+        $('.modal-hash').modal('show');
 
        });
     </script>

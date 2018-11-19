@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/trumbowyg.min.css">
 	<link rel="stylesheet" href="css/plyr.css">
 	<link rel="stylesheet" href="css/simplebar.css">
+	<link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <title>Destream Portal</title>
@@ -1162,7 +1163,7 @@
     		</div>
     	</section>
 
-    <!-- Popup modal window auth -->
+<!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
@@ -1208,7 +1209,7 @@
                             <div class="form-group form-group-checkbox required">
                                 <label><input type="checkbox" name="remember" required><span></span>Remember me</label>
                             </div> 
-                            <div class="form-group">                                
+                            <div class="form-group form-group-btn">                                
                                 <button class="btn" type="submit">Log in</button>                                    
                             </div>
                                                 
@@ -1257,7 +1258,7 @@
 								<a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
                                 </label>
                             </div> 
-                            <div class="form-group">
+                            <div class="form-group form-group-btn ">
                                <button class="btn" type="submit">Register</button>
                             </div> 
                             
@@ -1290,6 +1291,9 @@
                     <div class="text">
                         Check your email %% we've sent you an email with instructions on how to reset your password
                     </div>
+                    <div class="form-group">
+                               <button class="btn" data-dismiss="modal">Ok</button>
+                            </div>
                </div>
             </div>
         </div>
@@ -1315,8 +1319,10 @@
                       <label class="control-label" for="nickname">Nickname or email</label>
                       <input type="text" id="nickname" class="form-control" required>
                     </div>
+                    <div class="form-group form-group-btn">
                     <button class="btn recovery-send" data-dismiss="modal" data-target=".modal-recovery-password-ok" data-toggle="modal">Recover</button>  
-                    <!--button class="btn recovery-send" type="submit">Recover</button-->                          
+                    <!--button class="btn recovery-send" type="submit">Recover</button-->
+                    </div>                          
                    </form>
                    <div class="links">
                    	<a href="#" class="auth-link" data-dismiss="modal" data-target=".modal-auth" data-toggle="modal">Log in</a>
@@ -1864,9 +1870,9 @@
                             </div>
 
                             <div class="form-group" aria-required="true">
-                                <label class="control-label">Attach server catalog</label>
-                                <div class="server-catalog">
-	                                <select class="selectpicker" title="Select server catalog">
+                                <label class="control-label">Attach service catalog</label>
+                                <div class="service-catalog">
+	                                <select class="selectpicker" title="Select service catalog">
 			    						<option value="cat1">Catalog 1</option>
 			    						<option value="cat2">Catalog 2</option>
 			    						<option value="cat3">Catalog 3</option>
@@ -1916,7 +1922,7 @@
                                 </div>
                             </div>
                             </div>
-                            <div class="form-group text-center">                                
+                            <div class="form-group form-group-btn text-center">                                
                                 <button class="btn" type="submit">Create</button>                                    
                             </div>
                            </form>

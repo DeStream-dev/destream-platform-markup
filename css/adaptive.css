@@ -679,7 +679,6 @@ text-align: left;
     margin: 0 auto;
     background-color: #f8f8f9;
     min-height: 100%;
-
   }
 .modal-content{
   box-shadow: none;
@@ -1479,9 +1478,13 @@ header .btn.login{
     }
     .modal-dialog-centered{
       align-items: stretch;
+      min-height: 100%;
     }
     .modal-content{
       padding: 10px;
+       box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     }
   
     .modal-auth .social{
@@ -1492,10 +1495,10 @@ header .btn.login{
       top: 82px;
     }
 
-    .modal .form .form-group-btn {
+    .modal .form .form-group-btn, .modal .buttons {
       margin-bottom: 50px;
     }
-    .modal .form .form-group-btn > button{
+    .modal .form .form-group-btn > button, .modal .buttons .btn{
       position: fixed;
       width: calc(100% - 20px);
       top: auto;
@@ -2362,33 +2365,35 @@ header .btn.login{
     }
     .modal{
        background-color: #f8f8f9;
+       padding: 0 !important;
     }
     .modal-interest .buttons .btn-finish{
       position: relative;
       width: 100%;
       margin-bottom: 30px;
     }
-   .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay{
+   .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay,
+   .modal-transaction-successful{
     background-color: rgba(24,33,41, 0.9);
     }
     .modal-recovery-password-ok .title, .modal-recovery-password .title, .modal-change-save .title, .modal-email-change .title,
-    .modal-addoverlay .title{
+    .modal-addoverlay .title, .modal-transaction-successful .title{
       padding-top: 0;
     }
     .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog, .modal-change-save .modal-dialog, 
-    .modal-email-change .modal-dialog, .modal-addoverlay .modal-dialog{
+    .modal-email-change .modal-dialog, .modal-addoverlay .modal-dialog, .modal-transaction-successful .modal-dialog{
       align-items: center;
     }
     .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close, 
     .modal-change-save .modal-header button.close, .modal-email-change .modal-header button.close,
-    .modal-addoverlay .modal-header button.close{
+    .modal-addoverlay .modal-header button.close, .modal-transaction-successful .modal-header button.close{
       position: absolute;
       right: 20px;
       top: 20px;
     }
     .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button,
     .modal-change-save .form .form-group > button, .modal-email-change .form .form-group > button,
-    .modal-addoverlay .form .form-group > button{
+    .modal-addoverlay .form .form-group > button, .modal-transaction-successful .form .form-group > button{
       position: relative;
       left: auto;
       top: auto;
@@ -2397,10 +2402,10 @@ header .btn.login{
       width: 100%;
     }
     .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body,  .modal-change-save .modal-body,
-    .modal-email-change .modal-body, .modal-addoverlay .modal-body{
+    .modal-email-change .modal-body, .modal-addoverlay .modal-body, .modal-transaction-successful .modal-body{
       padding-bottom: 0;
     }
-    .input-with-label .label{
+    .input-with-label .label, .converter .label{
       right: 5px;
       border-radius: 0;
     }
@@ -2655,6 +2660,108 @@ header .btn.login{
   .broadcast-mobile .services-catalog .list .item{
     padding-bottom: 30px;
   }
+  .modal-addblock .form .btn{
+    width: 100%;
+  }
+  .modal-hash .data .key{
+    width: 100%;
+  }
+  .modal-hash .data .value{
+    width: 100%;
+    padding-bottom: 10px;
+    line-height: normal;
+  }
+  .modal-transfer-2 .half, .converter .half{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 0;
+  }
+  .modal-transfer-2 .user > div{
+    display: block;
+  }
+  .modal-transfer-2 .user .icon{
+    margin-right: 0;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 5px;
+  }
+  .modal-transfer-2 .converter .user .name{
+    padding-top: 10px;
+  }
+  .modal-transfer-2 .comment-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 75px;
+    color: #0b1f30;
+    opacity: 0.7;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .modal-body .title, .modal-body .list .title, .comments .title, .modal-news-detail .comments .inner .title{
+    font-size: 12px;
+    padding: 0 0 22px 0;
+  }
+  .modal-equiring .title{
+    border-bottom: 1px solid #dbe0e6;
+  }
+  .modal-transfer-2 .converter .name{
+    padding: 5px 0 0;
+  }
+  .converter .half:last-child{
+    padding-bottom: 55px;
+  }
+  .converter{
+    border-bottom: none;
+  }
+  .modal-buydst .buttons, .modal-transfer .buttons, .modal-transfer-2 .buttons{
+    border-top: none;
+    padding-top: 10px;
+  }
+  .confirm-transfer{
+    border-bottom: none;
+  }
+   .modal-buydst .title, .modal-transfer .title, .modal-transfer-2  .title, .modal-equiring .title{
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+   .modal-transfer .form{
+    padding-top: 65px;
+   }
+   .modal-transfer .form-group{
+    margin-bottom: 30px;
+   }
+   .converter .info, .form .info{
+    padding-top: 0;
+    padding-bottom: 0;
+   }
+
+   .modal-equiring .item{
+    background-color: #ffffff;
+    height: 80px;
+    margin-bottom: 10px;
+   }
+  .modal-equiring .items{
+    margin-top: 30px;
+  }
+    .modal-equiring .modal-body .row{
+        margin: 0 -5px;
+      }
+    .modal-equiring .modal-body  div[class*='col-']{
+      padding: 0 5px;
+    }
+    .converter .go{
+      margin: 35px auto 0;
+       -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+      width: unset;
+      display: block;
+    }
 
  }
 
@@ -3224,8 +3331,8 @@ header .btn.login{
     }
 
     .modal-header button.close{
-      right: 15px;
-      top: 30px;
+      right: 12px;
+      top: 20px;
       position: fixed;
       z-index: 30;
     }
@@ -3244,13 +3351,13 @@ header .btn.login{
     }
     .modal-dialog-centered{
       align-items: stretch;
+      min-height: 100%;
     }
     .modal-content{
-      padding: 35px 10px 10px;
+      padding: 25px 10px 10px;
       box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-
     }
     .modal-body{
       padding: 0;
@@ -3262,10 +3369,10 @@ header .btn.login{
     .modal-auth .forget-password a{
       top: 82px;
     }
-    .modal .form .form-group-btn {
+    .modal .form .form-group-btn, .modal .buttons {
       margin-bottom: 50px;
     }
-    .modal .form .form-group-btn > button{
+    .modal .form .form-group-btn > button, .modal .buttons .btn{
       position: fixed;
       width: calc(100% - 20px);
       top: auto;
@@ -4176,7 +4283,7 @@ header .btn.login{
     .modal-interest .form.interest .search-panel{
       border-top: none;
       border-bottom: none;
-      padding: 15px 0 0;
+      padding: 25px 0 0;
     }
     .modal-interest .form.interest .search-panel .search-input input[type="search"]{
       border-radius: 0;
@@ -4189,6 +4296,7 @@ header .btn.login{
     }
     .modal{
        background-color: #f8f8f9;
+       padding: 0 !important;
     }
     .modal-interest .buttons .btn-finish{
       position: relative;
@@ -4197,27 +4305,27 @@ header .btn.login{
     }
 
  
-    .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay{
+    .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay,
+   .modal-transaction-successful{
     background-color: rgba(24,33,41, 0.9);
     }
     .modal-recovery-password-ok .title, .modal-recovery-password .title, .modal-change-save .title, .modal-email-change .title,
-    .modal-addoverlay .title{
+    .modal-addoverlay .title, .modal-transaction-successful .title{
       padding-top: 0;
     }
     .modal-recovery-password-ok .modal-dialog, .modal-recovery-password .modal-dialog, .modal-change-save .modal-dialog, 
-    .modal-email-change .modal-dialog, .modal-addoverlay .modal-dialog{
+    .modal-email-change .modal-dialog, .modal-addoverlay .modal-dialog, .modal-transaction-successful .modal-dialog{
       align-items: center;
     }
     .modal-recovery-password-ok .modal-header button.close, .modal-recovery-password .modal-header button.close, 
     .modal-change-save .modal-header button.close, .modal-email-change .modal-header button.close,
-    .modal-addoverlay .modal-header button.close{
+    .modal-addoverlay .modal-header button.close, .modal-transaction-successful .modal-header button.close{
       position: absolute;
-      right: 20px;
       top: 20px;
     }
     .modal-recovery-password-ok .form .form-group > button, .modal-recovery-password .form .form-group > button,
     .modal-change-save .form .form-group > button, .modal-email-change .form .form-group > button,
-    .modal-addoverlay .form .form-group > button{
+    .modal-addoverlay .form .form-group > button, .modal-transaction-successful .form .form-group > button{
       position: relative;
       left: auto;
       top: auto;
@@ -4226,11 +4334,11 @@ header .btn.login{
       width: 100%;
     }
     .modal-recovery-password-ok .modal-body, .modal-recovery-password .modal-body,  .modal-change-save .modal-body,
-    .modal-email-change .modal-body, .modal-addoverlay .modal-body{
+    .modal-email-change .modal-body, .modal-addoverlay .modal-body, .modal-transaction-successful .modal-body{
       padding-bottom: 0;
     }
 
-    .input-with-label .label{
+    .input-with-label .label, .converter .label{
       right: 5px;
       border-radius: 0;
     }
@@ -4487,7 +4595,184 @@ header .btn.login{
   .modal-addblock .form .btn{
     width: 100%;
   }
+  .modal-hash .data .key{
+    width: 100%;
+  }
+  .modal-hash .data .value{
+    width: 100%;
+    padding-bottom: 10px;
+    line-height: normal;
+  }
+  .modal-transfer-2 .half, .converter .half{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 0;
+  }
+  .modal-transfer-2 .user > div{
+    display: block;
+  }
+  .modal-transfer-2 .user .icon{
+    margin-right: 0;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 5px;
+  }
+  .modal-transfer-2 .converter .user .name{
+    padding-top: 10px;
+  }
+  .modal-transfer-2 .comment-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 75px;
+    color: #0b1f30;
+    opacity: 0.7;
+    width: 65%;
+    margin: 0 auto;
+  }
 
+  .modal-body .title, .modal-body .list .title, .comments .title, .modal-news-detail .comments .inner .title{
+    font-size: 12px;
+    padding: 0 0 22px 0;
+  }
+  .modal-equiring .title{
+    border-bottom: 1px solid #dbe0e6;
+  }
+  .modal-transfer-2 .converter .name{
+    padding: 5px 0 0;
+  }
+  .converter .half:last-child{
+    padding-bottom: 55px;
+  }
+  .converter{
+    border-bottom: none;
+  }
+  .modal-buydst .buttons, .modal-transfer .buttons, .modal-transfer-2 .buttons{
+    border-top: none;
+    padding-top: 10px;
+  }
+  .confirm-transfer{
+    border-bottom: none;
+  }
+   .modal-buydst .title, .modal-transfer .title, .modal-transfer-2  .title, .modal-equiring .title{
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+   .modal-transfer .form{
+    padding-top: 65px;
+   }
+   .modal-transfer .form-group{
+    margin-bottom: 30px;
+   }
+   .converter .info, .form .info{
+    padding-top: 0;
+    padding-bottom: 0;
+   }
+
+   .modal-equiring .item{
+    background-color: #ffffff;
+    height: 80px;
+    margin-bottom: 10px;
+   }
+  .modal-equiring .items{
+    margin-top: 30px;
+  }
+    .modal-equiring .modal-body .row{
+        margin: 0 -5px;
+      }
+    .modal-equiring .modal-body  div[class*='col-']{
+      padding: 0 5px;
+    }
+    .converter .go{
+      margin: 35px auto 0;
+       -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+      width: unset;
+      display: block;
+    }
+    .modal-announcement .remindme{
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      margin: 0;
+    }
+    .remindme a{
+      font-size: 0;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      text-align: center;
+    }
+    .modal-announcement .stream{
+      font-size: 12px;
+      padding-left: 55px;
+    }
+    .modal-announcement .stream b{
+      font-size: 16px;
+    }
+    .modal-announcement .user{
+      position: absolute;
+      top: 50px;
+    }
+    .modal-announcement .head{
+      padding: 20px 0 58px;
+    }
+    .modal-announcement .inner .head {
+      padding-bottom: 58px;
+    }
+    .modal-announcement .inner .head .user{
+      top: 70px;
+    }
+    .modal-announcement .img{
+      position: relative;
+      display: block;
+      width: 110px;
+      height: 147px;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+       background-size: cover;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+    }
+    .modal .inner .row{
+      margin: 0 -5px;
+    }
+    .modal .inner div[class*='col-']{
+      padding: 0 5px;
+    }
+    .votes input[type="number"] {
+      left: 0;
+      width: 100%;
+    }
+    .modal-announcement .votes{
+      width: 100%;
+    }
+    .voting .title{
+      padding-top: 30px;
+    }
+    .modal-announcement .inner .col-12.col-sm-4{
+      float: left;
+      flex: unset;
+      width: 110px;
+    }
+    .modal-announcement .inner .col-12.col-sm-8{
+      float: left;
+      flex: unset;
+      width: calc(100% - 110px);
+    }
+    .voting{
+     width: calc(100% + 110px);
+     margin-left: -110px;
+     margin-top: 100px;
+    }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {

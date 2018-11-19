@@ -2164,7 +2164,7 @@ button.close {
   margin-top: 4px;
 }
 .modal-announcement .remindme svg{
-  width: 15px;
+  width: 14px;
   height: 16px;
   fill: #ffffff;
 }
@@ -2832,7 +2832,7 @@ button.close {
   width: 25%;
 }
 .modal-hash .data .value{
-  width: 74%;
+  width: calc(75% - 0.6em);
   color: #31373c;
   position: relative;
 }
@@ -2848,8 +2848,7 @@ button.close {
 
 .modal-buydst .title, .modal-transfer .title, .modal-transfer-2 .title{
   border-bottom: 1px solid #dbe0e6;
-  opacity: 0.7;
-}
+ }
 .converter{
   border-bottom: 1px solid #dbe0e6;
 }
@@ -2987,7 +2986,6 @@ button.close {
 
 .modal-transaction-successful .title{
   border-bottom: 1px solid #dbe0e6;
-  opacity: 0.7;
 }
 .modal-transaction-successful .modal-body{
   padding-bottom: 35px;
@@ -6170,6 +6168,19 @@ color: #c4c8cc;
 .simplebar-content{
   margin-left: -2px !important;
 }
+
+
+a.prev-step svg{
+  width: 12px;
+  height: 19px;
+  stroke: #9b9b9b;
+}
+.modal a.prev-step {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
 .slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,

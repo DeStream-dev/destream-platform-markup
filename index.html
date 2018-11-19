@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/trumbowyg.min.css">
 	<link rel="stylesheet" href="css/plyr.css">
 	<link rel="stylesheet" href="css/simplebar.css">
+	<link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <title>Destream Portal</title>
@@ -1231,7 +1232,7 @@
     	</section>
 
 
-    <!-- Popup modal window auth -->
+<!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
@@ -1545,17 +1546,19 @@
 	            <div class="inner">
 	            <div class="row">
 	    			<div class="col-12 col-sm-4">
-	    				<div class="slides">
+	    				<div class="slides d-none d-md-block">
 	    					<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
 	    				</div>
+	    				<span class="img d-md-none" style="background-image: url('img/announcement/img1.png')"></span>
 	    			</div>
 	    			<div class="col-12 col-sm-8">
 		    			<div class="text">	    				
 		    				Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge Fortnite Clay Pigeon Location
 		    			</div>
+		    		
 		    			<div class="voting">
 		    				<div class="title">Voting</div>
 		    				<div class="form">
@@ -1609,18 +1612,25 @@
 		    				</div>
 		    			</div>
 		    			<div class="overall">
-		    			<div class="votes">
-		    				<b>Amount of votes</b>
-		    				<div class="d-none d-lg-block quantity">
-                                <input value="2000" maxlength="2" type="text">
-                                <a href="#" class="increase"><svg class="icon"><use xlink:href="img/vectors.svg#up"></use></svg></a>
-                                <a href="#" class="decrease"><svg class="icon"><use xlink:href="img/vectors.svg#down"></use></svg></a>
-                            </div>  
-                            <input type="number" min="1" class="d-block d-lg-none">
-                            <button type="submit" class="btn vote-btn">Vote</button>      
-		    			</div>
-		    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
-	                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>	                	
+		    				<div class="row">
+		    					<div class="col-12 col-md-6">
+					    			<div class="votes">
+					    				<b>Amount of votes</b>
+					    				<div class="d-none d-lg-block quantity">
+			                                <input value="2000" maxlength="2" type="text">
+			                                <a href="#" class="increase"><svg class="icon"><use xlink:href="img/vectors.svg#up"></use></svg></a>
+			                                <a href="#" class="decrease"><svg class="icon"><use xlink:href="img/vectors.svg#down"></use></svg></a>
+			                            </div>  
+			                            <input type="number" min="1" class="d-block d-lg-none">
+			                            <button type="submit" class="btn vote-btn">Vote</button>      
+					    			</div>
+				    			</div>
+				    			<div class="col-8 offset-4 offset-sm-4 offset-md-0 col-sm-8 col-md">
+				    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
+			                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>
+			                	</div>
+	                		</div>
+
 	                	</div>
 		    		</div>
 	    		</div>	
@@ -1628,15 +1638,16 @@
 
     			<div class="inner">
 	            <div class="row">
-	    			<div class="col-12 col-sm-4">
-	    				<div class="slides">
+	    			<div class="col-4">
+	    				<div class="slides d-none d-md-block">
 	    					<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
 	    				</div>
+	    				<span class="img d-md-none" style="background-image: url('img/announcement/img1.png')"></span>
 	    			</div>
-	    			<div class="col-12 col-sm-8">
+	    			<div class="col-8">
 	    				<div class="head">
 				           <div class="user">
 						    	<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
@@ -1933,8 +1944,11 @@
                                         <option>RRR</option>
                                     </select>
                             	</div>    
-	                            	<input type="text" value="8000" />
+	                            	<input type="text" value="8000" id="minimal-donate" />	                            	
 	                            </div>
+	                             <div class="range full d-lg-none">
+							    		<input type="range" min="0" max="2500" data-rangeslider data-for="minimal-donate">
+							    	</div>
                             </div>
 
                             <div class="form-group" aria-required="true">
@@ -2024,9 +2038,9 @@
 	<script>
      $(function () {
 
-       $('.modal-interest').modal('show');
+     //  $('.modal-interest').modal('show');
 
-    //  $('.modal-announcement').modal('show');
+      $('.modal-announcement').modal('show');
 
    //   $('.modal-news-detail').modal('show');
 
@@ -2036,7 +2050,7 @@
 
 	//  $('.modal-auth').modal('show');
 
-     //$('.modal-create-future-stream').modal('show');
+  //   $('.modal-create-future-stream').modal('show');
 
        });
     </script>
