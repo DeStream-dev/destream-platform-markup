@@ -1163,6 +1163,8 @@
     		</div>
     	</section>
 
+
+
 <!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -1440,13 +1442,13 @@
 	            <div class="head">
 		            <div class="inner">
 		            	<div class="row">
-		            		<div class="col-12 col-sm-4">
+		            		<div class="col-12 col-md-4">
 				            	<div class="user">
 				            		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 				    				<span class="name">Soda CmonBruh</span>
 				    			</div>
 			    			</div>
-			    			<div class="col-12 col-sm-8">
+			    			<div class="col-12 col-md-8">
 				    			<div class="stream">
 				    			Stream start at:<b>21.05.2018 in 21:50</b>
 				    			</div>
@@ -1460,13 +1462,13 @@
 	            <div class="head">
 		            <div class="inner">
 		            	<div class="row">
-		            		<div class="col-12 col-sm-4">
+		            		<div class="col-12 col-md-4">
 				            	<div class="user">
 				            		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 				    				<span class="name">Soda CmonBruh</span>
 				    			</div>
 			    			</div>
-			    			<div class="col-12 col-sm-8">
+			    			<div class="col-12 col-md-8">
 				    			<div class="stream live-now">
 				    			Stream:<b><a href="#">Live Now <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a></b>
 				    			</div>
@@ -1475,19 +1477,19 @@
 	    			</div>
 	            </div>
 	            <div class="inner">
-	            <div class="row">
-	    			<div class="col-12 col-sm-4">
-	    				<div class="slides">
+	            
+	    				<div class="slides d-none d-md-block">
 	    					<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
 	    				</div>
-	    			</div>
-	    			<div class="col-12 col-sm-8">
+	    				<span class="img d-md-none" style="background-image: url('img/announcement/img1.png')"></span>
+	    			
 		    			<div class="text">	    				
 		    				Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge Fortnite Clay Pigeon Location
 		    			</div>
+		    		
 		    			<div class="voting">
 		    				<div class="title">Voting</div>
 		    				<div class="form">
@@ -1496,7 +1498,7 @@
                                         <div class="radio form-group form-group-radio">
                                             <label>
                                         	    <input type="radio" name="contact-type" value="Vote 1"><span></span>
-                                                Vote 1
+                                                <i>Vote 1</i>
                                             </label>
                                         </div>
                                         <div class="value">32</div>
@@ -1505,7 +1507,7 @@
                                         <div class="radio form-group form-group-radio">
                                             <label>
                                          	    <input type="radio" name="contact-type" value="Vote 2"><span></span>
-                                                Vote 2
+                                                <i>Vote 2</i>
                                             </label>
                                         </div>
                                         <div class="value">485</div>
@@ -1514,7 +1516,7 @@
                                         <div class="radio form-group form-group-radio">
                                             <label>
                                         	    <input type="radio" name="contact-type" checked="checked" value="Vote 3"><span></span>
-                                                Vote 3
+                                                <i>Vote 3</i>
                                             </label>
                                         </div>
                                         <div class="value">32</div>
@@ -1523,7 +1525,7 @@
                                         <div class="radio form-group form-group-radio">
                                             <label>
                                          	    <input type="radio" name="contact-type" value="Vote 4"><span></span>
-                                                Vote 4
+                                                <i>Vote 4</i>
                                             </label>
                                         </div>
                                         <div class="value">3222</div>
@@ -1532,7 +1534,7 @@
                                         <div class="radio form-group form-group-radio">
                                             <label>
                                         	    <input type="radio" name="contact-type" value="Vote 5"><span></span>
-                                                Vote 5
+                                                <i>Vote 5</i>
                                             </label>
                                         </div>
                                         <div class="value">32</div>
@@ -1541,34 +1543,42 @@
 		    				</div>
 		    			</div>
 		    			<div class="overall">
-		    			<div class="votes">
-		    				<b>Amount of votes</b>
-		    				<div class="d-none d-lg-block quantity">
-                                <input value="2000" maxlength="2" type="text">
-                                <a href="#" class="increase"><svg class="icon"><use xlink:href="img/vectors.svg#up"></use></svg></a>
-                                <a href="#" class="decrease"><svg class="icon"><use xlink:href="img/vectors.svg#down"></use></svg></a>
-                            </div>  
-                            <input type="number" min="1" class="d-block d-lg-none">
-                            <button type="submit" class="btn vote-btn">Vote</button>      
-		    			</div>
-		    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
-	                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>	                	
+		    				<div class="row">
+		    					<div class="col-12 col-md-6">
+					    			<div class="votes">
+					    				<b>Amount of votes</b>
+					    				<div class="d-none d-lg-block quantity">
+			                                <input value="2000" maxlength="2" type="text">
+			                                <a href="#" class="increase"><svg class="icon"><use xlink:href="img/vectors.svg#up"></use></svg></a>
+			                                <a href="#" class="decrease"><svg class="icon"><use xlink:href="img/vectors.svg#down"></use></svg></a>
+			                            </div>  
+			                            <input type="number" min="1" class="d-block d-lg-none" id="votes-amount">
+			                            <button type="submit" class="btn vote-btn">Vote</button>  
+			                            <div class="range full d-lg-none">
+								    		<input type="range" min="0" max="2500" data-rangeslider data-for="votes-amount">
+								    	</div>    
+					    			</div>
+				    			</div>
+				    			<div class="col-8 offset-4 offset-sm-4 offset-md-0 col-sm-8 col-md-6">
+				    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
+			                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>
+			                	</div>
+	                		</div>
+
 	                	</div>
-		    		</div>
-	    		</div>	
+		    		
     			</div>
 
     			<div class="inner">
-	            <div class="row">
-	    			<div class="col-12 col-sm-4">
-	    				<div class="slides">
+	            
+	    				<div class="slides d-none d-md-block">
 	    					<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
 			    			<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
 	    				</div>
-	    			</div>
-	    			<div class="col-12 col-sm-8">
+	    				<span class="img d-md-none" style="background-image: url('img/announcement/img1.png')"></span>
+	    			
 	    				<div class="head">
 				           <div class="user">
 						    	<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
@@ -1586,8 +1596,7 @@
 		    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
 	                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>	                	
 	                	</div>
-		    		</div>
-	    		</div>	
+		    		
     			</div>
 
 
@@ -1865,8 +1874,11 @@
                                         <option>RRR</option>
                                     </select>
                             	</div>    
-	                            	<input type="text" value="8000" />
+	                            	<input type="text" value="8000" id="minimal-donate" />	                            	
 	                            </div>
+	                             <div class="range full d-lg-none">
+							    		<input type="range" min="0" max="2500" data-rangeslider data-for="minimal-donate">
+							    	</div>
                             </div>
 
                             <div class="form-group" aria-required="true">
@@ -1933,7 +1945,6 @@
 </div>
 <!--Create future stream window end-->
 
-
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
@@ -1958,7 +1969,7 @@
 	<script>
      $(function () {
 
-    //   $('.modal-interest').modal('show');
+       $('.modal-interest').modal('show');
 
     //  $('.modal-announcement').modal('show');
 

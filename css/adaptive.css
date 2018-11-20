@@ -368,7 +368,7 @@ header  div[class*='col-']{
   width: 100%;
 }
 .modal-content, .modal-addblock .dropzone .dz-message span{
-  border-radius: 0;
+  border-radius: 3px;
 }
 .in-wallet .score{
   font-size: 21px;
@@ -653,7 +653,7 @@ text-align: left;
  .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
   left: 0;
   width: 100%;
-  border-radius: 0;
+  border-radius: 3px;
  }
 .modal .form button{
   left: 0;
@@ -666,10 +666,21 @@ text-align: left;
   margin-right: 18px;
  }
  .modal .bootstrap-select>.dropdown-toggle,.modal .converter .label{
-  border-radius: 0;
+  border-radius: 3px;
+ }
+ .modal-announcement .votes{
+  width: 100%;
  }
  .votes input[type="number"]{
   border-radius: 20px;
+  width: calc(100% - 10px);
+  padding-right: 50px;
+ }
+ .modal-announcement .votes .vote-btn{
+  width: 86px;
+ }
+ .modal-announcement .votes .range.full input[type=range], .modal-announcement .votes .range.full .rangeslider--horizontal{
+    margin: 20px 0;
  }
    .modal-announcement .remindme{
     margin-right: 45px;
@@ -740,7 +751,7 @@ body.widget > .content{
   left: 15px;
 }
 .dropzone .dz-preview{left: 60px;}
-.modal-addservice .input .label{border-radius: 0;right: 5px;}
+.modal-addservice .input .label{border-radius: 3px;right: 5px;}
 .modal .confirm-transfer, .modal .converter{
   border: none;
 }
@@ -775,7 +786,7 @@ header .btn.login{
 }
 .input-with-label .label{
   right: 5px;
-  border-radius: 0;
+  border-radius: 3px;
 }
 .form .info{
   text-align: center;
@@ -863,7 +874,7 @@ header .btn.login{
   padding: 25px;
 }
 .modal-widget .search-input input[type="search"]{
- border-radius: 0;
+ border-radius: 3px;
  padding-left: 43px;
  left: 0;
 }
@@ -885,7 +896,7 @@ header .btn.login{
 .modal-create-future-stream .search-input input[type="search"]{
   left: 0;
   width: 100%;
-  border-radius: 0;
+  border-radius: 3px;
 }
 .service-catalog .bootstrap-select>.dropdown-toggle{
   width: 100%;
@@ -901,13 +912,74 @@ header .btn.login{
   right: 0;
 }
 .service-catalog .dropdown-menu{
-  border-radius: 0;
+  border-radius: 3px;
   width: 100%;
   }
 .list-announcement-tile .large .icon.d-md-block{
   display: inline-block !important;
 }
 
+ .modal-announcement .form-group input[type="radio"] + span{
+      width: 100%;
+      height: 30px;
+      border-radius: 20px;
+      background-color: transparent;
+        box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+    .modal-announcement .form-group input[type="radio"]:checked + span{
+      background-color: #f3f3f3;
+    }
+    
+    .modal-announcement .form-group input[type="radio"] + span:after{
+      content: "";
+      cursor: pointer;
+      left: 17px;
+      position: absolute;
+      text-align: center;
+      top: 6px;
+
+      background-color: transparent;
+      color: #f05a00;
+      display: block;
+      width: .5em;
+      height: 1em;
+      border-style: solid;
+      border-width: 0 .15em .15em 0;
+      border-radius: 0;
+      -webkit-transform: scale(0) rotate(45deg);
+      -ms-transform: scale(0) rotate(45deg);
+      -o-transform: scale(0) rotate(45deg);
+      transform: scale(0) rotate(45deg);
+    }
+     .modal-announcement .form-group input[type="radio"]:checked + span:after{
+        -webkit-transform: scale(1)  rotate(45deg);
+          -ms-transform: scale(1)  rotate(45deg);
+           -o-transform: scale(1)  rotate(45deg);
+              transform: scale(1)  rotate(45deg);
+     }
+    .voting .item .form-group-radio label{
+      padding: 10px 15px 10px 40px;
+      width: 100%;
+      position: relative;
+      left: -15px;
+    }
+    .voting .item .form-group{
+      width: calc(100% - 40px);
+      height: 40px;
+      margin-bottom: 0;
+      margin-top: -5px;
+    }
+     .modal-announcement .form-group-radio label i{
+       position: relative;
+    }
+    .donate-detail .img, .modal-wallet-donate .imgs .img{
+      border-radius: 3px;
+    }
+     .modal-wallet-donate .imgs{
+      border-bottom: none;
+     }
 }
 
 .rotate-warning{display: none;}
@@ -1053,6 +1125,9 @@ header .btn.login{
    }
   .main-sidebar{
     background-color: rgba(22,26,28,0.95);
+    z-index: 300;
+    top: 0;
+    height: 100%;
    }
 .main-sidebar .logo{
   position: absolute;
@@ -1471,7 +1546,7 @@ header .btn.login{
       width: 100%;
     }
     .modal-content, .modal-addblock .dropzone .dz-message span{
-      border-radius: 0;
+      border-radius: 3px;
     }
     .modal-dialog{
       margin: 0;
@@ -1510,7 +1585,7 @@ header .btn.login{
   .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
     left: 0;
     width: 100%;
-    border-radius: 0;
+    border-radius: 3px;
    }
   .modal-auth .social{
     width: calc(120% - 40px);
@@ -2171,16 +2246,16 @@ header .btn.login{
   }
 
   .modal-addservice .input .label{
-    border-radius: 0;
+    border-radius: 3px;
     right: 4px;
   }
   .modal-addservice .form .form-group > button{
-  width: 100%;
-  margin-top: 15px;
-   position: relative;
-  left: unset;
-  top: unset;
-  bottom: unset;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    left: unset;
+    top: unset;
+    bottom: unset;
   }
 
   .services-catalog .list .item .text{
@@ -2339,8 +2414,12 @@ header .btn.login{
     .text p{
       margin-bottom: 17px;
     }
+    .modal .comments{
+      padding-top: 30px;
+    }
     .modal .comments .item .text{
       font-size: 12px;
+      padding-left: 40px;
     }
     .modal .comments .item{
       padding-bottom: 25px;
@@ -2355,7 +2434,7 @@ header .btn.login{
       padding: 15px 0 0;
     }
     .modal-interest .form.interest .search-panel .search-input input[type="search"]{
-      border-radius: 0;
+      border-radius: 3px;
       background-color: #ffffff;
     }
      .modal-interest .form.interest .list .more{
@@ -2407,12 +2486,12 @@ header .btn.login{
     }
     .input-with-label .label, .converter .label{
       right: 5px;
-      border-radius: 0;
+      border-radius: 3px;
     }
     .service-catalog .bootstrap-select>.dropdown-toggle, .modal-create-future-stream .search-input input[type="search"], .form .tags{
       width: 100%;
       left: 0;
-      border-radius: 0;
+      border-radius: 3px;
     }
     .service-catalog .dropdown-menu{
       width: 100%;
@@ -2762,6 +2841,229 @@ header .btn.login{
       width: unset;
       display: block;
     }
+    .modal-announcement .remindme{
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      margin: 0;
+    }
+    .remindme a{
+      font-size: 0;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      text-align: center;
+    }
+    .modal-announcement .stream{
+      font-size: 12px;
+      padding-left: 55px;
+    }
+    .modal-announcement .stream b{
+      font-size: 16px;
+    }
+    .modal-announcement .stream.live-now b:after{
+      top: 7px;
+    }
+    .modal-announcement .user{
+      position: absolute;
+      top: 50px;
+    }
+    .modal-announcement .head{
+      padding: 20px 0 58px;
+    }
+    .modal-announcement .inner .head {
+      padding-bottom: 58px;
+      position: relative;
+    }
+    .modal-announcement .inner .head .user{
+      top: 70px;
+    }
+    .modal-announcement .img{
+      position: relative;
+      display: block;
+      width: 110px;
+      height: 147px;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+       background-size: cover;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+    }
+    .modal .inner .row{
+      margin: 0 -5px;
+    }
+    .modal .inner div[class*='col-']{
+      padding: 0 5px;
+    }
+    .votes input[type="number"] {
+      left: 0;
+      width: 100%;
+    }
+    .modal-announcement .votes{
+      width: 100%;
+      margin-right: 0;
+      margin-top: 20px;
+    }
+    .modal-announcement .votes .vote-btn{
+      right: 0;
+    }
+    .voting .title{
+      padding-top: 20px;
+    }
+    .modal-announcement .inner .img{
+      float: left;
+      width: 110px;
+    }
+    .modal-announcement .inner .text{
+      float: left;
+      width: calc(100% - 110px);
+      padding-left: 10px;
+    }
+    .modal-announcement .inner .head + .text{
+      width: 100%;
+      float: none;
+      padding-left: 0;
+      padding-top: 20px;
+      clear: both;
+    }
+    .voting{
+     width: 100%;
+     float: none;
+     clear: both;
+     padding-left: 0;
+    }
+    .overall{
+      width: 100%;
+      padding-left: 0;
+      padding-top: 20px;
+      text-align: right;
+    }
+    .overall .offset-4.offset-sm-4{
+      text-align: right;
+    }
+    .overall .likes,  .overall .share{
+      margin-top: 20px;
+     }
+    .modal-announcement .inner .head{
+      width: calc(100% - 110px);
+      padding-left: 10px;
+    }
+    .modal-announcement .form-group input[type="radio"] + span{
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      background-color: transparent;
+        box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      border: 1px solid #f05a00;
+    }
+    .modal-announcement .form-group input[type="radio"]:checked + span{
+      background-color: #f05a00;
+    }
+    .modal-announcement .form-group input[type="radio"] + span + i{
+       color: #f05a00;
+       position: relative;
+    }
+    .modal-announcement .form-group input[type="radio"]:checked + span + i{
+      color: #ffffff;
+    }
+    .modal-announcement .form-group input[type="radio"] + span:after{
+      display: none;
+    }
+    .voting .item .form-group{
+      width: calc(100% - 40px);
+      height: 40px;
+      margin-bottom: 25px;
+      margin-top: -15px;
+    }
+    .voting .item .form-group-radio label{
+      padding: 15px;
+      width: 100%;
+      text-align: center;     
+    }
+
+   .modal-announcement .range.full input[type=range], .modal-announcement .range.full .rangeslider--horizontal{
+    margin: 30px 0;
+   }
+     .donate-detail .img, .modal-wallet-donate .imgs .img{
+      border-radius: 3px;
+    }
+    .modal-wallet-donate .imgs .img{
+      height: 144px;
+    }
+     .donate-detail .img{
+      height: 132px;
+     }
+     .modal-wallet-donate .imgs{
+      border-bottom: none;
+     }
+     .donate-detail .col-8{
+      padding-right: 0;
+     }
+     .donate-detail textarea{
+      width: calc(133.333333% + 30px) !important;
+    }
+    .modal-wallet-donate .form .more{
+      background-color: #f8f8f9;
+      color: #666f79;
+      border: 1px solid #cdd0d2;
+      text-align: center;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0;
+    }
+   .modal-wallet-donate .converter .half{
+    width: calc(49% - 23px);
+   }
+    .modal-wallet-donate .converter .go{
+      display: inline-block;
+      width: 40px;
+       -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+    }
+    .modal-wallet-donate .user > div .name{
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+     .modal-wallet-donate .user{
+      padding-top: 40px;
+      position: relative;
+     }
+    .modal-wallet-donate .user > div label{
+      position: absolute;
+      left: auto;
+      top: 18px;
+      width: 100%;
+      text-align: center;
+    }
+   .modal-wallet-donate .user .icon{
+    margin-right: 0;
+   }
+   .modal-wallet-donate .user > div .form-group-checkbox label{font-size: 12px;text-align: left;}
+   .modal-wallet-donate .user > div{
+    display: block;
+    width: 100%;
+   }
+   .modal-wallet-donate .form .buttons button{
+    position: relative;
+    margin-top: 15px;
+   }
+   .modal-wallet-donate .form .buttons{
+    padding-bottom: 0;
+    margin-bottom: 20px;
+   }
+
 
  }
 
@@ -2819,6 +3121,7 @@ header .btn.login{
   .main-content{
     width: 100%;
     margin-left: 0;
+    z-index: 250;
   }
   .ContentFlow{
     display: none;
@@ -2928,6 +3231,9 @@ header .btn.login{
    }
   .main-sidebar{
     background-color: rgba(22,26,28,0.95);
+    z-index: 300;
+    top: 0;
+    height: 100%;
    }
 .main-sidebar .logo{
   position: absolute;
@@ -3344,7 +3650,7 @@ header .btn.login{
       width: 100%;
     }
     .modal-content, .modal-addblock .dropzone .dz-message span{
-      border-radius: 0;
+      border-radius: 3px;
     }
     .modal-dialog{
       margin: 0;
@@ -3384,7 +3690,7 @@ header .btn.login{
   .dropzone .dz-message span,.trumbowyg-box, .trumbowyg-editor, .converter .half input{
     left: 0;
     width: 100%;
-    border-radius: 0;
+    border-radius: 3px;
    }
   .modal-auth .social{
     width: calc(120% - 40px);
@@ -4103,7 +4409,7 @@ header .btn.login{
   }
 
   .modal-addservice .input .label{
-    border-radius: 0;
+    border-radius: 3px;
     right: 4px;
   }
   .modal-addservice .form .form-group > button{
@@ -4270,8 +4576,12 @@ header .btn.login{
     .text p{
       margin-bottom: 17px;
     }
+    .modal .comments{
+      padding-top: 30px;
+    }
     .modal .comments .item .text{
       font-size: 12px;
+      padding-left: 40px;
     }
     .modal .comments .item{
       padding-bottom: 25px;
@@ -4286,7 +4596,7 @@ header .btn.login{
       padding: 25px 0 0;
     }
     .modal-interest .form.interest .search-panel .search-input input[type="search"]{
-      border-radius: 0;
+      border-radius: 3px;
       background-color: #ffffff;
     }
      .modal-interest .form.interest .list .more{
@@ -4305,7 +4615,7 @@ header .btn.login{
     }
 
  
-    .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay,
+   .modal-recovery-password-ok, .modal-recovery-password, .modal-change-save, .modal-email-change, .modal-addoverlay,
    .modal-transaction-successful{
     background-color: rgba(24,33,41, 0.9);
     }
@@ -4340,12 +4650,12 @@ header .btn.login{
 
     .input-with-label .label, .converter .label{
       right: 5px;
-      border-radius: 0;
+      border-radius: 3px;
     }
     .service-catalog .bootstrap-select>.dropdown-toggle, .modal-create-future-stream .search-input input[type="search"], .form .tags{
       width: 100%;
       left: 0;
-      border-radius: 0;
+      border-radius: 3px;
     }
     .service-catalog .dropdown-menu{
       width: 100%;
@@ -4715,6 +5025,10 @@ header .btn.login{
     }
     .modal-announcement .stream b{
       font-size: 16px;
+      line-height: 14px;
+    }
+    .modal-announcement .stream.live-now b:after{
+      top: 1px;
     }
     .modal-announcement .user{
       position: absolute;
@@ -4725,6 +5039,7 @@ header .btn.login{
     }
     .modal-announcement .inner .head {
       padding-bottom: 58px;
+      position: relative;
     }
     .modal-announcement .inner .head .user{
       top: 70px;
@@ -4754,25 +5069,228 @@ header .btn.login{
     }
     .modal-announcement .votes{
       width: 100%;
+      margin-right: 0;
+      margin-top: 20px;
+    }
+    .modal-announcement .votes .vote-btn{
+      right: 0;
     }
     .voting .title{
-      padding-top: 30px;
+      padding-top: 20px;
     }
-    .modal-announcement .inner .col-12.col-sm-4{
+    .modal-announcement .inner .img{
       float: left;
-      flex: unset;
       width: 110px;
     }
-    .modal-announcement .inner .col-12.col-sm-8{
+    .modal-announcement .inner .text{
       float: left;
-      flex: unset;
       width: calc(100% - 110px);
+      padding-left: 10px;
+    }
+    .modal-announcement .inner .head + .text{
+      width: 100%;
+      float: none;
+      padding-left: 0;
+      padding-top: 20px;
+      clear: both;
     }
     .voting{
-     width: calc(100% + 110px);
-     margin-left: -110px;
-     margin-top: 100px;
+     width: 100%;
+     float: none;
+     clear: both;
+     padding-left: 0;
     }
+    .overall{
+      width: 100%;
+      padding-left: 0;
+      padding-top: 20px;
+      text-align: right;
+    }
+    .overall .offset-4.offset-sm-4{
+      text-align: right;
+    }
+    .overall .likes,  .overall .share{
+      margin-top: 20px;
+     }
+    .modal-announcement .inner .head{
+      width: calc(100% - 110px);
+      padding-left: 10px;
+    }
+    .modal-announcement .form-group input[type="radio"] + span{
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      background-color: transparent;
+        box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      border: 1px solid #f05a00;
+    }
+    .modal-announcement .form-group input[type="radio"]:checked + span{
+      background-color: #f05a00;
+    }
+    .modal-announcement .form-group input[type="radio"] + span + i{
+       color: #f05a00;
+       position: relative;
+    }
+    .modal-announcement .form-group input[type="radio"]:checked + span + i{
+      color: #ffffff;
+    }
+    .modal-announcement .form-group input[type="radio"] + span:after{
+      display: none;
+    }
+    .voting .item .form-group{
+      width: calc(100% - 40px);
+      height: 40px;
+      margin-bottom: 25px;
+      margin-top: -15px;
+    }
+    .voting .item .form-group-radio label{
+      padding: 15px;
+      width: 100%;
+      text-align: center;     
+    }
+
+   .modal-announcement .range.full input[type=range], .modal-announcement .range.full .rangeslider--horizontal{
+    margin: 30px 0;
+   }
+
+   .donate-detail .img, .modal-wallet-donate .imgs .img{
+      border-radius: 3px;
+    }
+    .modal-wallet-donate .imgs .img{
+      height: 84px;
+    }
+     .donate-detail .img{
+      height: 72px;
+     }
+     .modal-wallet-donate .imgs{
+      border-bottom: none;
+     }
+     .donate-detail .col-8{
+      padding-right: 0;
+     }
+     .donate-detail textarea{
+      width: calc(133.333333% + 30px) !important;
+    }
+    .modal-wallet-donate .form .more{
+      background-color: #f8f8f9;
+      color: #666f79;
+      border: 1px solid #cdd0d2;
+      text-align: center;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0;
+    }
+   .modal-wallet-donate .converter .half{
+    width: calc(49% - 23px);
+   }
+    .modal-wallet-donate .converter .go{
+      display: inline-block;
+      width: 40px;
+       -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+    }
+    .modal-wallet-donate .user > div .name{
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+     .modal-wallet-donate .user{
+      padding-top: 40px;
+      position: relative;
+     }
+    .modal-wallet-donate .user > div label{
+      position: absolute;
+      left: auto;
+      top: 18px;
+      width: 100%;
+      text-align: center;
+    }
+   .modal-wallet-donate .user .icon{
+    margin-right: 0;
+   }
+   .modal-wallet-donate .user > div .form-group-checkbox label{font-size: 12px;text-align: left;}
+   .modal-wallet-donate .user > div{
+    display: block;
+    width: 100%;
+   }
+   .modal-wallet-donate .form .buttons button{
+    position: relative;
+    margin-top: 15px;
+   }
+   .modal-wallet-donate .form .buttons{
+    padding-bottom: 0;
+    margin-bottom: 20px;
+   }
+   .filter-panel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 240;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #383e44;
+    margin: 0;
+    padding: 50px 0 0;
+    display: none !important;
+   }
+   .list .setup > div.filter-panel{
+    margin: 0;
+   }
+  .filter-panel .close{
+    position: relative;
+    float: left;
+  }
+.filter-panel .form-group-checkbox{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #666f79;   
+  }
+ .filter-panel .form-group-checkbox:last-child{
+     border-bottom: 1px solid #666f79;
+  }
+  .filter-panel .form-group-checkbox label{
+    display: block;
+    cursor: pointer;    
+    padding: 11px 0;
+  }
+.filter-panel .form-group input[type="checkbox"] + span{
+    left: auto;
+    right: 5px;
+    top: 11px;
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .filter-panel .form-group{
+    position: relative;
+  }
+.filter-panel .form-group input[type="checkbox"] + span:after{
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          border-style: solid;
+          width: 0.6em;
+          height: 1.1em;
+          color: #2c3238;
+    }
+    .filter-panel .form-group input[type="checkbox"]:checked + span:after{
+      color: #f05a00;
+    }
+
+
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
