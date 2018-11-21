@@ -88,8 +88,6 @@ header{
   background-color: #282d33;
   border-bottom: 1px solid rgba(68,76,84,0.7);
   position: relative;
-  z-index: 120;
-
    box-shadow: 0px 2px 4px rgba(38, 43, 46, 0.15);
   -moz-box-shadow: 0px 2px 4px rgba(38, 43, 46, 0.15);
   -webkit-box-shadow: 0px 2px 4px rgba(38, 43, 46, 0.15);
@@ -2983,17 +2981,21 @@ button.close {
   position: relative;
   top: -1px;
 }
-.modal-buydst .buttons, .modal-transfer .buttons, .modal-transfer-2 .buttons {
+.modal-buydst .buttons, .modal-transfer .buttons, .modal-transfer-2 .buttons,.modal-equiring .buttons {
  border-top: 1px solid #dbe0e6;
  padding-top: 30px;
  padding-bottom: 15px;
 }
 
-.modal-buydst .buttons .btn, .modal-transfer .buttons .btn, .modal-transfer-2 .buttons .btn{
+.modal-buydst .buttons .btn, .modal-transfer .buttons .btn, .modal-transfer-2 .buttons .btn, .modal-equiring .buttons .btn{
   width: unset;
+  display: inline-block !important;
+  left: 0;
 }
-.modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next, .modal-transfer-2 .buttons .btn-next{
+.modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next, .modal-transfer-2 .buttons .btn-next, .modal-equiring .buttons .btn-next{
   float: right;
+  right: 0;
+  left: unset;
 }
 
 .modal-equiring .item {
@@ -6311,7 +6313,9 @@ a.prev-step svg{
   left: unset;
 }
 
-
+ .modal-transaction-successful .btn{
+      margin-top: 30px;
+    }
 
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
@@ -6321,7 +6325,7 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
 .ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
 .form-group input[type="checkbox"] + span, .settings .personal .change-photo,
-.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message{
+.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;

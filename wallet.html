@@ -529,7 +529,58 @@
 			    			</div>
 			    			<div class="setup d-md-none">
 			    				<a class="search-btn" href="#"><svg><use xlink:href="img/vectors.svg#search"></use></svg></a>
-			   					<a class="filters" href="#"><svg><use xlink:href="img/vectors.svg#setup"></use></svg></a>				    			
+			   						    					<a href="#" class="setup-link"><svg><use xlink:href="img/vectors.svg#setup"></use></svg></a>
+	    					<div class="filter-panel">
+	    					<a href="#" class="close"><svg><use xlink:href="img/vectors.svg#close"></use></svg></a>
+	    					<span class="checkmark"></span>
+	    						<div class="group filterby">
+	    							<div class="title">Filter by</div>
+	    							<div class="checks-group">
+										<div class="form-group form-group-checkbox">
+			                               	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
+			                            </div>
+	    							</div>
+	    						</div>	    						
+
+	    						<div class="group sortby">
+	    							<div class="title">Sort by</div>
+	    							<div class="checks-group">
+										<div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" checked="checked" name="sort"><span></span>Popularity</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" name="sort"><span></span>Viewers</label>
+			                            </div>
+			                            
+	    							</div>
+	    						</div>
+
+	    						<div class="group period">
+	    							<div class="title">Period</div>
+	    							<div class="dates">
+	    								<div class="from"><input type="date"/></div> 
+	    								<div class="to"><input type="date"/></div> 
+	    							</div>
+	    							<div class="checks-group">
+										<div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" checked="checked" name="period"><span></span>Current month</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" name="period"><span></span>Last month</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" name="period"><span></span>Last two weeks</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" name="period"><span></span>Last month</label>
+			                            </div>
+	    							</div>
+	    						</div>
+
+	    					</div>				    			
 				    		</div>
 
 			    		</div>
@@ -1294,19 +1345,19 @@
 	<script>
      $(function () {
         
-     	$('.modal-transfer-2').modal('show');
+   //  	$('.modal-transfer-2').modal('show');
 
-        $('.modal-transfer').modal('show');        
+     //   $('.modal-transfer').modal('show');        
 
-        $('.modal-transaction-successful').modal('show');
+    //    $('.modal-transaction-successful').modal('show');
 
-        $('.modal-equiring').modal('show');
+       // $('.modal-equiring').modal('show');
 
-        $('.modal-buydst').modal('show');
+    //    $('.modal-buydst').modal('show');
 
-        $('.modal-hash').modal('show');
+    //    $('.modal-hash').modal('show');
 
-        $('.modal-wallet-donate').modal('show');
+    //   $('.modal-wallet-donate').modal('show');
 
        });
     </script>

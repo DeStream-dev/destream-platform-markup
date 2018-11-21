@@ -66,6 +66,21 @@ $('.menu-toggle').on("click",function(){
    return false;
 });
 
+$('.setup-link').on("click",function(){
+  var thisel = $(this);
+  thisel.parents('.setup').find('.filter-panel').addClass("open");
+
+   return false;
+});
+
+$('.filter-panel .close').on("click",function(){
+  var thisel = $(this);
+  thisel.parents('.filter-panel').removeClass("open");
+
+   return false;
+});
+
+
 function searchH(){
    var wH = $(window).height();
    var hH = $('header').outerHeight(); 

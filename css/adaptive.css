@@ -980,6 +980,10 @@ header .btn.login{
      .modal-wallet-donate .imgs{
       border-bottom: none;
      }
+
+    .modal-transaction-successful .btn{
+      margin-top: 30px;
+    }
 }
 
 .rotate-warning{display: none;}
@@ -1031,6 +1035,7 @@ header .btn.login{
   .main-content{
     width: 100%;
     margin-left: 0;
+    z-index: 250;
   }
   .ContentFlow{
     display: none;
@@ -1039,7 +1044,7 @@ header .btn.login{
   .menu-toggle{
     position: fixed;
     right: 15px;
-    z-index: 500;
+    z-index: 100;
   }
   .logo{
     margin-left: -10px;
@@ -3063,6 +3068,195 @@ header .btn.login{
     padding-bottom: 0;
     margin-bottom: 20px;
    }
+      .filter-panel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 240;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #383e44;
+    margin: 0;
+    padding: 65px 10px 10px;
+    left: -100%;
+   }
+   .list .setup > div.filter-panel{
+    margin: 0;   
+   }
+   .filter-panel.open{
+    margin: 0;
+    left: 0;
+   }
+  .filter-panel .close{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    float: left;
+    -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+  }
+.filter-panel .form-group-checkbox{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #444c54;   
+  }
+    .filter-panel .title{
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 15px;
+      padding-top: 40px;
+    }
+  .filter-panel .form-group-checkbox label{
+    font-size: 13px;
+    color: #dbe0e6;
+  }
+ .filter-panel .form-group-checkbox:last-child{
+     border-bottom: 1px solid #444c54;
+  }
+  .filter-panel .form-group-checkbox label{
+    display: block;
+    cursor: pointer;    
+    padding: 13px 0;
+    margin-bottom: 0;
+  }
+  .filter-panel .group:first-of-type{
+    border-top: 1px solid #444c54;;
+  }
+.filter-panel .form-group input[type="checkbox"] + span{
+    left: auto;
+    right: 5px;
+    top: 11px;
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .filter-panel .form-group{
+    position: relative;
+  }
+  .filter-panel .form-group input[type="checkbox"] + span:after{
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          border-style: solid;
+          width: 0.6em;
+          height: 1.1em;
+          color: transparent;
+    }
+  .filter-panel .form-group input[type="checkbox"]:checked + span:after{
+      color: #f05a00;
+    }
+
+  .filter-panel .form-group input[type="radio"] + span{
+        left: auto;
+        right: 5px;
+        top: 11px;
+        background-color: transparent;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+  .filter-panel .form-group input[type="radio"] + span:after{
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          border-style: solid;
+          border-radius: 0;
+          width: 0.6em;
+          height: 1.1em;
+          color: transparent;          
+          background-color: transparent;
+    }
+   .filter-panel .form-group input[type="radio"]:checked + span:after{
+      color: #f05a00;
+
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+    }
+
+  .filter-panel .form-group-radio{
+    display: block;
+    margin: 0;
+    padding: 11px 0;
+    border-top: 1px solid #dbe0e6;   
+  }
+.filter-panel .form-group-radio:last-child{
+     border-bottom: 1px solid #dbe0e6;
+  }
+  .filter-panel .form-group-radio  label{
+    display: block;
+    padding-left: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+   .filter-panel .checkmark{
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+          border-width: 0 .19em .19em 0;
+          border-style: solid;
+          border-radius: 0;
+          width: 0.5em;
+          height: 0.8em;
+          color: #737c85;          
+   }
+
+   .filter-panel .group.period .dates .from, .filter-panel .group.period .dates .to{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(50% - 0.3em);
+    text-align: center;
+    position: relative;
+   }
+   .filter-panel .group.period .dates .from{
+    text-align: right;
+    padding-right: 20px;
+   }
+   .filter-panel .group.period .dates .to{
+    text-align: left;
+    padding-left: 20px;
+   }
+    .filter-panel .group.period .dates .from:after{
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 1px;
+      background-color: #444c54;
+      top: 50%;
+      margin-top: -1px;
+      right: -6px;
+    }
+  .filter-panel .group.period .dates {
+    padding: 10px 0;
+    border-top: 1px solid #444c54 ;
+    margin-top: 10px;
+  }
+    .filter-panel .group.period .dates input[type="date"]{
+      border: none;
+      border-radius: 3px;
+      background-color: #444c54;
+      text-align: center;
+      font-family: "Montserrat";
+      font-size: 13px;
+      color: #dbe0e6;
+      padding: 7px;
+      width: 122px;
+    }
 
 
  }
@@ -3093,7 +3287,7 @@ header .btn.login{
     white-space: nowrap;
     position: absolute;
     width: 120px;
-    z-index: 302;
+    z-index: 102;
   }
   .logo img{width: 90%;}
   .logo{margin: 8px 0 0 8px;}
@@ -3130,7 +3324,7 @@ header .btn.login{
   .menu-toggle{
     position: fixed;
     right: 15px;
-    z-index: 500;
+    z-index: 100;
   }
   .menu-toggle svg{
     fill: #737c85;
@@ -5233,35 +5427,59 @@ header .btn.login{
     width: 100%;
     height: 100%;
     z-index: 240;
-    left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     background-color: #383e44;
     margin: 0;
-    padding: 50px 0 0;
-    display: none !important;
+    padding: 65px 10px 10px;
+    left: -100%;
    }
    .list .setup > div.filter-panel{
+    margin: 0;   
+   }
+   .filter-panel.open{
     margin: 0;
+    left: 0;
    }
   .filter-panel .close{
-    position: relative;
+    position: absolute;
+    left: 20px;
+    top: 20px;
     float: left;
+    -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
   }
 .filter-panel .form-group-checkbox{
     display: block;
     margin: 0;
     padding: 0;
-    border-top: 1px solid #666f79;   
+    border-top: 1px solid #444c54;   
+  }
+    .filter-panel .title{
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 15px;
+      padding-top: 40px;
+    }
+  .filter-panel .form-group-checkbox label{
+    font-size: 13px;
+    color: #dbe0e6;
   }
  .filter-panel .form-group-checkbox:last-child{
-     border-bottom: 1px solid #666f79;
+     border-bottom: 1px solid #444c54;
   }
   .filter-panel .form-group-checkbox label{
     display: block;
     cursor: pointer;    
-    padding: 11px 0;
+    padding: 13px 0;
+    margin-bottom: 0;
+  }
+  .filter-panel .group:first-of-type{
+    border-top: 1px solid #444c54;;
   }
 .filter-panel .form-group input[type="checkbox"] + span{
     left: auto;
@@ -5275,7 +5493,7 @@ header .btn.login{
   .filter-panel .form-group{
     position: relative;
   }
-.filter-panel .form-group input[type="checkbox"] + span:after{
+  .filter-panel .form-group input[type="checkbox"] + span:after{
       -webkit-transform: scale(1)  rotate(45deg);
       -ms-transform: scale(1)  rotate(45deg);
        -o-transform: scale(1)  rotate(45deg);
@@ -5284,13 +5502,107 @@ header .btn.login{
           border-style: solid;
           width: 0.6em;
           height: 1.1em;
-          color: #2c3238;
+          color: transparent;
     }
-    .filter-panel .form-group input[type="checkbox"]:checked + span:after{
+  .filter-panel .form-group input[type="checkbox"]:checked + span:after{
       color: #f05a00;
     }
 
+  .filter-panel .form-group input[type="radio"] + span{
+        left: auto;
+        right: 5px;
+        top: 11px;
+        background-color: transparent;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+  .filter-panel .form-group input[type="radio"] + span:after{
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+          border-width: 0 .26em .26em 0;
+          border-style: solid;
+          border-radius: 0;
+          width: 0.6em;
+          height: 1.1em;
+          color: transparent;          
+          background-color: transparent;
+    }
+   .filter-panel .form-group input[type="radio"]:checked + span:after{
+      color: #f05a00;
 
+      -webkit-transform: scale(1)  rotate(45deg);
+      -ms-transform: scale(1)  rotate(45deg);
+       -o-transform: scale(1)  rotate(45deg);
+          transform: scale(1)  rotate(45deg);
+    }
+
+  .filter-panel .form-group-radio{
+    display: block;
+    margin: 0;
+    padding: 11px 0;
+    border-top: 1px solid #dbe0e6;   
+  }
+.filter-panel .form-group-radio:last-child{
+     border-bottom: 1px solid #dbe0e6;
+  }
+  .filter-panel .form-group-radio  label{
+    display: block;
+    padding-left: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+   .filter-panel .checkmark{
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+          border-width: 0 .19em .19em 0;
+          border-style: solid;
+          border-radius: 0;
+          width: 0.5em;
+          height: 0.8em;
+          color: #737c85;          
+   }
+
+   .filter-panel .group.period .dates .from, .filter-panel .group.period .dates .to{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(50% - 0.3em);
+    text-align: center;
+    position: relative;
+   }
+    .filter-panel .group.period .dates .from:after{
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 1px;
+      background-color: #444c54;
+      top: 50%;
+      margin-top: -1px;
+      right: -6px;
+    }
+  .filter-panel .group.period .dates {
+    padding: 10px 0;
+    border-top: 1px solid #444c54 ;
+    margin-top: 10px;
+  }
+    .filter-panel .group.period .dates input[type="date"]{
+      border: none;
+      border-radius: 3px;
+      background-color: #444c54;
+      text-align: center;
+      font-family: "Montserrat";
+      font-size: 13px;
+      color: #dbe0e6;
+      padding: 7px;
+      width: 122px;
+    }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {

@@ -424,7 +424,6 @@
             </footer>
             </div>
     	</aside>
-
     	
     	<section class="main-content" data-simplebar>
     		<div id="contentFlow" class="ContentFlow">        
@@ -597,13 +596,14 @@
 		    			</div>
 	    			</div>
     			</div> 
-    			<a class="view-all" href="#">View all <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>   			
+    			<a class="view-all d-none d-md-block" href="#">View all <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>
+    			<a class="more d-md-none" href="#">More</a>  			
     		</div>
 
     		<div class="list list-news">
     			<div class="title">News</div>
     			<div class="row">
-	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
 			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news1.png')"></a>
 			    			<div class="description">
@@ -616,7 +616,7 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
 			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news2.png')"></a>
 			    			<div class="description">
@@ -629,7 +629,7 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
 			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news3.png')"></a>
 			    			<div class="description">
@@ -642,7 +642,7 @@
 			    			</div>
 		    			</div>
 	    			</div>
-	    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
 		    			<div class="item">
 			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news4.png')"></a>
 			    			<div class="description">
@@ -656,17 +656,18 @@
 		    			</div>
 	    			</div>
 	    		</div>
-    			<a class="view-all" href="#">View all <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>   
+    			<a class="view-all d-none d-md-block" href="#">View all <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>
+    			<a class="more d-md-none" href="#">More</a>    
     		</div>
 
     		<div class="list list-announcement">
     			<div class="row">
-	    			<div class="d-none d-sm-block col-sm-4">
+	    			<div class="d-none d-md-block col-md-4">
 	    				<div class="img"><img src="img/anons1.png" width="415" height="553" alt="" /></div>
 	    			</div>
-	    			<div class="col-12 col-sm-8">
+	    			<div class="col-12 col-md-8">
 	    				<div class="title">Stream anons</div>
-	    				<div class="setup">
+	    				<div class="setup d-none d-md-block">
 	    					<div class="filter">
 		    					<select class="selectpicker" title="Filter">
 		    						<option value="Filt 1">Filter 1</option>
@@ -676,12 +677,44 @@
 	    					</div>
 	    					<div class="sort">
 	    						<select class="selectpicker" title="Sort">
-		    						<option value="Sort 1">Sort 1</option>
-		    						<option value="Sort 2">Sort 2</option>
-		    						<option value="Sort 3">Sort 3</option>
+		    						<option value="viewers">Viewers</option>
+		    						<option value="popularity">Popularity</option>
 		    					</select>
 	    					</div>
 	    				</div>
+	    				<div class="setup d-md-none">
+	    					<a href="#" class="setup-link"><svg><use xlink:href="img/vectors.svg#setup"></use></svg></a>
+	    					<div class="filter-panel">
+	    					<a href="#" class="close"><svg><use xlink:href="img/vectors.svg#close"></use></svg></a>
+	    					<span class="checkmark"></span>
+	    						<div class="group filterby">
+	    							<div class="title">Filter by</div>
+	    							<div class="checks-group">
+										<div class="form-group form-group-checkbox">
+			                               	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
+			                            </div>
+	    							</div>
+	    						</div>	    						
+
+	    						<div class="group sortby">
+	    							<div class="title">Sort by</div>
+	    							<div class="checks-group">
+										<div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" checked="checked" name="sort"><span></span>Popularity</label>
+			                            </div>
+			                            <div class="form-group form-group-checkbox">
+			                               	<label><input type="radio" name="sort"><span></span>Viewers</label>
+			                            </div>
+			                            
+	    							</div>
+	    						</div>
+
+	    					</div>
+	    				</div>
+	    				<div class="img d-md-none"><img src="img/announcement-mobile.png"  alt="" /></div>	
 	    				<ul>
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
@@ -700,7 +733,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-	    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm on" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -714,7 +747,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -728,7 +761,7 @@
 							<li class="item">
 	    						<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -742,7 +775,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -756,7 +789,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -770,7 +803,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -784,7 +817,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -798,7 +831,7 @@
 	    					<li class="item">
 	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 	    						<div class="description">
-		    						<span class="name">Soda CmonBruh</span>
+	    							<span class="name">Soda CmonBruh</span>
 					    			<a class="text" href="#">Возможность нахождения поисковых ключей в тексте и определения.</a>
 					    			<span class="date">21.05.2018 at 21:50</span>
 					    			<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
@@ -832,35 +865,39 @@
 
     		<div class="list list-announcement-tile">
     			<div class="title">Stream anons</div>
-	    				<div class="setup">
+	    				<div class="setup d-none d-md-block">
 	    					<div class="filter">
-		    					<select class="selectpicker ds-dropdown" title="Filter">
+		    					<select class="selectpicker" title="Filter">
 		    						<option value="Filt 1">Filter 1</option>
 		    						<option value="Fier 2">Filter 2</option>
 		    						<option value="Fier 3">Filter 3</option>
 		    					</select>
 	    					</div>
 	    					<div class="sort">
-	    						<select class="selectpicker ds-dropdown" title="Sort">
-		    						<option value="Sort 1">Sort 1</option>
-		    						<option value="Sort 2">Sort 2</option>
-		    						<option value="Sort 3">Sort 3</option>
+	    						<select class="selectpicker" title="Sort">
+		    						<option value="viewers">Viewers</option>
+		    						<option value="popularity">Popularity</option>
 		    					</select>
 	    					</div>
+	    				</div>
+	    				<div class="setup d-md-none">
+	    					<a href="#"><svg><use xlink:href="img/vectors.svg#setup"></use></svg></a>
 	    				</div>
 	    			<div class="large">
 	    				<div class="row">
 	    					<div class="col-12 col-sm-12 col-lg-6">
 	    						<div class="item">	    							
-	    							<div class="slides">
+	    							<div class="slides d-none d-md-block">
 	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
+	    								
 	    							<div class="description">
-		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    			<span class="name">Soda CmonBruh</span>
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
 										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
 										<div class="bottom">
 											<span class="date">21.05.2018 at 21:50</span>
@@ -877,15 +914,16 @@
 
 							<div class="col-12 col-sm-12 col-lg-6">
 	    						<div class="item">	    							
-	    							<div class="slides">
+	    							<div class="slides d-none d-md-block">
 	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    							<div class="description">
-		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    			<span class="name">Soda CmonBruh</span>
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
 										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
 										<div class="bottom">
 											<span class="date">21.05.2018 at 21:50</span>
@@ -902,15 +940,16 @@
 
 							<div class="col-12 col-sm-12 col-lg-6">
 	    						<div class="item">	    							
-	    							<div class="slides">
+	    							<div class="slides d-none d-md-block">
 	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    							<div class="description">
-		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    			<span class="name">Soda CmonBruh</span>
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
 										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
 										<div class="bottom">
 											<span class="date">21.05.2018 at 21:50</span>
@@ -927,15 +966,16 @@
 
 							<div class="col-12 col-sm-12 col-lg-6">
 	    						<div class="item">	    							
-	    							<div class="slides">
+	    							<div class="slides d-none d-md-block">
 	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
 	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    							<div class="description">
-		    							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>		    								
-						    			<span class="name">Soda CmonBruh</span>
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
 										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
 										<div class="bottom">
 											<span class="date">21.05.2018 at 21:50</span>
@@ -951,7 +991,7 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="small">
+	    			<div class="small d-none d-md-block">
 	    				<div class="row">
 	    					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 	    						<div class="item">
@@ -1981,7 +2021,7 @@
 
      // $('.modal-auth').modal('show');
 
-    // $('.modal-create-future-stream').modal('show');
+     $('.modal-create-future-stream').modal('show');
 
        });
     </script>
