@@ -445,9 +445,23 @@ $(".main-sidebar .block .title .search-input input[type='search']").on("blur", f
     $(this).addClass("minimize");
   });
 
-
  // $(this).parents(".search-input").addClass("minimize");
 });
+
+
+$('.setup .search-input .btn').on("click", function(){
+  $(this).parents(".search-input").removeClass("minimize");
+  $(this).parents(".search-input").css({'width':'100%'});
+  $(this).parents(".search-input").find("input[type='search']").focus();
+});
+
+$(".setup .search-input input[type='search']").on("blur", function(){
+  $(this).parents(".search-input").animate({'width': '40px'},300,function(){
+    $(this).addClass("minimize");
+  });
+
+});
+
 
 
 /*

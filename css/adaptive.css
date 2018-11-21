@@ -3255,9 +3255,64 @@ header .btn.login{
       font-size: 13px;
       color: #dbe0e6;
       padding: 7px;
-      width: 122px;
+      width: 132px;
+    }
+    .payment-history .setup{
+      position: absolute;
+      width: calc(100% - 70px);
+    }
+    .payment-history .setup .setup-link{
+      position: absolute;
+      right: 0;
+    }
+    .setup .search-input{
+      position: absolute;
+      right: 27px;
+      top: -9px;
+      width: 100%;
+      z-index: 200;
+      margin: 0 15px 0 0;
+
+      -webkit-transition: width 0.3s ease-out;
+      -moz-transition: width 0.3s ease-out;
+      -ms-transition: width 0.3s ease-out;
+      -o-transition: width 0.3s ease-out;
+      transition: width 0.3s ease-out;
+
+      overflow: visible!important;
+    }
+    .setup .search-input .btn{
+      outline: none;
+    }
+    .setup .search-input .btn svg{
+      fill: #737c85;
+    }
+    .setup .search-input.minimize{
+      overflow: hidden;
+      width: 40px;
     }
 
+    .setup .search-input.minimize input[type="search"]{ 
+      background-color: transparent;
+        box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      left: 0;
+      width: 0;
+      overflow: hidden;
+    }
+    .setup input[type="search"]::-webkit-input-placeholder { color: #ffffff;opacity: 1;}
+    .setup input[type="search"]::-moz-placeholder          {color: #ffffff;opacity: 1;}
+    .setup input[type="search"]:-moz-placeholder           {color: #ffffff;opacity: 1;}
+    .setup input[type="search"]:-ms-input-placeholder      {color: #ffffff;opacity: 1;}
+
+    .setup .search-input input[type="search"]{
+      position: relative;
+      left: 0;
+      width: 100%;
+      padding-left: 50px;
+      color: rgb(170,177,184, 0.5);
+    }
 
  }
 
@@ -5601,8 +5656,67 @@ header .btn.login{
       font-size: 13px;
       color: #dbe0e6;
       padding: 7px;
-      width: 122px;
+      width: 132px;
     }
+    .payment-history .setup{
+      position: absolute;
+      width: calc(100% - 70px);
+    }
+    .payment-history .setup .setup-link{
+      position: absolute;
+      right: 0;
+    }
+    .setup .search-input{
+      position: absolute;
+      right: 27px;
+      top: -9px;
+      width: 100%;
+      z-index: 200;
+      margin: 0 15px 0 0;
+
+      -webkit-transition: width 0.3s ease-out;
+      -moz-transition: width 0.3s ease-out;
+      -ms-transition: width 0.3s ease-out;
+      -o-transition: width 0.3s ease-out;
+      transition: width 0.3s ease-out;
+
+      overflow: visible!important;
+    }
+    .setup .search-input .btn{
+      outline: none;
+    }
+    .setup .search-input .btn svg{
+      fill: #737c85;
+    }
+    .setup .search-input.minimize{
+      overflow: hidden;
+      width: 40px;
+    }
+
+    .setup .search-input.minimize input[type="search"]{ 
+      background-color: transparent;
+        box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      left: 0;
+      width: 0;
+      overflow: hidden;
+    }
+    .setup input[type="search"]::-webkit-input-placeholder { color: #ffffff;opacity: 1;}
+    .setup input[type="search"]::-moz-placeholder          {color: #ffffff;opacity: 1;}
+    .setup input[type="search"]:-moz-placeholder           {color: #ffffff;opacity: 1;}
+    .setup input[type="search"]:-ms-input-placeholder      {color: #ffffff;opacity: 1;}
+
+    .setup .search-input input[type="search"]{
+      position: relative;
+      left: 0;
+      width: 100%;
+      padding-left: 50px;
+      color: rgb(170,177,184, 0.5);
+    }
+
+
+
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
