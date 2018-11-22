@@ -1244,9 +1244,9 @@ header .btn.login{
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
-      -webkit-background-size: contain;
-      -moz-background-size: contain;
-      -o-background-size: contain;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       height: 220px;
       width: 100%;
       overflow: hidden;
@@ -1286,7 +1286,11 @@ header .btn.login{
     background-color: #161a1c;
     z-index: 299;
   }
-
+   .main-sidebar .block.game .item, .main-sidebar .block.lifestyle .item{
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
     header .search-input input[type="search"]{
       position: relative;
       left: -5px;
@@ -2396,7 +2400,7 @@ header .btn.login{
           border-width: 0 .26em .26em 0;
           width: 0.6em;
           height: 1.1em;
-          color: #2c3238;
+          color: transparent;
     }
      .form.interest .form-group input[type="checkbox"]:checked + span:after{
       color: #f05a00;
@@ -4803,7 +4807,7 @@ header .btn.login{
           border-style: solid;
           width: 0.6em;
           height: 1.1em;
-          color: #2c3238;
+          color: transparent;
     }
      .form.interest .form-group input[type="checkbox"]:checked + span:after{
       color: #f05a00;
