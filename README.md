@@ -38,3 +38,20 @@ Update 26.09
 	- Interests
 	- Subscription
 	- Service catalog
+	
+	
+	
+Pages list:
+
+index.html Home page (logged user header)
+index-register.html Home page (unlogged user header)
+live-broadcast.html Page Live broadcast. Mobile version variant with slider
+live-broadcast-mobile-tabs.html Page Live broadcast. Mobile version variant with tabs
+messages.html Page Messages
+mychannel.html Page MyChannel
+overlays.html Page Overlays
+settings.html Page Settings
+wallet.html  Page Wallet
+widget.html  First page of widget
+widget2.html Second page of widget
+dropdowns.html Page with two variants of dropdown lists with filters - for light and dark theme
