@@ -1023,7 +1023,8 @@ footer .social {
   padding: 25px 0;
   font-size: 15px;
   text-transform: uppercase;
-  color: rgb(11,31,48,0.7);
+  opacity: 0.7;
+  color: #0b1f30;
   font-weight: bold;
 }
 .modal-auth .social{
