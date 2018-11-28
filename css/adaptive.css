@@ -61,7 +61,7 @@ span.size{ display: none; }
   transform: rotate(45deg);
   stroke: #0b1f30;
   }
-.menu-close:hover svg{
+.no-touch .menu-close:hover svg{
   stroke: #ffc100;
   }
   .menu-open {
@@ -106,6 +106,8 @@ span.size{ display: none; }
 .modal-addblock .modal-lg{
     max-width: 465px;
   }
+
+
 
 @media (min-width: 1200px) { /* xl */
     .container-fluid {
@@ -302,7 +304,7 @@ header  div[class*='col-']{
     position: fixed;/* absolute;*/
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 600;
     height: 100%;
     background-color: rgba(44,50,56,0.8);
     padding-top: 60px;
@@ -993,9 +995,12 @@ header .btn.login{
     border: 1px solid magenta; 
   }
   header{
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-bottom: none;
+  }
+  header.totop{
+    z-index: 200;
   }
   .widget header{
     z-index: 124;
@@ -1047,13 +1052,14 @@ header .btn.login{
     z-index: 100;
   }
   .logo{
-    margin-left: -10px;
+    margin-left: -4px;
   }
   header .user-btn-cont > .icon{
     width: 30px;
     height: 30px;    
     overflow: hidden;
     margin-right: 10px;
+    margin-top: 1px;
   }
   .sidebar-collapse .main-sidebar{
     left: 0;
@@ -1079,18 +1085,37 @@ header .btn.login{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-top: 3px;
+    margin-top: 5px;
   }
-  header .create-btn-cont .create .plus{
-    font-size: 32px;
+    header .create-btn-cont .create .plus{
+    font-size: 0;
+    position: relative;    
+    display: block;
+    line-height: 30px;
+  }
+  header .create-btn-cont .create .plus:after{    
     font-weight: 300;
-    line-height: 27px;
+    font-size: 24px;
+    content: "+";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -1px;
+    text-align: center;
+    line-height: 30px;
+    color: #ffffff;
+    font-family: "Tahoma";
   }
   header .search-panel{
     display: none;
   }
   .search-results{
-    width: 100%;
+    width: calc(100% + 10px);
+    left: -5px;
+  }
+  .search-results-inner{
+    padding: 0 20px;
   }
   header .search-panel.open{
     position: fixed;
@@ -1099,7 +1124,7 @@ header .btn.login{
     top: 5px;
     display: block;
     z-index: 800;
-    max-width: unset;
+    max-width: calc(100% - 22px);
   }
   header .search-panel .close{
     position: absolute;
@@ -1168,7 +1193,6 @@ header .btn.login{
    .main-sidebar  .block.account{
     position: relative;
     padding-bottom: 45px;
-    margin-top: 60px;
     padding-top: 20px;
    }
 
@@ -1223,7 +1247,7 @@ header .btn.login{
 .main-sidebar .block.game ul, .main-sidebar .block.lifestyle ul{
       letter-spacing: -0.3em;
       margin-left: -6px;
-      width: calc(100% + 6px);
+      width: calc(100% + 12px);
     }
     .main-sidebar .block.game > ul > li{
       display: inline-block;
@@ -1276,7 +1300,7 @@ header .btn.login{
       left: -10px;
       width: calc(100% + 20px);
     }
-  .sidebar-collapse .main-sidebar:after{
+  /*.sidebar-collapse .main-sidebar:after{
     position: absolute;
     content: "";
     left: 0;
@@ -1285,7 +1309,7 @@ header .btn.login{
     height: 60px;
     background-color: #161a1c;
     z-index: 299;
-  }
+  }*/
    .main-sidebar .block.game .item, .main-sidebar .block.lifestyle .item{
       padding: 0;
       margin: 0;
@@ -1534,7 +1558,7 @@ header .btn.login{
       left: auto;
       z-index: 200;
      }
-     .list-announcement-tile .large .item .alarm:hover{
+    .no-touch .list-announcement-tile .large .item .alarm:hover{
       background-color: #dbe0e6;
       }
     .list-announcement .img{
@@ -1836,25 +1860,25 @@ header .btn.login{
     .wallet .btns .put .icon{
        border-color: #f05a00;
     }
-    .wallet .btns .get:hover .icon{
+    .no-touch .wallet .btns .get:hover .icon{
       background-color: #7ed321;
     }
-    .wallet .btns .put:hover .icon{
+   .no-touch .wallet .btns .put:hover .icon{
       background-color: #f05a00;
     }
-    .wallet .btns .add:hover .icon{
+   .no-touch .wallet .btns .add:hover .icon{
       background-color: #c6ced5;
     }
-    .wallet .btns .get:hover{
+   .no-touch .wallet .btns .get:hover{
       background-color: transparent;
     }
-    .wallet .btns .put:hover{
+   .no-touch .wallet .btns .put:hover{
       background-color: transparent;
     }
-    .wallet .btns .add:hover{
+  .no-touch .wallet .btns .add:hover{
       background-color: transparent;
     }
-    .wallet .btns a:hover {
+  .no-touch .wallet .btns a:hover {
       text-decoration: none;
     }
     .main-content .page{
@@ -2209,7 +2233,7 @@ header .btn.login{
       z-index:1;
    }
 
-  .settings .notification .item:hover .name:before {
+ .no-touch .settings .notification .item:hover .name:before {
     border-color: #444c54 transparent transparent transparent;
   }
   .settings .notification .item .name:after {
@@ -2228,7 +2252,7 @@ header .btn.login{
     border-bottom-color: #383e44;
     bottom: 14px;
   }
-  .settings .notification .item.open:hover .name:before {
+ .no-touch .settings .notification .item.open:hover .name:before {
     border-bottom-color: #444c54;
   }
   .settings .notification .item.open .name:after {
@@ -2720,7 +2744,7 @@ header .btn.login{
     font-size: 12px;
     line-height: 15px;
   }
-  .page.live-broadcast .head .user-info a:hover{
+  .no-touch .page.live-broadcast .head .user-info a:hover{
     text-decoration: none;
   }
 
@@ -2741,7 +2765,7 @@ header .btn.login{
     border-bottom-color: transparent;
     font-size: 11px;
   }
-  .broadcast-mobile .nav-pills .nav-link.active, .broadcast-mobile .nav-pills .show>.nav-link, .broadcast-mobile .nav-pills .nav-link:hover{
+  .broadcast-mobile .nav-pills .nav-link.active, .broadcast-mobile .nav-pills .show>.nav-link, .no-touch .broadcast-mobile .nav-pills .nav-link:hover{
     color: #c6ced5;
     border-bottom-color: #f05a00;
   }
@@ -3076,7 +3100,7 @@ header .btn.login{
     padding-bottom: 0;
     margin-bottom: 20px;
    }
-      .filter-panel{
+  .filter-panel{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -3088,6 +3112,9 @@ header .btn.login{
     margin: 0;
     padding: 65px 10px 10px;
     left: -100%;
+   }
+   .top{
+    z-index: 20;
    }
    .list .setup > div.filter-panel{
     margin: 0;   
@@ -3336,6 +3363,38 @@ header .btn.login{
   .overlays .item .menu .dropdown-menu:before{
     display: none;
   }
+  .main-sidebar .block .item{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px);
+  }
+  .main-sidebar .simplebar-scroll-content, .main-sidebar .simplebar-content{
+    margin: 0 !important;
+    padding: 0 !important
+  }
+  .main-sidebar .block.account .btns a .ds-tooltip{
+    display: none;
+  }
+ .main-sidebar .simplebar-track {
+    display: none;
+  }
+  .main-sidebar-content .head{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 800;
+    background-color: #161a1c;
+  }
+  .main-sidebar-content .head.fixed{
+    position: fixed;
+  }
+  input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],textarea{
+    font-size: 1em;
+  }
 
  }
 
@@ -3349,8 +3408,12 @@ header .btn.login{
     padding-right: 10px;
     border-bottom: none;
   }
+  header.totop{
+    z-index: 200;
+  }
   .main-sidebar-content{
-    padding: 0 10px;
+    padding: 60px 10px 20px;
+    position: relative;
   }
     .widget header{
     z-index: 124;
@@ -3408,7 +3471,7 @@ header .btn.login{
     fill: #737c85;
     }
   .logo{
-    margin-left: -15px;
+    margin-left: -5px;
   }
   header .user-btn-cont > .icon{
     width: 30px;
@@ -3421,7 +3484,7 @@ header .btn.login{
     height: 100%;
     z-index: 300;
   }
-  .sidebar-collapse .main-sidebar:after{
+  /*.sidebar-collapse .main-sidebar:after{
     position: absolute;
     content: "";
     left: 0;
@@ -3430,14 +3493,18 @@ header .btn.login{
     height: 60px;
     background-color: #161a1c;
     z-index: 299;
-  }
+    display: none;
+  }*/
   .main-sidebar .block .title .search-input{
     z-index: 200;
   }
  a.search-btn {
   float: right;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 18px;
   margin-top: 13px;
+  position: relative;
  }
   a.search-btn svg{
     width: 19px;
@@ -3455,15 +3522,34 @@ header .btn.login{
     margin-top: 3px;
   }
   header .create-btn-cont .create .plus{
-    font-size: 32px;
+    font-size: 0;
+    position: relative;    
+    display: block;
+    line-height: 30px;
+  }
+  header .create-btn-cont .create .plus:after{    
     font-weight: 300;
-    line-height: 27px;
+    font-size: 24px;
+    content: "+";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -1px;
+    text-align: center;
+    line-height: 30px;
+    color: #ffffff;
+    font-family: "Tahoma";
   }
   header .search-panel{
     display: none;
   }
   .search-results{
-    width: 100%;
+    width: calc(100% + 10px);
+    left: -5px;
+  }
+  .search-results-inner{
+    padding: 0 20px;
   }
   header .search-panel.open{
     position: fixed;
@@ -3472,7 +3558,7 @@ header .btn.login{
     top: 5px;
     display: block;
     z-index: 800;
-    max-width: unset;
+    max-width: calc(100% - 22px);
   }
   header .search-panel .close{
     position: absolute;
@@ -3523,6 +3609,7 @@ header .btn.login{
     opacity: 1;
     text-shadow: none;
   }
+
   .main-sidebar  .close:after{
     position: absolute;
     content: "+";
@@ -3541,7 +3628,6 @@ header .btn.login{
    .main-sidebar  .block.account{
     position: relative;
     padding-bottom: 45px;
-    margin-top: 60px;
     padding-top: 20px;
    }
 
@@ -3549,8 +3635,8 @@ header .btn.login{
    .main-sidebar  .block.account:after{
     position: absolute;
     content: "";
-    z-index: 302;
-    width: calc( 100% + 5px);
+    z-index: 30;
+    width: calc( 100% + 10px);
     left: -5px;
     height: 1px;
     top: 0;
@@ -3595,7 +3681,7 @@ header .btn.login{
     .main-sidebar .block.game ul, .main-sidebar .block.lifestyle ul{
       letter-spacing: -0.3em;
       margin-left: -6px;
-      width: calc(100% + 6px);
+      width: calc(100% + 12px);
     }
     .main-sidebar .block.game > ul > li{
       display: inline-block;
@@ -3641,8 +3727,7 @@ header .btn.login{
       background-color: rgba(0,0,0,0.6);
     }
   .main-sidebar .block .title .search-input input[type="search"]{
-      left: -5px;
-      width: calc(100% + 10px);
+     font-size: 1.1em;
     }
     .main-sidebar .block.game .item, .main-sidebar .block.lifestyle .item{
       padding: 0;
@@ -3901,7 +3986,7 @@ header .btn.login{
       left: auto;
       z-index: 200;
      }
-     .list-announcement-tile .large .item .alarm:hover{
+     .no-touch .list-announcement-tile .large .item .alarm:hover{
       background-color: #dbe0e6;
       }
     .list-announcement .img{
@@ -4244,25 +4329,25 @@ header .btn.login{
     .wallet .btns .put .icon{
        border-color: #f05a00;
     }
-    .wallet .btns .get:hover .icon{
+    .no-touch.wallet .btns .get:hover .icon{
       background-color: #7ed321;
     }
-    .wallet .btns .put:hover .icon{
+    .no-touch .wallet .btns .put:hover .icon{
       background-color: #f05a00;
     }
-    .wallet .btns .add:hover .icon{
+    .no-touch .wallet .btns .add:hover .icon{
       background-color: #c6ced5;
     }
-    .wallet .btns .get:hover{
+    .no-touch .wallet .btns .get:hover{
       background-color: transparent;
     }
-    .wallet .btns .put:hover{
+    .no-touch .wallet .btns .put:hover{
       background-color: transparent;
     }
-    .wallet .btns .add:hover{
+    .no-touch .wallet .btns .add:hover{
       background-color: transparent;
     }
-    .wallet .btns a:hover {
+    .no-touch .wallet .btns a:hover {
       text-decoration: none;
     }
     .main-content .page{
@@ -4629,7 +4714,7 @@ header .btn.login{
       z-index:1;
    }
 
-.settings .notification .item:hover .name:before {
+.no-touch .settings .notification .item:hover .name:before {
   border-color: #444c54 transparent transparent transparent;
 }
 .settings .notification .item .name:after {
@@ -4648,7 +4733,7 @@ header .btn.login{
     border-bottom-color: #383e44;
     bottom: 14px;
   }
-  .settings .notification .item.open:hover .name:before {
+ .no-touch .settings .notification .item.open:hover .name:before {
     border-bottom-color: #444c54;
   }
   .settings .notification .item.open .name:after {
@@ -5143,7 +5228,7 @@ header .btn.login{
     font-size: 12px;
     line-height: 15px;
   }
-  .page.live-broadcast .head .user-info a:hover{
+  .no-touch .page.live-broadcast .head .user-info a:hover{
     text-decoration: none;
   }
   .plyr--video .plyr__controls{
@@ -5163,7 +5248,7 @@ header .btn.login{
     border-bottom-color: transparent;
     font-size: 11px;
   }
-  .broadcast-mobile .nav-pills .nav-link.active, .broadcast-mobile .nav-pills .show>.nav-link, .broadcast-mobile .nav-pills .nav-link:hover{
+  .broadcast-mobile .nav-pills .nav-link.active, .broadcast-mobile .nav-pills .show>.nav-link, .no-touch .broadcast-mobile .nav-pills .nav-link:hover{
     color: #c6ced5;
     border-bottom-color: #f05a00;
   }
@@ -5513,6 +5598,9 @@ header .btn.login{
     padding: 65px 10px 10px;
     left: -100%;
    }
+   .top{
+    z-index: 20;
+   }
    .list .setup > div.filter-panel{
     margin: 0;   
    }
@@ -5752,6 +5840,39 @@ header .btn.login{
   .overlays .item .menu .dropdown-menu:before{
     display: none;
   }
+  .main-sidebar .block .item{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px);
+  }
+  .main-sidebar .simplebar-scroll-content, .main-sidebar .simplebar-content{
+    margin: 0 !important;
+    padding: 0 !important
+  }
+  .main-sidebar .block.account .btns a .ds-tooltip{
+    display: none;
+  }
+ .main-sidebar .simplebar-track {
+    display: none;
+  }
+  .main-sidebar-content .head{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 800;
+    background-color: #161a1c;
+  }
+  .main-sidebar-content .head.fixed{
+    position: fixed;
+  }
+  input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],textarea{
+    font-size: 1em;
+  }
+
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {

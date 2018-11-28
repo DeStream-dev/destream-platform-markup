@@ -41,7 +41,7 @@ ul{
   list-style: none;
 }
 a{text-decoration: none; color: #152f5c;}
-a:hover{text-decoration: underline; }
+.no-touch a:hover{text-decoration: underline; }
 a:visited,a:focus{text-decoration: none; outline:none;}
 h2{
   font-size: 70px;
@@ -62,10 +62,10 @@ h3{
  /*width: 1800px;*/
   position: relative;
 }
-.top-menu{
+.top{
   position: absolute;
-  z-index: 500;
-  top: 0;
+  z-index: 700;
+  top: 7px;
   left: 15px;
 }
 .logo{
@@ -99,7 +99,7 @@ header{
   width: 100%;
   z-index: 440;
 }
-.fixedHeader .top-menu {
+.fixedHeader .top {
   position: fixed;
   top: 0;
 }
@@ -261,7 +261,7 @@ header .notifications-cont .dropdown-menu ul li{
 .dropdown-menu ul li{
   padding: 0;  
 }
-.dropdown-menu ul li:hover,.dropdown-menu ul li.active{
+.no-touch .dropdown-menu ul li:hover,.dropdown-menu ul li.active{
   background-color: rgba(91,109,126,0.8);
 }
 header .notifications-cont .dropdown-menu ul li .icon{
@@ -291,10 +291,11 @@ header .notifications-cont .dropdown-menu ul li .icon img{
 .dropdown-item.active, .dropdown-item:active{
   background-color: transparent;
 }
-.dropdown-menu ul li a:hover{
+.no-touch .dropdown-menu ul li a:hover{
   background-color: transparent;
+  text-decoration: none;
 }
-.dropdown-menu ul li a:hover span{
+.no-touch .dropdown-menu ul li a:hover span{
   color: #ffffff;
 }
 header .notifications-cont .dropdown-menu ul li a{
@@ -418,11 +419,11 @@ header .user-btn-cont .dropdown-toggle:after{
     outline: none;
     background: transparent;
 }
-.slick-dots li button:hover,
+.no-touch .slick-dots li button:hover,
 .slick-dots li button:focus{
     outline: none;
 }
-.slick-dots li button:hover:before,
+.no-touch .slick-dots li button:hover:before,
 .slick-dots li button:focus:before{
     opacity: 1;
 }
@@ -467,9 +468,9 @@ header .user-btn-cont .dropdown-toggle:after{
     outline: none;
     background: transparent;
 }
-.slick-prev:hover svg,
+.no-touch .slick-prev:hover svg,
 .slick-prev:focus svg,
-.slick-next:hover svg,
+.no-touch .slick-next:hover svg,
 .slick-next:focus svg{
     opacity: 1;
 }
@@ -717,7 +718,7 @@ padding: 0 25px;
   width: 0;
 }
 
-.main-sidebar .block.account .btns a:hover .ds-tooltip{
+.no-touch .main-sidebar .block.account .btns a:hover .ds-tooltip{
   opacity: 1;
 }
 
@@ -732,23 +733,23 @@ padding: 0 25px;
   height: 24px;
   fill: #aab1b8;
 }
-.main-sidebar .block.account .btns .get:hover{
+.no-touch .main-sidebar .block.account .btns .get:hover{
   border-color: #7ed321;
 }
-.main-sidebar .block.account .btns .get:hover svg{
+.no-touch .main-sidebar .block.account .btns .get:hover svg{
   fill: #7ed321;
 }
-.main-sidebar .block.account .btns .put:hover{
+.no-touch .main-sidebar .block.account .btns .put:hover{
   border-color: #f05a00;
 }
-.main-sidebar .block.account .btns .put:hover svg{
+.no-touch .main-sidebar .block.account .btns .put:hover svg{
   fill: #f05a00;
 }
 .main-sidebar .block .title .search-input{
   position: absolute;
   right: 0;
   top: -15px;
-  width:100%;
+  width: 100%;
   z-index: 400;
 
   -webkit-transition: width 0.3s ease-out;
@@ -756,8 +757,13 @@ padding: 0 25px;
   -ms-transition: width 0.3s ease-out;
   -o-transition: width 0.3s ease-out;
   transition: width 0.3s ease-out;
-
-  overflow: visible!important;
+/*
+ -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition:  none;
+  -o-transition:  none;
+  transition: none;*/
+  /*overflow: visible;*/
 }
 .main-sidebar .block .title .search-input .btn{
   outline: none;
@@ -775,6 +781,8 @@ padding: 0 25px;
   left: 0;
   width: 0;
   overflow: hidden;
+  padding-left: 0;
+  text-align: left;
 }
 
 .main-sidebar .block .title, .main-content .title{
@@ -798,7 +806,7 @@ padding: 0 25px;
   position: relative;
   left: 0;
   width: 100%;
-  padding-left: 50px;
+ /* padding-left: 50px;*/
   color: rgb(170,177,184, 0.5);
 }
 
@@ -841,7 +849,7 @@ padding: 0 25px;
   margin: 0 -25px;
   width: calc(100% + 50px);
 }
-.main-sidebar .block .item:hover{
+.no-touch .main-sidebar .block .item:hover{
   text-decoration: none;
   background-color: #444c54;
 }
@@ -928,7 +936,7 @@ padding: 0 25px;
   padding-top: 22px;
   display: inline-block;
 }
-.more:hover{
+.no-touch .more:hover{
   color: #aab1b8;
   text-decoration: none;
  }
@@ -938,11 +946,11 @@ padding: 0 25px;
   top: -1px;
   left: 0;
 }
-.view-all:hover{
+.no-touch .view-all:hover{
   text-decoration: none;
   color: #aab1b8;
 }
-.view-all:hover svg, .more:hover svg{
+.no-touch .view-all:hover svg, .no-touch .more:hover svg{
   left: 3px;
 }
 .more svg{
@@ -992,10 +1000,10 @@ footer .social {
   width: 30px;
   height: 30px;
 }
-.social a:hover{
+.no-touch .social a:hover{
   background-color: #f05a00;
 }
-.social a:hover svg{
+.no-touch .social a:hover svg{
   fill: #ffffff;
 }
 .social a:active svg{
@@ -1053,7 +1061,7 @@ footer .social {
   top: -2px;
   fill: #8ba0b6;
 }
-.modal-auth .social a:hover{
+.no-touch .modal-auth .social a:hover{
    box-shadow: 4px 4px 7px rgba(102, 111, 121, 0.15);
   -moz-box-shadow: 4px 4px 7px rgba(102, 111, 121, 0.15);
   -webkit-box-shadow: 4px 4px 7px rgba(102, 111, 121, 0.15);
@@ -1256,7 +1264,7 @@ footer .social {
   padding: 15px 20px;
   margin-left: -20px;
 }
-.list-announcement .item:hover{
+.no-touch .list-announcement .item:hover{
   background-color: #444c54;
 }
 .list-announcement .item:before,.list-announcement .item:after{
@@ -1309,7 +1317,7 @@ footer .social {
   line-height: 28px;
   text-align: center;
 }
-.list .alarm:hover, .list-announcement .alarm.on{
+.no-touch .list .alarm:hover, .list-announcement .alarm.on{
   background-color: #dbe0e6;
 }
 
@@ -1319,7 +1327,7 @@ footer .social {
   position: relative;
   fill: #737c85;
 }
-.list .alarm:hover svg, .list .alarm.on svg{
+.no-touch .list .alarm:hover svg, .list .alarm.on svg{
   fill: #f05a00;
 }
 .list .share .megaphone svg{
@@ -1462,7 +1470,7 @@ footer .social {
   left: -7px;
   background-color: transparent;
 }
-.list-announcement-tile .large .item .alarm:hover{
+.no-touch .list-announcement-tile .large .item .alarm:hover{
   background-color: transparent;
 }
 .list-announcement-tile .large .item .share{
@@ -1507,7 +1515,7 @@ footer .social {
   left: -7px;
   background-color: transparent;
 }
-.list .small .item .alarm:hover{
+.no-touch .list .small .item .alarm:hover{
   background-color: transparent;
 }
 .list .small {
@@ -1565,19 +1573,18 @@ footer .social {
   border-color: #f05a00;
   color: #f05a00;
 }
-.btn:hover{
+.no-touch .btn:hover{
   color: #ffffff;
 }
-.btn-white:hover{
+.no-touch .btn-white:hover{
   color: #f05a00;
 }
-.btn-transparent:hover{
+.no-touch .btn-transparent:hover{
   color: #f05a00;
 }
 input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],textarea, button,
 .destream-dropdown.bootstrap-select .btn{
   width: 100%;
-  font-size: 15px;
   font-family: "Montserrat";
   background-color: #ffffff;
   border: none;
@@ -1671,7 +1678,7 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
 .modal-body .nav{
   padding-bottom: 25px;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link, .nav-pills .nav-link:hover{
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link, .no-touch .nav-pills .nav-link:hover{
   background-color: transparent;
   color: #f05a00;
   border-bottom: 2px solid #f05a00;
@@ -1758,7 +1765,7 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
 .overall a:last-child{
   margin-right: 0;
 }
-.modal-news-detail .inner .social a:hover{
+.no-touch .modal-news-detail .inner .social a:hover{
   text-decoration: none;
 }
 a.likes svg{
@@ -1957,7 +1964,7 @@ background-color: #ffffff;
   background-color: #f05a00;
   border-radius: 50%;
 }
-.form-group input[type="radio"]:hover + span:after {
+.no-touch .form-group input[type="radio"]:hover + span:after {
    -webkit-transform: scale(1);
       -ms-transform: scale(1);
        -o-transform: scale(1);
@@ -2149,7 +2156,7 @@ button.close {
 .modal-announcement .stream.live-now b{
   padding-left: 22px;
 }
-.modal-announcement .stream.live-now b a, .modal-announcement .stream.live-now b a:hover{
+.modal-announcement .stream.live-now b a, .no-touch .modal-announcement .stream.live-now b a:hover{
   text-decoration: none;
   color: #60666c;
 }
@@ -2169,7 +2176,7 @@ button.close {
   top: -3px;
   left: 0;
 }
-.modal-announcement .stream.live-now b a:hover svg{
+.no-touch .modal-announcement .stream.live-now b a:hover svg{
  left: -3px;
 }
 .modal-announcement .remindme {
@@ -2336,7 +2343,7 @@ button.close {
   margin: 0;
   border: none;
 }
- .quantity a:hover{
+.no-touch .quantity a:hover{
   border-color: #2e273d;
 }
 
@@ -2580,7 +2587,7 @@ button.close {
   color: #c6ced5;
   position: relative;
 }
-.navigation a:hover{
+.no-touch .navigation a:hover{
   font-weight: bold;
   text-decoration: none;
   padding-right: 5.5px;
@@ -2675,19 +2682,19 @@ button.close {
   height: 24px;
   fill: #aab1b8;
 }
-.wallet .btns .get:hover{
+.no-touch .wallet .btns .get:hover{
   background-color: #7ed321;
 }
-.wallet .btns .put:hover{
+.no-touch .wallet .btns .put:hover{
   background-color: #f05a00;
 }
-.wallet .btns .add:hover{
+.no-touch .wallet .btns .add:hover{
   background-color: #c6ced5;
 }
-.wallet .btns a:hover {
+.no-touch .wallet .btns a:hover {
   text-decoration: none;
 }
-.wallet .btns a:hover svg{
+.no-touch .wallet .btns a:hover svg{
   fill: #ffffff;
 }
 
@@ -2756,7 +2763,7 @@ button.close {
 .payment-history .item:last-of-type:after{
   display: none;
 }
-.payment-history .item:hover{
+.no-touch .payment-history .item:hover{
   background-color: #444c54;
 }
 .payment-history .item dd{
@@ -3022,7 +3029,7 @@ button.close {
   top: 50%;
   left: 50%;
 }
-.modal-equiring .item:hover{
+.no-touch .modal-equiring .item:hover{
   background-color: rgba(219,224,230,0.4);
 }
 
@@ -3248,7 +3255,7 @@ button.close {
   position: relative;
   top: -60px;
 }
-.page.mychannel .head .user-info .name:hover .edit{
+.no-touch .page.mychannel .head .user-info .name:hover .edit{
   display: inline-block;
 }
 .page.mychannel .head .user-info .name span{
@@ -3276,7 +3283,7 @@ button.close {
   height: unset;
   width: unset;
 }
-.page.mychannel .item:hover .edit{
+.no-touch .page.mychannel .item:hover .edit{
   display: inline-block;
 }
 .page.mychannel .edit svg,.page.live-broadcast .edit svg{
@@ -3308,10 +3315,10 @@ button.close {
   height: 16px;
   fill: #aab1b8;
 }
-.page.mychannel .head .user-info a:hover {
+.no-touch .page.mychannel .head .user-info a:hover {
   text-decoration: none;
 }
-.page.mychannel .head .user-info a:hover svg{
+.no-touch .page.mychannel .head .user-info a:hover svg{
   fill: #f05a00;
 }
 .subscribe svg,
@@ -3422,7 +3429,7 @@ button.close {
   text-decoration: underline;
   color: #c6ced5;
 } 
-.myblocks .small .text a:hover{
+.no-touch .myblocks .small .text a:hover{
   text-decoration: none;
 } 
 
@@ -3500,7 +3507,7 @@ button.close {
   width: 100%;
   height: auto;
 }
-.dropzone .dz-preview:hover .dz-image img {
+.no-touch .dropzone .dz-preview:hover .dz-image img {
       -webkit-transform: none;
       -moz-transform: none;
       -ms-transform: none;
@@ -3555,10 +3562,10 @@ button.close {
 .trumbowyg-box button svg{
   pointer-events: none;
 }
-.trumbowyg-box button:hover{
+.no-touch .trumbowyg-box button:hover{
   background-color: #737c85 !important;
 }
-.trumbowyg-box button:hover svg{
+.no-touch .trumbowyg-box button:hover svg{
   fill: #ffffff;
 }
 .trumbowyg-box, .trumbowyg-editor{
@@ -3826,7 +3833,7 @@ button.close {
  padding-right: 10px;
  min-width: 100px;
 }
-.services-catalog .list .item .btn-buy:hover{
+.no-touch .services-catalog .list .item .btn-buy:hover{
   background-color: #f05a00;
 }
 .services-catalog .list .item .bottom{
@@ -3914,7 +3921,7 @@ button.close {
   padding: 15px 55px;
   margin-left: -55px;
 }
-.messages .list .item:hover{
+.no-touch .messages .list .item:hover{
   background-color: #444c54;
 }
 
@@ -3958,7 +3965,7 @@ button.close {
   line-height: 13px;
   color: #aab1b8;
 }
-.settings .nav-item .nav-link.active, .settings .nav-item .nav-link:hover{
+.settings .nav-item .nav-link.active, .no-touch .settings .nav-item .nav-link:hover{
   color: #dbe0e6;
 }
 .settings .nav-item .nav-link:after{
@@ -3971,7 +3978,7 @@ button.close {
   opacity: 0;
   background-color: #f05a00;
 }
-.settings .nav-item .nav-link.active:after, .settings .nav-item .nav-link:hover:after{
+.settings .nav-item .nav-link.active:after, .no-touch .settings .nav-item .nav-link:hover:after{
   opacity: 1;
 }
 
@@ -4045,7 +4052,7 @@ button.close {
   font-size: 12px;
   padding: 0;
 }
-.settings .personal .change-photo:hover .dz-message{
+.no-touch .settings .personal .change-photo:hover .dz-message{
   opacity: 0.9;
 }
 .settings .personal .dropzone .dz-message span b{
@@ -4286,7 +4293,7 @@ button.close {
 .settings .notification .item.header{
   padding-top: 0;
 }
-.settings .notification .item:hover{
+.no-touch .settings .notification .item:hover{
   background-color: #444c54;
 }
 .settings .notification .item dd, .settings .notification .item dt{
@@ -4369,7 +4376,7 @@ button.close {
   position: relative;
   width: calc(100% + 30px);
 }
-.settings .subscription .item:hover{
+.no-touch .settings .subscription .item:hover{
   text-decoration: none;
   background-color: #444c54;
 }
@@ -4456,7 +4463,7 @@ button.close {
 border-width: 6px 5px 0 5px;
 border-color: #c6ced5 transparent transparent transparent;
 }
-.services .list a:hover{
+.no-touch .services .list a:hover{
   text-decoration: none;
 }
 .services .list .units{
@@ -4499,7 +4506,7 @@ border-color: #c6ced5 transparent transparent transparent;
 .modal-addservice .bootstrap-select>.dropdown-toggle.bs-placeholder, 
 .modal-addservice .bootstrap-select>.dropdown-toggle.bs-placeholder:active, 
 .modal-addservice .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, 
-.modal-addservice .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
+.no-touch .modal-addservice .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
   color: #152a3c;
 }
 .modal-addservice .input .label .btn{
@@ -4632,17 +4639,30 @@ border-color: #c6ced5 transparent transparent transparent;
 .plyr .btn, .plyr button{
   width: unset;
   height: unset;
-  padding: 30px !important;
+  
    box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
 .plyr__controls button{
-  padding: 20px !important;
+  padding: 5px 12px;
 }
+
+.plyr__control.plyr__control--overlaid[data-plyr=play] {
+  padding: 41px !important;
+}
+
+
 .plyr__control.plyr__control--overlaid[data-plyr=play] svg{
-  width: 40px;
-  height: 40px;
+  /*width: 40px;
+  height: 40px;*/
+   transform: scale(2.2);
+}
+.plyr__control svg{
+  transform: scale(0.8);
+}
+.plyr__menu__container .plyr__control{
+  /*padding: 4px 28px 4px 11px !important;*/
 }
 
 /*******************  WIDGET  ************************/
@@ -4726,7 +4746,7 @@ border-color: #c6ced5 transparent transparent transparent;
   background:  linear-gradient(180deg, #444C54 0%, rgba(68, 76, 84, 0.0001) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00444c54', endColorstr='#444c54',GradientType=1 );
 }
-.widget .main-sidebar .setup .bars>a:hover{
+.no-touch .widget .main-sidebar .setup .bars>a:hover{
   text-decoration: none;
 }
 .widget .main-sidebar .setup .bars>a:after{
@@ -4837,7 +4857,7 @@ border-color: #c6ced5 transparent transparent transparent;
 .widget .top-panel .btn-group a .redo svg{
   width: 23px;
 }
-.widget .top-panel .btn-group a:hover svg{
+.no-touch .widget .top-panel .btn-group a:hover svg{
   fill: #f05a00
  }
 .widget .top-panel .btn-group:last-child{
@@ -4963,11 +4983,11 @@ border-color: #c6ced5 transparent transparent transparent;
    padding-right: 50px;
 }
 .widget-panel ul li a.active,
-.widget-panel ul li a:hover{
+.no-touch .widget-panel ul li a:hover{
   text-decoration: none;
 }
 .widget-panel ul li.active,
-.widget-panel ul li:hover{
+.no-touch .widget-panel ul li:hover{
   background-color: #444c54;
 }
 .widget-panel ul li .links{
@@ -4977,7 +4997,7 @@ border-color: #c6ced5 transparent transparent transparent;
   opacity: 0;
 }
 .widget-panel ul li.active .links,
-.widget-panel ul li:hover .links{
+.no-touch .widget-panel ul li:hover .links{
   opacity: 1;
 }
 .widget-panel ul li .links a{
@@ -4992,7 +5012,7 @@ border-color: #c6ced5 transparent transparent transparent;
   opacity: 0.7;
   fill: #aab1b8;
   }
-  .widget-panel ul li .links a:hover svg{
+ .no-touch .widget-panel ul li .links a:hover svg{
     opacity: 1;
   }
 .widget-panel ul li .links .dublicate svg{
@@ -5179,10 +5199,10 @@ top: 0;
   position: relative;
   top: -1px;
 }
-.modal-widget .widget-panel .menu li:hover {
+.no-touch .modal-widget .widget-panel .menu li:hover {
   background-color: #edeeef;
 }
-.modal-widget .widget-panel .menu li:hover .submenu{
+.no-touch .modal-widget .widget-panel .menu li:hover .submenu{
   display: block;
 
 }
@@ -5288,7 +5308,7 @@ top: 0;
   color: #737c85;
   text-align: right;
 }
-.modal-audio .items dl.selected, .modal-audio .items dl:hover{
+.modal-audio .items dl.selected, .no-touch .modal-audio .items dl:hover{
   background-color: #f8f8f9;
   position: relative;
 }
@@ -5416,7 +5436,7 @@ header .search-input{
   padding: 10px 10px 10px 48px;
   cursor: default;
 }
-.ui-menu.ui-widget.ui-widget-content.ui-autocomplete li:hover{
+.no-touch .ui-menu.ui-widget.ui-widget-content.ui-autocomplete li:hover{
   background-color: #444c54;
 }
 .ui-menu.ui-widget.ui-widget-content.ui-autocomplete li div{
@@ -5631,10 +5651,10 @@ header .search-input{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.modal-create-future-stream .is-voting .field .remove:hover{
+.no-touch .modal-create-future-stream .is-voting .field .remove:hover{
   border-color: #f05a00;
 }
-.modal-create-future-stream .is-voting .field .remove:hover:after{
+.no-touch .modal-create-future-stream .is-voting .field .remove:hover:after{
  color: #f05a00;
 }
 .modal-create-future-stream .is-voting{
@@ -5742,8 +5762,7 @@ header .search-panel{
 
 .search-results{
   z-index: 600;
-  width: inherit;
-  /*width: 100%;*/
+  width: 100%;
   background-color: #1a1d1f;
   padding-top: 0;
   padding-bottom: 20px;
@@ -5864,7 +5883,7 @@ header .search-panel{
   padding-left: 50px;
   padding-right: 50px;
 }
-.search-results .live li:hover, .search-results .announcement li:hover, .search-results .news li:hover, .search-results .categoy li:hover{
+.no-touch .search-results .live li:hover, .no-touch .search-results .announcement li:hover, .no-touch .search-results .news li:hover, .no-touch .search-results .categoy li:hover{
   background-color: #444c54;
 }
 
@@ -5947,7 +5966,7 @@ header .search-panel{
    -moz-background-size: cover;
    -o-background-size: cover;
 }
-.search-results .category li .img:hover{
+.no-touch .search-results .category li .img:hover{
   border: 1px solid #f05a00;
 }
 .search-results .category li .img span{
@@ -5969,15 +5988,14 @@ header .search-panel{
   -webkit-box-shadow: none;
 }
 .modal-audio .plyr--audio .plyr__control[data-plyr=play] svg{
-  height: 14px;
-  width: 11px;
+   transform: scale(0.6);
   fill: #737c85;
 }
 .modal-audio .plyr--audio .plyr__controls{
  padding: 0;
 }
 .modal-audio .plyr--audio .plyr__control.plyr__tab-focus,
-.modal-audio .plyr--audio .plyr__control:hover,
+.no-touch .modal-audio .plyr--audio .plyr__control:hover,
 .modal-audio .plyr--audio .plyr__control[aria-expanded=true] {
     background: transparent;
     color: #737c85;
@@ -6074,7 +6092,7 @@ border-radius: 0;
   outline: none;
   border: none;
 }
-.dropdown-with-check .dropdown-menu ul li:hover{
+.no-touch .dropdown-with-check .dropdown-menu ul li:hover{
   background-color: #444c54;
 }
 .dropdown-with-check .dropdown-menu.show li a span.check-mark{
@@ -6193,7 +6211,7 @@ border-radius: 0;
 .dropdown-with-check-light .bootstrap-select .bs-ok-default:before{
   background-color: #ffffff;
 }
-.dropdown-with-check-light .dropdown-menu ul li:hover{
+.no-touch .dropdown-with-check-light .dropdown-menu ul li:hover{
   background-color: #dbe0e6;
 }
 .dropdown-with-check-light .dropdown-menu ul li a span{
@@ -6321,7 +6339,7 @@ a.prev-step svg{
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
 .slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,
-.form-group input[type="radio"]:hover + span:after,
+.form-group input[type="radio"] + span:after,
 .ds-tooltip, .payment-history .item, .messages .list .item, .settings .nav-item .nav-link:after,
 .settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
 .ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
@@ -6342,3 +6360,28 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
   -o-transition: border-top-color 0.3s ease-out;
   transition: border-top-color 0.3s ease-out;
 }
+
+#text1{
+        width: 100%; 
+        padding: 10px;
+        font-family: "Montserrat";
+        
+        resize: none;
+          box-shadow: 0px -0.6px 1px rgba(81, 89, 96, 0.4);
+      -moz-box-shadow: 0px -0.6px 1px rgba(81, 89, 96, 0.4);
+      -webkit-box-shadow: 0px -0.6px 1px rgba(81, 89, 96, 0.4);
+      
+      border-radius: 20px;
+      font-size: 1em;
+      height: 40px;
+      outline: none; 
+      background-color: yellow;
+       -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: navy;
+  border: none;
+      position: relative;
+      left: 0;
+     
+      }

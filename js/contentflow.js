@@ -597,14 +597,16 @@ ContentFlow.prototype = {
             }
         },
         onMakeActive: function(item) {
+            if($('.ContentFlow').is(':visible')){
                if(!currentPlayer) {
                 currentPlayer = new Plyr($(item.element).find(".player").find("video"));
                 setTimeout(function(){
                    currentPlayer.play();
-                   currentPlayer.volume = 0;
+                  // currentPlayer.volume = 0;
                    currentPlayer.toggleControls(false);
                 }, 400);
-              }            
+              }    
+            }        
         },
         onReachTarget: function(A) { },
         onMoveTo: function(A) {},
@@ -1190,6 +1192,7 @@ ContentFlow.prototype = {
                 D.conf.onInit()
             }
         }, 10);
+
         this.isInit = true
     },
     _initAddOns: function() {

@@ -25,10 +25,10 @@
 }
 
 .plyr {
-    -moz-osx-font-smoothing: auto;
-    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     direction: ltr;
-    font-family: Avenir, "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat';
     font-variant-numeric: tabular-nums;
     font-weight: 500;
     line-height: 1.7;
@@ -49,8 +49,7 @@
 
 .plyr button {
     font: inherit;
-    line-height: inherit;
-    width: auto
+    line-height: inherit
 }
 
 .plyr:focus {
@@ -75,7 +74,7 @@
 }
 
 .plyr__badge {
-    background: #4f5b5f;
+    background: #f05a00;
     border-radius: 2px;
     color: #fff;
     font-size: 9px;
@@ -97,11 +96,12 @@
     padding: 10px;
     position: absolute;
     text-align: center;
+    transform: translateY(-40px);
     transition: transform .4s ease-in-out;
     width: 100%
 }
 
-.plyr__captions .plyr__caption {
+.plyr__captions span {
     background: rgba(0, 0, 0, .8);
     border-radius: 2px;
     -webkit-box-decoration-break: clone;
@@ -111,7 +111,7 @@
     white-space: pre-wrap
 }
 
-.plyr__captions .plyr__caption div {
+.plyr__captions span div {
     display: inline
 }
 
@@ -136,8 +136,8 @@
     display: block
 }
 
-.plyr:not(.plyr--hide-controls) .plyr__controls:not(:empty)~.plyr__captions {
-    transform: translateY(-40px)
+.plyr--hide-controls .plyr__captions {
+    transform: translateY(-15px)
 }
 
 .plyr__control {
@@ -160,59 +160,42 @@
     pointer-events: none;
     width: 18px
 }
-
+.plyr__control[data-plyr=play] svg{
+    height: 16px;
+    width: 14px;
+}
 .plyr__control:focus {
     outline: 0
 }
 
 .plyr__control.plyr__tab-focus {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(26, 175, 255, .35);
     outline: 0
 }
 
-a.plyr__control {
-    text-decoration: none
-}
-
-a.plyr__control::after,
-a.plyr__control::before {
-    display: none
-}
-
-.plyr__control.plyr__control--pressed .icon--not-pressed,
-.plyr__control.plyr__control--pressed .label--not-pressed,
-.plyr__control:not(.plyr__control--pressed) .icon--pressed,
-.plyr__control:not(.plyr__control--pressed) .label--pressed {
+.plyr__control[aria-pressed=false] .icon--pressed,
+.plyr__control[aria-pressed=false] .label--pressed,
+.plyr__control[aria-pressed=true] .icon--not-pressed,
+.plyr__control[aria-pressed=true] .label--not-pressed {
     display: none
 }
 
 .plyr--audio .plyr__control.plyr__tab-focus,
 .plyr--audio .plyr__control:hover,
 .plyr--audio .plyr__control[aria-expanded=true] {
-    background: transparent;
-    color: #f05a00;
-}
-
-.plyr--video .plyr__control svg {
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .15))
-}
-
-.plyr--video .plyr__control.plyr__tab-focus,
-.plyr--video .plyr__control:hover,
-.plyr--video .plyr__control[aria-expanded=true] {
-    background: transparent;
-    color:  #f05a00;
+    background: #1aafff;
+    color: #fff
 }
 
 .plyr__control--overlaid {
-    background: rgba(240, 90, 0, .8);
+    background: rgba(240,90,0, .8);
     border: 0;
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
     color: #fff;
     display: none;
     left: 50%;
-    padding: 15px;
+    padding: 30px !important;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -220,15 +203,16 @@ a.plyr__control::before {
 }
 
 .plyr__control--overlaid svg {
+    height: 40px;
     left: 2px;
-    position: relative
+    position: relative;
+    width: 40px
 }
 
 .plyr__control--overlaid:focus,
 .plyr__control--overlaid:hover {
-    background: transparent;
-}
-
+   background: #f05a00;
+ }
 .plyr--playing .plyr__control--overlaid {
     opacity: 0;
     visibility: hidden
@@ -245,70 +229,86 @@ a.plyr__control::before {
 .plyr__controls {
     align-items: center;
     display: flex;
-    justify-content: flex-end;
     text-align: center
 }
 
 .plyr__controls .plyr__menu,
 .plyr__controls .plyr__progress,
 .plyr__controls .plyr__time,
-.plyr__controls .plyr__volume,
 .plyr__controls>.plyr__control {
     margin-left: 5px
 }
 
-.plyr__controls .plyr__menu+.plyr__control,
-.plyr__controls .plyr__progress+.plyr__control,
-.plyr__controls>.plyr__control+.plyr__control,
-.plyr__controls>.plyr__control+.plyr__menu {
-    margin-left: 2px
-}
-
+.plyr__controls .plyr__menu:first-child,
+.plyr__controls .plyr__menu:first-child+[data-plyr=pause],
+.plyr__controls .plyr__progress:first-child,
+.plyr__controls .plyr__progress:first-child+[data-plyr=pause],
+.plyr__controls .plyr__time:first-child,
+.plyr__controls .plyr__time:first-child+[data-plyr=pause],
 .plyr__controls>.plyr__control:first-child,
 .plyr__controls>.plyr__control:first-child+[data-plyr=pause] {
-    margin-left: 0;
-    margin-right: auto
+    margin-left: 0
 }
 
-.plyr__controls:empty {
-    display: none
+.plyr__controls .plyr__volume {
+    margin-left: 5px
 }
 
 @media (min-width:480px) {
     .plyr__controls .plyr__menu,
     .plyr__controls .plyr__progress,
     .plyr__controls .plyr__time,
-    .plyr__controls .plyr__volume,
     .plyr__controls>.plyr__control {
         margin-left: 10px
     }
-}
-
-.plyr--audio .plyr__controls {
-    background:transparent;
-    border-radius: inherit;
-    color: #4f5b5f;
-    padding: 10px
+    .plyr__controls .plyr__menu+.plyr__control,
+    .plyr__controls>.plyr__control+.plyr__control,
+    .plyr__controls>.plyr__control+.plyr__menu {
+        margin-left: 5px
+    }
 }
 
 .plyr--video .plyr__controls {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
+    background:  linear-gradient(transparent, rgba(0, 0, 0, .96));
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
-    bottom: 0;
+    bottom: -1px;
     color: #fff;
     left: 0;
-    padding: 20px 5px 5px;
+    padding: 35px 10px 20px;
     position: absolute;
     right: 0;
     transition: opacity .4s ease-in-out, transform .4s ease-in-out;
-    z-index: 3
+    z-index: 2;
 }
 
-@media (min-width:480px) {
-    .plyr--video .plyr__controls {
-        padding: 35px 10px 10px
-    }
+.plyr--video .plyr__controls .plyr__control svg {
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .15));
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .15))
+}
+
+.plyr--video .plyr__controls .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__controls .plyr__control:hover,
+.plyr--video .plyr__controls .plyr__control[aria-expanded=true] {
+    background: transparent;/*#1aafff;*/
+    color: #fff;
+      box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+}
+.plyr--video .plyr__controls .plyr__control.plyr__tab-focus svg,
+.plyr--video .plyr__controls .plyr__control:hover svg,
+.plyr--video .plyr__controls .plyr__control[aria-expanded=true] svg {
+    fill: #f05a00;
+}
+.plyr.plyr--audio{
+    min-width: unset;
+}
+.plyr--audio .plyr__controls {
+    background: transparent;
+    border-radius: inherit;
+    color: #4f5b5f;
+    padding: 10px
 }
 
 .plyr--video.plyr--hide-controls .plyr__controls {
@@ -350,7 +350,11 @@ a.plyr__control::before {
     width: 100%
 }
 
-.plyr--full-ui .plyr__video-embed>.plyr__video-embed__container {
+.plyr--full-ui .plyr__video-embed iframe {
+    pointer-events: none
+}
+
+.plyr--full-ui .plyr__video-embed>div {
     padding-bottom: 240%;
     position: relative;
     transform: translateY(-38.28125%)
@@ -362,7 +366,7 @@ a.plyr__control::before {
 }
 
 .plyr__menu .plyr__control svg {
-    transition: transform .3s ease
+   /* transition: transform .3s ease*/
 }
 
 .plyr__menu .plyr__control[aria-expanded=true] svg {
@@ -375,8 +379,6 @@ a.plyr__control::before {
 
 .plyr__menu__container {
     animation: plyr-popup .2s ease;
-    background: rgba(255, 255, 255, .9);
-    border-radius: 4px;
     bottom: 100%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
     color: #4f5b5f;
@@ -386,7 +388,10 @@ a.plyr__control::before {
     right: -3px;
     text-align: left;
     white-space: nowrap;
-    z-index: 3
+    z-index: 3;
+
+    background-color: rgba(40,45,51,0.95);
+    border-radius: 6px;
 }
 
 .plyr__menu__container>div {
@@ -396,7 +401,7 @@ a.plyr__control::before {
 
 .plyr__menu__container::after {
     border: 4px solid transparent;
-    border-top-color: rgba(255, 255, 255, .9);
+    border-top-color: rgba(40,45,51,0.95);
     content: '';
     height: 0;
     position: absolute;
@@ -405,37 +410,38 @@ a.plyr__control::before {
     width: 0
 }
 
-.plyr__menu__container [role=menu] {
-    padding: 7px
+.plyr__menu__container ul {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 7px 0;
 }
 
-.plyr__menu__container [role=menuitem],
-.plyr__menu__container [role=menuitemradio] {
+.plyr__menu__container ul li {
     margin-top: 2px
 }
-
-.plyr__menu__container [role=menuitem]:first-child,
-.plyr__menu__container [role=menuitemradio]:first-child {
+.plyr__menu__container ul li:hover {
+   background-color: rgba(91,109,126,0.2);
+}
+.plyr__menu__container ul li:first-child {
     margin-top: 0
 }
 
 .plyr__menu__container .plyr__control {
     align-items: center;
-    color: #4f5b5f;
+    color: #ffffff;
     display: flex;
-    font-size: 14px;
-    padding: 4px 11px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 14px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 100%
-}
-
-.plyr__menu__container .plyr__control>span {
-    align-items: inherit;
-    display: flex;
-    width: 100%
+    width: 100%;
+      box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 .plyr__menu__container .plyr__control::after {
@@ -492,49 +498,52 @@ a.plyr__control::before {
     border-right-color: currentColor
 }
 
-.plyr__menu__container .plyr__control[role=menuitemradio] {
+.plyr__menu__container label.plyr__control {
     padding-left: 7px
 }
 
-.plyr__menu__container .plyr__control[role=menuitemradio]::after,
-.plyr__menu__container .plyr__control[role=menuitemradio]::before {
-    border-radius: 100%
-}
-
-.plyr__menu__container .plyr__control[role=menuitemradio]::before {
+.plyr__menu__container label.plyr__control input[type=radio]+span {
     background: rgba(0, 0, 0, .1);
-    content: '';
+    border-radius: 100%;
     display: block;
     flex-shrink: 0;
     height: 16px;
     margin-right: 10px;
+    position: relative;
     transition: all .3s ease;
     width: 16px
 }
 
-.plyr__menu__container .plyr__control[role=menuitemradio]::after {
+.plyr__menu__container label.plyr__control input[type=radio]+span::after {
     background: #fff;
-    border: 0;
+    border-radius: 100%;
+    content: '';
     height: 6px;
-    left: 12px;
+    left: 5px;
     opacity: 0;
-    top: 50%;
-    transform: translateY(-50%) scale(0);
+    position: absolute;
+    top: 5px;
+    transform: scale(0);
     transition: transform .3s ease, opacity .3s ease;
     width: 6px
 }
 
-.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
-    background: #f05a00
+.plyr__menu__container label.plyr__control input[type=radio]:checked+span {
+    background: #1aafff
 }
 
-.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::after {
+.plyr__menu__container label.plyr__control input[type=radio]:checked+span::after {
     opacity: 1;
-    transform: translateY(-50%) scale(1)
+    transform: scale(1)
 }
 
-.plyr__menu__container .plyr__control[role=menuitemradio].plyr__tab-focus::before,
-.plyr__menu__container .plyr__control[role=menuitemradio]:hover::before {
+.plyr__menu__container label.plyr__control input[type=radio]:focus+span {
+    box-shadow: 0 0 0 3px rgba(26, 175, 255, .35);
+    outline: 0
+}
+
+.plyr__menu__container label.plyr__control.plyr__tab-focus input[type=radio]+span,
+.plyr__menu__container label.plyr__control:hover input[type=radio]+span {
     background: rgba(0, 0, 0, .1)
 }
 
@@ -542,10 +551,89 @@ a.plyr__control::before {
     align-items: center;
     display: flex;
     margin-left: auto;
-    margin-right: -5px;
+    margin-right: -7px;
     overflow: hidden;
     padding-left: 25px;
     pointer-events: none
+}
+
+.plyr__progress {
+    display: flex;
+    flex: 1;
+    position: relative
+}
+
+.plyr__progress input[type=range] {
+    position: relative;
+    z-index: 2
+}
+
+.plyr__progress .plyr__tooltip {
+    font-size: 14px;
+    left: 0
+}
+
+.plyr__progress--buffer {
+    -webkit-appearance: none;
+    background: 0 0;
+    border: 0;
+    border-radius: 100px;
+    height: 4px;
+    left: 0;
+    margin: -3px 0 0 !important;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%
+}
+
+.plyr__progress--buffer::-webkit-progress-bar {
+    background: 0 0;
+    transition: width .2s ease
+}
+
+.plyr__progress--buffer::-webkit-progress-value {
+    background: currentColor;
+    border-radius: 100px;
+    min-width: 6px
+}
+
+.plyr__progress--buffer::-moz-progress-bar {
+    background: currentColor;
+    border-radius: 100px;
+    min-width: 6px;
+    transition: width .2s ease
+}
+
+.plyr__progress--buffer::-ms-fill {
+    border-radius: 100px;
+    transition: width .2s ease
+}
+
+.plyr--video .plyr__progress--buffer {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    color: rgba(255, 255, 255, .25)
+}
+
+.plyr--audio .plyr__progress--buffer {
+    color: rgba(183, 197, 205, .66)
+}
+
+.plyr--loading .plyr__progress--buffer {
+    animation: plyr-progress 1s linear infinite;
+    background-image: linear-gradient(-45deg, rgba(47, 52, 61, .6) 25%, transparent 25%, transparent 50%, rgba(47, 52, 61, .6) 50%, rgba(47, 52, 61, .6) 75%, transparent 75%, transparent);
+    background-repeat: repeat-x;
+    background-size: 25px 25px;
+    color: transparent
+}
+
+.plyr--video.plyr--loading .plyr__progress--buffer {
+    background-color: rgba(255, 255, 255, .25);
+    height: 4px;
+}
+
+.plyr--audio.plyr--loading .plyr__progress--buffer {
+    background-color: rgba(183, 197, 205, .66)
 }
 
 .plyr--full-ui input[type=range] {
@@ -555,7 +643,7 @@ a.plyr__control::before {
     border-radius: 28px;
     color: #f05a00;
     display: block;
-    height: 20px;
+    height: 3px;
     margin: 0;
     padding: 0;
     transition: box-shadow .3s ease;
@@ -565,9 +653,9 @@ a.plyr__control::before {
 .plyr--full-ui input[type=range]::-webkit-slider-runnable-track {
     background: 0 0;
     border: 0;
-    border-radius: 2px;
-    height: 4px;
-    transition: box-shadow .3s ease;
+    border-radius: 3px;
+    height: 6px;
+    transition: all .3s ease;
     -webkit-user-select: none;
     user-select: none;
     background-image: linear-gradient(to right, currentColor var(--value, 0), transparent var(--value, 0))
@@ -578,6 +666,7 @@ a.plyr__control::before {
     border: 0;
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .15), 0 0 0 1px rgba(47, 52, 61, .2);
+    box-sizing: border-box;
     height: 10px;
     position: relative;
     transition: all .2s ease;
@@ -589,9 +678,9 @@ a.plyr__control::before {
 .plyr--full-ui input[type=range]::-moz-range-track {
     background: 0 0;
     border: 0;
-    border-radius: 2px;
-    height: 4px;
-    transition: box-shadow .3s ease;
+    border-radius: 3px;
+    height: 6px;
+    transition: all .3s ease;
     -moz-user-select: none;
     user-select: none
 }
@@ -601,24 +690,25 @@ a.plyr__control::before {
     border: 0;
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .15), 0 0 0 1px rgba(47, 52, 61, .2);
-    height: 10px;
+    box-sizing: border-box;
+    height: 14px;
     position: relative;
     transition: all .2s ease;
-    width: 10px;
+    width: 14px
 }
 
 .plyr--full-ui input[type=range]::-moz-range-progress {
     background: currentColor;
-    border-radius: 2px;
-    height: 4px
+    border-radius: 3px;
+    height: 6px
 }
 
 .plyr--full-ui input[type=range]::-ms-track {
     background: 0 0;
     border: 0;
-    border-radius: 2px;
-    height: 4px;
-    transition: box-shadow .3s ease;
+    border-radius: 3px;
+    height: 6px;
+    transition: all .3s ease;
     -ms-user-select: none;
     user-select: none;
     color: transparent
@@ -627,9 +717,9 @@ a.plyr__control::before {
 .plyr--full-ui input[type=range]::-ms-fill-upper {
     background: 0 0;
     border: 0;
-    border-radius: 2px;
-    height: 4px;
-    transition: box-shadow .3s ease;
+    border-radius: 3px;
+    height: 6px;
+    transition: all .3s ease;
     -ms-user-select: none;
     user-select: none
 }
@@ -637,9 +727,9 @@ a.plyr__control::before {
 .plyr--full-ui input[type=range]::-ms-fill-lower {
     background: 0 0;
     border: 0;
-    border-radius: 2px;
-    height: 4px;
-    transition: box-shadow .3s ease;
+    border-radius: 3px;
+    height: 6px;
+    transition: all .3s ease;
     -ms-user-select: none;
     user-select: none;
     background: currentColor
@@ -650,11 +740,12 @@ a.plyr__control::before {
     border: 0;
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .15), 0 0 0 1px rgba(47, 52, 61, .2);
-    height: 10px;
+    box-sizing: border-box;
+    height: 14px;
     position: relative;
     transition: all .2s ease;
-    width: 10px;
-    margin-top: 0;
+    width: 14px;
+    margin-top: 0
 }
 
 .plyr--full-ui input[type=range]::-ms-tooltip {
@@ -670,30 +761,33 @@ a.plyr__control::before {
 }
 
 .plyr--full-ui input[type=range].plyr__tab-focus::-webkit-slider-runnable-track {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(26, 175, 255, .35);
     outline: 0
 }
 
 .plyr--full-ui input[type=range].plyr__tab-focus::-moz-range-track {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(26, 175, 255, .35);
     outline: 0
 }
 
 .plyr--full-ui input[type=range].plyr__tab-focus::-ms-track {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(26, 175, 255, .35);
     outline: 0
 }
 
 .plyr--full-ui.plyr--video input[type=range]::-webkit-slider-runnable-track {
-    background-color: rgba(255, 255, 255, .25)
+    background-color: rgba(255, 255, 255, .25);
+    height: 4px;
 }
 
 .plyr--full-ui.plyr--video input[type=range]::-moz-range-track {
-    background-color: rgba(255, 255, 255, .25)
+    background-color: rgba(255, 255, 255, .25);
+    height: 4px;
 }
 
 .plyr--full-ui.plyr--video input[type=range]::-ms-track {
-    background-color: rgba(255, 255, 255, .25)
+    background-color: rgba(255, 255, 255, .25);
+    height: 4px;
 }
 
 .plyr--full-ui.plyr--video input[type=range]:active::-webkit-slider-thumb {
@@ -701,7 +795,7 @@ a.plyr__control::before {
 }
 
 .plyr--full-ui.plyr--video input[type=range]:active::-moz-range-thumb {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .15), 0 0 0 1px rgba(47, 52, 61, .2), 0 0 0 3px rgba(255, 255, 255, .5)
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15), 0 0 0 1px rgba(47, 52, 61, .2), 0 0 0 3px  rgba(255, 255, 255, .5)
 }
 
 .plyr--full-ui.plyr--video input[type=range]:active::-ms-thumb {
@@ -732,25 +826,6 @@ a.plyr__control::before {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .15), 0 0 0 1px rgba(47, 52, 61, .2), 0 0 0 3px rgba(0, 0, 0, .1)
 }
 
-.plyr__poster {
-    background-color: #000;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity .2s ease;
-    width: 100%;
-    z-index: 1
-}
-
-.plyr--stopped.plyr__poster-enabled .plyr__poster {
-    opacity: 1
-}
-
 .plyr__time {
     font-size: 14px
 }
@@ -778,7 +853,6 @@ a.plyr__control::before {
     color: #4f5b5f;
     font-size: 14px;
     font-weight: 500;
-    left: 50%;
     line-height: 1.3;
     margin-bottom: 10px;
     opacity: 0;
@@ -788,7 +862,6 @@ a.plyr__control::before {
     transform: translate(-50%, 10px) scale(.8);
     transform-origin: 50% 100%;
     transition: transform .2s .1s ease, opacity .2s .1s ease;
-    white-space: nowrap;
     z-index: 2
 }
 
@@ -830,7 +903,6 @@ a.plyr__control::before {
 }
 
 .plyr__controls>.plyr__control:last-child .plyr__tooltip {
-    left: auto;
     right: 0;
     transform: translate(0, 10px) scale(.8);
     transform-origin: 100% 100%
@@ -855,7 +927,6 @@ a.plyr__control::before {
 }
 
 .plyr--video {
-    background: #000;
     overflow: hidden
 }
 
@@ -871,113 +942,25 @@ a.plyr__control::before {
     z-index: 0
 }
 
-.plyr__progress {
-    flex: 1;
-    left: 7px;
-    margin-right: 14px;
-    position: relative
-}
-
-.plyr__progress input[type=range],
-.plyr__progress__buffer {
-    margin-left: -7px;
-    margin-right: -7px;
-    width: calc(100% + 14px)
-}
-
-.plyr__progress input[type=range] {
-    position: relative;
-    z-index: 2
-}
-
-.plyr__progress .plyr__tooltip {
-    font-size: 14px;
-    left: 0
-}
-
-.plyr__progress__buffer {
-    -webkit-appearance: none;
-    background: 0 0;
-    border: 0;
-    border-radius: 100px;
-    height: 4px;
-    left: 0;
-    margin-top: -2px;
-    padding: 0;
-    position: absolute;
-    top: 50%
-}
-
-.plyr__progress__buffer::-webkit-progress-bar {
-    background: 0 0;
-    transition: width .2s ease
-}
-
-.plyr__progress__buffer::-webkit-progress-value {
-    background: currentColor;
-    border-radius: 100px;
-    min-width: 4px
-}
-
-.plyr__progress__buffer::-moz-progress-bar {
-    background: currentColor;
-    border-radius: 100px;
-    min-width: 4px;
-    transition: width .2s ease
-}
-
-.plyr__progress__buffer::-ms-fill {
-    border-radius: 100px;
-    transition: width .2s ease
-}
-
-.plyr--video .plyr__progress__buffer {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
-    color: rgba(255, 255, 255, .25)
-}
-
-.plyr--audio .plyr__progress__buffer {
-    color: rgba(183, 197, 205, .66)
-}
-
-.plyr--loading .plyr__progress__buffer {
-    animation: plyr-progress 1s linear infinite;
-    background-image: linear-gradient(-45deg, rgba(47, 52, 61, .6) 25%, transparent 25%, transparent 50%, rgba(47, 52, 61, .6) 50%, rgba(47, 52, 61, .6) 75%, transparent 75%, transparent);
-    background-repeat: repeat-x;
-    background-size: 25px 25px;
-    color: transparent
-}
-
-.plyr--video.plyr--loading .plyr__progress__buffer {
-    background-color: rgba(255, 255, 255, .25)
-}
-
-.plyr--audio.plyr--loading .plyr__progress__buffer {
-    background-color: rgba(183, 197, 205, .66)
-}
-
 .plyr__volume {
-    align-items: center;
-    display: flex;
     flex: 1;
     position: relative
 }
 
 .plyr__volume input[type=range] {
-    margin-left: 5px;
     position: relative;
     z-index: 2
 }
 
 @media (min-width:480px) {
     .plyr__volume {
-        max-width: 90px
+        max-width: 50px
     }
 }
 
 @media (min-width:768px) {
     .plyr__volume {
-        max-width: 110px
+        max-width: 80px
     }
 }
 
@@ -987,6 +970,28 @@ a.plyr__control::before {
 
 .plyr--is-ios.plyr--vimeo [data-plyr=mute] {
     display: none!important
+}
+
+.plyr--has-error {
+    pointer-events: none
+}
+
+.plyr--has-error::after {
+    align-items: center;
+    background: #000;
+    color: #fff;
+    content: attr(data-plyr-error);
+    display: flex;
+    font-size: 16px;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 1px 1px #000;
+    top: 0;
+    width: 100%;
+    z-index: 10
 }
 
 .plyr:-webkit-full-screen {
@@ -1386,9 +1391,9 @@ a.plyr__control::before {
 .plyr__cues {
     background: currentColor;
     display: block;
-    height: 4px;
+    height: 6px;
     left: 0;
-    margin: -2px 0 0;
+    margin: -3px 0 0;
     opacity: .8;
     position: absolute;
     top: 50%;
@@ -1408,8 +1413,4 @@ a.plyr__control::before {
     padding: 0!important;
     position: absolute!important;
     width: 1px!important
-}
-
-.plyr [hidden] {
-    display: none!important
 }
