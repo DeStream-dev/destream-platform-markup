@@ -3398,7 +3398,13 @@ header .btn.login{
   .main-sidebar .block .title .search-input input[type="search"]{
      font-size: 1.1em;
     }
-
+    .main-sidebar .block .title .search-input{
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none;
+    }
  }
 
 
@@ -5875,6 +5881,13 @@ header .btn.login{
   }
   .main-sidebar .block .title .search-input input[type="search"]{
      font-size: 1.1em;
+    }
+  .main-sidebar .block .title .search-input{
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none;
     }
 
 }
