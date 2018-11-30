@@ -6354,3 +6354,11 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
   -o-transition: border-top-color 0.3s ease-out;
   transition: border-top-color 0.3s ease-out;
 }
+
+.ContentFlow{
+    opacity: 0;
+}
+
+.ContentFlow.initialize{
+    opacity: 1;
+}

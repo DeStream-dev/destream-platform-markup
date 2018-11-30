@@ -75,7 +75,7 @@ var ContentFlowGlobal = {
         }
     },
     initPath: function() {
-        this.CSSBaseDir = "css/"
+        this.CSSBaseDir = "css/";
         this.scriptElement = this.getScriptElement(this.scriptName);
         if (!this.scriptElement) {
             this.scriptName = "contentflow_src.js";
@@ -545,7 +545,7 @@ ContentFlow.prototype = {
     _reflectionWithinImage: true,
     Browser: ContentFlowGlobal.Browser,
     _defaultConf: {
-        useAddOns: "all",
+        useAddOns: "none",
         biggestItemPos: 0,
         loadingTimeout: 30000,
         activeElement: "content",
@@ -584,7 +584,9 @@ ContentFlow.prototype = {
         reflectionColor: "transparent",
         reflectionHeight: 0,
         reflectionGap: 0,
-        onInit: function() {},
+        onInit: function() {
+            $('.ContentFlow').addClass('initialize');
+        },
         onclickInactiveItem: function(A) {           
         },
         onclickActiveItem: function(B) {           
@@ -1193,7 +1195,7 @@ ContentFlow.prototype = {
             }
         }, 10);
 
-        this.isInit = true
+        this.isInit = true;
     },
     _initAddOns: function() {
         var C = [];
