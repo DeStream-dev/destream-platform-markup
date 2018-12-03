@@ -16,9 +16,10 @@ $('a[disabled]').bind("click",function(){
 
 
 var cf;
+if($('#contentFlow').length){
   cf = new ContentFlow('contentFlow');
   cf._init();
-
+}
 /*
 $('.form form').validator().on('submit', function (e) {
   if(e.isDefaultPrevented()){
@@ -550,7 +551,8 @@ setTimeout(function(){
  
 
   
-var player = new Plyr('.live-broadcast .player video');
+var player = new Plyr('.player video');
+
 var players;
 if($('.modal-audio .items dl dd.play .audioplayer').length)
 players =  Plyr.setup('.audioplayer');

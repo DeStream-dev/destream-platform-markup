@@ -1569,6 +1569,7 @@ footer .social {
 }
 .no-touch .btn:hover{
   color: #ffffff;
+  text-decoration: none;
 }
 .no-touch .btn-white:hover{
   color: #f05a00;
@@ -4740,7 +4741,7 @@ border-color: #c6ced5 transparent transparent transparent;
   background:  linear-gradient(180deg, #444C54 0%, rgba(68, 76, 84, 0.0001) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00444c54', endColorstr='#444c54',GradientType=1 );
 }
-.no-touch .widget .main-sidebar .setup .bars>a:hover{
+.no-touch.widget .main-sidebar .setup .bars>a:hover{
   text-decoration: none;
 }
 .widget .main-sidebar .setup .bars>a:after{
@@ -4851,7 +4852,7 @@ border-color: #c6ced5 transparent transparent transparent;
 .widget .top-panel .btn-group a .redo svg{
   width: 23px;
 }
-.no-touch .widget .top-panel .btn-group a:hover svg{
+.no-touch.widget .top-panel .btn-group a:hover svg{
   fill: #f05a00
  }
 .widget .top-panel .btn-group:last-child{
@@ -4861,6 +4862,10 @@ border-color: #c6ced5 transparent transparent transparent;
   padding: 8px 15px;
 }
 .widget .page .img img{
+  width: 100%;
+  height: auto;
+}
+.widget .page .player{
   width: 100%;
   height: auto;
 }
@@ -4977,11 +4982,11 @@ border-color: #c6ced5 transparent transparent transparent;
    padding-right: 50px;
 }
 .widget-panel ul li a.active,
-.no-touch .widget-panel ul li a:hover{
+.no-touch.widget-panel ul li a:hover{
   text-decoration: none;
 }
 .widget-panel ul li.active,
-.no-touch .widget-panel ul li:hover{
+.no-touch.widget-panel ul li:hover{
   background-color: #444c54;
 }
 .widget-panel ul li .links{
@@ -4991,7 +4996,7 @@ border-color: #c6ced5 transparent transparent transparent;
   opacity: 0;
 }
 .widget-panel ul li.active .links,
-.no-touch .widget-panel ul li:hover .links{
+.no-touch.widget-panel ul li:hover .links{
   opacity: 1;
 }
 .widget-panel ul li .links a{
@@ -5006,7 +5011,7 @@ border-color: #c6ced5 transparent transparent transparent;
   opacity: 0.7;
   fill: #aab1b8;
   }
- .no-touch .widget-panel ul li .links a:hover svg{
+ .no-touch.widget-panel ul li .links a:hover svg{
     opacity: 1;
   }
 .widget-panel ul li .links .dublicate svg{
