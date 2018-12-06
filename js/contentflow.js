@@ -602,10 +602,14 @@ ContentFlow.prototype = {
             if($('.ContentFlow').is(':visible')){
                if(!currentPlayer) {
                 currentPlayer = new Plyr($(item.element).find(".player").find("video"));
+             //   currentPlayer.on('ready', () => {
+               //         currentPlayer.toggleControls(false);
+               //     });
                 setTimeout(function(){
                    currentPlayer.play();
-                  // currentPlayer.volume = 0;
-                   currentPlayer.toggleControls(false);
+                   currentPlayer.volume = 0;
+
+                 //  currentPlayer.toggleControls(false);
                 }, 400);
               }    
             }        

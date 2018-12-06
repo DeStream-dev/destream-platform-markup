@@ -74,7 +74,9 @@ $('.menu-toggle').on("click",function(){
  
 
    setTimeout(function(){
+    if($('#contentFlow').length){
     cf.resize();
+    }
     $('.slides').slick('resize');
    if($('.main-sidebar .close').is(':visible')) $('.main-sidebar-content .head').addClass('fixed');
 
@@ -110,6 +112,10 @@ $('header .search-btn').on("click", function(){
   });
 $('header .search-panel .close').on("click", function(){
     $('header .search-panel').removeClass("open");
+    return false;
+  });
+$('.list .alarm').on("click", function(){
+    $(this).toggleClass("on");
     return false;
   });
 

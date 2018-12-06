@@ -41,6 +41,7 @@ ul{
   list-style: none;
 }
 a{text-decoration: none; color: #152f5c;}
+a:hover{text-decoration: none; }
 .no-touch a:hover{text-decoration: underline; }
 a:visited,a:focus{text-decoration: none; outline:none;}
 h2{
@@ -150,12 +151,30 @@ header nav a, header nav a:visited{
   border-radius: 20px;
   background-color: transparent;
 }
+
+header .faq-btn,
 header .notifications-cont,
 header .create-btn-cont,
 header .user-btn-cont,
 header .btn.login{
   float: right;
   margin-top: 4px;
+}
+header .faq-btn {
+  display: inline-block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #838a91;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 17px;
+  margin-top: 14px;
+}
+header .faq-btn svg{
+  width: 8px;
+  height: 12px;
+  fill: #282d33;
 }
 header .notifications-cont{
   position: relative;
@@ -299,12 +318,19 @@ header .notifications-cont .dropdown-menu ul li .icon img{
   color: #ffffff;
 }
 header .notifications-cont .dropdown-menu ul li a{
-  padding: 15px 15px 15px 55px;
+  padding: 8px 15px 3px 55px;
+}
+header .notifications-cont .dropdown-menu ul li .date{
+  line-height: 16px;
+  color: #aab1b8;
+  padding: 0 15px 8px 55px;
+  font-size: 13px;
+  display: block;
 }
 header .notifications-cont .dropdown-menu .view-all-cont {
   border-top: 1px solid #383E44;
   margin: 12px 25px 0;
-  padding-top: 8px;
+  padding: 8px 0;
   text-align: center;
 }
 header .create-btn-cont{
@@ -1670,6 +1696,9 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
   border-bottom: 2px solid #cdd0d2;  
   border-radius: 0;
 }
+.nav-pills .nav-link:hover{
+  text-decoration: none;
+}
 .modal-body .nav{
   padding-bottom: 25px;
 }
@@ -1677,6 +1706,9 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
   background-color: transparent;
   color: #f05a00;
   border-bottom: 2px solid #f05a00;
+}
+.no-touch .settings .nav-pills .nav-link:hover{
+  border-bottom: none;
 }
 .form .form-group{
   position: relative;
@@ -1857,6 +1889,9 @@ a.share svg{
   margin-left: 15px;
   width: 100%;
 }
+.modal-news-detail .comments .item .text{
+  padding-left: 40px;
+} 
 .modal .comments .form{
   margin-left: 55px;
   margin-right: 20px;
@@ -3294,7 +3329,8 @@ button.close {
 }
 .page.mychannel .head .user-info .likes,
 .page.mychannel .head .user-info .subscribe,
-.page.mychannel .head .user-info .unsubscribe{
+.page.mychannel .head .user-info .unsubscribe,
+.page.mychannel .head .user-info .views{
   font-size: 14px;
   line-height: 17px;
   font-weight: bold;
@@ -3305,10 +3341,17 @@ button.close {
   top: -19px;
   margin-right: 25px;
 }
+
 .page.mychannel .head .user-info .likes svg{
   width: 18px;
   height: 16px;
   fill: #aab1b8;
+}
+.page.mychannel .head .user-info .views svg{
+  width: 18px;
+  height: 16px;
+  fill: #aab1b8;
+  display: none;
 }
 .no-touch .page.mychannel .head .user-info a:hover {
   text-decoration: none;
@@ -3321,6 +3364,9 @@ button.close {
   width: 19px;
   height: 19px;
   fill: #aab1b8;
+}
+.subscribe svg{
+  margin-right: 13px;
 }
 .page.mychannel .head .user-info .unsubscribe {
   margin-left: 35px;
@@ -3949,9 +3995,12 @@ button.close {
   z-index: 7;
 }
 .settings .nav-item{
-  margin-right: 70px;
+  margin-right: 50px;
   position: relative;
   z-index: 8;
+}
+.settings .nav-item:last-child{
+  margin-right: 0;
 }
 .settings .nav-item .nav-link{
   border: none;
@@ -4367,14 +4416,27 @@ button.close {
 }
 .settings .subscription .item {
   padding: 15px;
-  margin: 0 -15px;
   position: relative;
-  width: calc(100% + 30px);
+  background-color: #353a40;
+  border: 1px solid #5a6066;
+  border-right: none;
+  margin-top: -1px;
+  display: block;
+}
+.settings .subscription .items{
+  border-right: 1px solid #5a6066;
+}
+.settings .subscription .items .row{
+  margin: 0;
+}
+.settings .subscription .items div[class*='col-']{
+  padding: 0;
 }
 .no-touch .settings .subscription .item:hover{
-  text-decoration: none;
   background-color: #444c54;
+  text-decoration: none;
 }
+
 .settings .subscription .item .name{
     padding-left: 60px;
     font-size: 13px;
@@ -4455,8 +4517,8 @@ button.close {
 }
 .services .list.open a:before{
   border-style: solid;
-border-width: 6px 5px 0 5px;
-border-color: #c6ced5 transparent transparent transparent;
+  border-width: 6px 5px 0 5px;
+  border-color: #c6ced5 transparent transparent transparent;
 }
 .no-touch .services .list a:hover{
   text-decoration: none;
@@ -4472,7 +4534,11 @@ border-color: #c6ced5 transparent transparent transparent;
 .services-catalog .list.open .item{
   padding-bottom: 0;
 }
-
+.settings .overlays .list{
+  margin-top: 0;
+  padding: 0;
+  border: none;
+}
 
 .modal-addservice .input{
   position: relative;
@@ -4625,10 +4691,10 @@ border-color: #c6ced5 transparent transparent transparent;
 .overlays .item .menu .dropdown-menu.show{
   right: -14px !important;
   left: auto !important;
-  -webkit-transform: none !important;
+ /* -webkit-transform: none !important;
     -ms-transform:  none !important;
     transform: none !important;
-    top: 40px !important;
+    top: 40px !important;*/
 }
 
 .plyr .btn, .plyr button{
@@ -5633,7 +5699,8 @@ header .search-input{
   border-radius: 50%;
   border: 1px solid #737c85;
   right: -10px;
-  top: 10px;
+  top: auto;
+  bottom: 9px;
 }
 .modal-create-future-stream .is-voting .field .remove:after{
   position: absolute;
@@ -6338,7 +6405,7 @@ a.prev-step svg{
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
 .slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,
-.form-group input[type="radio"] + span:after,
+.form-group input[type="radio"] + span:after, .main-sidebar .block .item,
 .ds-tooltip, .payment-history .item, .messages .list .item, .settings .nav-item .nav-link:after,
 .settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
 .ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
@@ -6360,10 +6427,17 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
   transition: border-top-color 0.3s ease-out;
 }
 
+.ContentFlow .plyr__control.plyr__control--overlaid[data-plyr=play], .ContentFlow .plyr--video .plyr__controls{
+  display: none;
+}
 .ContentFlow{
     opacity: 0;
 }
-
 .ContentFlow.initialize{
     opacity: 1;
+}
+
+.page > .text{
+  font-size: 13px;
+  color: #dbe0e6;
 }

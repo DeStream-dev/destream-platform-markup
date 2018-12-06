@@ -18,14 +18,16 @@
   <body class="sidebar-collapse">
  
   	<header class="user-is-logged"> 
-
+	  	<div class="top">
+	  		<a class="menu-toggle" href="#">
+				        	<svg><use xlink:href="img/vectors.svg#ham"></use></svg>
+			</a>			        
+			<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+	  	</div>
   		<div class="container-fluid"> 
 		  	<div class="row">
 			    <div class="col-3 col-sm-4">
-			        <a class="menu-toggle" href="#">
-			        	<svg><use xlink:href="img/vectors.svg#ham"></use></svg>
-					</a>			        
-					<h1 class="logo"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+			        
 			    </div>
 			    <div class="col-1 col-sm-1 col-md-4">
 			    	<div class="search-panel">
@@ -154,7 +156,7 @@
 				    			<li><a href="wallet.html"><span class="icon wallet"><svg><use xlink:href="img/vectors.svg#wallet"></use></svg></span> Wallet</a></li>
 				    			<li><a href="overlays.html"><span class="icon overlays"><svg><use xlink:href="img/vectors.svg#overlays"></use></svg></span> Overlays</a></li>
 				    			<li><a href="settings.html"><span class="icon settings"><svg><use xlink:href="img/vectors.svg#settings"></use></svg></span> Settings</a></li>
-				    			<li><a href="#" data-target=".modal-interest" data-toggle="modal"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
+				    			<li><a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
 				    		</ul>
 						</div>
 			     	</div>
@@ -165,9 +167,10 @@
 			     		<span class="d-none d-lg-block">Create</span></a>
 			     			<div class="dropdown-menu" aria-labelledby="create">
 						    <ul>
-				    			<li><a href="#">Create 1</a></li>
-				    			<li><a href="#">Create 2</a></li>
-				    			<li><a href="#">Create 3</a></li>
+				    			<li><a href="#" data-target=".modal-create-future-stream" data-toggle="modal">Create future stream</a></li>
+				    			<li><a href="#" data-target=".modal-transfer" data-toggle="modal">Create transaction</a></li>
+				    			<li><a href="#" data-target=".modal-addoverlay" data-toggle="modal">Create overlay</a></li>
+				    			<li><a href="#">Create tournament</a></li>
 				    		</ul>
 						</div>
 			     	</div>
@@ -177,32 +180,39 @@
 						    <ul>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="#">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    		</ul>
-				    		<div class="view-all-cont"><a class="view-all" href="#">View all</a></div>
+				    		<div class="view-all-cont"><a class="view-all" href="messages.html">View all</a></div>
 						</div>			    		
 			    	</div>
+			    	<a class="faq-btn" href="#"><svg><use xlink:href="img/vectors.svg#quiz"></use></svg></a>
 			    </div>
 		  </div>
 		</div>
@@ -210,8 +220,10 @@
 
    	<aside class="main-sidebar" data-simplebar>
     	  <div class="main-sidebar-content">
-    	  <a class="close d-md-none"></a>
-    	  <h1 class="logo  d-md-none"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+	    	<div class="head">
+	    	  	<a class="close d-md-none"></a>
+	    	  	<h1 class="logo  d-md-none"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
+	    	</div>
     		<div class="block account">
     			<div class="status">+12%</div>
     			<div class="score">2 850 000</div>
@@ -238,7 +250,7 @@
 	    		</div>
 	    		<ul>
 	    			<li>
-	    				<a href="#" class="item">
+	    				<a href="mychannel.html" class="item">
 		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 		    				<span class="description">
 			    				<span class="name" title="Konstapolsky1980">Konstapolsky1980</span>
@@ -248,7 +260,7 @@
 				    	</a>
 	    			</li>
 	    			<li>
-	    				<a href="#" class="item">
+	    				<a href="mychannel.html" class="item">
 		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 		    				<span class="description">
 			    				<span class="name">Tachat</span>
@@ -258,7 +270,7 @@
 				    	</a>
 	    			</li>
 	    			<li>
-	    				<a href="#" class="item">
+	    				<a href="mychannel.html" class="item">
 		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 		    				<span class="description">
 			    				<span class="name">Tachat</span>
@@ -268,7 +280,7 @@
 				    	</a>
 	    			</li>
 	    			<li>
-	    				<a href="#" class="item">
+	    				<a href="mychannel.html" class="item">
 		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 		    				<span class="description">
 			    				<span class="name">Tachat</span>
@@ -278,7 +290,7 @@
 				    	</a>
 	    			</li>
 	    			<li>
-	    				<a href="#" class="item">
+	    				<a href="mychannel.html" class="item">
 		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 		    				<span class="description">
 			    				<span class="name">Tachat</span>
@@ -288,7 +300,7 @@
 				    	</a>
 	    			</li>
 	    			<li>
-	    				<a href="#" class="item">
+	    				<a href="mychannel.html" class="item">
 		    				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
 		    				<span class="description">
 			    				<span class="name">Tachat</span>
@@ -310,63 +322,63 @@
 	    		</div>
 	    		<ul>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hffgdfgdghghghgh</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Grand Theft Auto V</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/3.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Rise of the Tomb Raidghghgh</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/2.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Ведьмак 3</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
-	    					<span class="icon d-none d-md-block"><img src="img/icon4.png" width="16" height="15" alt="" /></span>
+	    				<a href="game.html" class="item">
+	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Battlefield 1</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/2.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
-	    					<span class="icon d-none d-md-block"><img src="img/icon5.png" width="16" height="15" alt="" /></span>
+	    				<a href="game.html" class="item">
+	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Assassin’s Creed: Rogdffgf</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Assassin’s Creed Origiffgd</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/3.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Watch Dogs 2</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="game.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hffgdfgdghghghgh</span>
 	    					<span class="img d-md-none" style="background-image: url('img/sidemenu/2.png')"></span>
@@ -386,7 +398,7 @@
 	    		</div>
 	    		<ul>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hffgdfgdghghghgh</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
@@ -395,7 +407,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">H…Grand Theft Auto V</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
@@ -404,7 +416,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Rise of the Tomb Raidghghgh</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
@@ -413,7 +425,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Ведьмак 3</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
@@ -422,7 +434,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Battlefield 1</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
@@ -431,7 +443,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Assassin’s Creed: Rogdffgfgfvbvbfgdghghghgh</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
@@ -440,7 +452,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon1.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Assassin’s Creed Origiffgdfgdghghghgh</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
@@ -449,7 +461,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon2.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">Watch Dogs 2</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle2.png')">
@@ -458,7 +470,7 @@
 	    				</a>
 	    			</li>
 	    			<li>
-	    				<a class="item" href="#">
+	    				<a href="lifestyle.html" class="item">
 	    					<span class="icon d-none d-md-block"><img src="img/icon3.png" width="16" height="15" alt="" /></span>
 	    					<span class="name d-none d-md-block">The Witcher 3: Wild Hdfghghghgfhghhfgfgfg2</span>
 	    					<span class="img d-md-none" style="background-image:url('img/interest/lifestyle1.png')">
@@ -476,7 +488,7 @@
                     <a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitch"></use></svg></a>
                     <a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube"></use></svg></a>
 	            </div>
-	            <a href="#">Usage Rules</a>
+	            <a href="rules.html">Usage Rules</a>
 	            <div class="copyrights">&copy; 2018 DeStream, LLC</div>
             </footer>
             </div>

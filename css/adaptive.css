@@ -128,6 +128,9 @@ span.size{ display: none; }
     .list-announcement-tile .large .icon.d-md-block{
       display: inline-block !important;
     }
+    .page.mychannel .head .user-info span.d-md-block{
+      display: inline-block!important;
+    }
 }
 
 
@@ -251,9 +254,11 @@ body.widget > .content{
 }
 
 .settings .nav-item{
-    margin-right: 65px;
+    margin-right: 55px;
 }
-
+    .page.mychannel .head .user-info span.d-md-block{
+      display: inline-block!important;
+    }
 }
 
 
@@ -292,13 +297,16 @@ header  div[class*='col-']{
     right: 8px;
    }
    header .user-btn-cont{
-    margin-right: 35px;
+    margin-right: 41px;
    }
   header .create-btn-cont{
-    margin-right: 25px;
+    margin-right: 11px;
    }
+  header .faq-btn{
+    margin-right: 11px;
+  }
    header .notifications-cont{
-    margin-right: 37px;
+    margin-right: 23px;
    }
   .main-sidebar{
     position: fixed;/* absolute;*/
@@ -660,6 +668,9 @@ text-align: left;
 .modal .form button{
   left: 0;
  }
+ .modal-addoverlay .form button{
+  width: 100%;
+ }
  .modal-transfer-2 .btn-next{
   margin-right: 0;
  }
@@ -985,6 +996,12 @@ header .btn.login{
 
     .modal-transaction-successful .btn{
       margin-top: 30px;
+    }
+       .page.mychannel .head .user-info span.d-md-block{
+      display: inline-block!important;
+    }
+    .page.mychannel .head .user-info .unsubscribe{
+      margin-left: 5px;
     }
 }
 
@@ -3405,6 +3422,7 @@ header .btn.login{
       -o-transition: none;
       transition: none;
     }
+ 
  }
 
 
