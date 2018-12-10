@@ -488,32 +488,6 @@ $(".setup .search-input input[type='search']").on("blur", function(){
 });
 
 
-
-/*
-var availableTags = [
-      "The Witcher 3: Wild H…Grand Theft",
-      "Auto V",
-      "Rise of the Tomb Raider",
-      "Ведьмак 3",
-      "Battlefield 1",
-      "Fortnite",
-      "For honor",
-      "Новости",
-      "Мультики",
-      "Forza Horizon 4"
-    ];
-    $( "header .search-input input, .main-sidebar .block .title .search-input input" ).autocomplete({
-      source: availableTags,
-       open: function( event, ui ) {
-        var input = event.target;
-        $(input).parents(".search-input").addClass("search-active");
-       },
-       close: function( event, ui ) {
-        var input = event.target;
-        $(input).parents(".search-input").removeClass("search-active");
-       }
-    });
-*/
 $( "header .search-input input[type='search'" ).on("focus",function(){
   $('header .search-results').addClass("open");
   $(this).parents(".search-input").addClass("search-active");
@@ -563,6 +537,24 @@ var players;
 if($('.modal-audio .items dl dd.play .audioplayer').length)
 players =  Plyr.setup('.audioplayer');
 
+
+if($('.datepicker').length){
+   $('input.datepicker').on('click',function(){
+    $(this).parents(".datepicker-group").addClass("open");
+   });
+  $('input.datepicker').on('blur',function(){
+   // $(this).parents(".datepicker-group").removeClass("open");
+   });
+  $('input.datepicker').datetimepicker({
+   // 'debug': true
+  });
+
+}
+
+
+$('.theatre-mode-toggle').on('click', function(){
+    $('body').toggleClass("theatre-mode");
+   });
 
 
 });

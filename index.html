@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/bootstrap-select.min.css" />	
-	<link rel="stylesheet" href="css/fonts.css" />    
+	<link rel="stylesheet" href="css/bootstrap-select.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />		
+	<link rel="stylesheet" href="css/fonts.css" />  
+	<link rel="stylesheet" href="css/font-awesome/css/fontawesome-all.min.css" />  
 	<link rel="stylesheet" href="css/dropzone.css" /> 
 	<link rel="stylesheet" href="css/trumbowyg.min.css">
 	<link rel="stylesheet" href="css/plyr.css">
@@ -495,6 +497,7 @@
     	</aside>
     	
     	<section class="main-content" data-simplebar>
+
     		<div id="contentFlow" class="ContentFlow">        
 				<div class="loadIndicator"><div class="indicator"></div></div>
 				<div class="flow">
@@ -1740,7 +1743,15 @@
             <div class="modal-body">
              	<div class="title">Create future stream</div>
             	<div class="form">
-                        <form  data-toggle="validator" role="form">    
+                        <form  data-toggle="validator" role="form">  
+                        	<div class="form-group datepicker-group" aria-required="true">
+                                <label class="control-label">Date</label>
+                                <input class="datepicker d-none d-md-block" type="text" placeholder="Select date & time">
+                                <input class="d-block d-md-none" type="date" placeholder="Select date">
+                                <label class="control-label d-block d-md-none">Time</label>
+                                <input class="d-block d-md-none" type="time" placeholder="Select time">
+                            </div>  
+
                             <div class="form-group" aria-required="true">
                                 <label class="control-label">About stream</label>
                                 <textarea>Text</textarea>
@@ -2312,9 +2323,11 @@
 
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
+    <script type='text/javascript' src="js/moment.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type='text/javascript' src="js/jquery-ui.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datetimepicker.js"></script>    
     <script type='text/javascript' src="js/svgxuse.js"></script>
     <script type="text/javascript" src="js/slick.js"></script>
     <script type='text/javascript' src="js/dropzone.js"></script>
@@ -2345,7 +2358,7 @@
 
 	//  $('.modal-auth').modal('show');
 
-  //   $('.modal-create-future-stream').modal('show');
+     $('.modal-create-future-stream').modal('show');
 
        });
     </script>

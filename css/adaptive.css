@@ -131,6 +131,9 @@ span.size{ display: none; }
     .page.mychannel .head .user-info span.d-md-block{
       display: inline-block!important;
     }
+    .page.live-broadcast .head .user-info span.d-md-block{
+      display: inline-block!important;
+    }
 }
 
 
@@ -664,6 +667,9 @@ text-align: left;
   left: 0;
   width: 100%;
   border-radius: 3px;
+ }
+ .modal-create-future-stream .bootstrap-datetimepicker-widget.dropdown-menu{
+  width: 100%;
  }
 .modal .form button{
   left: 0;
