@@ -543,7 +543,7 @@ if($('.datepicker').length){
     $(this).parents(".datepicker-group").addClass("open");
    });
   $('input.datepicker').on('blur',function(){
-   // $(this).parents(".datepicker-group").removeClass("open");
+    $(this).parents(".datepicker-group").removeClass("open");
    });
   $('input.datepicker').datetimepicker({
    // 'debug': true

@@ -257,10 +257,16 @@
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M8.08995 14.0825C8.56935 14.9215 7.9701 16.0001 7.01129 16.0001C6.05249 16.0001 5.45324 14.9215 5.93264 14.0825H8.08995Z" />
 	</g>
 
-	<g id="loading" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-     <path d="M6.6,15.4 C8.3,17 10.5,18 13,18 C18,18 22,14 22,9 M19.4,2.6 C17.7,1 15.5,0 13,0 C8,0 4,4 4,9" id="Shape" stroke="#AAB1B8" stroke-width="2" stroke-linejoin="round"></path>
-     <polygon id="Shape" fill="#AAB1B8" fill-rule="nonzero" points="18 9 26 9 22 5"></polygon>
-     <polygon id="Shape" fill="#AAB1B8" fill-rule="nonzero" points="0 9 4 13 8 9"></polygon>         
+	<g id="loading" viewBox="0 0 26 20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Home-Dark---smoll" transform="translate(-812.000000, -2458.000000)">
+            <g id="Group-22" transform="translate(795.000000, 2459.000000)">
+                <g id="Group-8" transform="translate(17.000000, 0.000000)">
+                    <path d="M6.6,15.4 C8.3,17 10.5,18 13,18 C18,18 22,14 22,9 M19.4,2.6 C17.7,1 15.5,0 13,0 C8,0 4,4 4,9" id="Shape" stroke="#AAB1B8" stroke-width="2" stroke-linejoin="round"></path>
+                    <polygon id="Shape" fill="#AAB1B8" fill-rule="nonzero" points="18 9 26 9 22 5"></polygon>
+                    <polygon id="Shape" fill="#AAB1B8" fill-rule="nonzero" points="0 9 4 13 8 9"></polygon>
+                </g>
+            </g>
+        </g>
     </g>
 	<g opacity="0.7" viewBox="0 0 18 20" id="notifications">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M1.19833 17.0787C-0.374704 17.0787 -0.374704 14.7566 1.19833 14.7566C2.47174 14.7566 2.54664 10.2622 2.54664 8.68914C2.54664 4.94382 4.79384 2.77154 7.34065 2.24719C6.89121 1.1985 7.64028 0 8.76387 0C9.88747 0 10.6365 1.1985 10.1871 2.24719C12.7339 2.77154 14.9811 4.94382 14.9811 8.68914C14.9811 10.2622 15.056 14.7566 16.3294 14.7566C17.9025 14.7566 17.9025 17.0787 16.3294 17.0787H1.19833Z" />

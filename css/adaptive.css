@@ -262,6 +262,19 @@ body.widget > .content{
     .page.mychannel .head .user-info span.d-md-block{
       display: inline-block!important;
     }
+
+  header .user-btn-cont{
+    margin-right: 42px;
+   }
+  header .create-btn-cont{
+    margin-right: 12px;
+   }
+  header .faq-btn{
+    margin-right: 12px;
+  }
+   header .notifications-cont{
+    margin-right: 24px;
+   }
 }
 
 
@@ -1151,7 +1164,7 @@ header .btn.login{
   }
   header .search-panel .close{
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 13px;
     z-index: 801;
     width: 21px;
@@ -3595,7 +3608,7 @@ header .btn.login{
   }
   header .search-panel .close{
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 13px;
     z-index: 801;
     width: 21px;

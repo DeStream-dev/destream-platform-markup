@@ -1368,16 +1368,16 @@ footer .social {
 .list .share .megaphone svg{
   width: 17px;
 }
-.list .loading {
+.loading {
   padding: 5px 0;
 }
-.list .loading a{
+.loading a{
   font-size: 12px;
   line-height: 14px;
   font-weight: 500;
   color: #aab1b8;
 }
-.list .loading a.spin svg{
+.loading a.spin svg{
   animation-name: spin1;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
@@ -1407,11 +1407,11 @@ footer .social {
    -o-background-size: cover;
 }
 
-.list .loading svg{
+.loading svg{
   width: 26px;
   height: 20px;
 }
-.list .loading span{
+.loading span{
   display: block;
   padding-top: 5px;
 }
@@ -2598,7 +2598,7 @@ button.close {
   left: auto;
   right: 20px;
 }
-.form.interest .list .loading{
+.form.interest .loading{
   margin-top: 25px;
 }
 .modal-interest .buttons{
@@ -3994,7 +3994,7 @@ button.close {
   padding-left: 60px;
   font-size: 13px;
 }
-.messages .list .loading{
+.messages .loading{
   padding-top: 15px;
 }
 .messages .list .item {
@@ -6650,7 +6650,7 @@ background-color: #f05a00;
   border-top: none;
   border-color: #dfe6ea;
   }
-  .modal-create-future-stream .datepicker-group.open .bootstrap-datetimepicker-widget.dropdown-menu ul li:first-child{    
+  .modal-create-future-stream .datepicker-group .bootstrap-datetimepicker-widget.dropdown-menu ul li:first-child{    
   /*  border-top: 1px solid #dbe0e6;*/
     padding-top: 10px;
     position: relative;
@@ -6671,48 +6671,6 @@ background-color: #f05a00;
   color: #b7c0c7;
   font-size: 17px;
 }
-
-a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
-.slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,
-.form-group input[type="radio"] + span:after, .main-sidebar .block .item,
-.ds-tooltip, .payment-history .item, .messages .list .item, .settings .nav-item .nav-link:after,
-.settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
-.ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
-.form-group input[type="checkbox"] + span, .settings .personal .change-photo,
-.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
-.bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
-.bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a{
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-
-.settings .notification .item .name:before, .settings .notification .item .name:after{
-  -webkit-transition: border-top-color 0.3s ease-out;
-  -moz-transition: border-top-color 0.3s ease-out;
-  -ms-transition: border-top-color 0.3s ease-out;
-  -o-transition: border-top-color 0.3s ease-out;
-  transition: border-top-color 0.3s ease-out;
-}
-
-.ContentFlow .plyr__control.plyr__control--overlaid[data-plyr=play], .ContentFlow .plyr--video .plyr__controls{
-  display: none;
-}
-.ContentFlow{
-    opacity: 0;
-}
-.ContentFlow.initialize{
-    opacity: 1;
-}
-
-.page > .text{
-  font-size: 13px;
-  color: #dbe0e6;
-}
-
 
 /************************  THEATRE-MODE   ******************************/
 
@@ -6785,4 +6743,364 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
   top: 0;
   height: 100%;
 }
+
+.tournaments .list{
+  padding-top: 30px;
+}
+.tournaments .list .loading{
+  margin-top: 20px;
+}
+.tournaments .item {
+  background-color: #444c54;
+  border: 1px solid #515a62;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+.tournaments .item:hover{
+  text-decoration: none;
+}
+.tournaments .list {
+  padding: 30px 0;
+  margin-top: 35px;
+  border-top: 1px solid #666f79;
+}
+.tournaments .list .item {
+  padding: 20px 20px 31px 20px;
+}
+.tournaments .item .img{
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 176px;
+  overflow: hidden;  
+  background-position: center;
+  background-repeat: no-repeat;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+}
+
+.tournaments .item .tournament-title, .tournament .general-info .tournament-title{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #dbe0e6;
+  padding-bottom: 7px;
+}
+.tournaments .item .game .icon, .tournament .general-info .game .icon{
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  left: 0;
+  border-radius: 0;
+  line-height: normal;
+  position: absolute;
+  top: auto;
+}
+.tournaments .item .game .icon img, .tournament .general-info .game .icon img{
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+.tournaments .item .game, .tournament .general-info .game{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  color: #c6ced5;
+  padding-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tournaments .item .status, .tournament .general-info .status{
+  background-color: #f05a00;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  padding: 7px 0;
+  position: relative;
+  left: -20px;
+  width: calc(100% + 40px);
+}
+.tournaments .item .status.orange, .tournament .general-info .status.orange{
+  background-color: #f05a00;
+}
+.tournaments .item .status.violet,.tournament .general-info .status.violet{
+  background-color: #5321bf;
+}
+.tournaments .item .status.magenta, .tournament .general-info .status.magenta{
+  background-color: #b42192;
+}
+.tournaments .item .status.green, .tournament .general-info .status.green{
+  background-color: #53950a;
+}
+.tournaments .item .status.blue,.tournament .general-info .status.blue{
+  background-color: #008ece;
+}
+.tournaments .item .prize-fund, .tournament .general-info .prize-fund{
+  display: inline-block;
+  vertical-align: top;
+  width: calc(60% - 0.3em);
+  font-weight: 500;
+  font-size: 12px;
+  color: #aab1B8;
+  line-height: 17px;
+  padding-top: 15px;
+}
+.tournaments .item .prize-fund b, .tournament .general-info .prize-fund b{
+  font-size: 13px;
+  color: #dbe0e6;
+  display: block;
+  font-weight: bold;
+}
+
+.tournaments .item .players, .tournament .general-info .players {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(40% - 0.3em);
+  text-align: right;
+  font-weight: 500;
+  font-size: 12px;
+  color: #aab1B8;
+  line-height: 17px;
+  padding-top: 15px;
+}
+.tournaments .item .players b, .tournament .general-info .players b{
+  font-size: 13px;
+  color: #dbe0e6;
+  display: block;
+  font-weight: bold;
+}
+.tournaments .item .time, .tournament .general-info .time{
+  margin-top: 17px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: #89929a;
+  line-height: 17px;
+  padding: 17px 0 13px;
+  border-top: 1px solid #666f79;
+}
+.tournaments .item .time b, .tournament .general-info .time b{
+  font-size: 13px;
+  color: #c6ced5;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.tournaments .item .bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4a525a;
+  height: 31px;
+  text-align: center;
+  border-top: 1px solid #515a62;
+}
+
+.tournaments .item .bottom .social svg{
+  width: 18px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: -3px;
+  fill: #aab1b8;
+  opacity: 0.5;
+}
+.tournaments .item .bottom .social.share svg{
+  width: 20px;
+  height: 20px;
+}
+.tournaments .item .social span{
+  font-size: 12px;
+  line-height: 35px;
+  color: #aab1b8;
+  margin-right: 10%;
+  display: inline-block;
+  padding-top: 0;
+}
+
+.tournaments .item .bottom .social span:last-child{
+  margin-right: 0;
+ }
+.tournaments .item .bottom .social span svg{
+  width: 18px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: -3px;
+  fill: #aab1b8;
+  opacity: 0.5;
+}
+.title-with-search{
+  position: relative;
+}
+.tournaments .search-input{
+  position: absolute;
+  top: -12px;
+  right: 0;
+  width: 350px;
+}
+.tournaments .search-input input[type="search"]{
+  background-color: #2c3238;
+}
+
+.tournament.page{
+  padding-top: 0;
+}
+.tournament .top-image{
+  height: 500px;
+  overflow: hidden;  
+  background-position: top center;
+  background-repeat: no-repeat;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   position: relative;
+   left: -55px;
+   width: calc(100% + 110px);
+}
+.tournament .tabs {
+  position: relative;
+}
+.tournament .tabs:after, .tournament .tabs:before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 110px);
+  height: 1px;
+  left: -55px;
+  top: 0;
+  background-color: rgba(102,111,121,0.4);
+}
+.tournament .tabs:before{
+  top: auto;
+  bottom: 0;
+}
+.tournament .tabs .nav .nav-link{
+  padding: 20px 0;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #2c3239;
+  border-right: 1px solid #282d33;
+}
+.tournament .tabs .nav .nav-link:hover{
+  background-color: #343b43;
+  text-decoration: none;
+}
+.tournament .tabs .nav .nav-link.active{
+  font-weight: bold;
+  background-color: #f05a00;
+}
+.tournament .general-info{
+  position: relative;
+  left: -55px;
+  width: calc(100% + 110px);
+  background-color: #282d33;
+}
+
+.tournament .general-info > div{
+  padding: 10px 55px;
+}
+.tournament .general-info > div:first-child{
+  border-bottom: 1px solid rgba(102,111,121,0.4);
+}
+.tournament .general-info .social, .tournament .general-info .prize-fund, .tournament .general-info .players, .tournament .general-info .time,
+.tournament .general-info .format{
+  display: inline-block;
+  vertical-align: top;
+}
+.tournament .general-info .social svg{
+  width: 18px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: -3px;
+  fill: #aab1b8;
+  opacity: 0.5;
+}
+.tournament .general-info .social.share svg{
+  width: 20px;
+  height: 20px;
+}
+.tournament .general-info .social span{
+  font-size: 12px;
+  line-height: 35px;
+  color: #aab1b8;
+  margin-right: 10%;
+  display: inline-block;
+  padding-top: 0;
+}
+
+.tournament .general-info .social span:last-child{
+  margin-right: 0;
+ }
+.tournament .general-info .social span svg{
+  width: 18px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: -3px;
+  fill: #aab1b8;
+  opacity: 0.5;
+}
+ .tournament .general-info .status{
+    float: right;
+    display: inline-block;
+ }
+
+.tournament .general-info .head{
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+
+a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
+.slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,
+.form-group input[type="radio"] + span:after, .main-sidebar .block .item,
+.ds-tooltip, .payment-history .item, .messages .list .item, .settings .nav-item .nav-link:after,
+.settings .notification .item,.settings .subscription .item, .plyr__menu__container ul li,
+.ui-autocomplete li, .widget-panel ul li .links,.widget-panel ul li,
+.form-group input[type="checkbox"] + span, .settings .personal .change-photo,
+.search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
+.bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
+.bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a{
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
+.settings .notification .item .name:before, .settings .notification .item .name:after{
+  -webkit-transition: border-top-color 0.3s ease-out;
+  -moz-transition: border-top-color 0.3s ease-out;
+  -ms-transition: border-top-color 0.3s ease-out;
+  -o-transition: border-top-color 0.3s ease-out;
+  transition: border-top-color 0.3s ease-out;
+}
+
+.ContentFlow .plyr__control.plyr__control--overlaid[data-plyr=play], .ContentFlow .plyr--video .plyr__controls{
+  display: none;
+}
+.ContentFlow{
+    opacity: 0;
+}
+.ContentFlow.initialize{
+    opacity: 1;
+}
+
+.page > .text{
+  font-size: 13px;
+  color: #dbe0e6;
+}
+
 
