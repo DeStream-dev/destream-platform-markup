@@ -1022,6 +1022,20 @@ header .btn.login{
     .page.mychannel .head .user-info .unsubscribe{
       margin-left: 5px;
     }
+
+    .tournament .top-image{
+      height: 225px;
+    }
+    .tournament .general-info .social{
+      position: relative;
+      top: unset;
+      margin-top: 0;
+    }
+    .tournament .general-info .status{
+      position: relative;
+      top: unset;
+      margin-top: 0;
+    }
 }
 
 .rotate-warning{display: none;}
