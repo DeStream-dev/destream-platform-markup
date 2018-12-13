@@ -1027,15 +1027,54 @@ header .btn.login{
       height: 225px;
     }
     .tournament .general-info .social{
-      position: relative;
+      position: absolute;
       top: unset;
+      bottom: 0;
       margin-top: 0;
+    }
+    .tournament .general-info .social span{
+      line-height: normal;
     }
     .tournament .general-info .status{
       position: relative;
       top: unset;
       margin-top: 0;
     }
+    div.comments input[type="text"]{
+      width: 100%;
+    }
+   .tournament .general-info > div:first-child .head{
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(102,111,121,0.4);
+     }
+    .tournament .general-info .head > div{
+      display: inline-block;
+      width: calc(50% - 0.3em);
+    }
+    .tournament .general-info > div:first-child .head > div:last-child{
+      text-align: right;
+      display: inline-block!important;
+    }
+
+    .tournament .tabs .nav .nav-link.active{
+      background-color: #2c3239;
+      border-bottom: 4px solid #f05a00;
+    }
+    .tournament .tabs .nav .nav-link{
+      border-right: none;
+      padding: 28px 0 13px;     
+    }
+     .tournament .tabs .nav .nav-item{
+       flex: 1 1 auto;
+       flex-basis: 1;
+     }
+     .tournament .general-info > div{
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+     }
+
 }
 
 .rotate-warning{display: none;}
