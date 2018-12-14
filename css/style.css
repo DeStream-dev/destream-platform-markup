@@ -833,7 +833,7 @@ padding: 0 25px;
   left: 0;
   width: 100%;
  /* padding-left: 50px;*/
-  color: rgb(170,177,184, 0.5);
+  color: rgba(170,177,184, 0.5);
 }
 
 
@@ -2464,7 +2464,7 @@ button.close {
 }
 .form.interest .search-panel {
   padding: 0 0 30px;
-  border-bottom: 1px solid rgb(102,111,121,0.7);
+  border-bottom: 1px solid rgba(102,111,121,0.7);
 }
 .modal-interest .form.interest .search-panel {
     border-top: 1px solid #dbe0e6;
@@ -7047,7 +7047,7 @@ background-color: #f05a00;
   background-color: #343b43;
   text-decoration: none;
 }
-.tournament .tabs .nav .nav-link.active{
+.tournament .tabs .nav .nav-link.active, .tournament .tabs .nav .nav-link.active:hover{
   font-weight: bold;
   background-color: #f05a00;
 }
@@ -7232,6 +7232,12 @@ background-color: #f05a00;
   top: -18px;
   left: 18px;
 }
+.team-block .team .icon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+
+}
 .team-block .team .name{
   color: #dbe0e6;
   text-transform: uppercase;
@@ -7241,20 +7247,20 @@ background-color: #f05a00;
   padding: 8px 10px 8px 80px;
   display: block;
 }
-.tournament .tab-content #players .item .icon, .tournament .tab-content #bracket .item .icon{
+.tournament .tab-content .items .item .icon{
    width: 40px;
    height: 40px;
    overflow: hidden;
    position: absolute;
-   top: 13px;
+   top: 10px;
    left: auto;
 }
-.tournament .tab-content #players .icon img, .tournament .tab-content #bracket .icon img{
+.tournament .tab-content .items .item .icon img{
   border-radius: 50%;
   width: 100%;
   height: auto;
 }
-.tournament .tab-content #players .item, .tournament .tab-content #bracket .item {
+.tournament .tab-content .items .item{
   padding: 7px 20px;
   position: relative;
   background-color: #353a40;
@@ -7263,21 +7269,21 @@ background-color: #f05a00;
   margin-top: -1px;
   display: block;
 }
-.tournament .tab-content #players .items, .tournament .tab-content #bracket .items{
+.tournament .items{
   border-left: 1px solid #5a6066;
 }
-.tournament .tab-content #players .items .row, .tournament .tab-content #bracket .items .row{
+.tournament .tab-content .items .row{
   margin: 0;
 }
-.tournament .tab-content #players .items div[class*='col-'], .tournament .tab-content #bracket .items div[class*='col-']{
+.tournament .tab-content .items div[class*='col-']{
   padding: 0;
 }
-.no-touch .tournament .tab-content #players .item:hover, .no-touch .tournament .tab-content #bracket .item:hover{
+.no-touch .tournament .tab-content .items .item:hover{
   background-color: #444c54;
   text-decoration: none;
 }
 
-.tournament .tab-content #players .item .name, .tournament .tab-content #bracket .item .name{
+.tournament .tab-content .items .item .name{
     padding-left: 60px;
     font-size: 13px;
     line-height: 19px;
@@ -7387,6 +7393,231 @@ background-color: #f05a00;
   color: #c6ced5;
 }
 
+.winners > div, .winners-detail > div{
+  display: inline-block;
+  float: left;
+  width: 33.3333333333%;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+.winners .name{
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #dbe0e6;
+  margin-top: 10px;
+  display: inline-block;
+}
+.winners .place{
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.winners > div.first{
+  height: 181px;
+  border: 1px solid #ffc668;
+  background-color: #2c3238;
+  float: none;
+}
+.winners-detail > div{
+  font-size: 13px;
+  line-height: 17px;
+  padding-top: 50px;
+
+}
+.winners-detail > div.first{ 
+  float: none;
+}
+/*.winners-detail > div.first:after, .winners-detail > div.first:before{
+  position: absolute;
+  content: "";
+  height: 200px;
+  width: 1px;
+  border-left: 1px dashed gray;
+  bottom: 0;
+  left: 0;
+}*/
+
+.winners-detail > div.first{
+  border-right: 1px dashed rgba(151,151,151, 0.3);
+  border-left: 1px dashed rgba(151,151,151, 0.3);
+}
+.winners-detail > div.first:before{
+  left: auto;
+  right: 0;
+}
+.winners > div .prize{ 
+  font-size: 32px;
+  line-height: 17px;
+  color: #ffffff;
+  font-weight: 300;
+
+  position: absolute;
+  top: 50%;
+   -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    width: 100%;
+}
+.winners > div .prize .crown{
+  padding-bottom: 17px;
+}
+.winners > div .prize .place{
+  padding-top: 11px;
+  }
+.winners > div.first .place{
+  color: #ffc668;
+}
+.winners > div.second{
+  height: 161px;
+  border: 1px solid #7e8891;
+  background-color: rgba(44, 50, 56, 0.5);
+  float: left;
+  position: relative;
+  top: 10px;
+}
+.winners-detail > div.second{
+  float: left;
+}
+.winners > div.second .prize{ 
+  font-size: 25px;
+}
+.winners > div.second .place{
+  color: #dbe0e6;
+}
+.winners > div.third{
+  height: 147px;
+  border: 1px solid rgba(181, 189, 196, 0.2);
+  background-color: rgba(44, 50, 56, 0.3);
+  float: right;
+  position: relative;
+  top: 17px;
+}
+.tournament .tab-content #prizes .winners > div.first{
+  height: 165px;
+  }
+
+.tournament .tab-content #prizes .winners > div.second{
+  height: 149px;
+  top: 8px;
+  }
+.tournament .tab-content #prizes .winners > div.third{
+  height: 138px;
+  top: 13px;
+  }
+
+.winners-detail > div.third{ 
+  float: right;
+  }
+.winners > div.third .prize{ 
+  font-size: 19px;
+  }
+.winners > div.third .place{
+  color: #aab1b8;
+}
+.winners > div > .user .icon{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  vertical-align: middle;
+  margin: 2px auto 0;
+
+}
+.winners > div > .user .icon img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.winners:before,.winners:after{
+  display: table;
+  content: " ";
+}
+.winners:after{
+  clear: both;
+}
+
+.tournament .tab-content #results .block{
+  margin-top: 30px;
+}
+.tournament .tab-content #results .block .title{
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #dbe0e6;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666f79;
+  margin-bottom: 1px;
+}
+.tournament .view-all{
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+  border: 1px solid #666f79;
+  padding: 10px 0;
+  color: #aab1b8;
+}
+.no-touch .tournament .view-all:hover{
+  background-color: #444c54;
+}
+.tournament .tab-content #results .item .icon{
+  top: 10px;
+}
+.tournament .tab-content #results .item .name{
+  padding-bottom: 2px;
+  padding-top: 5px;
+}
+.tournament .tab-content #results .item .place{
+  margin-left: 60px;
+  color: #aab1b8;
+  font-size: 13px;
+  position: relative;
+  top: -5px;
+  line-height: 19px;
+}
+.tournament .tab-content  #prizes .teams .team-name{
+  color: #c6ced5;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.tournament .tab-content  #prizes .teams .row{
+  margin: 0;
+}
+
+.tournament .tab-content  #prizes .teams div[class*='col-']{
+  padding: 0;
+  }
+  .tournament .tab-content  #prizes .items{
+    margin-left: -1px;
+  }
+.tournament .tab-content #prizes hr{
+  height: 0;
+  background-color: #666f79;
+  opacity: 0.7;
+  margin: 40px 0 30px;
+}
+
+
+
+
+.clearfix:before,.clearfix:after{
+  display: table;
+  content: " ";
+}
+.clearfix:after{
+  clear: both;
+}
+
 
 a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.list-announcement .item,
 .slider, .dropdown-menu ul li,.form-group input[type="checkbox"] + span:after,
@@ -7397,7 +7628,8 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .form-group input[type="checkbox"] + span, .settings .personal .change-photo,
 .search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
 .bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
-.bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a{
+.bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a,
+.tournament .tab-content .item{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
