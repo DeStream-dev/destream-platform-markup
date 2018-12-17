@@ -220,6 +220,44 @@ var announcementliderOptions = {
 announcementSlider.slick(announcementliderOptions);
 
 
+var eventsSlider = $('.events-slider'); 
+var eventsSliderOptions = {
+  dots: false,
+  arrows: true,
+  prevArrow: "<a class='slick-prev'><svg><use xlink:href='img/vectors.svg#arrow-prev'></use></svg></a>",
+  nextArrow: "<a class='slick-next'><svg><use xlink:href='img/vectors.svg#arrow-next'></use></svg></a>",
+  infinite: false,
+  speed: 700,
+  slidesToShow: 4,
+  centerMode: false,
+  variableWidth: false,
+  adaptiveHeight: false,
+  autoplay: false,
+      responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: "unslick"
+    }
+  ]
+};
+eventsSlider.slick(eventsSliderOptions);
+
 var servicesSlider = $('.page.live-broadcast > .services-catalog .list .row'); 
 var servicesSliderOptions = {
   dots: true,

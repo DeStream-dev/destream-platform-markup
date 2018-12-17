@@ -519,7 +519,7 @@ header .user-btn-cont .dropdown-toggle:after{
   height: 20px;
 }
 .slick-next{
-    right: -30px;
+    right: -34px;
 }
 
 .sidebar-collapse .main-sidebar{
@@ -3460,7 +3460,8 @@ button.close {
 .page.mychannel .list-announcement-tile {
   background-color: #444c54;
 }
-.large.carousel .item{
+.large.carousel > .slick-list > .slick-track > .slick-slide{
+  /*.large.carousel .item{*/
   margin: 0 10px;
 }
 .large.carousel {
@@ -3547,13 +3548,13 @@ button.close {
   font-size: 12px;
 }
 
-.modal-addblock .title{
+.modal-addblock .title, .modal-addteam .title{
   border-bottom: 1px solid #dbe0e6;
 }
-.modal-addblock .form{
+.modal-addblock .form, .modal-addteam .form{
   padding-top: 25px;
 }
-.modal-addblock .dropzone .dz-message span {
+.modal-addblock .dropzone .dz-message span,.modal-addteam .dropzone .dz-message span {
    font-size: 12px;
    line-height: 17px;
    height: 80px;
@@ -3561,7 +3562,7 @@ button.close {
    padding: 25px 20px 0;
    opacity: 0.7;
 }
-.modal-addblock .dropzone .dz-message span b {
+.modal-addblock .dropzone .dz-message span b, .modal-addteam .dropzone .dz-message span b  {
    font-size: 14px;
    line-height: 17px;
    display: block;
@@ -3587,7 +3588,7 @@ button.close {
   font-weight: bold;
   color: #888e94;
 }
-.modal-addblock .dropzone.dz-started .dz-message{
+.modal-addblock .dropzone.dz-started .dz-message, .modal-addteam .dropzone.dz-started .dz-message{
   display: block;
 }
 .dropzone .dz-preview.dz-image-preview{
@@ -3616,7 +3617,7 @@ button.close {
       filter:none;
 }
 
-.modal-addblock .preview{
+.modal-addblock .preview, .modal-addteam .preview{
   position: absolute;
   width: calc(100% + 40px);
   height: 109px;
@@ -3626,16 +3627,56 @@ button.close {
   z-index: 0;
 }
 
-.modal-addblock .dropzone .dz-message{
+.modal-addblock .dropzone .dz-message, .modal-addteam .dropzone .dz-message{
   position: relative;
   z-index: 2;
 }
 
-.modal-addblock .dropzone.file-added .dz-message span{
+.modal-addblock .dropzone.file-added .dz-message span, .modal-addteam .dropzone.file-added .dz-message span{
   background-color: #182129;
   color: #ffffff;
   opacity: 0.58;
 }
+
+.modal-addteam .note{
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.modal-addteam .note .img{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.modal-addteam .note .text{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 80px - 0.6em);
+  color: #383e44;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.modal-addteam .teamlink{
+  position: relative;
+}
+.modal-addteam .teamlink input[type-"text"]{
+  padding-right: 40px;
+}
+.modal-addteam .teamlink svg{
+  width: 16px;
+  height: 16px;
+  fill: #737c85;
+}
+.modal-addteam .copy{
+  position: absolute;
+  bottom: 12px;
+  right: -5px;
+}
+
 
 
 /*******************  TEXT EDITOR  **************************/
@@ -6799,6 +6840,9 @@ background-color: #f05a00;
   position: relative;
   display: block;
   margin-bottom: 20px;
+   box-shadow: 0px 2px 20px rgba(27, 30, 34, 0.25);
+  -moz-box-shadow: 0px 2px 20px rgba(27, 30, 34, 0.25);
+  -webkit-box-shadow: 0px 2px 20px rgba(27, 30, 34, 0.25);
 }
 .tournaments .item:hover{
   text-decoration: none;
@@ -6855,7 +6899,9 @@ background-color: #f05a00;
   position: relative;
   padding-left: 25px;
 }
-
+.tournaments .item .status{
+  display: block;
+}
 .tournaments .item .status, .tournament .general-info .status{
   background-color: #f05a00;
   color: #ffffff;
@@ -6944,7 +6990,6 @@ background-color: #f05a00;
   text-align: center;
   border-top: 1px solid #515a62;
 }
-
 .tournaments .item .bottom .social svg{
   width: 18px;
   height: 16px;
@@ -6978,6 +7023,14 @@ background-color: #f05a00;
   top: -3px;
   fill: #aab1b8;
   opacity: 0.5;
+}
+.tournaments .item .bottom .social span.share svg{
+  width: 20px;
+  height: 20px;
+  -webkit-transform: scale(.7);
+      -ms-transform: scale(.7);
+       -o-transform: scale(.7);
+          transform: scale(.7);
 }
 .title-with-search{
   position: relative;
@@ -7190,7 +7243,7 @@ background-color: #f05a00;
 .tournament .tab-content .tab-pane{
   padding: 40px 0;
 }
-.tournament .tab-content #lobby .text{
+.tournament .tab-content #lobby .text, .tournament-events .lobby .text{
   font-size: 13px;
   font-weight: 500;
   line-height: 19px;
@@ -7207,16 +7260,12 @@ background-color: #f05a00;
   font-weight: 600;
   position: relative;  
 }
-
-.title-area{
+.title-border{
   position: relative;
   padding-bottom: 20px;
   border-bottom: 1px solid #666f79;
   margin-bottom: 30px;
 }
-.tournament .tab-content #players{
-
-} 
 .team-block {
   margin-top: 50px;
 }
@@ -7247,7 +7296,7 @@ background-color: #f05a00;
   padding: 8px 10px 8px 80px;
   display: block;
 }
-.tournament .tab-content .items .item .icon{
+.tournament .tab-content .items .item .icon, .tournament-events .block .items .item .icon{
    width: 40px;
    height: 40px;
    overflow: hidden;
@@ -7255,12 +7304,12 @@ background-color: #f05a00;
    top: 10px;
    left: auto;
 }
-.tournament .tab-content .items .item .icon img{
+.tournament .tab-content .items .item .icon img, .tournament-events .block .items .item .icon img{
   border-radius: 50%;
   width: 100%;
   height: auto;
 }
-.tournament .tab-content .items .item{
+.tournament .tab-content .items .item, .tournament-events .block .items .item{
   padding: 7px 20px;
   position: relative;
   background-color: #353a40;
@@ -7269,21 +7318,21 @@ background-color: #f05a00;
   margin-top: -1px;
   display: block;
 }
-.tournament .items{
+.tournament .items, .tournament-events .block .items{
   border-left: 1px solid #5a6066;
 }
-.tournament .tab-content .items .row{
+.tournament .tab-content .items .row, .tournament-events .block .items .row{
   margin: 0;
 }
-.tournament .tab-content .items div[class*='col-']{
+.tournament .tab-content .items div[class*='col-'], .tournament-events .block .items div[class*='col-']{
   padding: 0;
 }
-.no-touch .tournament .tab-content .items .item:hover{
+.no-touch .tournament .tab-content .items .item:hover, .tournament-events .block .items .item:hover{
   background-color: #444c54;
   text-decoration: none;
 }
 
-.tournament .tab-content .items .item .name{
+.tournament .tab-content .items .item .name, .tournament-events .block .items .item .name{
     padding-left: 60px;
     font-size: 13px;
     line-height: 19px;
@@ -7294,7 +7343,7 @@ background-color: #f05a00;
     padding-bottom: 11px;
 }
 
-.tournament .tab-content #players .total{
+.tournament .tab-content #players .total,  .tournament-events .block.participants .total{
   position: absolute;
   right: 0;
   top: 2px;
@@ -7589,6 +7638,10 @@ background-color: #f05a00;
   font-weight: bold;
   text-transform: uppercase;
   padding-bottom: 20px;
+  display: block;
+  white-space: now;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tournament .tab-content  #prizes .teams .row{
   margin: 0;
@@ -7600,13 +7653,239 @@ background-color: #f05a00;
   .tournament .tab-content  #prizes .items{
     margin-left: -1px;
   }
-.tournament .tab-content #prizes hr{
+.tournament hr, .tournament-events hr{
   height: 0;
   background-color: #666f79;
-  opacity: 0.7;
+  opacity: 0.65;
+}
+.tournament .tab-content #prizes hr{  
   margin: 40px 0 30px;
 }
+.tournament .tab-content #video hr{
+  margin: 20px 0 30px;
+}
 
+.list-video .item{
+  padding-bottom: 20px;
+}
+.list-video .item .img{
+  position: relative;
+}
+.list-video .item .img:after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  content: "";
+  left: 0;
+  top: 0;
+  background: url("../img/tournaments/youtube.png") center center no-repeat;
+}
+.list-video .item .description{
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #dbe0e6;
+}
+.list-video .item .date{
+  padding-top: 3px;
+  padding-bottom: 0;
+  color: #89929a;
+}
+.list-video .item .text, .list-video .item .date{
+  padding-left: 0;
+ }
+
+.tournament .tab-content  #video .list{
+    padding: 35px 0 0;
+    margin-bottom: -10px;
+  }
+
+.page.tournament-events{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.tournament-events .block{
+  padding: 10px 0 40px 0;
+}
+.tournament-events .block.video{
+  padding-top: 0;
+  margin-bottom: -20px;
+}
+.tournament-events .block.news{
+  margin-bottom: -45px;
+}
+.tournament-events .block.comments{
+  padding: 10px 55px 50px;
+}
+.tournament-events .block.tournaments .title-with-search{
+  margin-top: 6px;
+}
+.tournament-events .list{
+  background-color: transparent;
+  padding: 20px 0 0;
+}
+.tournament-events .video .title{
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+.tournament-events .streamers .title{
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+.tournament-events .banners {
+  padding-bottom: 10px;
+}
+.tournament-events .banners .text{
+  color: #c6ced5;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  padding-top: 20px;
+}
+.tournament-events .banners .item{
+  height: 192px;
+  background-color: #666f79;
+  color: #dbe0e6;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+  display: block;
+}
+
+.tournament-events .banners .item span{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.tournament-events .banners .row{
+  margin: 0 -10px;
+  }
+.tournament-events .banners div[class*='col-']{
+  padding: 0 10px;
+}
+
+.tournament-events .lobby{
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
+
+.tournament-events .head{
+  height: 430px;
+  background-image: url("../img/tournaments/events.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 55px;
+  padding-right: 55px;
+  position: relative;
+  left: -55px;
+  width: calc(100% + 110px);
+}
+.tournament-events .head .bottom{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -60px;
+  padding-left: 55px;
+  padding-right: 55px;
+  height: 60px;
+
+  background-color: #282d33;
+}
+
+.tournament-events .head .icon{
+  width: 163px;
+  height: 163px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #b42192;
+  display: inline-block;
+  position: absolute;
+  top: -103px;
+  z-index: 8;
+}
+.tournament-events .head .icon img{
+  width: 100%;
+  height: auto;
+}
+.tournament-events .head .bottom .name{
+  margin-left: 180px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 60px;
+  color: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+.tournament-events .head .bottom .social {
+  float: right;
+  white-space: nowrap;
+}
+.tournament-events .head .bottom .social a{
+  margin-right: 40px;
+  font-size: 12px;
+  line-height: 60px;
+  font-weight: bold;
+  color: #c6ced5;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  border-radius: unset;
+  width: unset;
+  height: unset;
+}
+.no-touch .tournament-events .head .bottom .social a:hover{
+    text-decoration: none;
+}
+.tournament-events .head .bottom .social a.likes{
+  font-size: 14px;
+}
+
+.tournament-events .head .bottom .social a:last-child{
+  margin-right: 0;
+ }
+.tournament-events .head .bottom .social a svg{
+  width: 18px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+  fill: #c6ced5;
+}
+.no-touch .tournament-events .head .bottom .social a:hover svg{
+  fill: #f05a00;
+}
+.tournament-events .head .bottom .social a.share svg{
+  width: 20px;
+  height: 20px;
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+       -o-transform: scale(.9);
+          transform: scale(.9);
+}
+
+.events-slider {
+  margin: 0 -10px;
+}
+
+.events-slider .slick-slide{
+  margin: 0 10px;
+}
 
 
 

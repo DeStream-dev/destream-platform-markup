@@ -107,7 +107,9 @@ span.size{ display: none; }
     max-width: 465px;
   }
 
-
+.modal-addteam .modal-lg{
+    max-width: 390px;
+ }
 
 @media (min-width: 1200px) { /* xl */
     .container-fluid {
@@ -128,7 +130,7 @@ span.size{ display: none; }
     .list-announcement-tile .large .icon.d-md-block{
       display: inline-block !important;
     }
-    .page.mychannel .head .user-info span.d-md-block{
+    .page.mychannel .head .user-info span.d-md-block, .tournament-events .head .bottom .social span.d-md-block{
       display: inline-block!important;
     }
     .page.live-broadcast .head .user-info span.d-md-block{
@@ -259,7 +261,7 @@ body.widget > .content{
 .settings .nav-item{
     margin-right: 55px;
 }
-    .page.mychannel .head .user-info span.d-md-block{
+    .page.mychannel .head .user-info span.d-md-block, .tournament-events .head .bottom .social span.d-md-block {
       display: inline-block!important;
     }
 
@@ -393,7 +395,7 @@ header  div[class*='col-']{
   max-width: unset !important;
   width: 100%;
 }
-.modal-content, .modal-addblock .dropzone .dz-message span{
+.modal-content, .modal-addblock .dropzone .dz-message span, .modal-addteam .dropzone .dz-message span{
   border-radius: 3px;
 }
 .in-wallet .score{
@@ -515,10 +517,10 @@ body.widget .main-content .page{
     
 
 
-.modal-addblock .dropzone.file-added .dz-message span.msg-md{
+.modal-addblock .dropzone.file-added .dz-message span.msg-md, .modal-addteam .dropzone.file-added .dz-message span.msg-md{
   top: 28px;
 }
-.modal-addblock .preview{
+.modal-addblock .preview, .modal-addteam .preview{
   position: relative;
   width: 100%;
   left: 0;
@@ -526,11 +528,11 @@ body.widget .main-content .page{
   overflow: visible;
   height: 67px;
 }
-.modal-addblock .dropzone.file-added .preview{
+.modal-addblock .dropzone.file-added .preview, .modal-addteam .dropzone.file-added .preview{
   height: 109px;
 }
 
-.modal-addblock .dropzone .dz-message span.msg-md{
+.modal-addblock .dropzone .dz-message span.msg-md, .modal-addteam .dropzone .dz-message span.msg-md{
   text-transform: uppercase;
   color: #444c54;
   font-size: 14px;
@@ -542,7 +544,7 @@ body.widget .main-content .page{
   font-weight: bold;
   display: inline-block !important;
 }
-.modal-addblock .dropzone.file-added .dz-message span{
+.modal-addblock .dropzone.file-added .dz-message span, .modal-addteam .dropzone.file-added .dz-message span{
   background-color: #ffffff;
 }
 .dropzone .dz-preview.dz-image-preview{
@@ -795,7 +797,7 @@ body.widget > .content{
   left: 70px;
   width: calc(100% - 140px);
 }
-.modal-addblock .title, .modal-transfer .title,.modal-transfer-2 .title,
+.modal-addblock .title, .modal-addteam .title, .modal-transfer .title,.modal-transfer-2 .title,
 .modal-transaction-successful .title,.modal-equiring .title,.modal-buydst .title,
 .modal-hash .title,.modal-change-save .title,.modal-email-change .title,.modal-addservice .title{
   position: fixed;
@@ -1016,7 +1018,7 @@ header .btn.login{
     .modal-transaction-successful .btn{
       margin-top: 30px;
     }
-       .page.mychannel .head .user-info span.d-md-block{
+       .page.mychannel .head .user-info span.d-md-block, .tournament-events .head .bottom .social span.d-md-block{
       display: inline-block!important;
     }
     .page.mychannel .head .user-info .unsubscribe{
@@ -1667,7 +1669,7 @@ header .btn.login{
       max-width: unset !important;
       width: 100%;
     }
-    .modal-content, .modal-addblock .dropzone .dz-message span{
+    .modal-content, .modal-addblock .dropzone .dz-message span, .modal-addteam .dropzone .dz-message span, .modal-addteam .dropzone .dz-message span{
       border-radius: 3px;
     }
     .modal-dialog{
@@ -2211,7 +2213,7 @@ header .btn.login{
      .settings .personal .dropzone .preview{
       z-index: 120 !important;
      }
-    .modal-addblock .dropzone.file-added .dz-message span.msg-sm{
+    .modal-addblock .dropzone.file-added .dz-message span.msg-sm, .modal-addteam .dropzone.file-added .dz-message span.msg-sm{
       top: 28px;
     }
     .settings .integration .item .form-group-checkbox{
@@ -2865,7 +2867,7 @@ header .btn.login{
   .broadcast-mobile .services-catalog .list .item{
     padding-bottom: 30px;
   }
-  .modal-addblock .form .btn{
+  .modal-addblock .form .btn, .modal-addteam .form .btn{
     width: 100%;
   }
   .modal-hash .data .key{
@@ -4103,7 +4105,7 @@ header .btn.login{
       max-width: unset !important;
       width: 100%;
     }
-    .modal-content, .modal-addblock .dropzone .dz-message span{
+    .modal-content, .modal-addblock .dropzone .dz-message span, .modal-addteam .dropzone .dz-message span{
       border-radius: 3px;
     }
     .modal-dialog{
@@ -4333,10 +4335,10 @@ header .btn.login{
       padding-right: 35px;
     }
 
-    .modal-addblock .dropzone.file-added .dz-message span.msg-md{
+    .modal-addblock .dropzone.file-added .dz-message span.msg-md,.modal-addteam .dropzone.file-added .dz-message span.msg-md{
       top: 28px;
     }
-    .modal-addblock .preview{
+    .modal-addblock .preview, .modal-addteam .preview{
       position: relative;
       width: 100%;
       left: 0;
@@ -4344,11 +4346,11 @@ header .btn.login{
       overflow: visible;
       height: 67px;
     }
-    .modal-addblock .dropzone.file-added .preview{
+    .modal-addblock .dropzone.file-added .preview, .modal-addteam .dropzone.file-added .preview{
       height: 109px;
     }
 
-    .modal-addblock .dropzone .dz-message span.msg-md{
+    .modal-addblock .dropzone .dz-message span.msg-md, .modal-addteam .dropzone .dz-message span.msg-md{
       text-transform: uppercase;
       color: #444c54;
       font-size: 12px;
@@ -4360,7 +4362,7 @@ header .btn.login{
       font-weight: bold;
       display: inline-block !important;
     }
-    .modal-addblock .dropzone.file-added .dz-message span{
+    .modal-addblock .dropzone.file-added .dz-message span, .modal-addteam .dropzone.file-added .dz-message span{
       background-color: #ffffff;
     }
     .dropzone .dz-preview.dz-image-preview{
@@ -5356,7 +5358,7 @@ header .btn.login{
   .broadcast-mobile .services-catalog .list .item{
     padding-bottom: 30px;
   }
-  .modal-addblock .form .btn{
+  .modal-addblock .form .btn, .modal-addteam .form .btn{
     width: 100%;
   }
   .modal-hash .data .key{
