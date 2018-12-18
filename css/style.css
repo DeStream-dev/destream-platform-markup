@@ -6849,7 +6849,7 @@ background-color: #f05a00;
 }
 .tournaments .list {
   padding: 30px 0;
-  margin-top: 35px;
+  margin-top: 30px;
   border-top: 1px solid #666f79;
 }
 .tournaments .list .item {
@@ -7037,7 +7037,7 @@ background-color: #f05a00;
 }
 .tournaments .search-input{
   position: absolute;
-  top: -12px;
+  top: -14px;
   right: 0;
   width: 350px;
 }
@@ -7387,6 +7387,43 @@ background-color: #f05a00;
   margin-top: 30px;
   border-bottom: 2px solid #666f79;
 }
+.tournament .double-tabs{
+  float: left;
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+   border-bottom: 2px solid #666f79;
+}
+.tournament .double-tabs .tabs.inner{
+  border: none;
+}
+.tournament .tabs.inner.tabs-left{
+  float: left;
+  width: unset;
+}
+.tournament .tabs.inner.tabs-right{
+  float: right;
+  width: unset;/* calc(30% - 15px);*/
+  margin-left: 15px;
+  position: relative;
+}
+.tournament .tabs.inner.tabs-left .nav .nav-item, .tournament .tabs.inner.tabs-right .nav .nav-item{
+  float: left;
+  }
+.tournament .tabs-right ul{
+  position: relative;
+}
+.tournament .tabs-right ul:after{
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: -15px;
+  top: auto;
+  bottom: -5px;
+  background-color: #383e44;
+  float: none;
+}
 .tournament .tabs.inner .nav .nav-link{
   padding: 14px 0;  
   background-color: transparent;
@@ -7394,6 +7431,7 @@ background-color: #f05a00;
   font-size: 11px;
   font-weight: bold;
   border-right: none;
+  border-bottom: 2px solid transparent;
 }
 
 .tournament .tabs.inner .nav .nav-item:first-child .nav-link{
@@ -7413,6 +7451,9 @@ background-color: #f05a00;
   margin-right: 26px;
   position: relative;
   top: 2px;
+}
+.tournament .tabs.inner .nav .nav-item:last-child{
+  margin-right: 0;
 }
 .tournament .tabs.inner .nav .nav-link.active{
   background-color: transparent;
@@ -7721,6 +7762,61 @@ background-color: #f05a00;
 .tournament-events .block.tournaments .title-with-search{
   margin-top: 6px;
 }
+.tournament-events .block.tournaments .item .img{
+  height: 165px;
+}
+.tournament-events .block.tournaments .item .status{
+  left: 0;
+  width: 100%;
+  height: 44px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 15px;
+  color: #dbe0e6;
+  background-color: rgba(56, 62, 68, 0.5);
+  border: 1px solid #737c85;
+  margin: 20px 0;
+}
+.no-touch .tournament-events .block.tournaments .item .status:hover{
+  text-decoration: none;
+}
+.tournament-events .block.tournaments .item .status b{
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+  color: #89929a;
+  position: relative;
+}
+.tournament-events .block.tournaments .item .status.on-air b:before{
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: #d0021b;
+  position: absolute;
+  border-radius: 50%;
+  left: auto;
+  margin-left: -11px;
+  top: 4px;
+}
+.tournament-events .block.tournaments .item .time{
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+.tournament-events .block.tournaments .item .status.registration{
+  background-color: #f05a00;
+  border-color: #f05a00;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 42px;
+  white-space: nowrap;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+}
 .tournament-events .list{
   background-color: transparent;
   padding: 20px 0 0;
@@ -7887,7 +7983,61 @@ background-color: #f05a00;
   margin: 0 10px;
 }
 
+.rounds{
+  position: relative;
+  min-height: inherit;
+}
+.rounds .round{
+  display: inline-block;
+  width: calc(33.33333333% - 0.3em);
+  border-left: 1px dashed rgba(102,111,121,0.5);
+  min-height: inherit;
+}
+.tournament .tab-content .tab-pane .rounds .round .title{
+  font-size: 11px;
+  line-height: 14px;
+  color: #dbe0e6;
+  font-weight: bold;
+  text-align: center;
+}
+.rounds .group .icon{
 
+}
+.rounds .group .item .icon{
+   width: 38px;
+   height: 38px;
+   overflow: hidden;
+   position: absolute;
+   top: 8px;
+   left: auto;
+}
+.rounds .group .item .icon img{
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+.rounds .group .item .name{
+  color: #dbe0e6;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 8px 10px 8px 80px;
+  display: block;
+}
+.rounds .group .item{
+  padding: 7px 20px;
+  position: relative;
+  background-color: #2C3238;
+  border: 1px solid #5a6066;
+  border-left: none;
+  margin-top: -1px;
+  display: block;
+  border-radius: 40px;
+}
+.rounds .group .members{
+  display: none;
+}
 
 .clearfix:before,.clearfix:after{
   display: table;
