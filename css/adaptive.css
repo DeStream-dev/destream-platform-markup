@@ -107,7 +107,7 @@ span.size{ display: none; }
     max-width: 465px;
   }
 
-.modal-addteam .modal-lg{
+.modal-addteam .modal-lg,.modal-sendlink .modal-lg{
     max-width: 390px;
  }
 
@@ -136,6 +136,7 @@ span.size{ display: none; }
     .page.live-broadcast .head .user-info span.d-md-block{
       display: inline-block!important;
     }
+
 }
 
 
@@ -431,7 +432,7 @@ header  div[class*='col-']{
     padding-left: 0;
     width: unset;
     float: right;
-    right: 120px;
+    right: 115px;
     position: absolute;
     top: 45px;
   }
@@ -517,10 +518,10 @@ body.widget .main-content .page{
     
 
 
-.modal-addblock .dropzone.file-added .dz-message span.msg-md, .modal-addteam .dropzone.file-added .dz-message span.msg-md{
+.modal-addblock .dropzone.file-added .dz-message span.msg-md{
   top: 28px;
 }
-.modal-addblock .preview, .modal-addteam .preview{
+.modal-addblock .preview{
   position: relative;
   width: 100%;
   left: 0;
@@ -528,8 +529,41 @@ body.widget .main-content .page{
   overflow: visible;
   height: 67px;
 }
-.modal-addblock .dropzone.file-added .preview, .modal-addteam .dropzone.file-added .preview{
+ .modal-addteam .dropzone .dz-message{
+  margin-top: 200px;
+ }
+.modal-addteam .preview{
+  position: relative;
+  width: 157px;
+  left: 0;
+  margin: -225px auto 0;
+  overflow: visible;
+  height: 157px;
+  border-radius: 50%;
+  background-color: #c6ced5;
+}
+
+.modal-addblock .dropzone.file-added .preview{
   height: 109px;
+}
+.modal-addteam .dropzone.file-added .preview{
+  height: 157px;
+  overflow: hidden;
+}
+.modal-addteam .dropzone.file-added .msg-md i{
+  display: none;
+}
+.modal-addteam .dropzone.file-added .msg-md i.file-added-msg{
+  display: block;
+}
+
+
+.modal-addteam  .dropzone .dz-preview.dz-image-preview{
+  height: 157px;
+  width: 157px;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 0;
 }
 
 .modal-addblock .dropzone .dz-message span.msg-md, .modal-addteam .dropzone .dz-message span.msg-md{
@@ -687,8 +721,29 @@ text-align: left;
   width: 100%;
  }
 .modal .form button{
-  left: 0;
+    left: 0;
  }
+ .modal-addteam .form .btn,  .modal-sendlink .form .btn{
+    width: unset;
+    min-width: 170px;
+    /*position: fixed;
+    bottom: 0;*/
+     position: fixed;
+     left: 50%;
+   -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+      top: auto;
+      bottom: 45px;
+ }
+
+
+   .modal-addteam .btn,  .modal-sendlink .btn{
+     
+    }
+
+
+
  .modal-addoverlay .form button{
   width: 100%;
  }
@@ -797,7 +852,7 @@ body.widget > .content{
   left: 70px;
   width: calc(100% - 140px);
 }
-.modal-addblock .title, .modal-addteam .title, .modal-transfer .title,.modal-transfer-2 .title,
+.modal-addblock .title, .modal-addteam .title, .modal-sendlink .title, .modal-transfer .title,.modal-transfer-2 .title,
 .modal-transaction-successful .title,.modal-equiring .title,.modal-buydst .title,
 .modal-hash .title,.modal-change-save .title,.modal-email-change .title,.modal-addservice .title{
   position: fixed;
@@ -1031,7 +1086,7 @@ header .btn.login{
     .tournament .general-info .social{
       position: absolute;
       top: unset;
-      bottom: 0;
+      bottom: 20px;
       margin-top: 0;
     }
     .tournament .general-info .social span{
@@ -1040,6 +1095,7 @@ header .btn.login{
     .tournament .general-info .status{
       position: relative;
       top: unset;
+      right: 0;
       margin-top: 0;
     }
     div.comments input[type="text"]{
@@ -1049,6 +1105,13 @@ header .btn.login{
       padding-bottom: 20px;
       margin-bottom: 20px;
       border-bottom: 1px solid rgba(102,111,121,0.4);
+     }
+     .tournament .general-info > div:first-child .links{
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(102,111,121,0.4);
+     }
+     .tournament .general-info > div:first-child{
+      border-bottom: none;
      }
     .tournament .general-info .head > div{
       display: inline-block;
@@ -1071,12 +1134,77 @@ header .btn.login{
        flex: 1 1 auto;
        flex-basis: 1;
      }
+     .tournament .tabs.inner .nav .nav-item{
+      flex: none;
+     }
      .tournament .general-info > div{
       padding-bottom: 20px;
       padding-top: 20px;
-
      }
 
+    .tournament .items, .tournament-events .block .items,
+    .team-block .team, .tournament .tab-content #prizes .teams,
+    .tournament .tab-content #results .block .title,
+    .tournament .tabs.inner{
+      position: relative;
+      left: -55px;
+      width: calc(100% + 110px);
+    }
+    .tournament .tab-content  #prizes .teams .team-name{
+      padding-left: 55px;
+    }
+    .tournament .tab-content #results .block .title,.tournament .tabs.inner{
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+    .tournament .tab-content  #prizes .items div[class*='col-']:nth-child(2n) .item,
+    .tournament .tab-content  #results .items div[class*='col-']:nth-child(2n) .item,
+    .tournament .tab-content  #players .items div[class*='col-']:nth-child(2n) .item,
+    .tournament .tab-content  #prizes .teams div[class*='col-']:nth-child(2n) .team-name,
+    .tournament-events .block .items div[class*='col-']:nth-child(2n) .item{
+      padding-left: 20px;
+    }
+    .tournament .tab-content #prizes .items{
+      left: 0;
+      width: 100%;
+    }
+    .tournament .tab-content #prizes .teams .item{
+      padding-left: 55px;
+      padding-right: 20px;
+    }
+    .team-block .team
+    .tournament .tabs.inner{
+      padding-left: 55px;
+      padding-right: 55px;
+      position: relative;
+      left: -55px;
+      width: calc(100% + 110px);
+    }
+    .tournament .tab-content .items .item, .tournament-events .block .items .item{
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+    .team-block .team .icon{
+      left: 54px;
+    }
+    .team-block .team .name{
+      padding-left: 115px;
+    }
+    .modal-sendlink .note{
+      width: 55%;
+      margin: auto;
+    }
+    .modal-sendlink .copy{
+      right: 10px;
+    }
+    .tournament-events .banners .item{
+      height: 120px;
+    }.tournaments .item .time b, .tournament .general-info .time b{
+      display: block;
+    }
+    .tournament-events .block.tournaments .item .status.registration{
+      font-size: 11px;
+    }
 }
 
 .rotate-warning{display: none;}
@@ -2867,7 +2995,7 @@ header .btn.login{
   .broadcast-mobile .services-catalog .list .item{
     padding-bottom: 30px;
   }
-  .modal-addblock .form .btn, .modal-addteam .form .btn{
+  .modal-addblock .form .btn, .modal-addteam .form .btn, .modal-sendlink .form .btn{
     width: 100%;
   }
   .modal-hash .data .key{
@@ -4134,7 +4262,7 @@ header .btn.login{
     .modal .form .form-group-btn, .modal .buttons {
       margin-bottom: 50px;
     }
-    .modal .form .form-group-btn > button, .modal .buttons .btn{
+    .modal .form .form-group-btn > button, .modal .buttons .btn, .modal-addteam .btn,  .modal-sendlink .btn{
       position: fixed;
       width: calc(100% - 20px);
       top: auto;
@@ -5358,7 +5486,7 @@ header .btn.login{
   .broadcast-mobile .services-catalog .list .item{
     padding-bottom: 30px;
   }
-  .modal-addblock .form .btn, .modal-addteam .form .btn{
+  .modal-addblock .form .btn, .modal-addteam .form .btn, .modal-sendlink .form .btn{
     width: 100%;
   }
   .modal-hash .data .key{

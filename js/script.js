@@ -119,6 +119,7 @@ $('.list .alarm').on("click", function(){
     return false;
   });
 
+
 function searchH(){
    var wH = $(window).height();
    var hH = $('header').outerHeight(); 
@@ -648,6 +649,35 @@ Dropzone.options.addblockform = {
       }
       newfile = $('.modal-addblock [data-dz-name]').html();
       $('.modal-addblock .dropzone').addClass("file-added");
+
+    });
+  }
+ 
+};
+
+
+Dropzone.options.addteamform = { 
+  autoProcessQueue: false,
+  uploadMultiple: false,
+  parallelUploads: 1,
+  maxFiles: 1,
+  createImageThumbnails: true,
+  addRemoveLinks: false,
+  clickable: ".modal-addteam .dropzone .dz-message",
+  thumbnailWidth: null,
+  thumbnailHeight: null,
+  previewsContainer: ".modal-addteam .preview",
+  previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-image\"><img data-dz-thumbnail /></div>\n  </div>",
+
+  init: function() {
+    var myDropzone = this; 
+    var newfile = "";
+    this.on("addedfile", function(file) {
+       if(newfile) {
+        $('.modal-addteam .preview .dz-preview:first-of-type').remove();
+      }
+      newfile = $('.modal-addteam [data-dz-name]').html();
+      $('.modal-addteam .dropzone').addClass("file-added");
 
     });
   }
