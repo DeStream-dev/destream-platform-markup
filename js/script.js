@@ -434,6 +434,17 @@ if(!this_item.hasClass("open")){
    return false;
 });
 
+$('.page.tournament .tabs .nav .nav-link').on('click',function(){
+  if($(this).parents('.tabs').hasClass('inner')) return;
+   $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
+  if($(this).attr("id") == "lobby-tab"){
+    $('.page.tournament .top-image').removeClass("small");
+  }
+  else{
+    $('.page.tournament .top-image').addClass("small");
+  }
+});
+
 var $frameNav = null, slyOptionsNav;
 
 function setNavSliderWidth(){

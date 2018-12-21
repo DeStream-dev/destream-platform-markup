@@ -1080,10 +1080,7 @@ header .btn.login{
       margin-left: 5px;
     }
 
-    .tournament .top-image{
-      height: 225px;
-    }
-    .tournament .general-info .social{
+   .tournament .general-info .social{
       position: absolute;
       top: unset;
       bottom: 20px;
@@ -3669,14 +3666,17 @@ header .btn.login{
     right: 8px;
    }
    header .user-btn-cont{
-    margin-right: 30px;
+    margin-right: 22px;
     margin-top: 8px;
    }
   header .create-btn-cont{
-    margin-right: 20px;
+    margin-right: 12px;
    }
    header .notifications-cont{
     margin-right: 37px;
+   }
+   header .faq-btn{
+    margin-right: 12px;
    }
   .main-sidebar{
     width: 100%;
@@ -3731,7 +3731,7 @@ header .btn.login{
   float: right;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 18px;
+  margin-right: 10px;
   margin-top: 13px;
   position: relative;
  }
@@ -4044,7 +4044,7 @@ header .btn.login{
     .list .item .description{
       padding-top: 15px;
     }
-    .list .more{
+    .list .more, .tournament-events .block.participants .more{
         display: block;
         text-align: center;
         padding: 9px 0;
@@ -4055,6 +4055,7 @@ header .btn.login{
         font-size: 11px;
         text-transform: uppercase;
     }
+
     .list.list-news{
       background-color: #383e44;
     }
@@ -6020,6 +6021,10 @@ header .btn.login{
 
       overflow: visible!important;
     }
+    .tournaments .setup .search-input{
+      margin-right: 3px;
+      right: 0;
+    }
     .setup .search-input .btn{
       outline: none;
     }
@@ -6102,6 +6107,14 @@ header .btn.login{
   .main-sidebar .block .title .search-input input[type="search"]{
      font-size: 1.1em;
     }
+    div.comments .form{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  div.comments input[type="text"]{
+    left: 0;
+    width: 100%;
+  }
   .main-sidebar .block .title .search-input{
       -webkit-transition: none;
       -moz-transition: none;
@@ -6109,7 +6122,109 @@ header .btn.login{
       -o-transition: none;
       transition: none;
     }
+    .tournament .items, .tournament-events .block .items{
+      position: relative;
+      left: -10px;
+      width: calc(100% + 20px);
+    }
+    .tournament-events .banners .item{
+      margin-bottom: 10px;
+      height: 197px;
+    }
+    .tournament-events .list .item .name, .tournament-events .list .item .date, .tournament-events .list .item .text{
+      padding-left: 0;
+      padding-top: 1px;
+    }
+    .tournament-events .block{
+      padding: 10px 0;
+    }
+    .tournament-events .streamers .title{
+      padding-bottom: 20px;
+    }
+    .tournament-events .video .title{
+      padding-bottom: 0;
+    }
+    .tournament-events .video .list .item{
+      padding-bottom: 20px;
+    }
+    .team-block{
+      margin-top: 40px;
+    }
+    .team-block .team{
+      left: -10px;
+      position: relative;
+      width: calc(100% + 20px);
+    }
 
+    .tournament-events .block.news, .tournament-events .block.video{
+      margin-bottom: 20px;
+    }
+    .tournament-events .block.news .title-border{
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-right: none;
+    }
+     .tournament-events .list .item .description{
+      padding-top: 10px;
+     }
+      .tournament-events .list .more, .tournament-events .block.participants .more{
+        background-color: transparent;
+      }
+      .tournament-events .block.participants .more{
+        margin: 20px 0 30px;
+      }
+      .tournament-events .head .icon{
+        width: 105px;
+        height: 105px;
+      }
+      .tournament-events .head .bottom{
+        height: 86px;
+      }
+      .tournament-events .head{
+        margin-bottom: 86px;
+        height: 140px;
+      }
+      .page.tournament-events{
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .tournament-events .head .bottom .name{
+        font-size: 13px;
+        padding-bottom: 10px;
+        margin-left: 116px;
+        padding-top: 15px;
+        line-height: normal;
+        width: calc(100% - 117px);
+        border-bottom: 1px solid rgba(102,111,121, 0.6);
+      }
+    .tournament-events .head .bottom .social{
+      float: left;
+      padding-left: 116px;
+      }
+    .tournament-events .head .bottom .social a{
+      line-height: normal;
+      padding-top: 10px;
+      margin-right: 25px;
+    }
+    .tournament.page{
+      padding: 0;
+    }
+
+    .tournament .tabs .nav .nav-link.active{
+      background-color: #2c3239;
+      border-bottom: 2px solid #f05a00;
+    }
+    .tournament .tabs .nav .nav-link{
+      border-right: none;
+      padding: 10px 0 10px;     
+    }
+     .tournament .tabs .nav .nav-item{
+       flex: 1 1 auto;
+       flex-basis: 1;
+     }
+     .tournament .tabs.inner .nav .nav-item{
+      flex: none;
+     }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {

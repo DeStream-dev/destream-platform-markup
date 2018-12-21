@@ -7067,6 +7067,7 @@ background-color: #f05a00;
 .tournament .top-image{
   height: 500px;
   overflow: hidden;  
+  background-image: url('../img/tournaments/tournament.png');
   background-position: top center;
   background-repeat: no-repeat;
    background-size: cover;
@@ -7077,6 +7078,33 @@ background-color: #f05a00;
    left: -55px;
    width: calc(100% + 110px);
 }
+.tournament .top-image#lobby-tab-image{
+  background-image: url('../img/tournaments/tournament.png');
+  }
+.tournament .top-image#bracket-tab-image{
+  background-image: url('../img/tournaments/tournament2.png');
+  }
+  .tournament .top-image#rules-tab-image{
+  background-image: url('../img/tournaments/tournament.png');
+  }
+  .tournament .top-image#prizes-tab-image{
+  background-image: url('../img/tournaments/events.png');
+  }
+  .tournament .top-image#video-tab-image{
+  background-image: url('../img/tournaments/tournament2.png');
+  }
+  .tournament .top-image#results-tab-image{
+  background-image: url('../img/tournaments/tournament.png');
+  }
+.tournament .top-image#players-tab-image{
+  background-image: url('../img/tournaments/tournament2.png');
+  }
+  .tournament .top-image#connections-tab-image{
+  background-image: url('../img/tournaments/events.png');
+  }
+.tournament .top-image.small{
+  height: 300px;
+ }
 .tournament .tabs {
   position: relative;
    left: -55px;
@@ -7962,7 +7990,8 @@ background-color: #f05a00;
   background-color: #b42192;
   display: inline-block;
   position: absolute;
-  top: -103px;
+  top: auto;
+  bottom: 0;
   z-index: 8;
 }
 .tournament-events .head .icon img{
@@ -7974,7 +8003,7 @@ background-color: #f05a00;
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 60px;
-  color: 16px;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
@@ -8297,7 +8326,7 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
 .bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
 .bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a,
-.tournament .tab-content .item, .rounds .group .members{
+.tournament .tab-content .item, .rounds .group .members, .tournament .top-image{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
