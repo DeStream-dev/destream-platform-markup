@@ -447,20 +447,23 @@ $('.page.tournament .tabs .nav .nav-link').on('click',function(){
 
 var $frameNav = null, slyOptionsNav;
 
-function setNavSliderWidth(){
-      $('.settings .nav li').each(function(){
+function setNavSliderWidth(obj){
+     var totalW = 0;
+
+      obj.find('li').each(function(){
          $(this).find('a').width("auto");
     });
     if(!$('.d-md-block').is(":visible")){
       setTimeout(function(){
-            $('.settings .nav li').each(function(){
+     
+            obj.find('li').each(function(){
                var w0 = $(this).outerWidth();
+               totalW += w0;
                $(this).width((w0)+"px");
             });
-          
-      if($('.settings .tabs').length){
+      if(obj.length){
         if($frameNav && $frameNav.initialized){
-            setTimeout(function(){$('.settings .tabs-wrap').sly('reload');},1200);  
+            setTimeout(function(){obj.find('.tabs-wrap').sly('reload'); },1200);  
         }
       else{
        //   $frameNav  = $('.settings .tabs-wrap');
@@ -476,7 +479,7 @@ function setNavSliderWidth(){
             elasticBounds: 1,
             easing: 'easeOutExpo'
           };
-          $frameNav = new Sly($('.settings .tabs-wrap'), slyOptionsNav).init();  
+          $frameNav = new Sly(obj.find('.tabs-wrap'), slyOptionsNav).init();  
       }
     }
 
@@ -486,9 +489,9 @@ function setNavSliderWidth(){
   }
   else{  
     setTimeout(function(){
-      if($('.settings .tabs').length){
+      if(obj.length){
         if( $frameNav){
-          $('.settings .tabs-wrap').sly(false);
+         obj.find('.tabs-wrap').sly(false);
           $frameNav = null;
         }
       }
@@ -496,10 +499,12 @@ function setNavSliderWidth(){
   }
 }
 
-setNavSliderWidth();
+setNavSliderWidth($('.settings .tabs'));
+setNavSliderWidth($('.tournament .tabs:not(.inner)'));
 
 $(window).resize(function() {
-  setNavSliderWidth();
+  setNavSliderWidth($('.settings .tabs'));
+  setNavSliderWidth($('.tournament .tabs:not(.inner)'));
 });
 
 
@@ -541,10 +546,12 @@ $(".setup .search-input input[type='search']").on("blur", function(){
 $( "header .search-input input[type='search'" ).on("focus",function(){
   $('header .search-results').addClass("open");
   $(this).parents(".search-input").addClass("search-active");
+  $(this).parents(".search-panel").addClass("open");
 });
 $( "header .search-input input[type='search'" ).on("blur",function(){
    $('header .search-results').removeClass("open");
-    $(this).parents(".search-input").removeClass("search-active");
+   $(this).parents(".search-input").removeClass("search-active");
+   $(this).parents(".search-panel").removeClass("open");
 });
 
 $('.form .tags span').on('click', function(){
@@ -606,6 +613,30 @@ $('.theatre-mode-toggle').on('click', function(){
     $('body').toggleClass("theatre-mode");
    });
 
+ var iH = 0; 
+$('.tournament .general-info .about').on('click', function(){
+   if(!$('.tournament .general-info').hasClass("minimized")){
+    iH =  $('.tournament .general-info').height();
+    $('.tournament .general-info > *').css("opacity",0);
+    $('.tournament .general-info').height(iH).animate({'height':'100px'},function(){
+      $('.tournament .general-info').addClass("minimized");
+      $('.tournament .general-info > *').css("opacity",1);
+    });
+  }
+ else if($('.tournament .general-info').hasClass("minimized")){
+   $('.tournament .general-info .status').css("opacity",0);
+   $('.tournament .general-info').animate( {'height': iH+'px'},function(){
+      $('.tournament .general-info').removeClass("minimized");
+      $('.tournament .general-info .status').css("opacity",1);
+    });
+  }
+ //  $(this).parents(".general-info").toggleClass("minimized");
+   
+   });
+
+  $(window).resize(function() {
+    $('.tournament .general-info').height('unset');
+  });
 
 });
 

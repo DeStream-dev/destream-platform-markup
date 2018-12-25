@@ -33,7 +33,7 @@
 			    </div>
 			    <div class="col-1 col-sm-1 col-md-4">
 			    	<div class="search-panel">
-			      		<a class="close d-md-none"></a>
+			      		<a class="close"></a>
 			            <div class="search-input">
 			                <input type="search" placeholder="Search" />  
 			                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
@@ -538,7 +538,7 @@
 					<div class="general-info">
 						<div>
 						<div class="row">
-							<div class="col-12 col-md-12 col-lg-5">
+							<div class="col-12 col-md-12 col-lg-4 col-xl-5">
 								<div class="head">
 									<div>
 										<div class="tournament-title">Legends Challenge Cup</div>
@@ -550,7 +550,7 @@
 					    				</div>
 				    				</div>
 			    				</div>
-				    			<div class="col-12 col-md-12 col-lg-7">
+				    			<div class="col-12 col-md-12 col-lg-8 col-xl-7">
 				    			<div class="links">
 					    			<div class="social">
 										<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg> Like 22</span>
@@ -558,7 +558,7 @@
 										<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
 									</div>
 
-									<a href="#" class="status" data-target=".modal-addteam" data-toggle="modal">Registration is open</a>
+									<a href="#" class="d-none d-md-block status" data-target=".modal-addteam" data-toggle="modal">Registration is open</a>
 									</div>	
 								</div>
 							</div>	   	
@@ -566,7 +566,7 @@
 
 						<div>
 						<div class="row">
-							<div class="col-12 col-md-12 col-lg-5">
+							<div class="col-12 col-md-12 col-lg-4 col-xl-5">
 								<div class="head">
 									<div class="d-none d-lg-block">
 										<div class="collection-title">League of Legends</div>
@@ -574,31 +574,21 @@
 				    				</div>
 				    			</div>
 			    			</div>
-			    			<div class="col-12 col-md-12 col-lg-7">
+			    			<div class="col-12 col-md-12 col-lg-8 xol-xl-7">
 				    			<div class="prize-fund"><b>700 000 DST</b> Prize fund</div>
 						    	<div class="players"><b>12 / 257</b> Players</div>
 						    	<div class="time"><b>21.05.2017 at 9:00</b> UTC -08:00</div>
-
+						    	<div class="d-md-none status-cont text-center"><a href="#" class="status" data-target=".modal-addteam" data-toggle="modal">Registration is open</a>
+						    	</div>
 						    	<div class="format">Double elimination</div>
 					    	</div>
 					    	</div>
 						</div>
-
+							<div class="d-md-none text-center">
+								<a href="#" class="about">About<svg><use xlink:href="img/vectors.svg#about"></use></svg></a>
+							</div>
 					</div>
 
-
-						  	<!--- Join the tournament -->
-						  	<div class="join-the-tournament">
-							  	<div class="title">Join the tournament with the team " Zhuk"</div>
-							  	<span class="text">You are invited to the game </span>
-							  		<span class="user">							  		
-							  			<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
-						            	<span class="name">Екатерина Болтинская</span>
-							  		</span>
-							  	<div>
-							  	<a href="#" class="btn">Participate</a>
-							  	</div>
-						  	</div>
 					<div class="tab-content">
 					  	<div class="tab-pane fade show active" id="lobby" role="tabpanel" aria-labelledby="lobby-tab">
 					  		<div class="text">
@@ -792,6 +782,7 @@
 								</div>
 							</div>
 							<div class="clearfix"></div>
+							<div class="tab-content-scroll"  data-simplebar>
 							<div class="tab-content inner">					  			
 					  			<div class="tab-pane fade show active" id="round13" role="tabpanel" aria-labelledby="round13-tab">	
 									<div class="rounds">
@@ -1338,10 +1329,12 @@
 					  					Final right
 
 					  			</div>
+					  			</div>
 					  		</div>
 					  	</div>
 
 					  	<div class="tab-pane fade" id="rules" role="tabpanel" aria-labelledby="rules-tab">
+					  	<div class="title">Rules</div>
 					  		<div class="text">
 						  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec est varius, lacinia nulla vitae, pretium orci. Nullam vestibulum purus eu leo consequat faucibus. Sed suscipit erat mi, et laoreet orci mattis in. Quisque ut arcu aliquet risus lacinia viverra ut vitae erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec viverra lorem at feugiat auctor. Pellentesque vulputate mattis sapien, vel interdum mi aliquam cursus. Etiam sed tortor non tellus rutrum porta eu quis nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id dolor porttitor, varius dui eu, hendrerit ipsum. Nullam quis sem non lectus dapibus hendrerit sit amet nec ex. Nullam sit amet ligula vitae neque tempus pharetra. In metus velit, congue eu diam eu, pretium viverra sem. Curabitur hendrerit mattis tellus. Nullam tortor tortor, pulvinar vitae neque a, vulputate faucibus risus.
 						  		</p>
@@ -1355,6 +1348,7 @@
 					  	</div>
 
 					  	<div class="tab-pane fade" id="prizes" role="tabpanel" aria-labelledby="prizes-tab">
+					  	<div class="title">Prizes</div>
 					  		<div class="winners">
 					  					<div class="first">
 					  						<div class="prize">
@@ -1363,6 +1357,13 @@
 					  						
 					  						<div class="place">1 place</div>
 					  						</div>
+					  						<div class="text">
+					  						<b>Комплект QCYBER:</b><br>
+											- Наушники Qcyber ROOF (2 шт.)<br>
+											- Клавиатура Qcyber Dominator (2шт.)<br>
+											- Мышь Qcyber Aurora (2шт.)<br>
+											- Коврик K.G.B. (2 шт.)
+					  					</div>
 					  					</div>
 					  					<div class="second">
 					  						<div class="prize">
@@ -1371,30 +1372,19 @@
 					  						
 					  						<div class="place">2 place</div>
 					  						</div>
+					  						<div class="text">
+					  							8 000 DST					  						
+					  						</div>
 					  					</div>
 					  					<div class="third">
 					  						<div class="prize">
 					  							<div class="crown"><img src="img/crown/3.svg" alt="" /></div>					  						
-					  							50$
-					  						
-					  						<div class="place">3 place</div>
+					  							50$					  						
+					  							<div class="place">3 place</div>
 					  						</div>
-					  					</div>
-					  			</div>
-
-					  			<div class="winners-detail">
-					  					<div class="first">
-					  						<b>Комплект QCYBER:</b><br>
-											- Наушники Qcyber ROOF (2 шт.)<br>
-											- Клавиатура Qcyber Dominator (2шт.)<br>
-											- Мышь Qcyber Aurora (2шт.)<br>
-											- Коврик K.G.B. (2 шт.)
-					  					</div>
-					  					<div class="second">
-					  						8 000 DST					  						
-					  					</div>
-					  					<div class="third">
-					  						Cool man
+					  						<div class="text">
+						  						Cool man
+						  					</div>
 					  					</div>
 					  			</div>
 
@@ -1494,7 +1484,7 @@
 
 					  			<div class="list list-video">
 				    			<div class="row">
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news2.png')"></a>
 							    			<div class="description">
@@ -1503,7 +1493,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news3.png')"></a>
 							    			<div class="description">
@@ -1512,7 +1502,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news4.png')"></a>
 							    			<div class="description">
@@ -1521,7 +1511,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news1.png')"></a>
 							    			<div class="description">
@@ -1530,7 +1520,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news3.png')"></a>
 							    			<div class="description">
@@ -1539,7 +1529,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="live-broadcast.html#" style="background-image:url('img/news2.png')"></a>
 							    			<div class="description">
@@ -1549,6 +1539,7 @@
 						    			</div>
 					    			</div>
 					    		</div>
+					    		<a class="more d-md-none" href="live.html">More</a> 
 				    		</div>
 
 				    		<hr size="1" noshade width="100%" >
@@ -1557,7 +1548,7 @@
 
 				    		<div class="list list-video">
 				    			<div class="row">
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="#" style="background-image:url('img/news4.png')"></a>
 							    			<div class="description">
@@ -1566,7 +1557,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="#" style="background-image:url('img/news2.png')"></a>
 							    			<div class="description">
@@ -1575,7 +1566,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="#" style="background-image:url('img/news1.png')"></a>
 							    			<div class="description">
@@ -1584,7 +1575,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="#" style="background-image:url('img/news3.png')"></a>
 							    			<div class="description">
@@ -1593,7 +1584,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="#" style="background-image:url('img/news2.png')"></a>
 							    			<div class="description">
@@ -1602,7 +1593,7 @@
 								    		</div>
 						    			</div>
 					    			</div>
-					    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 						    			<div class="item">
 							    			<a class="img" href="#" style="background-image:url('img/news4.png')"></a>
 							    			<div class="description">
@@ -1612,12 +1603,14 @@
 						    			</div>
 					    			</div>
 					    		</div>
+					    		<a class="more d-md-none" href="live.html">More</a> 
 				    		</div>
 
 
 					  	</div>
 
 					  	<div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
+					  		<div class="title">Results</div>
 					  			<div class="winners">
 					  					<div class="first">
 					  						<div class="crown"><img src="img/crown/1.svg" alt="" /></div>
@@ -1885,9 +1878,13 @@
 					               		   </div>
 					               		</div>
 				               	</div>
+				               	<div class="more d-lg-none">
+				               			<a href="#">More</a>
+				               		</div>
 					  	</div>
 
 					  	<div class="tab-pane fade" id="connections" role="tabpanel" aria-labelledby="connections-tab">
+					  	<div class="title">Connections</div>
 					  		<div class="text">
 						  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec est varius, lacinia nulla vitae, pretium orci. Nullam vestibulum purus eu leo consequat faucibus. Sed suscipit erat mi, et laoreet orci mattis in. Quisque ut arcu aliquet risus lacinia viverra ut vitae erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec viverra lorem at feugiat auctor. Pellentesque vulputate mattis sapien, vel interdum mi aliquam cursus. Etiam sed tortor non tellus rutrum porta eu quis nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id dolor porttitor, varius dui eu, hendrerit ipsum. Nullam quis sem non lectus dapibus hendrerit sit amet nec ex. Nullam sit amet ligula vitae neque tempus pharetra. In metus velit, congue eu diam eu, pretium viverra sem. Curabitur hendrerit mattis tellus. Nullam tortor tortor, pulvinar vitae neque a, vulputate faucibus risus.
 						  		</p>
@@ -1900,6 +1897,21 @@
 					  		</div>
 					  	</div>
 				  </div>
+
+				  		<!--- Join the tournament -->
+						  	<div class="join-the-tournament">
+							  	<div class="title">Join the tournament with the team " Zhuk"</div>
+							  	<span class="text">You are invited to the game </span>
+							  		<span class="user">							  		
+							  			<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+						            	<span class="name">Екатерина Болтинская</span>
+							  		</span>
+							  	<div>
+							  	<a href="#" class="btn">Participate</a>
+							  	</div>
+						  	</div>
+
+
 
 				  <div class="comments">
                 	<div class="inner">
@@ -2392,9 +2404,11 @@
 
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
+    <script type='text/javascript' src="js/moment.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type='text/javascript' src="js/jquery-ui.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datetimepicker.js"></script>    
     <script type='text/javascript' src="js/svgxuse.js"></script>
     <script type="text/javascript" src="js/slick.js"></script>
     <script type='text/javascript' src="js/dropzone.js"></script>

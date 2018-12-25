@@ -523,4 +523,16 @@
 
 	</g>
 
+	<g viewBox="0 0 10 10" id="about" opacity="0.5">
+		<path d="M4.83333 3L1.16667 1.25" stroke-linecap="square"/>
+		<path d="M5.16667 3L8.83333 1.25" stroke-linecap="square"/>
+		<path d="M4.83333 6L1.16667 4.25" stroke-linecap="square"/>
+		<path d="M5.16667 6L8.83333 4.25" stroke-linecap="square"/>
+		<path d="M4.83333 9L1.16667 7.25" stroke-linecap="square"/>
+		<path d="M5.16667 9L8.83333 7.25" stroke-linecap="square"/>
+	</g>
+
+
+
+
 </svg>

@@ -4831,10 +4831,10 @@ button.close {
 .overlays .item .menu .dropdown-menu.show{
   right: -14px !important;
   left: auto !important;
- /* -webkit-transform: none !important;
+ -webkit-transform: none !important;
     -ms-transform:  none !important;
     transform: none !important;
-    top: 40px !important;*/
+    top: 40px !important;
 }
 
 .plyr .btn, .plyr button{
@@ -7136,7 +7136,6 @@ background-color: #f05a00;
   background-color: #2c3239;
   border-left: 1px solid #2c3239;
   border-right: 1px solid #282d33;
-  border-bottom: 4px solid transparent;
 }
 .tournament .tabs.inner .nav .nav-link{
   border-left: none;
@@ -7270,6 +7269,9 @@ background-color: #f05a00;
   padding: 0;
   margin-right: 7%;
 } 
+.tournament .general-info .time{
+  margin-right: 0;
+ }
 .tournament .general-info .prize-fund b, .tournament .general-info .players b, .tournament .general-info .time b{
     display: block;
     color: #dbe0e6;
@@ -7300,7 +7302,7 @@ background-color: #f05a00;
   color: #c6ced5;
 }
 .tournament .tab-content .tab-pane{
-  min-height: 520px;
+  /*min-height: 520px;*/
   position: relative;
 }
 .tournament .tab-content .tab-pane .title{
@@ -7308,7 +7310,8 @@ background-color: #f05a00;
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
-  position: relative;  
+  position: relative; 
+  padding-bottom: 20px; 
 }
 .title-border{
   position: relative;
@@ -7405,6 +7408,7 @@ background-color: #f05a00;
 }
 .join-the-tournament{
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 .join-the-tournament .title{
   padding-bottom: 10px;
@@ -7439,7 +7443,7 @@ background-color: #f05a00;
   margin-top: 20px;
 }
 .tournament .tabs.inner{
-  margin-top: 30px;
+  margin-top: 10px;
   border-bottom: 2px solid #666f79;
 }
 .tournament .double-tabs{
@@ -7567,6 +7571,8 @@ background-color: #f05a00;
   border: 1px solid #ffc668;
   background-color: #2c3238;
   float: none;
+  position: relative;
+  z-index: 90;
 }
 .winners-detail > div{
   font-size: 13px;
@@ -7600,21 +7606,16 @@ background-color: #f05a00;
   line-height: 17px;
   color: #ffffff;
   font-weight: 300;
-
-  position: absolute;
-  top: 50%;
-   -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-
-    width: 100%;
+  width: 100%;
 }
+
 .winners > div .prize .crown{
   padding-bottom: 17px;
 }
 .winners > div .prize .place{
   padding-top: 11px;
   }
+
 .winners > div.first .place{
   color: #ffc668;
 }
@@ -7643,17 +7644,31 @@ background-color: #f05a00;
   position: relative;
   top: 17px;
 }
-.tournament .tab-content #prizes .winners > div.first{
-  height: 165px;
+.tournament .tab-content #prizes .winners > div.first, .tournament .tab-content #prizes .winners > div.second, .tournament .tab-content #prizes .winners > div.third{
+  height: unset;
+  padding: 0;
+  border: none;
+  background-color: transparent;
   }
-
-.tournament .tab-content #prizes .winners > div.second{
+.tournament .tab-content #prizes .winners > div.first .prize{
+  height: 165px;
+  padding: 35px 0 0;
+  border: 1px solid #ffc668;
+  background-color: #2c3238;
+  }
+.tournament .tab-content #prizes .winners > div.second .prize{
   height: 149px;
   top: 8px;
+  padding: 25px 0;
+  border: 1px solid #7e8891;
+  background-color: rgba(44, 50, 56, 0.5);
   }
-.tournament .tab-content #prizes .winners > div.third{
+.tournament .tab-content #prizes .winners > div.third .prize{
   height: 138px;
   top: 13px;
+  padding: 20px 0;
+  border: 1px solid rgba(181, 189, 196, 0.2);
+  background-color: rgba(44, 50, 56, 0.3);
   }
 
 .winners-detail > div.third{ 
@@ -7665,6 +7680,12 @@ background-color: #f05a00;
 .winners > div.third .place{
   color: #aab1b8;
 }
+.tournament .tab-content #prizes .winners > div .text{
+  padding-top: 50px;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+
 .winners > div > .user .icon{
   width: 40px;
   height: 40px;
@@ -7677,15 +7698,23 @@ background-color: #f05a00;
 .winners > div > .user .icon img{
   border-radius: 50%;
   width: 100%;
+  height: auto;
+}
+.tournament .tab-content #prizes .winners{
+  position: relative;
+}
+.tournament .tab-content #prizes .winners:before,.tournament .tab-content #prizes .winners:after{
+  position: absolute;
+  left: 33.35333333%;
+  content: "";
   height: 100%;
+  width: 1px;
+  bottom: 0;
+  z-index: 70;
+  border-left: 1px dashed rgba(151,151,151, 0.3);
 }
-
-.winners:before,.winners:after{
-  display: table;
-  content: " ";
-}
-.winners:after{
-  clear: both;
+.tournament .tab-content #prizes .winners:before{
+  left: 66.54666666%;
 }
 
 .tournament .tab-content #results .block{
@@ -7801,7 +7830,11 @@ background-color: #f05a00;
   content: "";
   left: 0;
   top: 0;
-  background: url("../img/tournaments/youtube.png") center center no-repeat;
+  background: url("../img/tournaments/play.png") center center no-repeat;
+   -webkit-transform: scale(.19);
+      -ms-transform: scale(.19);
+       -o-transform: scale(.19);
+          transform: scale(.19);
 }
 .list-video .item .description{
   padding-top: 10px;
@@ -8304,7 +8337,9 @@ background-color: #f05a00;
   display: block;
   padding-bottom: 4px;
 }
-
+.ContentFlow .flow{
+  overflow: hidden;
+}
 
  
 .clearfix:before,.clearfix:after{
@@ -8326,14 +8361,13 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
 .bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
 .bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a,
-.tournament .tab-content .item, .rounds .group .members, .tournament .top-image{
+.tournament .tab-content .item, .rounds .group .members, .tournament .top-image, .tournament .general-info, .tournament .general-info, .tournament .general-info .about svg{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-
 
 .settings .notification .item .name:before, .settings .notification .item .name:after{
   -webkit-transition: border-top-color 0.3s ease-out;
@@ -8358,4 +8392,35 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
   color: #dbe0e6;
 }
 
+ header .search-panel .close{
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    z-index: 801;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    opacity: 1;
+    text-shadow: none;
+    background-color: #383e44;
+    display: none;
+  }
+header .search-panel.open .close{
+  display: block;
+}
 
+header .search-panel .close:after{
+    position: absolute;
+    content: "+";
+    font-weight: 300;
+    left: 3px;
+    pointer-events: none;
+    top: 1px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 20px;
+    color: #737c85;
+     -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+   }
