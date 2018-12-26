@@ -1,0 +1,1587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-select.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />		
+	<link rel="stylesheet" href="css/fonts.css" />  
+	<link rel="stylesheet" href="css/font-awesome/css/fontawesome-all.min.css" />  
+	<link rel="stylesheet" href="css/dropzone.css" /> 
+	<link rel="stylesheet" href="css/trumbowyg.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/simplebar.css">
+	<link rel="stylesheet" href="css/rangeslider.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <title>Destream Portal Tournament Page</title>
+  </head>
+  <body>
+ 
+  	    	<div class="page tournament">
+		    	<div class="top-image"></div>
+		    		<div class="tabs">
+		    			<div class="tabs-wrap">
+				    		<ul class="nav nav-justified" role="tablist">
+							  <li class="nav-item">
+							    <a class="nav-link active" href="#lobby" id="lobby-tab" data-toggle="tab" role="tab" aria-controls="lobby" aria-selected="true">Lobby</a>
+							  </li>
+							  <li class="nav-item">
+							   <a class="nav-link" id="bracket-tab" data-toggle="tab" href="#bracket" role="tab" aria-controls="bracket" aria-selected="false">Bracket</a>
+							  </li>	
+							  <li class="nav-item">
+							   <a class="nav-link" id="rules-tab" data-toggle="tab" href="#rules" role="tab" aria-controls="rules" aria-selected="false">Rules</a>
+							  </li>	
+							  <li class="nav-item">
+							   <a class="nav-link" id="prizes-tab" data-toggle="tab" href="#prizes" role="tab" aria-controls="prizes" aria-selected="false">Prizes</a>
+							  </li>	
+							  <li class="nav-item">
+							   <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false">Video</a>
+							  </li>	
+							  <li class="nav-item">
+							   <a class="nav-link" id="results-tab" data-toggle="tab" href="#results" role="tab" aria-controls="results" aria-selected="false">Results</a>
+							  </li>
+							   <li class="nav-item">
+							   <a class="nav-link" id="players-tab" data-toggle="tab" href="#players" role="tab" aria-controls="players" aria-selected="false">Players</a>
+							  </li>	
+							  <li class="nav-item">
+							   <a class="nav-link" id="connections-tab" data-toggle="tab" href="#connections" role="tab" aria-controls="connections" aria-selected="false">Connections</a>
+							  </li>		 
+							</ul>
+						</div>
+					</div>
+					<div class="general-info">
+						<div>
+						<div class="row">
+							<div class="col-12 col-md-12 col-lg-4 col-xl-5">
+								<div class="head">
+									<div>
+										<div class="tournament-title">Legends Challenge Cup</div>
+				    					<div class="game"><span class="icon"><img src="img/tournaments/icon1.png" alt="" /></span>Grand Theft Auto V</div>
+				    				</div>
+				    				<div class="d-none d-md-block d-lg-none">
+											<div class="collection-title">League of Legends</div>
+					    					<div class="collection">Tournaments collection</div>
+					    				</div>
+				    				</div>
+			    				</div>
+				    			<div class="col-12 col-md-12 col-lg-8 col-xl-7">
+				    			<div class="links">
+					    			<div class="social">
+										<span class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg> Like 22</span>
+										<span class="share"><svg><use xlink:href="img/vectors.svg#share"></use></svg>22</span>
+										<span class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</span>
+									</div>
+
+									<a href="#" class="d-none d-md-block status" data-target=".modal-addteam" data-toggle="modal">Registration is open</a>
+									</div>	
+								</div>
+							</div>	   	
+						</div>
+
+						<div>
+						<div class="row">
+							<div class="col-12 col-md-12 col-lg-4 col-xl-5">
+								<div class="head">
+									<div class="d-none d-lg-block">
+										<div class="collection-title">League of Legends</div>
+				    					<div class="collection">Tournaments collection</div>
+				    				</div>
+				    			</div>
+			    			</div>
+			    			<div class="col-12 col-md-12 col-lg-8 col-xl-7">
+				    			<div class="prize-fund"><b>700 000 DST</b> Prize fund</div>
+						    	<div class="players"><b>12 / 257</b> Players</div>
+						    	<div class="time"><b>21.05.2017 at 9:00</b> UTC -08:00</div>
+						    	<div class="d-md-none status-cont text-center"><a href="#" class="status" data-target=".modal-addteam" data-toggle="modal">Registration is open</a>
+						    	</div>
+						    	<div class="format">Double elimination</div>
+					    	</div>
+					    	</div>
+						</div>
+							<div class="d-md-none text-center">
+								<a href="#" class="about">About<svg><use xlink:href="img/vectors.svg#about"></use></svg></a>
+							</div>
+					</div>
+
+					<div class="tab-content">
+					  	<div class="tab-pane fade show active" id="lobby" role="tabpanel" aria-labelledby="lobby-tab">
+					  		<div class="text">
+						  		<p>Приглашаем вас принять участие в долгожданном любительском турнире по League of Legends!</p>
+						  		<p>
+						  		Турнир состоит из двух частей:<br>
+								Отборочный этап:<br>
+								Отборочный этап будет проходить online, на турнирной платформе click-storm.<br>
+								Все матчи до полуфиналов будут в формате bo1(до одной победы).<br>
+								Полуфинал, финал сетки лузеров и Гранд-финал будут проходить в формате bo3 (до двух побед).<br>
+								</p>
+								<p>
+								Даты проведения отборочного этапа - 27-28 октября 2018 года.<br>
+								Время начала отборочного этапа - 14:00 по Пермскому времени (12:00 по МСК)
+								</p>
+								<p>
+								Формат турнира - double elimination, т.е. проигравшая команда получает шанс пройти в финал через сетку лузеров.
+								</p>
+								<p>
+								Финальный этап:<br>
+								Финалы сетки лузеров и Гранд-финал пройдут 3-го ноября на фестивале PANICOMIX в дворце Молодежи г. Перми.<br>
+								Время начала финального этапа турнира - 12:00 по Пермскому времени. (10:00 по МСК)
+								</p>
+								<p>
+								Принимать участие в турнире могут команды из любых регионов, при условии что они смогут прибыть на финальный LAN этап мероприятия в город Пермь за свой счёт.
+								</p>
+						  	</div>
+
+					  	</div>
+
+					  	<div class="tab-pane fade" id="bracket" role="tabpanel" aria-labelledby="bracket-tab">
+					  		<div class="title">Bracket</div>
+					  		<div class="tabs inner">
+				    			<ul class="nav" role="tablist">
+								  <li class="nav-item">
+								    <a class="nav-link active" href="#group1" id="group1-tab" data-toggle="tab" role="tab" aria-controls="group1" aria-selected="true">Group1</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" id="group2-tab" data-toggle="tab" href="#group2" role="tab" aria-controls="group2" aria-selected="false">Group2</a>
+								  </li>	
+							  	</ul>
+							</div>
+
+					  		<div class="tab-content inner">					  			
+					  			<div class="tab-pane fade show active" id="group1" role="tabpanel" aria-labelledby="group1-tab">					  				
+					  				<div class="items">
+					               		<div class="row">
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Екатерина Болтинская</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			
+					               		</div>
+				               		</div>
+				               		<div class="results">
+					               		<div class="title">Results</div>
+
+					               		<div class="text">
+						               		1 место: "69LTD". убийств. очков.<br>
+											2 место: "smdНазвание команды". убийств. очков.
+										</div>
+									</div>
+					  			</div>
+					  			<div class="tab-pane fade" id="group2" role="tabpanel" aria-labelledby="group2-tab">
+					  				<div class="items">
+					               		<div class="row">
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Екатерина Болтинская</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			
+					               		</div>
+				               		</div>
+
+				               		<div class="results">
+					               		<div class="title">Results</div>
+
+					               		<div class="text">
+						               		1 место: "69LTD". убийств. очков.<br>
+											2 место: "smdНазвание команды". убийств. очков.
+										</div>
+									</div>
+					  			</div>
+
+					  		
+					  		</div>
+
+
+
+
+					  		<!---  Bracket2  -->
+					  		<br><br><br>
+
+					  		<div class="double-tabs">
+						  		<div class="tabs inner tabs-left">
+					    			<ul class="nav" role="tablist">
+									  <li class="nav-item">
+									    <a class="nav-link active" href="#round13" id="round13-tab" data-toggle="tab" role="tab" aria-controls="round13" aria-selected="true">1-3 round</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link" id="round46-tab" data-toggle="tab" href="#round46" role="tab" aria-controls="round46" aria-selected="false">4-6 round</a>
+									  </li>	
+									   <li class="nav-item">
+									    <a class="nav-link" id="final_left-tab" data-toggle="tab" href="#final_left" role="tab" aria-controls="final_left" aria-selected="false">Final</a>
+									  </li>	
+								  	</ul>
+								</div>
+
+								<div class="tabs inner tabs-right">
+					    			<ul class="nav" role="tablist">
+									  <li class="nav-item">
+									    <a class="nav-link" href="#winners" id="winners-tab" data-toggle="tab" role="tab" aria-controls="winners" aria-selected="true">Winners</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link" id="losers-tab" data-toggle="tab" href="#Losers" role="tab" aria-controls="losers" aria-selected="false">Losers</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link" id="final_right-tab" data-toggle="tab" href="#final_right" role="tab" aria-controls="final_right" aria-selected="false">Final</a>
+									  </li>	
+								  	</ul>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="tab-content-scroll"  data-simplebar>
+							<div class="tab-content inner">					  			
+					  			<div class="tab-pane fade show active" id="round13" role="tabpanel" aria-labelledby="round13-tab">	
+									<div class="rounds">
+						  				<div class="round round1">
+						  					<div class="title">1 Round</div>
+							  					<div class="pair">
+								  					<div class="group winner">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+
+							  					<div class="pair">
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">7</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+
+							  					<div class="pair">
+								  					<div class="group winner">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">15</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+
+							  					<div class="pair">
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group winner">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">12</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+
+							  					<div class="pair additional">
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">10</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">7</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+						  				</div>
+						  				<div class="round round2">
+						  					<div class="title">2 Round</div>
+
+						  					<div class="half">
+						  						<div class="pair">
+								  					<div class="group winner">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">7</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+							  				</div>
+
+							  				<div class="half">
+							  					<div class="pair">
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group winner">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">7</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+							  				</div>
+					  					</div>
+					  					<div class="round round3">
+					  						<div class="title">3 Round</div>
+					  						<div class="full">
+					  						<div class="pair">
+								  					<div class="group">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">22</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+
+								  					<div class="group winner">
+								  						<div class="item">
+								  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               						<span class="name">I.m. Khankishiev</span>
+						               						<span class="count">7</span>
+								  						</div>
+								  						<div class="members">
+								  							<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+									               			<div class="item">
+									               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+									               				<span class="name">Екатерина Болтинская</span>
+									               			</div>
+								  						</div>
+								  					</div>
+							  					</div>
+							  				</div>
+					  					</div>
+				  					</div>
+
+					  			</div>
+
+					  			<div class="tab-pane fade" id="round46" role="tabpanel" aria-labelledby="round46-tab">	
+
+					  					4-6 round
+
+					  			</div>
+
+					  			<div class="tab-pane fade" id="final_left" role="tabpanel" aria-labelledby="final_left-tab">	
+
+					  					Final left
+
+					  			</div>
+
+
+					  			<div class="tab-pane fade" id="winners" role="tabpanel" aria-labelledby="winners-tab">	
+
+					  					Winners
+
+					  			</div>
+
+					  			<div class="tab-pane fade" id="Losers" role="tabpanel" aria-labelledby="Losers-tab">	
+
+					  					Losers
+
+					  			</div>
+
+					  			<div class="tab-pane fade" id="final_right" role="tabpanel" aria-labelledby="final_right-tab">	
+
+					  					Final right
+
+					  			</div>
+					  			</div>
+					  		</div>
+					  	</div>
+
+					  	<div class="tab-pane fade" id="rules" role="tabpanel" aria-labelledby="rules-tab">
+					  	<div class="title">Rules</div>
+					  		<div class="text">
+						  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec est varius, lacinia nulla vitae, pretium orci. Nullam vestibulum purus eu leo consequat faucibus. Sed suscipit erat mi, et laoreet orci mattis in. Quisque ut arcu aliquet risus lacinia viverra ut vitae erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec viverra lorem at feugiat auctor. Pellentesque vulputate mattis sapien, vel interdum mi aliquam cursus. Etiam sed tortor non tellus rutrum porta eu quis nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id dolor porttitor, varius dui eu, hendrerit ipsum. Nullam quis sem non lectus dapibus hendrerit sit amet nec ex. Nullam sit amet ligula vitae neque tempus pharetra. In metus velit, congue eu diam eu, pretium viverra sem. Curabitur hendrerit mattis tellus. Nullam tortor tortor, pulvinar vitae neque a, vulputate faucibus risus.
+						  		</p>
+						  		<p>
+						  		Vivamus venenatis aliquet orci, eget ullamcorper ex scelerisque quis. Vestibulum pretium neque bibendum leo blandit maximus. Maecenas at blandit erat, sit amet malesuada urna. Duis nec placerat nisl, nec lobortis enim. Nulla porttitor felis risus, sed condimentum libero lacinia at. Nunc et libero magna. Quisque vitae arcu vitae velit pulvinar ornare. Integer ac mi odio. Integer ullamcorper vehicula enim, sed placerat ante fermentum ac.
+						  		</p>
+						  		<p>
+						  		Suspendisse semper diam at nisi luctus, eu suscipit ipsum consectetur. Ut vel orci ut odio vehicula vehicula. Maecenas a nibh non libero gravida vulputate et vel tortor. Nam vel ultricies nunc, sit amet auctor turpis. Etiam in orci non velit tempor porta. Sed pulvinar tincidunt lorem in blandit. In hac habitasse platea dictumst. Vestibulum eu tempus nunc. Nulla ultrices blandit lorem, ut placerat dolor rutrum vel. Duis vel finibus felis, vel molestie lorem.
+						  		</p>
+					  		</div>
+					  	</div>
+
+					  	<div class="tab-pane fade" id="prizes" role="tabpanel" aria-labelledby="prizes-tab">
+					  	<div class="title">Prizes</div>
+					  		<div class="winners">
+					  					<div class="first">
+					  						<div class="prize">
+					  						<div class="crown"><img src="img/crown/1.svg" alt="" /></div>
+					  							500$
+					  						
+					  						<div class="place">1 place</div>
+					  						</div>
+					  						<div class="text">
+					  						<b>Комплект QCYBER:</b><br>
+											- Наушники Qcyber ROOF (2 шт.)<br>
+											- Клавиатура Qcyber Dominator (2шт.)<br>
+											- Мышь Qcyber Aurora (2шт.)<br>
+											- Коврик K.G.B. (2 шт.)
+					  					</div>
+					  					</div>
+					  					<div class="second">
+					  						<div class="prize">
+					  						<div class="crown"><img src="img/crown/2.svg" alt="" /></div>
+					  							200$
+					  						
+					  						<div class="place">2 place</div>
+					  						</div>
+					  						<div class="text">
+					  							8 000 DST					  						
+					  						</div>
+					  					</div>
+					  					<div class="third">
+					  						<div class="prize">
+					  							<div class="crown"><img src="img/crown/3.svg" alt="" /></div>					  						
+					  							50$					  						
+					  							<div class="place">3 place</div>
+					  						</div>
+					  						<div class="text">
+						  						Cool man
+						  					</div>
+					  					</div>
+					  			</div>
+
+					  			<hr size="1" noshade width="100%" >
+
+					  			<div class="teams">
+					  				<div class="row">
+					               		<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               		<div class="team">
+					               			<div class="team-name">Team name</div>
+					               			<div class="items">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>						               				
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+						               			</div>
+						               		</div>
+					               		</div>
+					               		<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               		<div class="team">
+					               			<div class="team-name">Team name</div>
+					               			<div class="items">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			</div>
+						               			</div>
+					               		</div>
+					               		<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               		<div class="team">
+					               			<div class="team-name">Team name</div>
+					               			<div class="items">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+						               			</div>
+						               			</div>
+					               		</div>
+
+					              	</div>
+					            </div>
+
+					  	</div>
+
+					  	<div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+					  			<div class="title">Live</div>
+
+					  			<div class="list list-video">
+				    			<div class="row">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news2.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="live-broadcast.html">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news3.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="live-broadcast.html">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news4.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="live-broadcast.html">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news1.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="live-broadcast.html">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="live-broadcast.html" style="background-image:url('img/news3.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="live-broadcast.html">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="live-broadcast.html#" style="background-image:url('img/news2.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="live-broadcast.html">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    		</div>
+					    		<a class="more d-md-none" href="live.html">More</a> 
+				    		</div>
+
+				    		<hr size="1" noshade width="100%" >
+
+				    		<div class="title">Video</div>
+
+				    		<div class="list list-video">
+				    			<div class="row">
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="#" style="background-image:url('img/news4.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="#">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="#" style="background-image:url('img/news2.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="#">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="#" style="background-image:url('img/news1.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="#">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="#" style="background-image:url('img/news3.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="#">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="#" style="background-image:url('img/news2.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="#">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+						    			<div class="item">
+							    			<a class="img" href="#" style="background-image:url('img/news4.png')"></a>
+							    			<div class="description">
+								    			<a class="text" href="#">League of Legends</a>
+								    			<span class="date">21.05.2018</span>								    			
+								    		</div>
+						    			</div>
+					    			</div>
+					    		</div>
+					    		<a class="more d-md-none" href="live.html">More</a> 
+				    		</div>
+
+
+					  	</div>
+
+					  	<div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
+					  		<div class="title">Results</div>
+					  			<div class="winners">
+					  					<div class="first">
+					  						<div class="crown"><img src="img/crown/1.svg" alt="" /></div>
+					  						<div class="user">
+					  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">I.m. Khankishiev </span>
+					  						</div>
+					  						<div class="place">1 place</div>
+					  					</div>
+					  					<div class="second">
+					  						<div class="crown"><img src="img/crown/2.svg" alt="" /></div>
+					  						<div class="user">
+					  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">Никита Жмылев</span>
+					  						</div>
+					  						<div class="place">2 place</div>
+					  					</div>
+					  					<div class="third">
+					  						<div class="crown"><img src="img/crown/3.svg" alt="" /></div>
+					  						<div class="user">
+					  							<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">Александр Гаврилов</span>
+					  						</div>
+					  						<div class="place">3 place</div>
+					  					</div>
+					  			</div>
+
+					  			<a class="view-all" href="#">Veiw all</a>
+
+					  			<div class="block">
+					  				<div class="title">4 - 9 place</div>
+					  				<div class="items">
+						               	<div class="row">
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">I.m. Khankishiev </span>
+							               				<span class="place">4 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">Екатерина Болтинская</span>
+							               				<span class="place">5 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">Александр Гаврилов</span>
+							               				<span class="place">6 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">Никита Жмылев</span>
+							               				<span class="place">7 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">I.m. Khankishiev </span>
+							               				<span class="place">8 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">I.m. Khankishiev </span>
+							               				<span class="place">9 place</span>
+							               			</span>
+						               			</div>
+						               			
+						               	</div>
+				               		</div>
+					  			</div>
+
+					  			<div class="block">
+					  				<div class="title">10 - 15 place</div>
+					  				<div class="items">
+						               	<div class="row">
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">I.m. Khankishiev </span>
+							               				<span class="place">10 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">Екатерина Болтинская</span>
+							               				<span class="place">11 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">Александр Гаврилов</span>
+							               				<span class="place">12 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">Никита Жмылев</span>
+							               				<span class="place">13 place</span>
+							               			</span>
+						               			</div>
+						               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">I.m. Khankishiev </span>
+							               				<span class="place">14 place</span>
+							               			</span>
+						               			</div>
+												<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+							               			<span class="item">
+							               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+							               				<span class="name">I.m. Khankishiev </span>
+							               				<span class="place">15 place</span>
+							               			</span>
+						               			</div>						               			
+						               	</div>
+				               		</div>
+					  			</div>
+
+					  	</div>
+
+					  	<div class="tab-pane fade" id="players" role="tabpanel" aria-labelledby="players-tab">
+					  			<div class="title-border">
+					  				<div class="title">Players</div>
+					  				<div class="total">295 players</div>
+					  			</div>
+								<div class="items">
+				               		<div class="row">
+				               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               			<a class="item" href="#">
+					               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">I.m. Khankishiev </span>					               				
+					               			</a>
+				               			</div>
+				               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               			<a class="item" href="#">
+					               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">Екатерина Болтинская</span>
+					               			</a>
+				               			</div>
+				               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               			<a class="item" href="#">
+					               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">Александр Гаврилов</span>
+					               			</a>
+				               			</div>
+				               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               			<a class="item" href="#">
+					               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">Никита Жмылев</span>
+					               			</a>
+				               			</div>
+				               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+					               			<a class="item" href="#">
+					               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+					               				<span class="name">I.m. Khankishiev </span>
+					               			</a>
+				               			</div>
+				               			
+				               		   </div>
+				               		</div>
+
+				               		<div class="more d-lg-none">
+				               			<a href="#">More</a>
+				               		</div>
+				               		<!---  -->
+
+				               		<br><br><br><br>
+				               		<!-- players-with-team -->
+				               	<div class="title-border">
+					  				<div class="title">Players</div>
+					  				<div class="total">295 players</div>
+					  			</div>
+					  			<div class="team-block">
+						  			<div class="team">
+						  				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							            <span class="name">Team name</span>
+						  			</div>
+									<div class="items">
+					               		<div class="row">
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item capitan" href="#">
+						               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               				<span class="role">Capitan</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Екатерина Болтинская</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			
+					               		   </div>
+					               		</div>
+				               	</div>
+				               	<div class="team-block">
+						  			<div class="team">
+						  				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							            <span class="name">Team name</span>
+						  			</div>
+									<div class="items">
+					               		<div class="row">
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Екатерина Болтинская</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Александр Гаврилов</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">Никита Жмылев</span>
+						               			</a>
+					               			</div>
+					               			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
+						               			<a class="item" href="#">
+						               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+						               				<span class="name">I.m. Khankishiev </span>
+						               			</a>
+					               			</div>
+					               			
+					               		   </div>
+					               		</div>
+				               	</div>
+				               	<div class="more d-lg-none">
+				               			<a href="#">More</a>
+				               		</div>
+					  	</div>
+
+					  	<div class="tab-pane fade" id="connections" role="tabpanel" aria-labelledby="connections-tab">
+					  	<div class="title">Connections</div>
+					  		<div class="text">
+						  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec est varius, lacinia nulla vitae, pretium orci. Nullam vestibulum purus eu leo consequat faucibus. Sed suscipit erat mi, et laoreet orci mattis in. Quisque ut arcu aliquet risus lacinia viverra ut vitae erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec viverra lorem at feugiat auctor. Pellentesque vulputate mattis sapien, vel interdum mi aliquam cursus. Etiam sed tortor non tellus rutrum porta eu quis nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id dolor porttitor, varius dui eu, hendrerit ipsum. Nullam quis sem non lectus dapibus hendrerit sit amet nec ex. Nullam sit amet ligula vitae neque tempus pharetra. In metus velit, congue eu diam eu, pretium viverra sem. Curabitur hendrerit mattis tellus. Nullam tortor tortor, pulvinar vitae neque a, vulputate faucibus risus.
+						  		</p>
+						  		<p>
+						  		Vivamus venenatis aliquet orci, eget ullamcorper ex scelerisque quis. Vestibulum pretium neque bibendum leo blandit maximus. Maecenas at blandit erat, sit amet malesuada urna. Duis nec placerat nisl, nec lobortis enim. Nulla porttitor felis risus, sed condimentum libero lacinia at. Nunc et libero magna. Quisque vitae arcu vitae velit pulvinar ornare. Integer ac mi odio. Integer ullamcorper vehicula enim, sed placerat ante fermentum ac.
+						  		</p>
+						  		<p>
+						  		Suspendisse semper diam at nisi luctus, eu suscipit ipsum consectetur. Ut vel orci ut odio vehicula vehicula. Maecenas a nibh non libero gravida vulputate et vel tortor. Nam vel ultricies nunc, sit amet auctor turpis. Etiam in orci non velit tempor porta. Sed pulvinar tincidunt lorem in blandit. In hac habitasse platea dictumst. Vestibulum eu tempus nunc. Nulla ultrices blandit lorem, ut placerat dolor rutrum vel. Duis vel finibus felis, vel molestie lorem.
+						  		</p>
+					  		</div>
+					  	</div>
+				  </div>
+
+				  		<!--- Join the tournament -->
+						  	<div class="join-the-tournament">
+							  	<div class="title">Join the tournament with the team " Zhuk"</div>
+							  	<span class="text">You are invited to the game </span>
+							  		<span class="user">							  		
+							  			<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+						            	<span class="name">Екатерина Болтинская</span>
+							  		</span>
+							  	<div>
+							  	<a href="#" class="btn">Participate</a>
+							  	</div>
+						  	</div>
+
+
+
+				  <div class="comments">
+                	<div class="inner">
+                		<div class="title">Comments</div>
+                		<ul>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge (Season 5, Week 3)</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">"I won't yet tell you what they're working on but you will see something in the next couple of years coming out of that studio that we think is pretty innovative in the mobile space,"</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Возможность нахождения поисковых ключей в тексте и определения.</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Возможность нахождения поисковых ключей в тексте и определения.</span>
+				    			</div>
+	    					</li>
+	    				</ul>
+	    				<div class="form">
+		    				<form>
+		    					<div class="form-group" aria-required="true">
+                                	<input type="text" class="form-control" required placeholder="Add comment">
+                            	</div>
+		    				</form>
+	    				</div>
+	    			</div>
+                </div>
+	    	</div>
+    	
+<!--add-team window-->
+<div class="modal-form modal-addteam modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addteam" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Add team</div>
+                <div class="form">
+		            	<form class="dropzone" id="addteamform" action="/file-upload" method="post" enctype="multipart/form-data">
+			            	
+			            	<div class="form-group" aria-required="true">
+                                <label class="control-label" for="teamname">Team name</label>
+                                <input type="text" id="teamname" class="form-control" placeholder="Team name">
+                            </div>
+
+			            	<div class="form-group">
+			            		<label>Team avatar</label>
+		            	        	<div class="dz-default dz-message">
+										<span class="msg-lg d-none d-lg-block">
+											<b>Drag the image here</b> or select on computer
+										</span>
+										<span class="msg-md d-block d-lg-none">
+											<i>Add avatar image</i>
+											<i class="file-added-msg">Change avatar image</i>
+										</span>
+									</div>
+									<div class="fallback">
+									    <input name="file" type="file" multiple />
+									</div>
+									<div class="preview"></div>
+		            		</div>
+		            		                            
+                            <div class="form-group text-center">                                
+                                <!--button class="btn" type="submit" data-target=".modal-sendlink" data-toggle="modal">Add team</button-->  
+                                <a class="btn" href="#" data-target=".modal-sendlink" data-dismiss="modal" data-toggle="modal">Add team</a>                                    
+                            </div>
+		            	</form>
+		            </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<!--add-team window end-->
+
+<!--send-link window-->
+<div class="modal-form modal-sendlink modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-sendlink" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Add team</div>
+
+                  <div class="note">
+			            <span class="img"><img src="img/steam-logo.svg" alt="" /></span>
+			            <span class="text">For this tournament you must be logged in to Steam</span>
+		            </div>
+
+                    <div class="form">
+		            	<form  method="post">
+							<div class="form-group teamlink" aria-required="true">
+	                            <label class="control-label" for="teamlink">Send this link to your team members</label>
+	                            <input type="text" id="teamlink" class="form-control" placeholder="http://127.0.0.1:32767/start.html">
+	                            <a class="copy" href="#"><svg><use xlink:href="img/vectors.svg#copy-s"></use></svg></a>
+	                        </div>
+	                         <div class="form-group text-center">                                
+	                                <!--button class="btn" type="submit">Ok</button--> 
+	                                <a class="btn" href="#" data-dismiss="modal">Ok</a>                                       
+	                        </div>
+                        </form>
+		            </div>               
+            </div>
+        </div>
+    </div>
+</div>
+<!--send-link window end-->
+
+    <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
+    <script type='text/javascript' src="js/popper.min.js"></script>
+    <script type='text/javascript' src="js/moment.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/jquery-ui.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datetimepicker.js"></script>    
+    <script type='text/javascript' src="js/svgxuse.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type='text/javascript' src="js/dropzone.js"></script>
+    <script type="text/javascript" src="js/trumbowyg.min.js"></script>
+    <script type="text/javascript" src="js/simplebar.js"></script>
+    <script type="text/javascript" src="js/plyr.polyfilled.js"></script>
+    <script type="text/javascript" src="js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="js/rangetouch.js"></script>
+    <script type="text/javascript" src="js/contentflow.js"></script>
+    <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/sly.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>
