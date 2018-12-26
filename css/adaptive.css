@@ -191,11 +191,11 @@ span.size{ display: none; }
   .list-announcement-tile .small .item .img{
   height: 220px;
   }
-  .list .item .share span{
+  .list .item .share span, .list .item .share a{
     margin-right: 3px;
     font-size: 10px;
   }
-  .list .item .share span svg{
+  .list .item .share span svg, .list .item .share a svg{
     margin-right: 3px;
   }
   .list-announcement-tile .large .item .date{
@@ -284,7 +284,7 @@ body.widget > .content{
    .tournament .general-info .prize-fund, .tournament .general-info .players{
     margin-right: 5%;
    }
-   .tournament .general-info .social span{
+   .tournament .general-info .social span, .tournament .general-info .social a{
     margin-right: 24%;
    }
 }
@@ -1128,7 +1128,7 @@ header .btn.login{
       bottom: 20px;
       margin-top: 0;
     }
-    .tournament .general-info .social span{
+    .tournament .general-info .social span, .tournament .general-info .social a{
       line-height: normal;
     }
     .tournament .general-info .status{
@@ -4033,7 +4033,7 @@ header .btn.login{
      .tournament .general-info > div{
         padding: 20px 0;
      }
-     .tournament .general-info .social span{
+     .tournament .general-info .social span, .tournament .general-info .social a{
       margin-right: 40px;
       line-height: normal;
      }
@@ -7075,7 +7075,7 @@ header .btn.login{
      .tournament .general-info > div{
         padding: 20px 0;
      }
-     .tournament .general-info .social span{
+     .tournament .general-info .social span, .tournament .general-info .social a{
       margin-right: 40px;
       line-height: normal;
      }

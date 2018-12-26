@@ -368,10 +368,24 @@ $('.confirm-transfer input[name="key"]').on("change",function(){
 
 $('.switch input[name="switch"]').on("change",function(){
  var val = $(this).val();
+ var iH = $('.is-voting').height();
+ $('.is-voting').attr("data-h",iH);
   if(val == '1'){
-    $('.is-voting').show();
+    $('.is-voting').show()
+    .css({"opacity": 0, "height": 0+'px', "overflow": 'hidden'})
+    .animate({"height": $('.is-voting').data('h') +'px'}, function(){
+      $('.is-voting').css({"opacity": 1, "overflow": 'visible'});
+    });
   }
-    else $('.is-voting').hide();
+    else {
+        iH = $('.is-voting').height();
+        $('.is-voting').attr("data-h",iH);
+      $('.is-voting').height($('.is-voting').data('h')+'px')
+      .animate({"height": 0}, function(){
+          $('.is-voting').hide();
+        });
+     
+    } 
   
 });
 
@@ -530,16 +544,19 @@ $(".main-sidebar .block .title .search-input input[type='search']").on("blur", f
 
 
 $('.setup .search-input .btn').on("click", function(){
-  $(this).parents(".search-input").removeClass("minimize");
-  $(this).parents(".search-input").css({'width':'100%'});
-  $(this).parents(".search-input").find("input[type='search']").focus();
+  if(!$('.d-md-block').is(":visible")){
+    $(this).parents(".search-input").removeClass("minimize");
+    $(this).parents(".search-input").css({'width':'100%'});
+    $(this).parents(".search-input").find("input[type='search']").focus();
+  }
 });
 
 $(".setup .search-input input[type='search']").on("blur", function(){
-  $(this).parents(".search-input").animate({'width': '40px'},300,function(){
-    $(this).addClass("minimize");
-  });
-
+  if(!$('.d-md-block').is(":visible")){
+    $(this).parents(".search-input").animate({'width': '40px'},300,function(){
+      $(this).addClass("minimize");
+    });
+  }
 });
 
 
@@ -555,7 +572,7 @@ $( "header .search-input input[type='search'" ).on("blur",function(){
 });
 
 $('.form .tags span').on('click', function(){
-  //remove tag here
+  console.log("remove tag here");
 });
 
 $('.modal-audio .add-audio').on('click', function(){

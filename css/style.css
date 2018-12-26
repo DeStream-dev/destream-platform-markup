@@ -43,7 +43,17 @@ ul{
 a{text-decoration: none; color: #152f5c;}
 a:hover{text-decoration: none; }
 .no-touch a:hover{text-decoration: underline; }
-a:visited,a:focus{text-decoration: none; outline:none;}
+a:visited,a:focus{text-decoration: none; outline:none;border: none;}
+
+button:focus {
+  outline: none;
+}
+
+*:focus, *:active{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
 h2{
   font-size: 70px;
   color: #ffffff;
@@ -315,6 +325,9 @@ header .notifications-cont .dropdown-menu ul li .icon img{
 }
 .dropdown-item.active, .dropdown-item:active{
   background-color: transparent;
+}
+.bootstrap-select .dropdown-menu li.active a span.text{
+  color: #ffffff;
 }
 .no-touch .dropdown-menu ul li a:hover{
   background-color: transparent;
@@ -1247,16 +1260,19 @@ footer .social {
   display: block;
   padding-top: 25px;
 }
-.list .item .share span{
+.list .item .share span, .list .item .share a{
   font-size: 12px;
   line-height: 17px;
   color: #aab1b8;
   margin-right: 10px;
 }
-.list .item .share span:last-child{
+.no-touch .list .item .share a:hover{
+  text-decoration: none;
+  }
+.list .item .share span:last-child, .list .item .share a:last-child{
   margin-right: 0;
  }
-.list .item .share span svg{
+.list .item .share span svg, .list .item .share a svg{
   width: 18px;
   height: 16px;
   margin-right: 5px;
@@ -1264,6 +1280,10 @@ footer .social {
   top: -3px;
   fill: #aab1b8;
   opacity: 0.5;
+}
+.no-touch .list .item .share a:hover svg{
+  fill: #f05a00;
+  opacity: 1;
 }
 .list.list-live{
   background-color: #383e44;
@@ -1430,6 +1450,7 @@ footer .social {
   padding-bottom: 0;
   height: 190px;
   overflow: hidden;
+  position: relative;
 }
 
 .list-announcement-tile .item .img{
@@ -1685,6 +1706,18 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
 .bootstrap-select .dropdown-toggle:after{
   right: 12px;
   top: 13px;
+}
+.dropup .dropdown-toggle::after{
+  border-bottom: none;
+   margin-top: 5px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  left: auto;
+  float: right;
+  border-top: 6px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
 }
 .slides{
   position: relative;
@@ -2881,7 +2914,7 @@ button.close {
     line-height: 13px;
     font-weight: bold;
     color: #c6ced5;
-    width: 15%;
+    width: 12%;
     white-space: nowrap;
     text-transform: uppercase;
     padding-left: 22px;
@@ -2911,7 +2944,7 @@ button.close {
   font-weight: bold;
 }
 .payment-history .item .value{
-  width: 20%;
+  width: 23%;
   text-align: right;
   font-size: 22px;
   line-height: 27px;
@@ -2985,6 +3018,9 @@ button.close {
 .modal-buydst .title, .modal-transfer .title, .modal-transfer-2 .title, .modal-wallet-donate .title{
   border-bottom: 1px solid #dbe0e6;
  }
+ .modal-transfer .title{
+  margin-bottom: 20px;
+ }
 .converter{
   border-bottom: 1px solid #dbe0e6;
 }
@@ -2993,6 +3029,10 @@ button.close {
   vertical-align: top;
   width: calc(49% - 37px);
   position: relative;
+}
+.converter .half.second{
+  position: relative;
+  left: 20px;
 }
 .converter .name{
   font-size: 11px;
@@ -3030,11 +3070,11 @@ button.close {
  z-index: 6;
  right: 5px;
  top: 5px;
- min-width: 60px;
+ min-width: 70px;
  background-color: #eef0f1;
  border-radius: 15px;
  font-weight: 500;
- padding: 0;
+ padding: 3px 0;
  text-align: center;
  font-size: 13px;
  line-height: 24px;
@@ -3048,10 +3088,24 @@ button.close {
 }
 .converter .label .bootstrap-select>.dropdown-toggle, .converter .label .form-control{
   background-color: transparent;
+  height: unset;
+}
+.converter .label .form-control:focus, .converter .label .form-control:active{
+  outline: none;
+  border: none;
 }
 .converter .label .bootstrap-select>.dropdown-toggle:after{
   border-top-color: #0b1f30;
   top: 8px;
+}
+.converter .input-with-label .label .bootstrap-select>.dropdown-toggle:after{
+  border-top-color: #0b1f30;
+  top: 6px;
+  right: 18px;
+}
+.converter .input-with-label .label{
+  color: #0b1f30;
+  padding: 1px 0;
 }
 .converter .label .bootstrap-select>.dropdown-toggle .filter-option{
   padding-left: 15px;
@@ -3068,6 +3122,9 @@ button.close {
   border-radius: 50%;
   position: relative;
   left: 0;
+}
+.modal-buydst .converter .go{
+  left: 10px;
 }
  .converter .go svg{
     width: 33px;
@@ -3089,14 +3146,19 @@ button.close {
 .modal-buydst .buttons .btn, .modal-transfer .buttons .btn, .modal-transfer-2 .buttons .btn, .modal-equiring .buttons .btn{
   width: unset;
   display: inline-block !important;
-  left: 0;
+  left: -20px;
 }
 .modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next, .modal-transfer-2 .buttons .btn-next, .modal-equiring .buttons .btn-next{
   float: right;
   right: 0;
   left: unset;
 }
-
+.modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next{
+  right: -20px;
+}
+.modal-transfer-2 .buttons .btn-next{
+  right: 20px;
+}
 .modal-equiring .item {
   border-radius: 15px;
   display: inline-block;
@@ -5690,6 +5752,9 @@ header .search-input{
   -moz-box-shadow: 0px -0.6px 1px rgba(81, 89, 96, 0.4);
   -webkit-box-shadow: 0px -0.6px 1px rgba(81, 89, 96, 0.4);
 }
+.modal-create-future-stream .input-with-label .label{
+  padding: 1px 0;
+}
 .modal-create-future-stream textarea{
   height: 88px;
 }
@@ -5708,8 +5773,12 @@ header .search-input{
   font-size: 13px;
   display: inline-block;
   position: relative;
-  pointer-events: none;
   margin-right: 7px;
+  cursor: pointer;
+}
+.no-touch .form .tags span:hover{
+  background-color: #f05a00;
+  color: #ffffff;
 }
 .form .tags span:before, .form .tags span:after{
   position: absolute;
@@ -5725,6 +5794,9 @@ header .search-input{
   transform: rotate(45deg);
   cursor: pointer;
 }
+.no-touch .form .tags span:hover:after, .no-touch .form .tags span:hover:before{
+  background-color: #ffffff;
+}
  .form .tags span:after{
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -5739,7 +5811,7 @@ header .search-input{
  z-index: 6;
  right: -15px;
  top: 5px;
- min-width: 60px;
+ min-width: 70px;
  background-color: #eef0f1;
  border-radius: 15px;
  font-weight: 500;
@@ -5755,10 +5827,16 @@ header .search-input{
   background: linear-gradient(180deg, rgba(247,248,248,1) 0%,rgba(237,238,239,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f8', endColorstr='#edeeef',GradientType=1 );
 }
+
 .input-with-label .label .bootstrap-select>.dropdown-toggle, .input-with-label .label .form-control{
   background-color: transparent;
   left: 0;
   width: 80px !important;
+  height: inherit;
+}
+.converter .input-with-label .label{
+  right: 5px;
+  width: 70px !important;
 }
 .input-with-label .label .bootstrap-select>.dropdown-toggle:after{
    border-top-color: #aab1b8;
@@ -5797,9 +5875,15 @@ header .search-input{
 .label .bootstrap-select .dropdown-toggle .filter-option-inner-inner{
   height: 30px;
   line-height: 30px;
+  color: #0b1f30;
 }
 .modal-create-future-stream .switch {
   float: right;
+  position: relative;
+  left: 15px;
+}
+.modal-create-future-stream .switch label{
+  cursor: pointer;
 }
 .modal-create-future-stream .form .switch .form-group-radio {
   display: inline-block;
@@ -5821,9 +5905,12 @@ header .search-input{
 }
 .modal-create-future-stream .form .form-group{
   margin-bottom: 23px;
+  clear: both;
 }
 .modal-create-future-stream .form .form-group.voting{
   margin-bottom: 0;
+  width: 100%;
+  padding-left: 0;
 }
 .modal-create-future-stream .is-voting .limits{
   margin-top: 30px;
@@ -5865,6 +5952,7 @@ header .search-input{
 }
 .modal-create-future-stream .is-voting{
   padding-bottom: 5px;
+  clear: both;
 }
 .modal-create-future-stream .is-voting .form-control{
   margin-bottom: 12px;
@@ -6298,6 +6386,7 @@ border-radius: 0;
   outline: none;
   border: none;
 }
+
 .no-touch .dropdown-with-check .dropdown-menu ul li:hover{
   background-color: #444c54;
 }
@@ -7014,23 +7103,30 @@ background-color: #f05a00;
   fill: #aab1b8;
   opacity: 0.5;
 }
-.tournaments .item .bottom .social.share svg{
+.tournaments .item .bottom .social .share svg{
   width: 20px;
   height: 20px;
 }
-.tournaments .item .social span{
+.tournaments .item .social span, .tournaments .item .social a{
   font-size: 12px;
   line-height: 35px;
   color: #aab1b8;
   margin-right: 10%;
   display: inline-block;
   padding-top: 0;
+  width: unset;
+  height: unset;
+  background-color: transparent;
+  border-radius: 0;
+}
+.no-touch .tournaments .item .social a:hover{
+  text-decoration: none;
 }
 
-.tournaments .item .bottom .social span:last-child{
+.tournaments .item .bottom .social span:last-child, .tournaments .item .bottom .social a:last-child{
   margin-right: 0;
  }
-.tournaments .item .bottom .social span svg{
+.tournaments .item .bottom .social span svg, .tournaments .item .bottom .social a svg{
   width: 18px;
   height: 16px;
   margin-right: 5px;
@@ -7039,13 +7135,17 @@ background-color: #f05a00;
   fill: #aab1b8;
   opacity: 0.5;
 }
-.tournaments .item .bottom .social span.share svg{
+.no-touch .tournaments .item .social a:hover svg{
+  opacity: 1;
+  fill: #f05a00;
+}
+.tournaments .item .bottom .social span.share svg, .tournaments .item .bottom .social a.share svg{
   width: 20px;
   height: 20px;
-  -webkit-transform: scale(.7);
-      -ms-transform: scale(.7);
-       -o-transform: scale(.7);
-          transform: scale(.7);
+  -webkit-transform: scale(.72);
+      -ms-transform: scale(.72);
+       -o-transform: scale(.72);
+          transform: scale(.72);
 }
 .title-with-search{
   position: relative;
@@ -7116,7 +7216,7 @@ background-color: #f05a00;
 .tournament .tabs:after, .tournament .tabs:before {
   position: absolute;
   content: "";
-  width: calc(100% + 110px);
+  width: calc(100% + 55px);
   height: 1px;
   left: -55px;
   top: 0;
@@ -7189,11 +7289,11 @@ background-color: #f05a00;
   fill: #aab1b8;
   opacity: 0.5;
 }
-.tournament .general-info .social.share svg{
+.tournament .general-info .social .share svg{
   width: 20px;
   height: 20px;
 }
-.tournament .general-info .social span{
+.tournament .general-info .social span, .tournament .general-info .social a{
   font-size: 12px;
   line-height: 35px;
   color: #aab1b8;
@@ -7202,18 +7302,29 @@ background-color: #f05a00;
   padding-top: 0;
   margin-right: 30%;
   font-weight: bold;
+  background-color: transparent;
+  border-radius: 0;
+  width: unset;
+  height: unset;
 }
-.tournament .general-info .social span.likes{
+.no-touch .tournament .general-info .social a:hover{
+  text-decoration: none;
+ }
+ .no-touch .tournament .general-info .social a:hover svg{
+  fill: #f05a00;
+  opacity: 1;
+ }
+.tournament .general-info .social span.likes, .tournament .general-info .social a.likes{
   color: #c6ced5;
   text-transform: uppercase;
   font-size: 14px;
   color: #c6ced5;
 }
 
-.tournament .general-info .social span:last-child{
+.tournament .general-info .social span:last-child, .tournament .general-info .social a:last-child{
   margin-right: 0;
  }
-.tournament .general-info .social span svg{
+.tournament .general-info .social span svg, .tournament .general-info .social a svg{
   width: 18px;
   height: 16px;
   margin-right: 5px;
@@ -8361,7 +8472,8 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
 .bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
 .bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a,
-.tournament .tab-content .item, .rounds .group .members, .tournament .top-image, .tournament .general-info, .tournament .general-info, .tournament .general-info .about svg{
+.tournament .tab-content .item, .rounds .group .members, .tournament .top-image, .tournament .general-info, .tournament .general-info,
+ .tournament .general-info .about svg, .tags span, .tags span:after, .tags span:before{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
