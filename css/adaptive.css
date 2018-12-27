@@ -4305,6 +4305,10 @@ header .btn.login{
       left: -10px;
       width: calc(100% + 20px);
     }
+    .tournament-events .block.comments{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     .page.tournaments .row{
       margin: 0;
     }
@@ -7377,6 +7381,10 @@ header .btn.login{
       position: relative;
       left: -10px;
       width: calc(100% + 20px);
+    }
+    .tournament-events .block.comments{
+      padding-left: 10px;
+      padding-right: 10px;
     }
     .tournament-events .head{
       padding-left: 0;
