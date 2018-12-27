@@ -8452,6 +8452,12 @@ background-color: #f05a00;
   display: block;
   padding-bottom: 4px;
 }
+
+.tournament{
+  background-color: #383e44;
+}
+
+
 .ContentFlow .flow{
   overflow: hidden;
 }
