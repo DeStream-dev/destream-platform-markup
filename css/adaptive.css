@@ -350,7 +350,7 @@ header  div[class*='col-']{
     margin-left: 0;
    /* position: relative;*/
   }
-  .main-content .page{
+  .main-content .page, .page{
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -2227,7 +2227,7 @@ header .btn.login{
   .no-touch .wallet .btns a:hover {
       text-decoration: none;
     }
-    .main-content .page{
+    .main-content .page, .page{
       padding: 25px 10px;
     }
   .wallet .payment-history{
@@ -4268,7 +4268,7 @@ header .btn.login{
         top: auto;
         bottom: 25px;
         left: -10px;
-        width: calc(100% + 20px);
+        width: calc(100% + 10px);
 
        }
        .tournament .general-info .about svg{
@@ -4300,7 +4300,25 @@ header .btn.login{
       left: -10px;
       width: calc(100% + 20px);
     }
-
+    .page.tournaments .list, .page.tournament div.comments{
+      position: relative;
+      left: -10px;
+      width: calc(100% + 20px);
+    }
+    .page.tournaments .row{
+      margin: 0;
+    }
+    .page .row{
+      margin: 0 -10px;
+    }
+   
+    .page div[class*='col-'], .page div[class*='col-']{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .page.tournaments div[class*='col-']{
+        padding: 0;
+    }
  
  }
 
@@ -5316,9 +5334,9 @@ header .btn.login{
     .no-touch .wallet .btns a:hover {
       text-decoration: none;
     }
-    .main-content .page{
+    .main-content .page, .page{
       padding: 25px 10px;
-    }
+    }   
   .wallet .payment-history{
     position: relative;
     padding-top: 0;
@@ -6782,6 +6800,7 @@ header .btn.login{
       left: 0;
       width: 0;
       overflow: hidden;
+      padding-left: 0;
     }
     .setup input[type="search"]::-webkit-input-placeholder { color: #ffffff;opacity: 1;}
     .setup input[type="search"]::-moz-placeholder          {color: #ffffff;opacity: 1;}
@@ -7316,7 +7335,7 @@ header .btn.login{
         top: auto;
         bottom: 25px;
         left: -10px;
-        width: calc(100% + 20px);
+        width: calc(100% + 10px);
 
        }
        .tournament .general-info .about svg{
@@ -7353,6 +7372,33 @@ header .btn.login{
       float: none;
       display: block;
       margin-left: 0;
+    }
+     .page.tournaments .list, .tournament-events .head, .page.tournament div.comments, .page.tournament-events div.comments{
+      position: relative;
+      left: -10px;
+      width: calc(100% + 20px);
+    }
+    .tournament-events .head{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .tournament-events .head .bottom{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .page.tournaments .list .row, .page.tournament-events .list .row{
+      margin: 0;
+    }
+    .page .row{
+      margin: 0 -10px;
+    }
+   
+    .page div[class*='col-'], .page div[class*='col-']{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .page.tournaments .list div[class*='col-'], .page.tournament-events .list div[class*='col-']{
+        padding: 0;
     }
 }
 

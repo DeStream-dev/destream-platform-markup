@@ -93,6 +93,69 @@ $('.main-sidebar .close').on("click", function(){
     return false;
   });
 
+var $frameNav = null, slyOptionsNav;
+
+function setNavSliderWidth(obj){
+     var totalW = 0;
+
+      obj.find('li').each(function(){
+         $(this).find('a').width("auto");
+    });
+    if(!$('.d-md-block').is(":visible")){
+      setTimeout(function(){
+     
+            obj.find('li').each(function(){
+               var w0 = $(this).outerWidth();
+               totalW += w0;
+               $(this).width((w0)+"px");
+            });
+      if(obj.length){
+        if($frameNav && $frameNav.initialized){
+            setTimeout(function(){obj.find('.tabs-wrap').sly('reload'); },1200);  
+        }
+      else{
+       //   $frameNav  = $('.settings .tabs-wrap');
+          slyOptionsNav = {
+            horizontal: 1,
+            itemNav: 'basic',
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: 0,
+            scrollBy: 1,
+            speed: 300,
+            elasticBounds: 1,
+            easing: 'easeOutExpo'
+          };
+          $frameNav = new Sly(obj.find('.tabs-wrap'), slyOptionsNav).init();  
+      }
+    }
+
+      }, 500);
+
+
+  }
+  else{  
+    setTimeout(function(){
+      if(obj.length){
+        if( $frameNav){
+         obj.find('.tabs-wrap').sly(false);
+          $frameNav = null;
+        }
+      }
+    },1000);  
+  }
+}
+
+setNavSliderWidth($('.settings .tabs'));
+setNavSliderWidth($('.tournament .tabs:not(.inner)'));
+
+$(window).resize(function() {
+  setNavSliderWidth($('.settings .tabs'));
+  setNavSliderWidth($('.tournament .tabs:not(.inner)'));
+});
+
+
 $('.setup-link').on("click",function(){
   var thisel = $(this);
   thisel.parents('.setup').find('.filter-panel').addClass("open");
@@ -448,80 +511,34 @@ if(!this_item.hasClass("open")){
    return false;
 });
 
+
+$('.tournament .general-info .comments').click(function(){
+  
+   var obj =  $('.tournament div.comments');
+   $('html, body, .main-content').stop().animate({
+        scrollTop: obj.offset().top - $('header').outerHeight()
+    }, 800);
+    return false;
+});
+
+
+
+
 $('.page.tournament .tabs .nav .nav-link').on('click',function(){
   if($(this).parents('.tabs').hasClass('inner')) return;
    $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
   if($(this).attr("id") == "lobby-tab"){
     $('.page.tournament .top-image').removeClass("small");
+     $('.page.tournament .general-info').removeClass("minimized");     
+     $('.tournament .general-info').height("unset");
+
   }
   else{
     $('.page.tournament .top-image').addClass("small");
+    $('.page.tournament .general-info').addClass("minimized");
+     $('.tournament .general-info').height("100px");
   }
 });
-
-var $frameNav = null, slyOptionsNav;
-
-function setNavSliderWidth(obj){
-     var totalW = 0;
-
-      obj.find('li').each(function(){
-         $(this).find('a').width("auto");
-    });
-    if(!$('.d-md-block').is(":visible")){
-      setTimeout(function(){
-     
-            obj.find('li').each(function(){
-               var w0 = $(this).outerWidth();
-               totalW += w0;
-               $(this).width((w0)+"px");
-            });
-      if(obj.length){
-        if($frameNav && $frameNav.initialized){
-            setTimeout(function(){obj.find('.tabs-wrap').sly('reload'); },1200);  
-        }
-      else{
-       //   $frameNav  = $('.settings .tabs-wrap');
-          slyOptionsNav = {
-            horizontal: 1,
-            itemNav: 'basic',
-            mouseDragging: 1,
-            touchDragging: 1,
-            releaseSwing: 1,
-            startAt: 0,
-            scrollBy: 1,
-            speed: 300,
-            elasticBounds: 1,
-            easing: 'easeOutExpo'
-          };
-          $frameNav = new Sly(obj.find('.tabs-wrap'), slyOptionsNav).init();  
-      }
-    }
-
-      }, 500);
-
-
-  }
-  else{  
-    setTimeout(function(){
-      if(obj.length){
-        if( $frameNav){
-         obj.find('.tabs-wrap').sly(false);
-          $frameNav = null;
-        }
-      }
-    },1000);  
-  }
-}
-
-setNavSliderWidth($('.settings .tabs'));
-setNavSliderWidth($('.tournament .tabs:not(.inner)'));
-
-$(window).resize(function() {
-  setNavSliderWidth($('.settings .tabs'));
-  setNavSliderWidth($('.tournament .tabs:not(.inner)'));
-});
-
-
 
 $('.widget .side-group .colors a').each(function(){
   if($(this).data('color')){
@@ -630,7 +647,7 @@ $('.theatre-mode-toggle').on('click', function(){
     $('body').toggleClass("theatre-mode");
    });
 
- var iH = 0; 
+ var iH = $('.tournament .general-info').height(); 
 $('.tournament .general-info .about').on('click', function(){
    if(!$('.tournament .general-info').hasClass("minimized")){
     iH =  $('.tournament .general-info').height();

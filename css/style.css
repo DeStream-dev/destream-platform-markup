@@ -824,7 +824,7 @@ padding: 0 25px;
   text-align: left;
 }
 
-.main-sidebar .block .title, .main-content .title{
+.main-sidebar .block .title, .main-content .title, .page .title{
   text-transform: uppercase;
   color: #ffffff;
   font-size: 15px;
@@ -2822,7 +2822,7 @@ button.close {
   fill: #ffffff;
 }
 
-.main-content .page{
+.main-content .page, .page{
   padding: 50px 55px;
   position: relative;
 }
@@ -6871,6 +6871,10 @@ background-color: #f05a00;
   width: calc(100% - 590px);
   margin-right: 340px;
 }
+.sidebar-collapse.with-chat .main-content{
+  margin-left: 0;
+  width: calc(100% - 340px);
+}
 .theatre-mode .main-content{
   margin-left: 0;
   width: calc(100% - 340px);
@@ -6891,8 +6895,8 @@ background-color: #f05a00;
   left: 0;
   top: 0;
 }
-.theatre-mode.with-chat .page.live-broadcast .head{
-  width: 100%;
+.theatre-mode.with-chat .page.live-broadcast .head{ 
+  width: calc(100% - 340px);
   }
 .theatre-mode .page.live-broadcast .head .user-info{
   bottom: 0;
@@ -7247,7 +7251,7 @@ background-color: #f05a00;
   background-color: #343b43;
   text-decoration: none;
 }
-.tournament .tabs .nav .nav-link.active, .tournament .tabs .nav .nav-link.active:hover{
+.tournament .tabs .nav .nav-link.active, .no-touch .tournament .tabs .nav .nav-link.active:hover{
   font-weight: bold;
   background-color: #f05a00;
 }

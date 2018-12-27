@@ -1260,16 +1260,19 @@ footer .social {
   display: block;
   padding-top: 25px;
 }
-.list .item .share span{
+.list .item .share span, .list .item .share a{
   font-size: 12px;
   line-height: 17px;
   color: #aab1b8;
   margin-right: 10px;
 }
-.list .item .share span:last-child{
+.no-touch .list .item .share a:hover{
+  text-decoration: none;
+  }
+.list .item .share span:last-child, .list .item .share a:last-child{
   margin-right: 0;
  }
-.list .item .share span svg{
+.list .item .share span svg, .list .item .share a svg{
   width: 18px;
   height: 16px;
   margin-right: 5px;
@@ -1277,6 +1280,10 @@ footer .social {
   top: -3px;
   fill: #aab1b8;
   opacity: 0.5;
+}
+.no-touch .list .item .share a:hover svg{
+  fill: #f05a00;
+  opacity: 1;
 }
 .list.list-live{
   background-color: #383e44;
@@ -1443,6 +1450,7 @@ footer .social {
   padding-bottom: 0;
   height: 190px;
   overflow: hidden;
+  position: relative;
 }
 
 .list-announcement-tile .item .img{
@@ -3022,6 +3030,10 @@ button.close {
   width: calc(49% - 37px);
   position: relative;
 }
+.converter .half.second{
+  position: relative;
+  left: 20px;
+}
 .converter .name{
   font-size: 11px;
   line-height: 13px;
@@ -3111,6 +3123,9 @@ button.close {
   position: relative;
   left: 0;
 }
+.modal-buydst .converter .go{
+  left: 10px;
+}
  .converter .go svg{
     width: 33px;
     height: 17px;
@@ -3131,14 +3146,19 @@ button.close {
 .modal-buydst .buttons .btn, .modal-transfer .buttons .btn, .modal-transfer-2 .buttons .btn, .modal-equiring .buttons .btn{
   width: unset;
   display: inline-block !important;
-  left: 0;
+  left: -20px;
 }
 .modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next, .modal-transfer-2 .buttons .btn-next, .modal-equiring .buttons .btn-next{
   float: right;
   right: 0;
   left: unset;
 }
-
+.modal-buydst .buttons .btn-next, .modal-transfer .buttons .btn-next{
+  right: -20px;
+}
+.modal-transfer-2 .buttons .btn-next{
+  right: 20px;
+}
 .modal-equiring .item {
   border-radius: 15px;
   display: inline-block;
@@ -5859,8 +5879,11 @@ header .search-input{
 }
 .modal-create-future-stream .switch {
   float: right;
-  position: relative
+  position: relative;
   left: 15px;
+}
+.modal-create-future-stream .switch label{
+  cursor: pointer;
 }
 .modal-create-future-stream .form .switch .form-group-radio {
   display: inline-block;
@@ -6848,6 +6871,10 @@ background-color: #f05a00;
   width: calc(100% - 590px);
   margin-right: 340px;
 }
+.sidebar-collapse.with-chat .main-content{
+  margin-left: 0;
+  width: calc(100% - 340px);
+}
 .theatre-mode .main-content{
   margin-left: 0;
   width: calc(100% - 340px);
@@ -6868,8 +6895,8 @@ background-color: #f05a00;
   left: 0;
   top: 0;
 }
-.theatre-mode.with-chat .page.live-broadcast .head{
-  width: 100%;
+.theatre-mode.with-chat .page.live-broadcast .head{ 
+  width: calc(100% - 340px);
   }
 .theatre-mode .page.live-broadcast .head .user-info{
   bottom: 0;
@@ -7080,23 +7107,30 @@ background-color: #f05a00;
   fill: #aab1b8;
   opacity: 0.5;
 }
-.tournaments .item .bottom .social.share svg{
+.tournaments .item .bottom .social .share svg{
   width: 20px;
   height: 20px;
 }
-.tournaments .item .social span{
+.tournaments .item .social span, .tournaments .item .social a{
   font-size: 12px;
   line-height: 35px;
   color: #aab1b8;
   margin-right: 10%;
   display: inline-block;
   padding-top: 0;
+  width: unset;
+  height: unset;
+  background-color: transparent;
+  border-radius: 0;
+}
+.no-touch .tournaments .item .social a:hover{
+  text-decoration: none;
 }
 
-.tournaments .item .bottom .social span:last-child{
+.tournaments .item .bottom .social span:last-child, .tournaments .item .bottom .social a:last-child{
   margin-right: 0;
  }
-.tournaments .item .bottom .social span svg{
+.tournaments .item .bottom .social span svg, .tournaments .item .bottom .social a svg{
   width: 18px;
   height: 16px;
   margin-right: 5px;
@@ -7105,13 +7139,17 @@ background-color: #f05a00;
   fill: #aab1b8;
   opacity: 0.5;
 }
-.tournaments .item .bottom .social span.share svg{
+.no-touch .tournaments .item .social a:hover svg{
+  opacity: 1;
+  fill: #f05a00;
+}
+.tournaments .item .bottom .social span.share svg, .tournaments .item .bottom .social a.share svg{
   width: 20px;
   height: 20px;
-  -webkit-transform: scale(.7);
-      -ms-transform: scale(.7);
-       -o-transform: scale(.7);
-          transform: scale(.7);
+  -webkit-transform: scale(.72);
+      -ms-transform: scale(.72);
+       -o-transform: scale(.72);
+          transform: scale(.72);
 }
 .title-with-search{
   position: relative;
@@ -7213,7 +7251,7 @@ background-color: #f05a00;
   background-color: #343b43;
   text-decoration: none;
 }
-.tournament .tabs .nav .nav-link.active, .tournament .tabs .nav .nav-link.active:hover{
+.tournament .tabs .nav .nav-link.active, .no-touch .tournament .tabs .nav .nav-link.active:hover{
   font-weight: bold;
   background-color: #f05a00;
 }
@@ -7255,11 +7293,11 @@ background-color: #f05a00;
   fill: #aab1b8;
   opacity: 0.5;
 }
-.tournament .general-info .social.share svg{
+.tournament .general-info .social .share svg{
   width: 20px;
   height: 20px;
 }
-.tournament .general-info .social span{
+.tournament .general-info .social span, .tournament .general-info .social a{
   font-size: 12px;
   line-height: 35px;
   color: #aab1b8;
@@ -7268,18 +7306,29 @@ background-color: #f05a00;
   padding-top: 0;
   margin-right: 30%;
   font-weight: bold;
+  background-color: transparent;
+  border-radius: 0;
+  width: unset;
+  height: unset;
 }
-.tournament .general-info .social span.likes{
+.no-touch .tournament .general-info .social a:hover{
+  text-decoration: none;
+ }
+ .no-touch .tournament .general-info .social a:hover svg{
+  fill: #f05a00;
+  opacity: 1;
+ }
+.tournament .general-info .social span.likes, .tournament .general-info .social a.likes{
   color: #c6ced5;
   text-transform: uppercase;
   font-size: 14px;
   color: #c6ced5;
 }
 
-.tournament .general-info .social span:last-child{
+.tournament .general-info .social span:last-child, .tournament .general-info .social a:last-child{
   margin-right: 0;
  }
-.tournament .general-info .social span svg{
+.tournament .general-info .social span svg, .tournament .general-info .social a svg{
   width: 18px;
   height: 16px;
   margin-right: 5px;
