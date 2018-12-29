@@ -694,12 +694,13 @@ padding: 0 25px;
   font-size: 13px;
   text-transform: uppercase;
   padding: 15px 0 10px;
+  display: none;
 }
 .main-sidebar .block.account .score{
   color: #ffffff;
   font-weight: 800;
   line-height: normal;
-  font-size: 27px;
+  font-size: 21px;
   text-transform: uppercase;
   padding-bottom: 7px;
 }
@@ -4329,6 +4330,22 @@ button.close {
   margin: 0 45px;
   width: 62%;
 }
+.settings .tab-pane#donate .personal {
+  padding-left: 0;
+  width: calc(62% - 240px);
+  margin: 0 0 0 20px;
+}
+.settings .personal .donatelink svg{
+  width: 16px;
+  height: 16px;
+  fill: #737c85;
+}
+.settings .personal .donatelink .copy{
+  position: absolute;
+  bottom: 12px;
+  right: 35px;
+}
+
 .settings .personal .form-group label{
   font-size: 11px;
   line-height: 13px;
@@ -7263,10 +7280,10 @@ background-color: #f05a00;
   border-bottom: 1px solid rgba(102,111,121,0.4);
 }
 
-.tournament .general-info > div{
+.tournament .general-info > .wrap > div{
   padding: 24px 55px;
 }
-.tournament .general-info > div:first-child{
+.tournament .general-info > .wrap > div:first-child{
   border-bottom: 1px solid rgba(102,111,121,0.4);
 }
 .tournament .general-info .social, .tournament .general-info .prize-fund, .tournament .general-info .players, .tournament .general-info .time,
@@ -7408,7 +7425,7 @@ background-color: #f05a00;
   line-height: 40px;
 }
 .tournament .tab-content .tab-pane{
-  padding: 40px 0;
+  padding: 60px 0 40px;
 }
 .tournament .tab-content .tab-pane .text, .tournament-events .lobby .text{
   font-size: 13px;
@@ -8249,9 +8266,12 @@ background-color: #f05a00;
   padding-right: 20px;
 }
 .tournament .tab-content .rounds .pair{
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+  position: relative;
 }
-
+.tournament .tab-content .rounds .fourth{
+  margin-bottom: 32px;
+}
 .tournament .tab-content .tab-pane .rounds .round .title{
   font-size: 11px;
   line-height: 14px;
@@ -8388,20 +8408,16 @@ background-color: #f05a00;
   z-index: 22;
   margin-bottom: 20px;
 }
-.tournament .tab-content .rounds .half:after, .tournament .tab-content .rounds .half:before{
-  position: absolute;
-  content: "";
-  width: 92px;
-  height: 82px;
-  left: -95px;
-  top: 21px;
-  background-image: url("../img/braces/brace1up.svg");
+.tournament .tab-content .rounds .group{
+  position: relative;
 }
- .tournament .tab-content .rounds .half:before{
-   background-image: url("../img/braces/brace1down.svg");
-   height: 86px;
-   top: 100px;
+
+ 
+  .tournament .tab-content .rounds .pair.additional .group:first-child:after, .tournament .tab-content .rounds .pair.additional .group:last-child:after,
+  .tournament .tab-content .rounds .round3 .group:first-child:after, .tournament .tab-content .rounds .round3 .group:last-child:after{
+    display: none;
   }
+
 .tournament .tab-content .rounds .half:last-child{
   z-index: 2;
 }
@@ -8412,19 +8428,68 @@ background-color: #f05a00;
   min-height: 450px;
   position: relative;
 }
-.tournament .tab-content .rounds .full:after, .tournament .tab-content .rounds .full:before{
+.tournament .tab-content .rounds .group:first-child:after, .tournament .tab-content .rounds .group:last-child:after{
   position: absolute;
   content: "";
-  width: 92px;
-  height: 146px;
-  left: -95px;
-  top: 75px;
-  background-image: url("../img/braces/brace2up.svg");
+  width: 52px;
+  height: 30px;
+  left: calc(100% + 10px);
+  top: 17px;
+  background-image: url("../img/braces/brace1.svg");
 }
- .tournament .tab-content .rounds .full:before{
-   background-image: url("../img/braces/brace2down.svg");
-    top: 215px;
+.tournament .tab-content .rounds .group.winner:after{
+ /* background-image: url("../img/braces/brace1_active.svg");
+  z-index: 56;*/
   }
+ .tournament .tab-content .rounds .group:last-child:after{
+    -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+   top: -4px;
+  }
+
+.tournament .tab-content .rounds .fourth .pair:first-child:after, .tournament .tab-content .rounds .fourth .pair:last-child:after{
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 64px;
+    left: calc(100% + 62px);
+    top: 45px;
+    background-image: url("../img/braces/brace2.svg");
+}
+.tournament .tab-content .rounds .fourth .pair:last-child:after{
+   top: -17px;
+   -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+  }
+.tournament .tab-content .rounds .fourth .pair.winner:after{
+ /*  background-image: url("../img/braces/brace2_active.svg");
+   z-index: 56;*/
+}
+.tournament .tab-content .rounds .half:first-child:after,.tournament .tab-content .rounds .half:last-child:after{
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 124px;
+  left: calc(100% + 61px);
+  top: 103px;
+  background-image: url("../img/braces/brace3.svg");
+
+}
+.tournament .tab-content .rounds .half:last-child:after{
+ top: -19px;
+    -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+  }
+.tournament .tab-content .rounds .half.winner:after{
+ /* background-image: url("../img/braces/brace3_active.svg");
+   z-index: 56;*/
+}
 .tournament .tab-content .rounds .half .pair, .tournament .tab-content .rounds .round3 .pair{
   position: absolute;
   z-index: 10;
@@ -8435,7 +8500,12 @@ background-color: #f05a00;
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
-
+.tournament .tab-content .rounds .full .pair{
+  margin-top: 2px;
+}
+      .tournament .tab-content #bracket .tab-content-scroll[data-simplebar] .simplebar-track.horizontal{
+        display: block !important;
+      }
 
 .tournament .tab-content #players .items .item.capitan{
 
@@ -8482,8 +8552,8 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .search-results .group li, .modal-audio .items dl,.wallet .btns a .icon, .dz-message, .filter-panel,
 .bootstrap-datetimepicker-widget table td:after, .bootstrap-datetimepicker-widget table th:after,.bootstrap-datetimepicker-widget table th,
 .bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a,
-.tournament .tab-content .item, .rounds .group .members, .tournament .top-image, .tournament .general-info, .tournament .general-info,
- .tournament .general-info .about svg, .tags span, .tags span:after, .tags span:before{
+.tournament .tab-content .item, .rounds .group .members, .tournament .top-image, .tournament .general-info, .tournament .general-info .wrap,
+.tournament .general-info .about svg, .tags span, .tags span:after, .tags span:before{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;

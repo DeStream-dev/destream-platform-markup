@@ -226,8 +226,7 @@
 	    	  	<h1 class="logo  d-md-none"><a href="index.html"><img src="img/logo.svg" width="152" height="40" alt="" />Destream</a></h1>
 	    	</div>
     		<div class="block account">
-    			<div class="status">+12%</div>
-    			<div class="score">2 850 000</div>
+    			<div class="score">2 850 000 DST</div>
     			<div class="money">475 000 $</div>
     			<div class="btns">
     				<a href="#" data-target=".modal-buydst" data-toggle="modal" class="get"><svg><use xlink:href="img/vectors.svg#arrow-get"></use></svg>
@@ -511,6 +510,9 @@
 							    <a class="nav-link active" href="#personal" id="personal-tab" data-toggle="tab" role="tab" aria-controls="personal" aria-selected="true">Personal</a>
 							  </li>
 							  <li class="nav-item">
+							    <a class="nav-link" href="#donate" id="donate-tab" data-toggle="tab" role="tab" aria-controls="donate" aria-selected="true">Donate</a>
+							  </li>
+							  <li class="nav-item">
 							   <a class="nav-link" id="integration-tab" data-toggle="tab" href="#integration" role="tab" aria-controls="integration" aria-selected="false">Integration</a>
 							  </li>	
 							  <li class="nav-item">
@@ -575,7 +577,23 @@
                             <div class="form-group buttons" aria-required="true">
                             <a href="#" class="btn btn-transparent btn-changepassword">Change password</a>
                             </div>
-                            <div class="form-group" aria-required="true">
+                            
+                            <div class="buttons">                            
+			            		<button type="button" class="btn btn-save">Save</button>
+			            		<button type="button" class="btn btn-transparent">Cancel</button>
+			            	</div>
+
+
+			            	<a href="#" class="delete-account">Delete account</a>
+
+			
+				   		</form>
+				   		</div>
+				  </div>
+				  <div class="tab-pane fade" id="donate" role="tabpanel" aria-labelledby="donate-tab">
+				  <div class="form personal">
+				  	<form data-toggle="validator" role="form">
+				  		<div class="form-group" aria-required="true">
                                 <label class="control-label" for="donate">Minimal donate</label>
                                 <div class="input">
                             	<div class="label">
@@ -592,17 +610,21 @@
                                 
                             </div>
 
+                            <div class="form-group donatelink" aria-required="true">
+	                            <label class="control-label" for="donatelink">Donate link</label>
+	                            <input type="text" id="donatelink" class="form-control" placeholder="http://127.0.0.1:32767/start.html">
+	                            <a class="copy" href="#"><svg><use xlink:href="img/vectors.svg#copy-s"></use></svg></a>
+	                        </div>
+
+
                             <div class="buttons">                            
 			            		<button type="button" class="btn btn-save">Save</button>
 			            		<button type="button" class="btn btn-transparent">Cancel</button>
 			            	</div>
 
+			            	</form>
+			            </div>
 
-			            	<a href="#" class="delete-account">Delete account</a>
-
-			
-				   		</form>
-				   		</div>
 				  </div>
 				  <div class="tab-pane fade" id="integration" role="tabpanel" aria-labelledby="integration-tab">
 				  		<div class="form integration">

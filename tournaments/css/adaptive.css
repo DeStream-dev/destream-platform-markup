@@ -354,6 +354,9 @@ header  div[class*='col-']{
     padding-left: 40px;
     padding-right: 40px;
   }
+  .page.live-broadcast{
+    padding: 0;
+  }
   .payment-history .item{
     padding-left: 40px;
     padding-right: 40px;
@@ -1140,16 +1143,16 @@ header .btn.login{
     div.comments input[type="text"]{
       width: 100%;
     }
-   .tournament .general-info > div:first-child .head{
+   .tournament .general-info > .wrap > div:first-child .head{
       padding-bottom: 20px;
       margin-bottom: 20px;
       border-bottom: 1px solid rgba(102,111,121,0.4);
      }
-     .tournament .general-info > div:first-child .links{
+     .tournament .general-info > .wrap > div:first-child .links{
       padding-bottom: 60px;
       border-bottom: 1px solid rgba(102,111,121,0.4);
      }
-     .tournament .general-info > div:first-child{
+     .tournament .general-info > .wrap > div:first-child{
       border-bottom: none;
       padding-bottom: 0;
      }
@@ -1157,7 +1160,7 @@ header .btn.login{
       display: inline-block;
       width: calc(50% - 0.3em);
     }
-    .tournament .general-info > div:first-child .head > div:last-child{
+    .tournament .general-info > .wrap > div:first-child .head > div:last-child{
       text-align: right;
       display: inline-block!important;
     }
@@ -1183,7 +1186,7 @@ header .btn.login{
      .tournament .tabs.inner .nav .nav-item{
       flex: none;
      }
-     .tournament .general-info > div{
+     .tournament .general-info > .wrap > div{
       padding-bottom: 20px;
       padding-top: 20px;
      }
@@ -1302,7 +1305,7 @@ header .btn.login{
       width: calc(100% + 80px);
     }
 
-    .tournament .general-info > div{
+    .tournament .general-info > .wrap > div{
       padding: 20px 40px;
     }
     .tournament .more{
@@ -4023,15 +4026,46 @@ header .btn.login{
       width: 100%;
       border-top: 1px solid rgba(102,111,121,0.4);
      }
-
-     .tournament .general-info{
+     .tournament .tab-content .tab-pane{
+      padding-top: 60px;
+     }
+      .tournament .general-info{
       left: -10px;
       width: calc(100% + 20px);
       padding-left: 10px;
       padding-right: 10px;
+      position: relative;
      }
-     .tournament .general-info > div{
+     .tournament .general-info:after{
+      position: absolute;
+      z-index: 4;
+      bottom: -38px;
+      left: -10px;
+      height: 101px;
+      width: calc(100% + 10px);
+      content: "";
+      background-image: url("../img/tournaments/angle.svg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+         background-size: cover;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+     }
+     .tournament .general-info.minimized:after{
+      bottom: 0;
+     }
+     .tournament .general-info > .wrap{
+      position: relative;
+        z-index: 5;
+     }
+     .tournament .general-info > .wrap > div:first-child{
         padding: 20px 0;
+        position: relative;
+     }
+     .tournament .general-info > .wrap > div{
+        padding: 20px 0 0;
+        position: relative;
      }
      .tournament .general-info .social span, .tournament .general-info .social a{
       margin-right: 40px;
@@ -4055,7 +4089,7 @@ header .btn.login{
       text-align: center;
       float: none;
       line-height: normal;
-      padding: 22px 0 10px;
+      padding: 22px 0 0;
      }
      .join-the-tournament .title{
       font-size: 13px;
@@ -4227,32 +4261,25 @@ header .btn.login{
         width: 1000px;
       }
 
-      .tournament .general-info.minimized{
+       .tournament .general-info.minimized{
         height: 101px;
         position: relative;
-        background-image: url("../img/tournaments/angle.svg");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-         background-size: cover;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -o-background-size: cover;
          background-color: transparent;
          border: none;
       }
     
-      .tournament .general-info.minimized > div:first-child{
+      .tournament .general-info.minimized > .wrap > div:first-child{
         display: none;
         opacity: 1;
       }
-       .tournament .general-info.minimized > div .head,  .tournament .general-info.minimized > div .prize-fund,
-       .tournament .general-info.minimized > div .time, .tournament .general-info.minimized > div .players,
-       .tournament .general-info.minimized > div .format{
+       .tournament .general-info.minimized > .wrap > div .head,  .tournament .general-info.minimized > .wrap > div .prize-fund,
+       .tournament .general-info.minimized > .wrap > div .time, .tournament .general-info.minimized > .wrap > div .players,
+       .tournament .general-info.minimized > .wrap > div .format{
         display: none;
         opacity: 1;
       }
-      .tournament .general-info > div:last-child{
-        padding: 0;
+      .tournament .general-info > .wrap > div:last-child{
+        padding-bottom: 0;
       }
       .tournament .general-info.minimized .status{
         top: -40px;
@@ -4265,6 +4292,7 @@ header .btn.login{
         color: #aab1b8;
         text-transform: uppercase;
         position: absolute;
+        z-index: 9;
         top: auto;
         bottom: 25px;
         left: -10px;
@@ -4283,8 +4311,8 @@ header .btn.login{
           display: block;
           position: absolute;
           left: 50%;
-          margin-left: -5px;
-          top: 5px;
+          margin-left: -7px;
+          top: 42px;
        }
        .tournament .general-info.minimized .about{
         font-size: 10px;
@@ -4300,7 +4328,13 @@ header .btn.login{
       left: -10px;
       width: calc(100% + 20px);
     }
-    .page.tournaments .list, .page.tournament div.comments{
+
+    .tournament .tabs.inner.tabs-right, .tournament .tabs.inner.tabs-left{
+      float: none;
+      display: block;
+      margin-left: 0;
+    }
+     .page.tournaments .list, .tournament-events .head, .page.tournament div.comments, .page.tournament-events div.comments{
       position: relative;
       left: -10px;
       width: calc(100% + 20px);
@@ -4309,7 +4343,15 @@ header .btn.login{
       padding-left: 10px;
       padding-right: 10px;
     }
-    .page.tournaments .row{
+    .tournament-events .head{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .tournament-events .head .bottom{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .page.tournaments .list .row, .page.tournament-events .list .row{
       margin: 0;
     }
     .page .row{
@@ -4320,7 +4362,7 @@ header .btn.login{
       padding-left: 10px;
       padding-right: 10px;
     }
-    .page.tournaments div[class*='col-']{
+    .page.tournaments .list div[class*='col-'], .page.tournament-events .list div[class*='col-']{
         padding: 0;
     }
  
@@ -7078,6 +7120,13 @@ header .btn.login{
       top: 0;
       right: 0;
       float: none;
+
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+
     }
 
     .tournament .general-info .social{
@@ -7094,13 +7143,44 @@ header .btn.login{
       width: calc(100% + 20px);
       padding-left: 10px;
       padding-right: 10px;
+      position: relative;
      }
-     .tournament .general-info > div{
+     .tournament .general-info:after{
+      position: absolute;
+      z-index: 4;
+      bottom: -38px;
+      left: -10px;
+      height: 101px;
+      width: calc(100% + 10px);
+      content: "";
+      background-image: url("../img/tournaments/angle.svg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+         background-size: cover;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+     }
+     .tournament .general-info.minimized:after{
+      bottom: 0;
+     }
+     .tournament .general-info > .wrap{
+      position: relative;
+        z-index: 5;
+     }
+     .tournament .general-info > .wrap > div:first-child{
         padding: 20px 0;
+        position: relative;
+     }
+     .tournament .general-info > .wrap > div{
+        padding: 20px 0 0;
+        position: relative;
      }
      .tournament .general-info .social span, .tournament .general-info .social a{
       margin-right: 40px;
       line-height: normal;
+      position: relative;
+      top: 2px;
      }
      .tournament .general-info .prize-fund, .tournament .general-info .players, .tournament .general-info .time{
       width: calc(33.33333333% - 0.3em);
@@ -7120,7 +7200,7 @@ header .btn.login{
       text-align: center;
       float: none;
       line-height: normal;
-      padding: 22px 0 10px;
+      padding: 22px 0 0;
      }
      .join-the-tournament .title{
       font-size: 13px;
@@ -7291,9 +7371,7 @@ header .btn.login{
         transform: translate(0, -50%);
       }
 
-      /*.tournament .tab-content #bracket .tab-content-scroll[data-simplebar] .simplebar-track.horizontal{
-        display: block !important;
-      }*/
+
       .tournament .tab-content #bracket .tab-content-scroll[data-simplebar] .tab-pane{
         width: 1000px;
       }
@@ -7301,29 +7379,22 @@ header .btn.login{
       .tournament .general-info.minimized{
         height: 101px;
         position: relative;
-        background-image: url("../img/tournaments/angle.svg");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-         background-size: cover;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -o-background-size: cover;
          background-color: transparent;
          border: none;
       }
     
-      .tournament .general-info.minimized > div:first-child{
+      .tournament .general-info.minimized > .wrap > div:first-child{
         display: none;
         opacity: 1;
       }
-       .tournament .general-info.minimized > div .head,  .tournament .general-info.minimized > div .prize-fund,
-       .tournament .general-info.minimized > div .time, .tournament .general-info.minimized > div .players,
-       .tournament .general-info.minimized > div .format{
+       .tournament .general-info.minimized > .wrap > div .head,  .tournament .general-info.minimized > .wrap > div .prize-fund,
+       .tournament .general-info.minimized > .wrap > div .time, .tournament .general-info.minimized > .wrap > div .players,
+       .tournament .general-info.minimized > .wrap > div .format{
         display: none;
         opacity: 1;
       }
-      .tournament .general-info > div:last-child{
-        padding: 0;
+      .tournament .general-info > .wrap > div:last-child{
+        padding-bottom: 0;
       }
       .tournament .general-info.minimized .status{
         top: -40px;
@@ -7336,6 +7407,7 @@ header .btn.login{
         color: #aab1b8;
         text-transform: uppercase;
         position: absolute;
+        z-index: 9;
         top: auto;
         bottom: 25px;
         left: -10px;
@@ -7354,8 +7426,8 @@ header .btn.login{
           display: block;
           position: absolute;
           left: 50%;
-          margin-left: -5px;
-          top: 5px;
+          margin-left: -7px;
+          top: 42px;
        }
        .tournament .general-info.minimized .about{
         font-size: 10px;
