@@ -514,8 +514,6 @@ if(!this_item.hasClass("open")){
 
 $('.tournament .general-info .comments, .tournament-events .head .bottom .comments').click(function(){
    var obj =  $('div.comments');
-   $('.page').scrollTop(900);
-   console.log( $('html, body').scrollTop());
    $('html, body, .page').stop().animate({
         scrollTop: obj.offset().top
     }, 800);

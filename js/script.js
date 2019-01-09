@@ -522,8 +522,6 @@ $('.tournament .general-info .comments, .tournament-events .head .bottom .commen
 });
 
 
-
-
 $('.page.tournament .tabs .nav .nav-link').on('click',function(){
   if($(this).parents('.tabs').hasClass('inner')) return;
    $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
@@ -542,6 +540,27 @@ $('.page.tournament .tabs .nav .nav-link').on('click',function(){
      $('.tournament .general-info').height("100px");
    }
   }
+});
+$('.tournament .rounds .group').on('mouseover', function(){
+    console.log($(this).data("group"));
+    var group_name = $(this).data("group");
+    $('.tournament .rounds .pair').each(function(){
+      console.log($(this).data("group_up"), "",$(this).data("group_down"));
+      if($(this).data("group_up") == group_name){
+          $(this).addClass("active-up")
+      }
+      if($(this).data("group_down") == group_name){
+          $(this).addClass("active-down")
+      }
+      });
+  });
+
+$('.tournament .rounds .group').on('mouseout', function(){
+  $('.tournament .rounds .pair').each(function(){
+     $(this).removeClass("active-up");
+     $(this).removeClass("active-down");
+  });
+
 });
 
 $('.widget .side-group .colors a').each(function(){
@@ -651,22 +670,23 @@ $('.theatre-mode-toggle').on('click', function(){
     $('body').toggleClass("theatre-mode");
    });
 
- var iH = $('.tournament .general-info').height(); 
+ var iH = $('.tournament .general-info .wrap').height(); 
 $('.tournament .general-info .about').on('click', function(){
    if(!$('.tournament .general-info').hasClass("minimized")){
-    iH =  $('.tournament .general-info').height();
+    iH =  $('.tournament .general-info .wrap').height();
    // $('.tournament .general-info > *').css("opacity",0);
-    $('.tournament .general-info').height(iH).animate({'height':'100px'},400,function(){
+    $('.tournament .general-info .wrap').height(iH).animate({'height':'70px'},500,function(){
       $('.tournament .general-info').addClass("minimized");
+      $('.tournament .general-info .status').css("opacity",0).delay(200).animate({"opacity":"1"});
     //  $('.tournament .general-info > *').css("opacity",1);
     });
   }
  else if($('.tournament .general-info').hasClass("minimized")){
-   $('.tournament .general-info .status').hide();//css("opacity",0);
+  // $('.tournament .general-info .status').hide();//css("opacity",0);
    $('.tournament .general-info').removeClass("minimized");
-   $('.tournament .general-info').animate( {'height': iH+'px'},400,function(){
+   $('.tournament .general-info .wrap').animate( {'height': iH+'px'},500,function(){
       $('.tournament .general-info').removeClass("minimized");
-      $('.tournament .general-info .status').fadeIn(100);//css("opacity",1);
+     // $('.tournament .general-info .status').fadeIn(100);//css("opacity",1);
     });
   }
  //  $(this).parents(".general-info").toggleClass("minimized");   

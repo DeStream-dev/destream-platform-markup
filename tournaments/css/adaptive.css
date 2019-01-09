@@ -287,6 +287,8 @@ body.widget > .content{
    .tournament .general-info .social span, .tournament .general-info .social a{
     margin-right: 24%;
    }
+
+
 }
 
 
@@ -305,6 +307,9 @@ body.widget > .content{
    }
   .widget header{
     z-index: 124;
+  }
+  .page.live-broadcast .head .user-info svg{
+    display: inline;
   }
   header .row{
     margin: 0;
@@ -367,9 +372,15 @@ header  div[class*='col-']{
     width: calc( 100% - 80px);
     left: 40px;
   }
+  .sidebar-collapse.with-chat .main-content{
+    width: 100%;
+  }
   .with-chat .main-content{
      margin-left: 0;
-     width: calc(100% - 340px);
+     width: 100%;
+  }
+  .with-chat .chat{
+    display: none;
   }
   .modal-interest .modal-lg{
     max-width: 100%;
@@ -412,9 +423,7 @@ header  div[class*='col-']{
 .page.live-broadcast .head .user-info,.page.mychannel .head .user-info{
   padding-left: 50px;
 }
-.page.live-broadcast .head .user-info > div{
-  width: calc(100% - 100px);
-}
+
 .page.mychannel .head .user-info > div{
   width: calc(100% - 200px);
   }
@@ -1330,6 +1339,70 @@ header .btn.login{
     .tournament .tab-content #bracket .tab-content-scroll[data-simplebar] .tab-pane{
         width: 1000px;
       }
+
+
+      .page.live-broadcast .head .icon{
+        width: 40px;
+        height: 40px;
+      }
+      .page.live-broadcast .head .donate{
+        margin-right: 0;
+      }
+      .page.live-broadcast .head {
+        margin-bottom: 117px;
+      }
+      .page.live-broadcast .head .user-info:after{
+        height: 117px;
+      }
+      .page.live-broadcast .head .user-info{
+        bottom: -117px;
+      }
+      .page.live-broadcast .head .user-info .links{
+          width: auto;
+          float: right;
+          position: relative;
+          right: 40px;
+          top: -20px;
+        }
+        .page.live-broadcast .head .user-info .user{
+          top: -40px;
+          display: block;
+        }
+        .page.live-broadcast .head .user-info .links .right-btns{
+          position: absolute;
+          right: 0;
+          top: -60px;
+        }
+        .page.live-broadcast .head .online{
+          margin-right: 0;
+        }
+      .page.live-broadcast .head .user-info .links span{
+        display: none;
+      }
+
+      .page.live-broadcast .head .user-info .links svg{
+        display: inline-block;
+      }
+      .page.live-broadcast .head .translation-url{
+        width: 49%;
+        float: left;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        top: -13px;
+      }
+      .page.live-broadcast .head .user-info:before{
+        position: absolute;
+        z-index: 60;
+        content: "";
+        left: 40px;
+        width: calc(100% - 80px);
+        top: 50%;
+        margin-top: -21px;
+        height: 1px;
+        background-color: rgba(102,111,121, 0.6);
+      }
 }
 
 .rotate-warning{display: none;}
@@ -1348,6 +1421,9 @@ header .btn.login{
   }
   .widget header{
     z-index: 124;
+  }
+  .page.live-broadcast .head .user-info svg{
+    display: inline;
   }
   header .row{
     margin: 0;
@@ -1386,9 +1462,16 @@ header .btn.login{
     margin-left: 0;
     z-index: 250;
   }
+
+  .sidebar-collapse.with-chat .main-content{
+    width: 100%;
+  }
   .with-chat .main-content{
      margin-left: 0;
-     width: calc(100% - 340px);
+     width: 100%;
+  }
+  .with-chat .chat{
+    display: none;
   }
   .ContentFlow{
     display: none;
@@ -4388,6 +4471,9 @@ header .btn.login{
     .widget header{
     z-index: 124;
   }
+  .page.live-broadcast .head .user-info svg{
+    display: inline;
+  }
   header .row{
     margin: 0;
   }
@@ -4431,10 +4517,17 @@ header .btn.login{
     margin-left: 0;
     z-index: 250;
   }
+  .sidebar-collapse.with-chat .main-content{
+    width: 100%;
+  }
   .with-chat .main-content{
      margin-left: 0;
-     width: calc(100% - 340px);
+     width: 100%;
   }
+  .with-chat .chat{
+    display: none;
+  }
+
   .ContentFlow{
     display: none;
   }

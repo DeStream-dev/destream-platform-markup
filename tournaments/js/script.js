@@ -541,7 +541,27 @@ $('.page.tournament .tabs .nav .nav-link').on('click',function(){
    }
   }
 });
+$('.tournament .rounds .group').on('mouseover', function(){
+    console.log($(this).data("group"));
+    var group_name = $(this).data("group");
+    $('.tournament .rounds .pair').each(function(){
+      console.log($(this).data("group_up"), "",$(this).data("group_down"));
+      if($(this).data("group_up") == group_name){
+          $(this).addClass("active-up")
+      }
+      if($(this).data("group_down") == group_name){
+          $(this).addClass("active-down")
+      }
+      });
+  });
 
+$('.tournament .rounds .group').on('mouseout', function(){
+  $('.tournament .rounds .pair').each(function(){
+     $(this).removeClass("active-up");
+     $(this).removeClass("active-down");
+  });
+
+});
 $('.widget .side-group .colors a').each(function(){
   if($(this).data('color')){
     $(this).css("background",$(this).data('color'));
