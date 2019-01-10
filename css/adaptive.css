@@ -111,6 +111,12 @@ span.size{ display: none; }
     max-width: 390px;
  }
 
+
+.broadcast-mobile .tab-pane#chat{
+  min-height: 330px;
+}
+
+
 @media (min-width: 1200px) { /* xl */
     .container-fluid {
         border: 1px solid orange;       
@@ -406,6 +412,7 @@ header  div[class*='col-']{
 }
 .page.live-broadcast .head .user-info .name{
   margin-right: 50px;
+  width: calc(100% - 110px);
 }
 .page.live-broadcast .head .player{
   padding: 0;
@@ -1367,6 +1374,7 @@ header .btn.login{
         .page.live-broadcast .head .user-info .user{
           top: -40px;
           display: block;
+          width: 60%;
         }
         .page.live-broadcast .head .user-info .links .right-btns{
           position: absolute;
@@ -1383,7 +1391,25 @@ header .btn.login{
       .page.live-broadcast .head .user-info .links svg{
         display: inline-block;
       }
-      .page.live-broadcast .head .translation-url{
+       .page.live-broadcast .head .user-info .links .chat-btn svg{
+        display: none;
+      }{
+        position: relative;
+      }
+      .page.live-broadcast.chat-open .head .user-info .links .chat-btn{
+        position: relative;
+      }
+      .page.live-broadcast.chat-open .head .user-info .links .chat-btn svg{
+        display: inline-block;
+        position: absolute;
+        left: 9px;
+        top: 9px;
+        stroke: #737c85;
+        -webkit-transform: scale(.6);
+        -ms-transform: scale(.6);
+        transform: scale(.6);
+      }
+      .page.live-broadcast .head .translation-title{
         width: 49%;
         float: left;
         display: inline-block;
@@ -3111,7 +3137,8 @@ header .btn.login{
   .page.live-broadcast .head .user-info{
     padding-left: 10px;
     padding-right: 10px;
-    bottom: 183px;
+    bottom: 0;
+    height: 183px;
   }
   .services-catalog{
     background-color: #383e44;
@@ -3153,44 +3180,72 @@ header .btn.login{
       margin: 0;
     }
 
-
+.page.live-broadcast .head .user-info .links{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 5px 10px 0;
+}
+.page.live-broadcast .head .online{
+  margin-right: 0;
+}
   .page.live-broadcast .head .user-info:after{
-    height: 28px;
-    bottom: -28px;
+    height: 40px;
+    top: 0;
   }
-
+.page.live-broadcast .head .user-info .user{
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 52;
+}
   .page.live-broadcast .head .icon{
     top: auto;
-    bottom: -93px;
+    bottom: 0;
     width: 45px;
     height: 45px;
   }
   .page.live-broadcast .head .user-info .name{
     position: absolute;
     bottom: auto;
-    top: 45px;
+    top: 0;
     font-size: 14px;
     text-transform: none;
     margin-right: 0;
-    padding-left: 60px;
+    padding-left: 0;
+    width: 100%;
+  }
+  .page.live-broadcast .head .translation-title{
+    display: block;
+    position: absolute;
+    left: 68px;
+    top: 73px;
+    font-size: 11px;
+    color: #c6ced5;
   }
   a.likes svg{
     margin-right: 7px;
   }
-  .page.live-broadcast .head .user-info > div{
+  .page.live-broadcast .head .right-btns{
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-  }
-  .page.live-broadcast .head .donate{
     position: absolute;
     left: 10px;
     width: calc(100% - 20px);
-    bottom: -143px;
+    bottom: 0;
     top: auto;
+   }
+  .page.live-broadcast .head .donate{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+    top: auto;
+    float: none;
+    margin: 0;
   }
   .page.live-broadcast .head .donate:before{
     position: absolute;
@@ -3205,42 +3260,24 @@ header .btn.login{
   .page.live-broadcast .head .donate .btn{
     width: 100%;    
   }
-  .page.live-broadcast .head .user-info .likes{
-    float: right;
-    margin-right: 0;
-    margin-top: 2px;
-    font-size: 0;
+  .page.live-broadcast .head .user-info .links svg{
+    display: inline-block;
   }
   .page.live-broadcast .head .user-info .likes svg{
     fill: #aab1b8;
   }
-  .page.live-broadcast .head .user-info .subscribe{
-    float: left;
-  }
+  
   .page.live-broadcast .head .user-info .subscribe svg{
     margin-right: 7px;
   }
 
   .page.live-broadcast .head .online{
-    font-size: 0;
-    position: relative;
-    padding-left: 10px;
-    float: left;
-    margin-left: 25px;
+   
   }  
-  .page.live-broadcast .head .online:after{
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 4px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #ff0000;
-  }
-  .page.live-broadcast .head .user-info .likes span, .page.live-broadcast .head .user-info .subscribe, .page.live-broadcast .head .online span{
-    font-size: 12px;
+  .page.live-broadcast .head .user-info .links span{
+    font-size: 14px;
     line-height: 15px;
+    display: none;
   }
   .no-touch .page.live-broadcast .head .user-info a:hover{
     text-decoration: none;
@@ -6216,7 +6253,8 @@ header .btn.login{
   .page.live-broadcast .head .user-info{
     padding-left: 10px;
     padding-right: 10px;
-    bottom: 183px;
+    bottom: 0;
+    height: 183px;
   }
   .services-catalog{
     background-color: #383e44;
@@ -6259,46 +6297,77 @@ header .btn.login{
     }
 
 
+  .page.live-broadcast .head .user-info .links{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 5px 10px 0;
+  text-align: center;
+}
+.page.live-broadcast .head .online{
+  margin-right: 0;
+  float: none;
+}
   .page.live-broadcast .head .user-info:after{
-    height: 28px;
-    bottom: -28px;
+    height: 40px;
+    top: 0;
   }
-
+.page.live-broadcast .head .user-info .user{
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 52;
+}
   .page.live-broadcast .head .icon{
     top: auto;
-    bottom: -93px;
+    bottom: 0;
     width: 45px;
     height: 45px;
   }
-
   .page.live-broadcast .head .user-info .name{
     position: absolute;
     bottom: auto;
-    top: 45px;
+    top: 0;
     font-size: 14px;
     text-transform: none;
     margin-right: 0;
-    padding-left: 60px;
+    padding-left: 0;
+    width: 100%;
+  }
+  .page.live-broadcast .head .translation-title{
+    display: block;
+    position: absolute;
+    left: 68px;
+    top: 73px;
+    font-size: 11px;
+    color: #c6ced5;
   }
   a.likes svg{
     margin-right: 7px;
   }
-  .page.live-broadcast .head .user-info > div{
+  .page.live-broadcast .head .right-btns{
+    position: relative;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-  }
-  .page.live-broadcast .head .donate{
     position: absolute;
     left: 10px;
     width: calc(100% - 20px);
-    bottom: -143px;
+    bottom: 0;
     top: auto;
+   }
+  .page.live-broadcast .head .donate{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+    top: auto;
+    float: none;
+    margin: 0;
   }
-   .page.live-broadcast .head .donate:before{
+  .page.live-broadcast .head .donate:before{
     position: absolute;
     width: 100%;
     height: 1px;
@@ -6311,46 +6380,29 @@ header .btn.login{
   .page.live-broadcast .head .donate .btn{
     width: 100%;    
   }
-  .page.live-broadcast .head .user-info .likes{
-    float: right;
-    margin-right: 0;
-    margin-top: 2px;
-    font-size: 0;
+  .page.live-broadcast .head .user-info .links svg{
+    display: inline-block;
   }
   .page.live-broadcast .head .user-info .likes svg{
     fill: #aab1b8;
   }
-  .page.live-broadcast .head .user-info .subscribe{
-    float: left;
-  }
+  
   .page.live-broadcast .head .user-info .subscribe svg{
     margin-right: 7px;
   }
 
   .page.live-broadcast .head .online{
-    font-size: 0;
-    position: relative;
-    padding-left: 10px;
-    float: left;
-    margin-left: 25px;
+   
   }  
-  .page.live-broadcast .head .online:after{
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 4px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #ff0000;
-  }
-  .page.live-broadcast .head .user-info .likes span, .page.live-broadcast .head .user-info .subscribe, .page.live-broadcast .head .online span{
-    font-size: 12px;
+  .page.live-broadcast .head .user-info .links span{
+    font-size: 14px;
     line-height: 15px;
+    display: none;
   }
   .no-touch .page.live-broadcast .head .user-info a:hover{
     text-decoration: none;
   }
+
   .plyr--video .plyr__controls{
     padding: 10px 10px 0;
   }

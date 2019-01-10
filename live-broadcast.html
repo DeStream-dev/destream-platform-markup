@@ -513,13 +513,11 @@
 	            		</video>
 		    		</div>
 	    			<div class="user-info">
-		    				<div class="user">
+		    				<a href="#" class="user">
 			    				<span class="icon"><img src="img/anar.png" width="461" height="614" alt="" /></span>
-			    				<div class="name">Zavr
-							   	<span class="status d-block d-md-none">Tuesday means smile, look it up</span>
-							   	</div>
-			    			</div>						
-						    <div class="translation-url"><a href="#">ENG/RU Снова танці 1SUB=10SQUATS</a></div>
+			    				<span class="name">Zavr</span>
+							</a>					
+						    <div class="translation-title">ENG/RU Снова танці 1SUB=10SQUATS</div>
 						   	<div class="links">
 						       	<a class="likes" title="Likes" href="#"><svg><use xlink:href="img/vectors.svg#likes"></use></svg> <span>Like</span> 165</a>
 						       	<a class="subscribe" title="Subscribe" href="#"><svg><use xlink:href="img/vectors.svg#subscribe"></use></svg><span>Subscribe</span> 276</a>
@@ -531,7 +529,7 @@
 						       		<span class="collapse-fullscreen"><svg><use xlink:href="img/vectors.svg#collapse-fullscreen"></use></svg></span>
 							    	</a>							    
 							       	<div class="donate"><a href="#" data-target=".modal-wallet-donate" data-toggle="modal" class="btn btn-donate">Donate</a></div>
-							       	<div class="chat-btn d-block d-lg-none"><a href="#" class="btn btn-chat">Chat</a></div>	
+							       	<div class="chat-btn d-none d-md-block d-lg-none"><a href="#" class="btn btn-chat"><svg><use xlink:href="img/vectors.svg#close"></use></svg>Chat</a></div>	
 						       	</div>				
 					       		<div class="online"><svg><use xlink:href="img/vectors.svg#online"></use></svg><span>Online</span> 2165</div>
 						       
@@ -541,16 +539,22 @@
 	    		</div>
 
 	    		<div class="broadcast-mobile d-block d-md-none">
-	    		<ul class="nav nav-pills nav-justified" role="tablist">
-				  <li class="nav-item">
-				    <a class="nav-link active" href="#details" id="details-tab" data-toggle="tab" role="tab" aria-controls="details" aria-selected="true">Details</a>
-				  </li>
-				  <li class="nav-item">
-				   <a class="nav-link" id="services-tab" data-toggle="tab" href="#services" role="tab" aria-controls="services" aria-selected="false">Services</a>
-				  </li>		 
-				</ul>
+		    		<ul class="nav nav-pills nav-justified" role="tablist">
+			    		<li class="nav-item">
+						    <a class="nav-link active" href="#chat" id="chat-tab" data-toggle="tab" role="tab" aria-controls="chat" aria-selected="true">Chat</a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="#details" id="details-tab" data-toggle="tab" role="tab" aria-controls="details" aria-selected="true">Details</a>
+						</li>
+						<li class="nav-item">
+						   <a class="nav-link" id="services-tab" data-toggle="tab" href="#services" role="tab" aria-controls="services" aria-selected="false">Services</a>
+						</li>		 
+					</ul>
 				<div class="tab-content auth-tab-content">
-				  <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+					<div class="tab-pane fade show active" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+						<br>chat here
+					</div>
+				  <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
 				  		<div class="myblocks">
 				    		<div class="large">
 				    			<div class="row">
@@ -998,13 +1002,12 @@
 					    		</div>
 
 	    					</div>
-	    		</div>   		
+	    		</div>  
+	    		<div class="chat"></div> 		
     		</div>
     	</section>
 
-    	<div class="chat">
-    
-    	</div>
+    	
     	
 <!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">

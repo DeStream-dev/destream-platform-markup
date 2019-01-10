@@ -240,8 +240,8 @@ var options = {
 smallSlider.slick(options);
 
 
-var announcementSlider = $('.large.carousel'); 
-var announcementliderOptions = {
+var announcementSliderMC = $('.page.mychannel .large.carousel'); 
+var announcementliderMCOptions = {
   dots: false,
   arrows: true,
   prevArrow: "<a class='slick-prev'><svg><use xlink:href='img/vectors.svg#arrow-prev'></use></svg></a>",
@@ -281,7 +281,45 @@ var announcementliderOptions = {
     }
   ]
 };
-announcementSlider.slick(announcementliderOptions);
+announcementSliderMC.slick(announcementliderMCOptions);
+
+var announcementSliderLB = $('.page.livebroadcast .large.carousel'); 
+var announcementliderLBOptions = {
+  dots: false,
+  arrows: true,
+  prevArrow: "<a class='slick-prev'><svg><use xlink:href='img/vectors.svg#arrow-prev'></use></svg></a>",
+  nextArrow: "<a class='slick-next'><svg><use xlink:href='img/vectors.svg#arrow-next'></use></svg></a>",
+  infinite: false,
+  speed: 700,
+  slidesToShow: 2,
+  centerMode: false,
+  variableWidth: false,
+  adaptiveHeight: false,
+  autoplay: false,
+      responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: "unslick"
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    }
+  ]
+};
+announcementSliderLB.slick(announcementliderLBOptions);
 
 
 var eventsSlider = $('.events-slider'); 
@@ -521,7 +559,6 @@ $('.tournament .general-info .comments, .tournament-events .head .bottom .commen
      return false;
 });
 
-
 $('.page.tournament .tabs .nav .nav-link').on('click',function(){
   if($(this).parents('.tabs').hasClass('inner')) return;
    $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
@@ -542,15 +579,15 @@ $('.page.tournament .tabs .nav .nav-link').on('click',function(){
   }
 });
 $('.tournament .rounds .group').on('mouseover', function(){
-    console.log($(this).data("group"));
     var group_name = $(this).data("group");
     $('.tournament .rounds .pair').each(function(){
-      console.log($(this).data("group_up"), "",$(this).data("group_down"));
-      if($(this).data("group_up") == group_name){
-          $(this).addClass("active-up")
+      if($(this).data("group_up") == group_name && $(this).data("group_winner") == group_name){
+          $(this).addClass("active-up");
+          $(this).parents(".half").addClass("active");
       }
-      if($(this).data("group_down") == group_name){
-          $(this).addClass("active-down")
+      if($(this).data("group_down") == group_name && $(this).data("group_winner") == group_name){
+          $(this).addClass("active-down");
+          $(this).parents(".half").addClass("active");
       }
       });
   });
@@ -559,6 +596,7 @@ $('.tournament .rounds .group').on('mouseout', function(){
   $('.tournament .rounds .pair').each(function(){
      $(this).removeClass("active-up");
      $(this).removeClass("active-down");
+     $(this).parents(".half").removeClass("active");
   });
 
 });

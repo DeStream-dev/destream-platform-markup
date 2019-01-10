@@ -1543,6 +1543,7 @@ footer .social {
   position: relative;
   top: -10px;
   vertical-align: bottom;
+  padding-top: 18px;
 }
 .list .small {
   font-size: 100%;
@@ -3944,12 +3945,14 @@ button.close {
   display: inline-block;
   top: -5px;
 }
-.page.live-broadcast .head .translation-url{
+.page.live-broadcast .head .translation-title{
   display: none;
   position: relative;
-  z-index: 51;
+  z-index: 51; 
+  color: #ffffff;
+  font-size: 15px;
 }
-.page.live-broadcast .head .translation-url a{
+.page.live-broadcast .head .translation-title a{
   color: #ffffff;
   font-size: 15px;
 }
@@ -3963,7 +3966,7 @@ button.close {
   color: #ffffff;
   text-transform: uppercase;
   position: relative;
-  top: -5px;
+  top: 0;
   margin-right: 35px;
   margin-left: 15px;
   width: 90px;
@@ -3971,6 +3974,9 @@ button.close {
   text-overflow: ellipsis;
   display: inline-block;
   white-space: nowrap;
+}
+.page.live-broadcast .head .user-info .name a{
+  color: #ffffff;
 }
 .page.live-broadcast .head .user-info .status{
   font-size: 11px;
@@ -4055,6 +4061,12 @@ button.close {
   border: 1px solid #737c85;
   color: #c6ced5;
 }
+.page.live-broadcast .head .chat-btn .btn svg{
+  display: none;
+  width: 19px;
+  height: 19px;
+}
+
 .page.live-broadcast .head .theatre-mode-toggle{
   float: right;
   position: relative;
@@ -4073,7 +4085,17 @@ button.close {
 .page.live-broadcast .list-announcement-tile {
   background-color: #383e44;
 }
-
+.chat-open .services-catalog, .chat-open .myblocks, .chat-open .list-announcement-tile{
+  display: none !important;
+}
+.page.live-broadcast.chat-open .chat{
+  position: relative;
+  right: auto;
+  top: auto;
+  min-height: 450px;
+  display: block;
+  width: 100%;
+}
 
 .services-catalog{
   padding: 0 55px;
@@ -8413,6 +8435,8 @@ background-color: #f05a00;
   -moz-box-shadow: 0px 2px 30px rgba(27, 30, 34, 0.85);
   -webkit-box-shadow: 0px 2px 30px rgba(27, 30, 34, 0.85);
   border-left: 1px solid #5a6066;
+
+  display: none;
 }
 
 .tournament .tab-content .rounds .group .members .item{
@@ -8460,7 +8484,7 @@ background-color: #f05a00;
 .tournament .tab-content .rounds .half{
   min-height: 216px;
   position: relative;
-  z-index: 22;
+  z-index: 21;
   margin-bottom: 20px;
 }
 .tournament .tab-content .rounds .group{
@@ -8489,7 +8513,7 @@ background-color: #f05a00;
   width: 52px;
   height: 30px;
   left: calc(100% + 10px);
-  top: 17px;
+  top: 17.2px;
   background-image: url("../img/braces/brace1.svg");
   pointer-events: none;
 }
@@ -8502,52 +8526,58 @@ background-color: #f05a00;
         -o-transform: scaleY(-1);
         -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
-   top: -4px;
+   top: -3.2px;
   }
 
-.tournament .tab-content .rounds .half .pair:before, .tournament .tab-content .rounds .half .pair:after{
+.tournament .tab-content .rounds .fourth .pair:first-child:before, .tournament .tab-content .rounds .fourth .pair:last-child:after{
     position: absolute;
     content: "";
     width: 54px;
     height: 64px;
-    left: -50px;
-    top: -15px;
+    left: calc(100% + 62px);/*-43px;*/
+    top: 45.5px;/*-13.9px;*/
     background-image: url("../img/braces/brace2.svg");
     pointer-events: none;
 }
-.tournament .tab-content .rounds .half .pair:after{
-   top: 39px;
+.tournament .tab-content .rounds .fourth .pair:last-child:after{
+   top: -16.4px/*39px*/;
    -moz-transform: scaleY(-1);
         -o-transform: scaleY(-1);
         -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
   }
-.tournament .tab-content .rounds .half .pair.active-up:before,
-.tournament .tab-content .rounds .half .pair.active-down:after{
+.tournament .tab-content .rounds .fourth .pair.active-up:before,
+.tournament .tab-content .rounds .fourth .pair.active-down:after,
+.tournament .tab-content .rounds .fourth .pair.active-down:before,
+.tournament .tab-content .rounds .fourth .pair.active-up:after{
    background-image: url("../img/braces/brace2_active.svg");
    z-index: 56;
 }
-.tournament .tab-content .rounds .full .pair:after,.tournament .tab-content .rounds .full .pair:before{
+.tournament .tab-content .rounds .half:first-child .pair:after,.tournament .tab-content .rounds .half:last-child .pair:before{
   position: absolute;
   content: "";
   width: 58px;
   height: 124px;
-  left: -50px;
-  top: -76px;
+  left: calc(100% + 61px); /*-44px;*/
+  top: 44.5px;
   background-image: url("../img/braces/brace3.svg");
   pointer-events: none;
-
+  z-index: 57;
 }
-.tournament .tab-content .rounds .full .pair:before{
-  top: 39px;
+.tournament .tab-content .rounds .half.active{
+  z-index: 22;
+}
+.tournament .tab-content .rounds .half:last-child .pair:before{
+  top: -77.4px;/*39.5px;*/
     -moz-transform: scaleY(-1);
         -o-transform: scaleY(-1);
         -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
   }
-.tournament .tab-content .rounds .full .pair.active-up:after, .tournament .tab-content .rounds .full .pair.active-down:before{
+.tournament .tab-content .rounds .half .pair.active-up:after, .tournament .tab-content .rounds .half .pair.active-down:before,
+.tournament .tab-content .rounds .half .pair.active-up:before, .tournament .tab-content .rounds .half .pair.active-down:after{
  background-image: url("../img/braces/brace3_active.svg");
-   z-index: 56;
+   z-index: 58;
 }
 .tournament .tab-content .rounds .half .pair, .tournament .tab-content .rounds .round3 .pair{
   position: absolute;
