@@ -73,11 +73,16 @@ h3{
  /*width: 1800px;*/
   position: relative;
 }
-.top{
+header .top{
   position: absolute;
   z-index: 700;
   top: 7px;
   left: 15px;
+}
+header .links{
+  width: calc(100% + 70px);
+  position: relative;
+  margin-left: -70px;
 }
 .logo{
   float: left;
@@ -97,7 +102,7 @@ header{
   height: 60px;
   padding: 6px 15px;
   background-color: #282d33;
-  border-bottom: 1px solid rgba(68,76,84,0.7);
+  border-bottom: 1px solid rgba(68,76,84,0.7) !important;
   position: relative;
    box-shadow: 0px 2px 4px rgba(38, 43, 46, 0.15);
   -moz-box-shadow: 0px 2px 4px rgba(38, 43, 46, 0.15);
@@ -607,7 +612,7 @@ body > .content > .container-fluid{
 
 header .search-panel{
   width: 100%;
-  max-width: 530px;
+  /*max-width: 608px;*/
   padding-top: 4px;
   margin: auto;
 } 
@@ -1854,7 +1859,7 @@ input[type="text"],input[type="search"],input[type="email"],input[type="password
 a.likes svg{
   width: 18px;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 6px;
   position: relative;
   top: -2px;
   fill: #f05a00;
@@ -3494,7 +3499,7 @@ button.close {
   fill: #aab1b8;
 }
 .subscribe svg{
-  margin-right: 13px;
+  margin-right: 6px;
 }
 .page.mychannel .head .user-info .unsubscribe {
   margin-left: 35px;
@@ -3881,7 +3886,7 @@ button.close {
 }
 .page.live-broadcast .head{
   position: relative;
-  margin-bottom: 60px; 
+  margin-bottom: 120px; 
 }
 .page.live-broadcast .head .player{
   width: 100%;
@@ -3904,7 +3909,7 @@ button.close {
 .page.live-broadcast .head .user-info{
   position: absolute;
   width: 100%;
-  bottom: -60px;
+  bottom: -120px;
   padding-left: 55px;
 }
 .page.live-broadcast .head .user-info:after{
@@ -3915,49 +3920,62 @@ button.close {
   bottom: 0;
   top: auto;
   width: 100%;
-  height: 60px;
+  height: 120px;
   background-color: #282d33;
 }
-/*.page.live-broadcast .head .user-info > div{
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  width: calc(100% - 110px);
-  padding-left: 15px;
-  z-index: 9;
-}*/
 .page.live-broadcast .head .user-info .user{
-  display: inline-block;
-  vertical-align: middle;
   position: relative;
   z-index: 9;
-  width: 200px; 
-  top: 5px;
+  top: -35px;
+  display: block;
+  width: 60%;
 }
 .page.live-broadcast .head .user-info > div > div{
   display: inline-block;
   vertical-align: middle;
 }
+ .page.live-broadcast .head .user-info:before{
+        position: absolute;
+        z-index: 60;
+        content: "";
+        left: 55px;
+        width: calc(100% - 110px);
+        top: 50%;
+        margin-top: -16px;
+        height: 1px;
+        background-color: rgba(102,111,121, 0.6);
+      }
 .page.live-broadcast .head .user-info .links{
-  width: calc(100% - 260px);
-  position: relative;
-  z-index: 50;
+  z-index: 54;
   display: inline-block;
-  top: -5px;
+  width: auto;
+  float: right;
+  position: relative;
+  right: 55px;
+  top: -20px;
 }
 .page.live-broadcast .head .translation-title{
-  display: none;
   position: relative;
   z-index: 51; 
   color: #ffffff;
   font-size: 15px;
+  width: 49%;
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: -13px;
 }
 .page.live-broadcast .head .translation-title a{
   color: #ffffff;
   font-size: 15px;
 }
-.page.live-broadcast .head .user-info .links .right-btns{
-  display: inline;
+.page.live-broadcast .head .user-info .right-btns{
+   position: absolute;
+   right: 55px;
+   top: -39px;
+   z-index: 53;
 }
 .page.live-broadcast .head .user-info .name{
   font-size: 19px;
@@ -4004,18 +4022,33 @@ button.close {
   margin-right: 25px;
 }
 .page.live-broadcast .head .user-info .views svg{
-  width: 18px;
+  width: 25px;
   height: 16px;
   fill: #aab1b8;
+  margin-right: 6px;
 }
 .page.live-broadcast .head .user-info .online svg{
-  width: 18px;
-  height: 16px;
+  width: 27px;
+  height: 17px;
   fill: #aab1b8;
+  stroke: #aab1b8;
+  margin-right: 6px;
 }
-.page.live-broadcast .head .user-info .links svg{
+.page.live-broadcast .head .user-info .links span{
   display: none;
 }
+.page.live-broadcast .head .user-info .links .theatre-mode-toggle span.fullscreen{
+  display: block;
+}
+.theatre-mode .page.live-broadcast .head .user-info .links .theatre-mode-toggle span.collapse-fullscreen{
+  display: inline-block;
+}
+.theatre-mode .page.live-broadcast .head .user-info .links .theatre-mode-toggle span.fullscreen{
+  display: none;
+}
+ .page.live-broadcast .head .user-info .links svg{
+  display: inline-block;
+ }
 .page.live-broadcast .head .user-info .links .theatre-mode-toggle svg{
   display: inline-block;
 }
@@ -4042,13 +4075,13 @@ button.close {
 .page.live-broadcast .head .online{
   float: right;
   top: 7px;
-  margin-right: 30px;
+  margin-right: 0;
 }
 .page.live-broadcast .head .donate{
   float: right;
   position: relative;
-  top: -5px;
-  margin-right: 30px;
+  top: 4px;
+  margin-right: 55px;
 }
 .page.live-broadcast .head .chat-btn{
   float: right;
@@ -6975,7 +7008,7 @@ background-color: #f05a00;
   top: 0;
 }
 
-.theatre-mode .page.live-broadcast > *:not(.head){
+.theatre-mode .page.live-broadcast > *:not(.head):not(.chat){
   display: none;
 }
 .theatre-mode .page.live-broadcast .d-md-block{
@@ -7076,6 +7109,10 @@ background-color: #f05a00;
   line-height: 17px;
   color: #dbe0e6;
   padding-bottom: 7px;
+  display: block;
+}
+.no-touch .tournaments .item .tournament-title:hover{
+  text-decoration: none;
 }
 .tournaments .item .game .icon, .tournament .general-info .game .icon{
   width: 16px;
@@ -7181,7 +7218,6 @@ background-color: #f05a00;
   font-weight: 500;
   margin-right: 5px;
 }
-
 .tournaments .item .bottom{
   position: absolute;
   bottom: 0;
@@ -8616,6 +8652,102 @@ background-color: #f05a00;
   background-color: #383e44;
 }
 
+
+.tournament-championats{
+  position: relative;
+}
+.tournament-championats .view-all{
+  position: absolute;
+  right: 0;
+  top: 1px;
+}
+.tournament-championats .list .item {
+  padding: 20px 20px 39px 20px;
+  border: 1px solid #666f79;
+  background-color: #2c3238;
+  margin-bottom: 20px;
+   box-shadow: 0px 10px 20px rgba(24, 32, 43, 0.7);
+  -moz-box-shadow: 0px 10px 20px rgba(24, 32, 43, 0.7);
+  -webkit-box-shadow: 0px 10px 20px rgba(24, 32, 43, 0.7);
+}
+.tournament-championats .item .img{
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 176px;
+  overflow: hidden;  
+  background-position: center;
+  background-repeat: no-repeat;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    border-top: 1px solid rgba(115,124,133,0.5);
+}
+.tournament-championats .item .top{
+  padding-bottom: 20px;
+}
+.tournament-championats .item .title{
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tournament-championats .item .dates{
+  color: #c6ced5;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 7px;
+}
+.tournament-championats .item .price{
+  float: right;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 37px;
+  white-space: nowrap;
+}
+.tournament-championats .item .bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c3238;
+  height: 39px;
+  text-align: center;
+  border-top: 1px solid rgba(115,124,133,0.5);
+}
+.tournament-championats .item .bottom a, .tournament-championats .item .bottom > span{
+  font-size: 12px;
+  line-height: 39px;
+  color: #aab;
+  margin-right: 10%;
+  display: inline-block;
+  padding-top: 0;
+  width: unset;
+  height: unset;
+  background-color: transparent;
+  border-radius: 0;
+  font-weight: bold;
+}
+.tournament-championats .item .bottom svg{
+  width: 18px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+  fill: #aab1b8;
+}
+.tournament-championats .item .bottom .share svg{
+  width: 20px;
+  height: 20px;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.tournament-championats .list .more{
+  margin: 0 10px;
+}
 
 .ContentFlow .flow{
   overflow: hidden;

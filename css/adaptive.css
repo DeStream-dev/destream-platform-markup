@@ -130,7 +130,7 @@ span.size{ display: none; }
      
     }
     header.user-is-logged .search-panel{    
-       margin-left: -55px;
+       margin-left: -78px;
     }
 
     .list-announcement-tile .large .icon.d-md-block{
@@ -141,6 +141,25 @@ span.size{ display: none; }
     }
     .page.live-broadcast .head .user-info span.d-md-block{
       display: inline-block!important;
+    }
+    .page.live-broadcast .head .user-info .likes, .page.live-broadcast .head .user-info .subscribe, .page.live-broadcast .head .user-info .views{
+      margin-right: 17px;
+    }
+     .page.live-broadcast .head .online{
+      margin-right: 0;
+    }
+    .page.live-broadcast .head .translation-title{
+      width: 35%;
+    }
+    .tournament-championats .item .bottom a, .tournament-championats .item .bottom > span{
+      margin-right: 6%;
+    }
+
+    .page.live-broadcast .head .theatre-mode-toggle{
+      position: absolute;
+      right: 0;
+      top: -56px;
+      z-index: 55;
     }
 
 }
@@ -154,8 +173,12 @@ span.size{ display: none; }
       position: relative;
     }
    header.user-is-logged .search-panel{    
-      margin-left: -95px;
-      width: calc(100% + 90px);
+      margin-left: -49px;
+      width: calc(100% - 20px);
+   }
+   header .links{
+    margin-left: -80px;
+    width: calc(100% + 80px);
    }
     header .user-btn-cont{margin-right: 35px;}
     header .create-btn-cont{margin-right: 28px;}
@@ -293,7 +316,25 @@ body.widget > .content{
    .tournament .general-info .social span, .tournament .general-info .social a{
     margin-right: 24%;
    }
+    .page.live-broadcast .head .user-info .likes, .page.live-broadcast .head .user-info .subscribe, .page.live-broadcast .head .user-info .views{
+      margin-right: 17px;
+    }
+    .page.live-broadcast .head .online{
+      margin-right: 0;
+    }
+    .page.live-broadcast .head .translation-title{
+      width: 38%;
+    }
+    .tournament-championats .item .bottom a, .tournament-championats .item .bottom > span{
+      margin-right: 6%;
+    }
 
+    .page.live-broadcast .head .theatre-mode-toggle{
+      position: absolute;
+      right: 0;
+      top: -56px;
+      z-index: 55;
+    }
 
 }
 
@@ -1354,6 +1395,7 @@ header .btn.login{
       }
       .page.live-broadcast .head .donate{
         margin-right: 0;
+        top: -5px;
       }
       .page.live-broadcast .head {
         margin-bottom: 117px;
@@ -1376,10 +1418,10 @@ header .btn.login{
           display: block;
           width: 60%;
         }
-        .page.live-broadcast .head .user-info .links .right-btns{
+        .page.live-broadcast .head .user-info .right-btns{
           position: absolute;
-          right: 0;
-          top: -60px;
+          right: 40px;
+          top: -39px;
         }
         .page.live-broadcast .head .online{
           margin-right: 0;
@@ -1393,13 +1435,11 @@ header .btn.login{
       }
        .page.live-broadcast .head .user-info .links .chat-btn svg{
         display: none;
-      }{
+      }
+      .page.live-broadcast.chat-open .head .user-info .chat-btn{
         position: relative;
       }
-      .page.live-broadcast.chat-open .head .user-info .links .chat-btn{
-        position: relative;
-      }
-      .page.live-broadcast.chat-open .head .user-info .links .chat-btn svg{
+      .page.live-broadcast.chat-open .head .user-info .chat-btn svg{
         display: inline-block;
         position: absolute;
         left: 9px;
@@ -1850,7 +1890,7 @@ header .btn.login{
     .list .item .description{
       padding-top: 15px;
     }
-    .list .more{
+    .list .more, .tournament-events .block.participants .more{
         display: block;
         text-align: center;
         padding: 9px 0;
@@ -3185,7 +3225,6 @@ header .btn.login{
   left: 0;
   top: 0;
   width: 100%;
-  bottom: 0;
   padding: 5px 10px 0;
 }
 .page.live-broadcast .head .online{
@@ -3196,7 +3235,7 @@ header .btn.login{
     top: 0;
   }
 .page.live-broadcast .head .user-info .user{
-  width: 100%;
+  width: calc(100% - 10px);
   display: block;
   position: absolute;
   top: 50px;
@@ -3217,7 +3256,7 @@ header .btn.login{
     text-transform: none;
     margin-right: 0;
     padding-left: 0;
-    width: 100%;
+    width: auto;
   }
   .page.live-broadcast .head .translation-title{
     display: block;
@@ -3651,7 +3690,7 @@ header .btn.login{
     padding: 65px 10px 10px;
     left: -100%;
    }
-   .top{
+   header .top{
     z-index: 20;
    }
    .list .setup > div.filter-panel{
@@ -4484,6 +4523,12 @@ header .btn.login{
     }
     .page.tournaments .list div[class*='col-'], .page.tournament-events .list div[class*='col-']{
         padding: 0;
+    }
+    .page.tournament-events div.comments input[type="text"]{
+      width: 100%;
+    }
+    .page.live-broadcast .head .user-info:before{
+      display: none;
     }
  
  }
@@ -6302,7 +6347,6 @@ header .btn.login{
   left: 0;
   top: 0;
   width: 100%;
-  bottom: 0;
   padding: 5px 10px 0;
   text-align: center;
 }
@@ -6315,7 +6359,7 @@ header .btn.login{
     top: 0;
   }
 .page.live-broadcast .head .user-info .user{
-  width: 100%;
+  width: calc(100% - 10px);
   display: block;
   position: absolute;
   top: 50px;
@@ -6336,7 +6380,7 @@ header .btn.login{
     text-transform: none;
     margin-right: 0;
     padding-left: 0;
-    width: 100%;
+    width: auto;
   }
   .page.live-broadcast .head .translation-title{
     display: block;
@@ -6773,7 +6817,7 @@ header .btn.login{
     padding: 65px 10px 10px;
     left: -100%;
    }
-   .top{
+   header .top{
     z-index: 20;
    }
    .list .setup > div.filter-panel{
@@ -7625,6 +7669,33 @@ header .btn.login{
     .page.tournaments .list div[class*='col-'], .page.tournament-events .list div[class*='col-']{
         padding: 0;
     }
+    .page.tournament-events div.comments input[type="text"]{
+      width: 100%;
+    }
+    .page.live-broadcast .head .user-info:before{
+      display: none;
+    }
+}
+
+
+@media (orientation: landscape) and (max-width: 991.98px) {
+
+  .container-fluid{
+    border: 1px solid darkviolet; 
+  }
+  .with-chat header, .with-chat .main-sidebar{
+    display: none;
+  }
+
+  .with-chat .chat{
+    display: none;
+  }
+  .with-chat .main-content{
+    margin: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+  }
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
