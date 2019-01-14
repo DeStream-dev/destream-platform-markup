@@ -193,8 +193,12 @@ span.size{ display: none; }
   .main-sidebar{
    /* position: absolute;*/
     position: fixed;
+    left: -250px;
     background-color: rgba(44,50,56,0.8);
    }
+  .sidebar-collapse .main-sidebar{
+    left: 0;
+  }
   .main-content{
     width: 100%;
     margin-left: 0;
@@ -218,7 +222,7 @@ span.size{ display: none; }
     height: 190px;
   }
   .list-announcement-tile .small .item .img{
-  height: 220px;
+  height: 325px;
   }
   .list .item .share span, .list .item .share a{
     margin-right: 3px;
@@ -390,12 +394,14 @@ header  div[class*='col-']{
    }
   .main-sidebar{
     position: fixed;/* absolute;*/
-    left: 0;
+    left: -250px;
     top: 0;
-    z-index: 600;
     height: 100%;
     background-color: rgba(44,50,56,0.8);
     padding-top: 60px;
+  }
+  .sidebar-collapse .main-sidebar{
+    left: 0;
   }
   .main-content{
     width: 100%;
@@ -1388,6 +1394,57 @@ header .btn.login{
         width: 1000px;
       }
 
+      .theatre-mode .main-sidebar{
+  left: 0;
+}
+.sidebar-collapse.with-chat .main-content{
+  margin-left: 0;
+  width: calc(100% - 340px);
+}
+.theatre-mode .main-content{
+  margin-left: 0;
+  width: 100%;
+  top: 60px;
+}
+.theatre-mode .page.live-broadcast{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: unset;
+  height: unset;
+}
+.theatre-mode .page.live-broadcast > *:not(.head):not(.chat){
+  display: unset;
+}
+.theatre-mode .page.live-broadcast .d-md-block{
+  display: block !important;
+}
+.theatre-mode .page.live-broadcast .head{
+  position: relative;
+  margin-bottom: 120px; 
+}
+.theatre-mode .page.live-broadcast .head .user-info{
+  bottom: -120px;
+}
+
+.theatre-mode.with-chat .main-content{
+  margin-left: 0;
+  width: 100%;
+}
+
+.theatre-mode .page.live-broadcast .head .player{
+  height: inherit;
+}
+.theatre-mode header{   
+  top: 0;
+}
+.theatre-mode .player .plyr{
+  max-height: unset;
+}
+
+.theatre-mode .chat{
+  display: none;
+}
 
       .page.live-broadcast .head .icon{
         width: 40px;
@@ -1484,6 +1541,10 @@ header .btn.login{
   }
   header.totop{
     z-index: 200;
+  }
+  .main-sidebar-content{
+    padding: 60px 10px 20px;
+    position: relative;
   }
   .widget header{
     z-index: 124;
@@ -1659,7 +1720,7 @@ header .btn.login{
 .main-sidebar .logo{
   position: absolute;
   top: 6px;
-  left: 30px;
+  left: 20px;
   z-index: 300;
 }
   .main-sidebar .close{
@@ -3406,6 +3467,9 @@ header .btn.login{
   .converter .half:last-child{
     padding-bottom: 55px;
   }
+  .converter .half.second{
+    left: 0;
+  }
   .converter{
     border-bottom: none;
   }
@@ -4530,6 +4594,58 @@ header .btn.login{
     .page.live-broadcast .head .user-info:before{
       display: none;
     }
+
+.theatre-mode .main-sidebar{
+  left: -100%;
+}
+.sidebar-collapse.theatre-mode .main-sidebar{
+  left: 0;
+}
+.sidebar-collapse.with-chat .main-content{
+  margin-left: 0;
+  width: 100%;
+}
+.theatre-mode .main-content{
+  margin-left: 0;
+  width: 100%;
+  top: 60px;
+}
+.theatre-mode .page.live-broadcast{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: unset;
+  height: unset;
+}
+.theatre-mode .page.live-broadcast > *:not(.head):not(.chat){
+  display: unset;
+}
+.theatre-mode .page.live-broadcast .head{
+  position: relative;
+  margin-bottom: 0; 
+}
+.theatre-mode .page.live-broadcast .head .user-info{
+  bottom: 0;
+}
+.theatre-mode.with-chat .main-content{
+  margin-left: 0;
+  width: 100%;
+}
+
+.theatre-mode .page.live-broadcast .head .player{
+  height: inherit;
+}
+.theatre-mode header{   
+  top: 0;
+}
+.theatre-mode .player .plyr{
+  max-height: unset;
+}
+
+.theatre-mode .chat{
+  display: none;
+}
+
  
  }
 
@@ -7675,10 +7791,63 @@ header .btn.login{
     .page.live-broadcast .head .user-info:before{
       display: none;
     }
+
+.theatre-mode .main-sidebar{
+  left: -100%;
+}
+.sidebar-collapse.theatre-mode .main-sidebar{
+  left: 0;
+}
+.sidebar-collapse.with-chat .main-content{
+  margin-left: 0;
+  width: 100%;
+}
+.theatre-mode .main-content{
+  margin-left: 0;
+  width: 100%;
+  top: 60px;
+}
+.theatre-mode .page.live-broadcast{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: unset;
+  height: unset;
+}
+.theatre-mode .page.live-broadcast > *:not(.head):not(.chat){
+  display: unset;
+}
+.theatre-mode .page.live-broadcast .head{
+  position: relative;
+  margin-bottom: 0; 
+}
+.theatre-mode .page.live-broadcast .head .user-info{
+  bottom: 0;
+}
+
+.theatre-mode.with-chat .main-content{
+  margin-left: 0;
+  width: 100%;
+}
+
+.theatre-mode .page.live-broadcast .head .player{
+  height: inherit;
+}
+.theatre-mode header{   
+  top: 0;
+}
+.theatre-mode .player .plyr{
+  max-height: unset;
+}
+
+.theatre-mode .chat{
+  display: none;
+}
+
 }
 
 
-@media (orientation: landscape) and (max-width: 991.98px) {
+@media (orientation: landscape) and (max-device-width: 991.98px) {
 
   .container-fluid{
     border: 1px solid darkviolet; 

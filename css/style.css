@@ -702,7 +702,7 @@ padding: 0 25px;
   display: none;
 }
 .main-sidebar .block.account .score{
-  color: #ffffff;
+  color: #c6ced5;
   font-weight: 800;
   line-height: normal;
   font-size: 21px;
@@ -710,7 +710,7 @@ padding: 0 25px;
   padding-bottom: 7px;
 }
 .main-sidebar .block.account .money{
-  color: #c6ced5;
+  color: #aab1b8;
   font-weight: 500;
   line-height: normal;
   font-size: 13px;
@@ -798,7 +798,7 @@ padding: 0 25px;
 }
 .main-sidebar .block .title .search-input{
   position: absolute;
-  right: 0;
+  right: 1px;
   top: -15px;
   width: 100%;
   z-index: 400;
@@ -1578,7 +1578,7 @@ footer .social {
 }
 .list .small .alarm{
   position: relative;
-  display: inline-block;
+  display: none;/*inline-block;*/
   top: 0;
   right: auto;
   left: -7px;
@@ -6255,6 +6255,7 @@ header .search-panel{
   color: #aab1b8;
   font-size: 12px;
   line-height: 17px;
+  padding-top: 5px;
 }
 .search-results .live li .text{
   color: #dbe0e6;
@@ -6262,10 +6263,11 @@ header .search-panel{
   line-height: 17px;
   height: 35px;
   overflow: hidden;
+  padding-top: 0;
 }
 .search-results .live li .name, .search-results .live li .text{
   padding-left: 135px;
-  display: inline-block;
+  display: block;
 }
 .search-results .live li .img img{
   width: 100%;
@@ -6340,7 +6342,10 @@ header .search-panel{
 }
 .search-results li a{
   text-decoration: none;
-  }
+}
+.no-touch .search-results li a:hover{
+  text-decoration: none;
+}
 .search-results .announcement li  .date{
   color: #dbe0e6;
   font-size: 16px;
@@ -7007,7 +7012,16 @@ background-color: #f05a00;
   width: calc(100% - 340px);
   top: 0;
 }
-
+.theatre-mode .page.live-broadcast{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.theatre-mode .page.live-broadcast .head{
+  margin-bottom: 0;
+}
 .theatre-mode .page.live-broadcast > *:not(.head):not(.chat){
   display: none;
 }
@@ -7016,28 +7030,49 @@ background-color: #f05a00;
 }
 .theatre-mode .page.live-broadcast .head{
   display: block !important;
-  position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
+  position: absolute;
 }
-.theatre-mode.with-chat .page.live-broadcast .head{ 
-  width: calc(100% - 340px);
-  }
 .theatre-mode .page.live-broadcast .head .user-info{
   bottom: 0;
 }
-.theatre-mode .page.live-broadcast .head .player{
-  height: calc(100% - 60px);
+
+.theatre-mode.with-chat .main-content{
+  margin-left: 0;
+  width: calc(100% - 340px);
+  height: 100%;
 }
-.theatre-mode header{
+
+.theatre-mode .page.live-broadcast .head .player{
+  height: calc(100% - 120px);
+}
+.with-chat header{
+  top: 0;
+   transition: all 0.3s ease-out;
    -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+}
+.theatre-mode header{   
   top: -60px;
+}
+.page.live-broadcast .head .player .plyr{
+   transition: all 0.3s ease-out;
+   -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.theatre-mode .player .plyr{
+  max-height: 100%;
+}
+.page.live-broadcast .player .plyr{
+  position: relative;
+  top: 0;
 }
 .collapse-fullscreen{
   display: none;
@@ -8736,6 +8771,10 @@ background-color: #f05a00;
   top: -1px;
   fill: #aab1b8;
 }
+.tournament-championats .item .bottom .prizes svg{
+  width: 19px;
+  height: 18px;
+}
 .tournament-championats .item .bottom .share svg{
   width: 20px;
   height: 20px;
@@ -8775,7 +8814,9 @@ a, a:after, a:before, a svg, button svg, nav li a, .btn, button, .btn:after,.lis
 .bootstrap-datetimepicker-widget table span, .bootstrap-datetimepicker-widget table span:before, .bootstrap-datetimepicker-widget table a,
 .tournament .tab-content .item, .rounds .group .members, .tournament .top-image, .tournament .general-info, .tournament .general-info .wrap,
 .tournament .general-info .about svg, .tags span, .tags span:after, .tags span:before,
-.tournament .tab-content .rounds .pair:after,.tournament .tab-content .rounds .pair:before,.tournament .tab-content .rounds .pair .group:after, .tournament .tab-content .rounds .pair .group:before{
+.tournament .tab-content .rounds .pair:after,.tournament .tab-content .rounds .pair:before,
+.tournament .tab-content .rounds .pair .group:after, .tournament .tab-content .rounds .pair .group:before,
+.theatre-mode .page.live-broadcast .head{
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;

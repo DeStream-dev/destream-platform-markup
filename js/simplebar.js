@@ -2801,7 +2801,7 @@
       value: function hideNativeScrollbar() {
         // Recalculate scrollbarWidth in case it's a zoom
         this.scrollbarWidth = scrollbarWidth();
-        this.scrollContentEl.style[this.isRtl ? 'paddingLeft' : 'paddingRight'] = "".concat(this.scrollbarWidth || this.offsetSize, "px");
+        this.scrollContentEl.style[this.isRtl ? 'paddingLeft' : 'paddingRight'] = "".concat(this.scrollbarWidth+1 || this.offsetSize+1, "px");
         this.scrollContentEl.style.marginBottom = "-".concat(this.scrollbarWidth * 2 || this.offsetSize, "px");
         this.contentEl.style.paddingBottom = "".concat(this.scrollbarWidth || this.offsetSize, "px");
 

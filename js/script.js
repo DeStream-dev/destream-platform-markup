@@ -84,6 +84,7 @@ $('.menu-toggle').on("click",function(){
    return false;
 });
 $('.main-sidebar .close').on("click", function(){
+  console.log("close click!");
     $('body').removeClass("sidebar-collapse");
     $('.main-sidebar-content .head').removeClass('fixed');
      setTimeout(function(){
@@ -552,7 +553,7 @@ if(!this_item.hasClass("open")){
 
 $('.chat-btn .btn').on('click',function(){
   $('.page').toggleClass("chat-open");
-
+  return false;
 });
 
 $('.tournament .general-info .comments, .tournament-events .head .bottom .comments').click(function(){
@@ -709,10 +710,42 @@ if($('.datepicker').length){
 
 }
 
+var valignTimeout;
+function playerVAlign(){
+  if(valignTimeout)clearTimeout(valignTimeout);
+    if($('body').hasClass("theatre-mode")){     
+      valignTimeout = setTimeout(function(){
+        var h1 = $('.page.live-broadcast .head .player').outerHeight();
+        var h2 = $('.page.live-broadcast .head .player .plyr').outerHeight();
+        console.log(h1,"  ",h2);
+        $('.theatre-mode .page.live-broadcast .head .player .plyr').css('top',(h1-h2)/2 + "px");
+      }, 400);
+      
+    }
+    else{
+      $('.page.live-broadcast .head .player .plyr').css('top',0);
+    }
+}
+  $(window).resize(function() {
+     playerVAlign();
+  });
 
 $('.theatre-mode-toggle').on('click', function(){
-    $('body').toggleClass("theatre-mode");
+    $('body').toggleClass("theatre-mode");  
+      playerVAlign();
    });
+
+$('.modal-create-future-stream .is-voting .add-option').on('click', function(){
+    $('<div class="field"><input type="text" class="form-control" placeholder="Option"><a class="remove" href="#"></a></div>').appendTo($('.modal-create-future-stream .is-voting .options'));
+
+   return false;
+   });
+
+$( document ).on( "click", ".modal-create-future-stream .is-voting .field .remove", function() {
+ $(this).parents('.field').remove();
+  return false;
+});
+
 
  var iH = $('.tournament .general-info .wrap').height(); 
 $('.tournament .general-info .about').on('click', function(){
