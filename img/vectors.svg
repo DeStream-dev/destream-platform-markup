@@ -538,24 +538,12 @@
 		<path d="M5.16667 9L8.83333 7.25" stroke-linecap="square"/>
 	</g>
 
+	<g viewBox="0 0 17 18" id="prizes">
+	    <path fill-rule="nonzero" d="M16.65 2.7h-3.6V0h-9v2.7H.45v4.392a2.786 2.786 0 0 0 2.151 2.75 2.66 2.66 0 0 0 1.508-.122 4.5 4.5 0 0 0 3.541 3.735V16.2h-2.7V18h7.2v-1.8h-2.7v-2.745a4.5 4.5 0 0 0 3.541-3.735 2.66 2.66 0 0 0 1.508.121 2.786 2.786 0 0 0 2.151-2.749V2.7zM4.05 7.2a.9.9 0 0 1-1.8 0V4.5h1.8v2.7zm10.8-1.35V7.2a.9.9 0 0 1-1.8 0V4.5h1.8v1.35z"/>
+	</g>
 
-<g viewBox="0 0 55 57" id="prizes">
-    <defs>
-        <filter id="a" width="116.2%" height="130.9%" x="-8.1%" y="-15.5%" filterUnits="objectBoundingBox">
-            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
-            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
-            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.105882353 0 0 0 0 0.117647059 0 0 0 0 0.133333333 0 0 0 0.3 0"/>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
-    </defs>
-    <path fill="#AAB1B8" fill-rule="nonzero" d="M16.65 2.7h-3.6V0h-9v2.7H.45v4.392a2.786 2.786 0 0 0 2.151 2.75 2.66 2.66 0 0 0 1.508-.122 4.5 4.5 0 0 0 3.541 3.735V16.2h-2.7V18h7.2v-1.8h-2.7v-2.745a4.5 4.5 0 0 0 3.542-3.735 2.66 2.66 0 0 0 1.507.121 2.786 2.786 0 0 0 2.151-2.749V2.7zM4.05 7.2a.9.9 0 0 1-1.8 0V4.5h1.8v2.7zm10.8-1.35V7.2a.9.9 0 1 1-1.8 0V4.5h1.8v1.35z" filter="url(#a)" transform="translate(19 18)"/>
-</g>
-
-
-
+	<g viewBox="0 0 19 13" id="players">
+	     <path fill-rule="evenodd" d="M13.646 5.924a2.62 2.62 0 1 1 0-5.24 2.62 2.62 0 0 1 0 5.24zM11.48 7.271a4.09 4.09 0 0 1 1.287-.207h1.87c2.051 0 3.906 2.05 4.362 4.784-1.189.16-2.024.235-2.506.228-1.47-.022-2.445-.293-2.767-.228a5.79 5.79 0 0 0-2.246-4.577zm-4.408.02a4.556 4.556 0 0 1 4.547 4.555v.204A35.772 35.772 0 0 1 0 12.063v-.217A4.556 4.556 0 0 1 4.547 7.29h2.526zM5.81 5.241A2.62 2.62 0 1 1 5.81 0a2.62 2.62 0 0 1 0 5.24z"/>
+	</g>
 
 </svg>

@@ -84,7 +84,6 @@ $('.menu-toggle').on("click",function(){
    return false;
 });
 $('.main-sidebar .close').on("click", function(){
-  console.log("close click!");
     $('body').removeClass("sidebar-collapse");
     $('.main-sidebar-content .head').removeClass('fixed');
      setTimeout(function(){
@@ -97,12 +96,17 @@ $('.main-sidebar .close').on("click", function(){
 var $frameNav = null, slyOptionsNav;
 
 function setNavSliderWidth(obj){
+  if(!obj.length) return;
      var totalW = 0;
 
       obj.find('li').each(function(){
          $(this).find('a').width("auto");
     });
-    if(!$('.d-md-block').is(":visible")){
+      var pageW = $('.page').width();
+      var navW = obj.find('ul').width();
+   /* if(!$('.d-md-block').is(":visible")){
+    console.log(navW,"  ",pageW);
+    if(navW > pageW){*/
       setTimeout(function(){
      
             obj.find('li').each(function(){
@@ -121,11 +125,11 @@ function setNavSliderWidth(obj){
             itemNav: 'basic',
             mouseDragging: 1,
             touchDragging: 1,
-            releaseSwing: 1,
+            releaseSwing: 0,
             startAt: 0,
             scrollBy: 1,
             speed: 300,
-            elasticBounds: 1,
+            elasticBounds: 0,
             easing: 'easeOutExpo'
           };
           $frameNav = new Sly(obj.find('.tabs-wrap'), slyOptionsNav).init();  
@@ -135,7 +139,7 @@ function setNavSliderWidth(obj){
       }, 500);
 
 
-  }
+ /* }
   else{  
     setTimeout(function(){
       if(obj.length){
@@ -145,7 +149,7 @@ function setNavSliderWidth(obj){
         }
       }
     },1000);  
-  }
+  }*/
 }
 
 setNavSliderWidth($('.settings .tabs'));
@@ -187,7 +191,11 @@ $('.list .alarm').on("click", function(){
 function searchH(){
    var wH = $(window).height();
    var hH = $('header').outerHeight(); 
-  $('header .search-results').height((wH-hH) - 30);
+   var offset = 30;
+   if($('.d-md-none').is(":visible")){
+      offset = 20;
+   }
+  $('header .search-results').height((wH-hH) - offset);
 }
 searchH();
 function screen(){
@@ -717,7 +725,6 @@ function playerVAlign(){
       valignTimeout = setTimeout(function(){
         var h1 = $('.page.live-broadcast .head .player').outerHeight();
         var h2 = $('.page.live-broadcast .head .player .plyr').outerHeight();
-        console.log(h1,"  ",h2);
         $('.theatre-mode .page.live-broadcast .head .player .plyr').css('top',(h1-h2)/2 + "px");
       }, 400);
       
@@ -775,6 +782,44 @@ $('.tournament .general-info .about').on('click', function(){
 
 });
 
+(function() {
+  'use strict';
+
+  function remoteModal(idModal) {
+    var vm = this;
+    vm.modal = $(idModal);
+
+    if (vm.modal.length == 0) {
+      return false;
+    }
+
+    if (window.location.hash == idModal) {
+      openModal();
+    }
+
+    var services = {
+      open: openModal,
+      close: closeModal
+    };
+
+    return services;
+
+    function openModal() {
+      vm.modal.modal('show');
+    }
+
+    function closeModal() {
+      vm.modal.modal('hide');
+    }
+  }
+  Window.prototype.remoteModal = remoteModal;
+})();
+
+$(function() {
+  if (window.location.hash) {
+   window.remoteModal(window.location.hash);
+ }
+});
 
 
 Dropzone.options.transferform = { 
