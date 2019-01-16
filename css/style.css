@@ -4371,7 +4371,11 @@ button.close {
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
+  }
+  .settings .home .blocks .item[data-link]{
+   cursor: pointer;
  }
+
  .settings .home .blocks .item.contain{
     background-size: contain;
    -webkit-background-size: contain;
@@ -4412,6 +4416,12 @@ button.close {
   padding-left: 80px;
   padding-right: 80px;
 }
+
+.no-touch .settings .home .blocks .item:hover .btn{
+  background-color: #f05a00;
+  border-color: #f05a00;
+  color: #ffffff;
+}
 .settings .home .blocks .item .btn-wrap.right{
   left: auto;
   right: 35px;
@@ -4431,6 +4441,7 @@ button.close {
   font-weight: 500;
   color: #dbe0e6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block;
 }
 .settings .home .blocks .item .title{
   text-transform: uppercase;
@@ -4441,6 +4452,7 @@ button.close {
   line-height: 19px;
   position: relative;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block;
 }
 .settings .home .blocks .item .content > .title{
   padding-left: 0;
@@ -4449,6 +4461,7 @@ button.close {
   position: relative;
   height: 100%;
   padding-bottom: 92px;
+  display: block;
 }
 .settings .home .blocks .item-inner:after, .settings .home .blocks .item-inner:before,
 .settings .home .blocks .item:after, .settings .home .blocks .item:before{
@@ -8962,6 +8975,7 @@ background-color: #f05a00;
   width: 50%;
   position: absolute;
   left: 50px;
+  padding-left: 70px;
   top: 20%;
 }
 .promo .item .title{
@@ -8972,14 +8986,24 @@ background-color: #f05a00;
   line-height: 34px;
 }
 .promo .item .text{
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 26px;
   color: #aab1b8;
   font-weight: 500;
   font-size: 13px;
   line-height: 19px;
 }
-
+.promo .item .btn{
+  font-size: 12px;
+  font-weight: 600;
+  color: #c6ced5;
+  line-height: 15px;
+}
+.no-touch .promo .item:hover .btn{
+    background-color: #f05a00;
+    border-color: #f05a00;
+    color: #ffffff;
+  }
 .promo .slick-dots{
     position: absolute;
     bottom: auto;

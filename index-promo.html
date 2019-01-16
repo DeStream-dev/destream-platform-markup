@@ -15,11 +15,12 @@
 	<link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css?v=2">
     <link rel="stylesheet" href="css/adaptive.css">
-    <title>Destream Portal Settings</title>
+    <title>Destream Portal</title>
   </head>
   <body>
-  <header class="user-is-logged"> 
-	  	<div class="top">
+ 
+  	<header> 
+  	<div class="top">
 	  		<a class="menu-toggle" href="#">
 				        	<svg><use xlink:href="img/vectors.svg#ham"></use></svg>
 			</a>			        
@@ -27,12 +28,11 @@
 	  	</div>
   		<div class="container-fluid"> 
 		  	<div class="row">
-			    <div class="col-3 col-sm-4 col-lg-3">
-			        
-			    </div>
-			    <div class="col-1 col-sm-1 col-md-4 col-lg-6">
-			    	<div class="search-panel">
-			      		<a class="close"></a>
+			    <div class="col-12 col-sm-3">
+			     </div>
+			    <div class="col-12 col-sm-6">
+			      	<div class="search-panel">
+			            <a class="close"></a>
 			            <div class="search-input">
 			                <input type="search" placeholder="Search" />  
 			                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
@@ -146,81 +146,15 @@
 					            </ul>
 					            <a class="more d-block d-lg-none" href="#">More news</a>
 				            </div>
-			            </div>
+			            </div> 
 			            </div>              
 			        </div>
 			    </div>
-			    <div class="col-8 col-sm-7 col-md-4 col-lg-3">
-			    <div class="links">			     	
-			     	<div class="user-btn-cont">
-			     		<a href="#" class="icon dropdown-toggle" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			     			<img src="img/live-icon1.png" width="40" height="40" alt="" />
-			     		</a>
-			     			<div class="dropdown-menu" aria-labelledby="account-link">
-						    <ul>
-				    			<li><a href="mychannel.html"><span class="icon my-channel"><svg><use xlink:href="img/vectors.svg#my-channel"></use></svg></span> My channel</a></li>
-				    			<li><a href="wallet.html"><span class="icon wallet"><svg><use xlink:href="img/vectors.svg#wallet"></use></svg></span> Wallet</a></li>
-				    			<li><a href="overlays.html"><span class="icon overlays"><svg><use xlink:href="img/vectors.svg#overlays"></use></svg></span> Overlays</a></li>
-				    			<li><a href="settings.html"><span class="icon settings"><svg><use xlink:href="img/vectors.svg#settings"></use></svg></span> Settings</a></li>
-				    			<li><a href="index-promo.html"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
-				    		</ul>
-						</div>
-			     	</div>
+			    <div class="col-12 col-sm-3">			     	
+			     	<a href="#" data-target=".modal-auth" data-toggle="modal" class="btn login d-none d-md-block">Log in</a>
+			     	<a href="#" data-target=".modal-auth" data-toggle="modal" class="login d-md-none"><svg><use xlink:href="img/vectors.svg#login"></use></svg></a>
 			     	<a class="search-btn d-md-none" href="#"><svg><use xlink:href="img/vectors.svg#search"></use></svg></a>
-			    	<div class="create-btn-cont">
-			     		<a class="btn create dropdown-toggle" id="create" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			     		<span class="plus d-lg-none">+</span>
-			     		<span class="d-none d-lg-block">Create</span></a>
-			     			<div class="dropdown-menu" aria-labelledby="create">
-						    <ul>
-				    			<li><a href="#" data-target=".modal-create-future-stream" data-toggle="modal">Create future stream</a></li>
-				    			<li><a href="#" data-target=".modal-transfer" data-toggle="modal">Create transaction</a></li>
-				    			<li><a href="#" data-target=".modal-addoverlay" data-toggle="modal">Create overlay</a></li>
-				    			<li><a href="#">Create tournament</a></li>
-				    		</ul>
-						</div>
-			     	</div>
-			     	<div class="notifications-cont d-none d-md-block">
-			    		<a class="dropdown-toggle" data-counter="6" href="#" id="notification-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg><use xlink:href="img/vectors.svg#notifications"></use></svg></a>
-			    		<div class="dropdown-menu" aria-labelledby="notification-link">
-						    <ul>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    		</ul>
-				    		<div class="view-all-cont"><a class="view-all" href="messages.html">View all</a></div>
-						</div>			    		
-			    	</div>
-			    	<a class="faq-btn" href="#"><svg><use xlink:href="img/vectors.svg#quiz"></use></svg></a>
 			    </div>
-			  </div>
 		  </div>
 		</div>
     </header>
@@ -516,1064 +450,552 @@
             </footer>
             </div>
     	</aside>
-
+    	
     	<section class="main-content" data-simplebar>
-	    	<div class="page settings">
-	    		<div class="title">Settings</div>
-	    		<div class="tabs">
-	    			<div class="tabs-wrap">
-			    		<ul class="nav nav-pills" role="tablist">
-			    			 <li class="nav-item">
-							    <a class="nav-link active" href="#home" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Home</a>
-							  </li>
-							  <li class="nav-item">
-							    <a class="nav-link" href="#personal" id="personal-tab" data-toggle="tab" role="tab" aria-controls="personal" aria-selected="true">Personal</a>
-							  </li>
-							  <li class="nav-item">
-							    <a class="nav-link" href="#donate" id="donate-tab" data-toggle="tab" role="tab" aria-controls="donate" aria-selected="true">Donate</a>
-							  </li>
-							  <li class="nav-item">
-							   <a class="nav-link" id="integration-tab" data-toggle="tab" href="#integration" role="tab" aria-controls="integration" aria-selected="false">Integration</a>
-							  </li>	
-							  <li class="nav-item">
-							   <a class="nav-link" id="notification-tab" data-toggle="tab" href="#notification" role="tab" aria-controls="notification" aria-selected="false">Notification</a>
-							  </li>	
-							  <li class="nav-item">
-							   <a class="nav-link" id="interest-tab" data-toggle="tab" href="#interest" role="tab" aria-controls="interest" aria-selected="false">Interest</a>
-							  </li>	
-							  <li class="nav-item">
-							   <a class="nav-link" id="subscription-tab" data-toggle="tab" href="#subscription" role="tab" aria-controls="subscription" aria-selected="false">Subscription</a>
-							  </li>	
-							  <li class="nav-item">
-							   <a class="nav-link" id="servicecatalog-tab" data-toggle="tab" href="#servicecatalog" role="tab" aria-controls="servicecatalog" aria-selected="false">Service catalog</a>
-							  </li>
-							   <li class="nav-item">
-							   <a class="nav-link" id="overlays-tab" data-toggle="tab" href="#overlays" role="tab" aria-controls="overlays" aria-selected="false">Overlays</a>
-							  </li>		 
-						</ul>
-					</div>
-				</div>
-				<div class="tab-content">
-				  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-					  <div class="home">
-					  	<div class="blocks">
-					 		<div class="row">
-						 		<div class="col-md-8">
-							 		<div class="item double" data-link="#overlays">
-							 			<div class="item-inner">
-								 			<div class="content">
-									 			<div class="title">Overlays</div>
-									 			<div class="text">Get one of our super awesome, beautiful profiles to show off your members, games, content and more.</div>
-									 		</div>
-									 		<div class="btn-wrap right bottom"><a class="btn btn-transparent big" href="#" data-target=".modal-addoverlay" data-toggle="modal">Create</a></div>
-							 			</div>
-							 		</div>
-						 		</div>
+	    	<div class="promo">
+		    	<div class="item" style="background-image: url('img/promo.png')">
+			    	<div class="content">
+			    		<div class="icon"></div>
+			    		<div class="title">Live time donate</div>
+			    		<div class="text">Welcome to destream. We are a global community of millions who come together each day to create their own entertainment: unique, live, unpredictable, you’re a part of the show.</div>
+			    		<div class="detail"><a class="btn btn-transparent" href="#">Details</a></div>
+			    	</div>
+		    	</div>
 
-						 		<div class="col-md-4">
-						 			<div class="item contain" style="background-image: url('img/settings-home-2.png')" data-link="#interest">
-							 			<div class="item-inner">
-							 				
-								 			<div class="title">Anonse</div>
-								 			<div class="content middle">
-								 				<div class="text">Get one of our super awesome, beautiful profiles to show off your members, games, content and more.</div>
-								 			</div>
-								 			<div class="btn-wrap center bottom"><a class="btn btn-transparent big" href="#" data-target=".modal-announcement" data-toggle="modal">Create</a></div>
-								 		</div>
-							 		</div>
-						 		</div>
-						 	</div>
-						 	<div class="row">
-						 		<div class="col">
-						 			<div class="item triple" data-link="#servicecatalog">
-						 				<div class="item-inner">
-							 				<div class="content">
-								 				<div class="title">Service catalog</div>
-								 			</div>
-							 			</div>
-							 		</div>
-						 		</div>
-						 	</div>
-						 	<div class="row">
-						 		<div class="col-md-4">
-						 			<div class="item" data-link="#overlays">
-						 				<div class="item-inner">
-							 				<div class="content">
-								 				<div class="title">Overlays</div>
-								 			</div>
-							 			</div>
-							 		</div>
-						 		</div>
-						 		<div class="col-md-4">
-						 			<div class="item" style="background-image: url('img/settings-home.png')" data-link="#subscription">
-							 			<div class="item-inner">
-							 				<div class="content middle">
-								 				<div class="title">Header</div>
-								 				<div class="text">Get one of our super awesome, beautiful profiles to show off your members, games, content and more.</div>
-								 			</div>
-								 			<div class="btn-wrap left bottom"><a class="btn btn-transparent" href="tttt.html" data-target=".modal-announcement" data-toggle="modal">Create</a></div>
-								 		</div>
-							 		</div>
-						 		</div>
-						 		<div class="col-md-4">
-						 			<div class="item">
-							 			<div class="item-inner">
-							 				<div class="content">
-								 				<div class="title">Service catalog</div>
-								 			</div>
-								 		</div>
-							 		</div>
-						 		</div>
-						 	</div>
-					 	 </div>
-					  </div>
-				  </div>
-				  <div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
-				  		<div class="form personal">
-				  		<form data-toggle="validator" role="form" class="dropzone" id="personaltabform" action="/file-upload" method="post" enctype="multipart/form-data">
-				  		<div class="user-info">
-		    			<span class="icon"><img src="img/anar.png" width="461" height="614" alt="" /></span>
-		    						<div class="change-photo">
-						            		<div class="dz-default dz-message">
-														<span class="msg-lg d-none d-lg-block">
-															<b>Drag the image here</b> or select on computer
-														</span>
-														<span class="msg-md d-md-block d-lg-none">
-															Edit
-														</span>
-														<span class="msg-xs d-block d-md-none">
-															<svg><use xlink:href="img/vectors.svg#pencil"></use></svg>
-														</span>
-													</div>
-													<div class="fallback">
-													    <input name="file" type="file" multiple />
-													</div>
-													<div class="preview"></div>
-					            		</div>
+		    	<div class="item" style="background-image: url('img/slider/slide1.png')">
+			    	<div class="content">
+			    		<div class="icon"></div>
+			    		<div class="title">Live time donate</div>
+			    		<div class="text">Welcome to destream. We are a global community of millions who come together each day to create their own entertainment: unique, live, unpredictable, you’re a part of the show.</div>
+			    		<div class="detail"><a class="btn btn-transparent" href="#">Details</a></div>
+			    	</div>
+		    	</div>
 
+		    	<div class="item" style="background-image: url('img/slider/slide2.png')">
+			    	<div class="content">
+			    		<div class="icon"></div>
+			    		<div class="title">Live time donate</div>
+			    		<div class="text">Welcome to destream. We are a global community of millions who come together each day to create their own entertainment: unique, live, unpredictable, you’re a part of the show.</div>
+			    		<div class="detail"><a class="btn btn-transparent" href="#">Details</a></div>
+			    	</div>
+		    	</div>
+
+		    	<div class="item" style="background-image: url('img/slider/slide3.png')">
+			    	<div class="content">
+			    		<div class="icon"></div>
+			    		<div class="title">Live time donate</div>
+			    		<div class="text">Welcome to destream. We are a global community of millions who come together each day to create their own entertainment: unique, live, unpredictable, you’re a part of the show.</div>
+			    		<div class="detail"><a class="btn btn-transparent" href="#">Details</a></div>
+			    	</div>
+		    	</div>
+
+	    	</div>
+
+    		<div class="list list-live">
+    			<div class="title">Live</div>
+    			<div class="row">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live1.png')">
+			    				<span class="count">338 512 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Zavr</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
 		    			</div>
-							<div class="form-group" aria-required="true">
-                                <label class="control-label" for="login">Nickname</label>
-                                <input type="text" id="login" class="form-control" required placeholder="Nickname">
-                            </div>
-                            <div class="form-group" aria-required="true">
-                                <label class="control-label" for="email">Email</label>
-                                <input type="email" id="email" class="form-control" required placeholder="Email">
-                            </div>
-                            <div class="form-group" aria-required="true">
-                                <label class="control-label" for="password">New password</label>
-                                <input type="password" id="password" class="form-control" required placeholder="New password"> 
-                            </div>
-                            <div class="form-group" aria-required="true">
-                                <label class="control-label" for="reenterpassword">Reenter new password</label>
-                                <input type="password" id="reenterpassword" class="form-control" required placeholder="Reenter new password"> 
-                            </div>
-                            <div class="form-group buttons" aria-required="true">
-                            <a href="#" class="btn btn-transparent btn-changepassword">Change password</a>
-                            </div>
-                            
-                            <div class="buttons">                            
-			            		<button type="button" class="btn btn-save">Save</button>
-			            		<button type="button" class="btn btn-transparent">Cancel</button>
-			            	</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live2.png')">
+			    				<span class="count">123 512 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Konstapolsky</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live3.png')">
+			    				<span class="count">3 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Ivanochek</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">			    			
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live4.png')">
+			    				<span class="count">254 512 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Zavr</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live5.png')">
+			    				<span class="count">13 512 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Zavr Konstapolsky</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live6.png')">
+			    				<span class="count">6 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Zavr</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live7.png')">
+			    				<span class="count">412 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Ivanochek</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		    			<div class="item">
+			    			<a class="img" href="live-broadcast.html" style="background-image:url('img/live8.png')">
+			    				<span class="count">2 312 viewers</span>
+			    			</a>
+			    			<div class="description">
+				    			<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+				    			<span class="name">Zavr</span>
+				    			<a class="text" href="live-broadcast.html">Название трансляции не более 2 строк…</a>
+			    			</div>
+		    			</div>
+	    			</div>
+    			</div> 
+    			<a class="view-all d-none d-md-block" href="live.html">View all <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>
+    			<a class="more d-md-none" href="news.html">More</a>  			
+    		</div>
 
+    		<div class="list list-news">
+    			<div class="title">News</div>
+    			<div class="row">
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+		    			<div class="item">
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news1.png')"></a>
+			    			<div class="description">
+				    			<span class="date">21.05.2018</span>
+				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
+				    			<span class="share">
+					    			<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+					    			<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+				    			</span>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+		    			<div class="item">
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news2.png')"></a>
+			    			<div class="description">
+				    			<span class="date">21.05.2018</span>
+				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
+				    			<span class="share">
+					    			<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+					    			<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+				    			</span>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+		    			<div class="item">
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news3.png')"></a>
+			    			<div class="description">
+				    			<span class="date">21.05.2018</span>
+				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
+				    			<span class="share">
+					    			<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+					    			<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+				    			</span>
+			    			</div>
+		    			</div>
+	    			</div>
+	    			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+		    			<div class="item">
+			    			<a class="img" href="#" data-target=".modal-news-detail" data-toggle="modal" style="background-image:url('img/news4.png')"></a>
+			    			<div class="description">
+				    			<span class="date">21.05.2018</span>
+				    			<a class="text" href="#" data-target=".modal-news-detail" data-toggle="modal">Анонс новости очень длинный но не более трех строк.</a>
+				    			<span class="share">
+					    			<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+					    			<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+				    			</span>
+			    			</div>
+		    			</div>
+	    			</div>
+	    		</div>
+    			<a class="view-all d-none d-md-block" href="news.html">View all <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a>
+    			<a class="more d-md-none" href="live.html">More</a>    
+    		</div>
 
-			            	<a href="#" class="delete-account">Delete account</a>
-
-			
-				   		</form>
-				   		</div>
-				  </div>
-				  <div class="tab-pane fade" id="donate" role="tabpanel" aria-labelledby="donate-tab">
-				  <div class="form personal">
-				  	<form data-toggle="validator" role="form">
-				  		<div class="form-group" aria-required="true">
-                                <label class="control-label" for="donate">Minimal donate</label>
-                                <div class="input">
-                            	<div class="label">
-                            		<select class="form-control selectpicker ds-dropdown currency-select" title="DST">
-                                        <option>EST</option>
-                                        <option>$</option>
-                                        <option>QWE</option>
-                                        <option>RUB</option>
-                                        <option>ETH</option>
-                                    </select>
-                            	</div>                            	
-                            	<input type="text" id="donate" class="form-control" required value="1200">
-                            </div>
-                                
-                            </div>
-
-                            <div class="form-group donatelink" aria-required="true">
-	                            <label class="control-label" for="donatelink">Donate link</label>
-	                            <input type="text" id="donatelink" class="form-control" placeholder="http://127.0.0.1:32767/start.html">
-	                            <a class="copy" href="#"><svg><use xlink:href="img/vectors.svg#copy-s"></use></svg></a>
-	                        </div>
-
-
-                            <div class="buttons">                            
-			            		<button type="button" class="btn btn-save">Save</button>
-			            		<button type="button" class="btn btn-transparent">Cancel</button>
-			            	</div>
-
-			            	</form>
-			            </div>
-
-				  </div>
-				  <div class="tab-pane fade" id="integration" role="tabpanel" aria-labelledby="integration-tab">
-				  		<div class="form integration">
-				  			<form data-toggle="validator" role="form">
-					  			<div class="item">
-					  				<div class="form-group form-group-checkbox">
-		                                <label><input type="checkbox" name="fb-integration" value="fb-integration"><span></span></label>
-		                            </div>
-		                            <div class="icon facebook"><svg><use xlink:href="img/vectors.svg#fb-white"></use></svg></div>
-		                            <div class="description">
-			                            <div class="title">Facebook</div>
-			                            <div class="text">
-			                            	<b>One-click log in to Twitch with your Facebook account</b>
-			                            	<span class="d-none d-md-block">By connecting your account with Facebook, you acknowledge and agree that information you choose to share will be uploaded to these services and may be viewed by these services and other users of these services.</span>
-			                            </div>
-		                            </div>
-					  			</div>
-
-					  			<div class="item">
-					  				<div class="form-group form-group-checkbox">
-		                                <label><input type="checkbox" name="tw-integration" value="tw-integration"><span></span></label>
-		                            </div>
-		                            <div class="icon twitter"><svg><use xlink:href="img/vectors.svg#twitter-white"></use></svg></div>
-		                            <div class="description">
-			                            <div class="title">Twitter</div>
-			                            <div class="text">
-			                            	<b>Tweet your Channel Feed posts to your followers.</b>
-			                            	<span class="d-none d-md-block">By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.</span>
-			                            </div>
-		                            </div>
-					  			</div>
-
-					  			<div class="item">
-					  				<div class="form-group form-group-checkbox">
-		                                <label><input type="checkbox" name="yt-integration" value="yt-integration"><span></span></label>
-		                            </div>
-		                            <div class="icon youtube"><svg><use xlink:href="img/vectors.svg#youtube-white"></use></svg></div>
-		                            <div class="description">
-			                            <div class="title">Youtube</div>
-			                            <div class="text">
-			                            	<b>Export archives</b>
-			                            	<span class="d-none d-md-block">By connecting your account with your YouTube account, you acknowledge and agree that information you choose to share will be uploaded to YouTube and may be viewed by YouTube and other YouTube users. Also, your YouTube account information may be used by Twitch. Twitch will not publicly display your YouTube account information. If you no longer want to share this information, please disconnect your YouTube account.</span>
-			                            </div>
-		                            </div>
-					  			</div>
-
-					  			<div class="item">
-					  				<div class="form-group form-group-checkbox">
-		                                <label><input type="checkbox" name="twitch-integration" value="twitch-integration"><span></span></label>
-		                            </div>
-		                            <div class="icon twitch"><svg><use xlink:href="img/vectors.svg#twitch-white"></use></svg></div>
-		                            <div class="description">
-			                            <div class="title">Twitch</div>
-			                            <div class="text">
-			                            	<b>Tweet your Channel Feed posts to your followers.</b>
-			                            	<span class="d-none d-md-block">By connecting your account with your Twitter account, you acknowledge and agree that information you choose to share will be uploaded to Twitter and may be viewed by Twitter and other Twitter users. Also, your Twitter account information may be used by Twitch. Twitch will not publicly display your Twitter account information. If you no longer want to share this information, please disconnect your Twitter account.</span>
-			                            </div>
-		                            </div>
-					  			</div>
-
-					  		</form>
-				  		</div>
-				  </div>
-				  <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
-						<div class="form notification d-none d-md-block">
-				  			<form data-toggle="validator" role="form">
-				  					<dl class="item header">
-			                            <dt class="event-name"></dt>
-			                            <dd class="site-push">Site push</dd>
-			                            <dd class="desktop-push">Desktop push</dd>
-			                            <dd class="mobile-push">Mobile push</dd>
-			                            <dd class="email">Email</dd>
-			                            <dd class="telegram">Telegram</dd>
-	                        		</dl>
-
-				  					<dl class="item">
-			                            <dt class="event-name">Event name</dt>
-			                            <dd class="site-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-		                            		</div>
-		                            	</dd>
-			                            <dd class="desktop-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="mobile-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="email">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="telegram">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-	                        		</dl>
-
-	                        		<dl class="item">
-			                            <dt class="event-name">Event name</dt>
-			                            <dd class="site-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-		                            		</div>
-		                            	</dd>
-			                            <dd class="desktop-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="mobile-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="email">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="telegram">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-	                        		</dl>
-
-	                        		<dl class="item">
-			                            <dt class="event-name">Event name</dt>
-			                            <dd class="site-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-		                            		</div>
-		                            	</dd>
-			                            <dd class="desktop-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="mobile-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="email">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="telegram">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-	                        		</dl>
-
-	                        		<dl class="item">
-			                            <dt class="event-name">Event name</dt>
-			                            <dd class="site-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-		                            		</div>
-		                            	</dd>
-			                            <dd class="desktop-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="mobile-push">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="email">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-			                            <dd class="telegram">
-			                            	<div class="form-group form-group-checkbox">
-		                                		<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-		                            		</div>
-			                            </dd>
-	                        		</dl>
-
-				  			</form>
-				  		</div>
-
-				  		<div class="form notification d-block d-md-none">
-				  			<form data-toggle="validator" role="form">
-					  			<div class="item">
-					  				<div class="name">Event name</div>
-					  				<div class="parameters">
-						  				<div>
-						  					<span>Site push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Desktop push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Mobile push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-							  				<span>Email</span>
-							  				<div class="form-group form-group-checkbox">
-							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-							  				</div>
-							  			</div>
-						  				<div>
-						  					<span>Telegram</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-					  				</div>
-					  			</div>
-
-					  			<div class="item">
-					  				<div class="name">Event name</div>
-					  				<div class="parameters">
-						  				<div>
-						  					<span>Site push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Desktop push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Mobile push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-							  				<span>Email</span>
-							  				<div class="form-group form-group-checkbox">
-							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-							  				</div>
-							  			</div>
-						  				<div>
-						  					<span>Telegram</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-					  				</div>
-					  			</div>
-
-					  			<div class="item">
-					  				<div class="name">Event name</div>
-					  				<div class="parameters">
-						  				<div>
-						  					<span>Site push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Desktop push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Mobile push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-							  				<span>Email</span>
-							  				<div class="form-group form-group-checkbox">
-							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-							  				</div>
-							  			</div>
-						  				<div>
-						  					<span>Telegram</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-					  				</div>
-					  			</div>
-
-					  			<div class="item">
-					  				<div class="name">Event name</div>
-					  				<div class="parameters">
-						  				<div>
-						  					<span>Site push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="site-push-1" value="site-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Desktop push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="desktop-push-1" value="desktop-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-						  					<span>Mobile push</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="mobile-push-1" value="mobile-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-						  				<div>
-							  				<span>Email</span>
-							  				<div class="form-group form-group-checkbox">
-							  					<label><input type="checkbox" name="email-push-1" value="email-push-1"><span></span></label>
-							  				</div>
-							  			</div>
-						  				<div>
-						  					<span>Telegram</span>
-						  					<div class="form-group form-group-checkbox">
-						  						<label><input type="checkbox" name="telegram-push-1" value="telegram-push-1"><span></span></label>
-						  					</div>
-						  				</div>
-					  				</div>
-					  			</div>
-				  					
-				  			</form>
-				  		</div>
-				  </div>
-				  <div class="tab-pane fade" id="interest" role="tabpanel" aria-labelledby="interest-tab">
-				  	<div class="form interest">
-	               		<form data-toggle="validator"> 
-	               			<div class="search-panel">   
-	               				<div class="row">
-		               				<div class="col-12 col-md-6 col-lg-4">
-		               					<div class="text">Choose what you like and we will try to give you the most interesting selection.</div>
-		               				</div>
-		               				<div class="col-12 col-md-6 col-lg-3">
-			               				<div class="filter">
-			               					<div class="form-group form-group-checkbox">
-			                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
-			                            	</div>
-			                            	<div class="form-group form-group-checkbox">
-			                                	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
-			                            	</div>
-			               				</div>
-		               				</div>
-		               				<div class="d-none d-md-block col-md-6 d-lg-none"></div>
-		               				<div class="col-12 col-md-6 col-lg-5">
-			               				<div class="search-input">
-							                <input type="search" placeholder="Search" />  
-							                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
-						            	</div> 
-					            	</div>
-				            	</div>
-				            </div>
-				            <div class="list">
-				            	<div class="row">
-		               				<div class="col-12 col-md-6 col-lg-7">
-		               					<div class="title">Game</div>
-		               					<div class="items-game">
-		               					<div class="row">
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
-			                            		</div>
-				               				</div>
-
-				               				<div class="col-4 col-md-6 col-lg-4">
-				               					<div class="form-group form-group-checkbox">
-			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
-			                            		</div>
-				               				</div>
-			               				</div>
-			               				<a class="more d-md-none" href="#">More game</a>
-		               				  </div>
-		               				</div>
-		               				<div class="col-12 col-md-6 col-lg-5">
-		               					<div class="title">Life style</div>
-		               					<div class="items-lifestyle">
-		               						<div class="row">
-					               				<div class="col-6 col-md-12">
-					               					<div class="form-group form-group-checkbox">
-						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-							                                <div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
-							                                <i>Very long and simple name of lifestyle rubric</i>
-						                                </label>
-						                            </div>
-					                            </div>
-					                            <div class="col-6 col-md-12">
-						                            <div class="form-group form-group-checkbox">
-						                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
-						                                	<div class="img" style="background-image: url('img/interest/lifestyle2.png')"></div>
-							                                <i>Name of lifestyle rubric</i>
-							                             </label>
-						                            </div>
-					                            </div>
-					                            <div class="col-6 col-md-12">
-						                           	<div class="form-group form-group-checkbox">
-						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-							                                <div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
-							                                <i>Very long and simple name of lifestyle rubric</i>
-						                                </label>
-						                            </div>
-					                            </div>
-					                            <div class="col-6 col-md-12">
-						                            <div class="form-group form-group-checkbox">
-						                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
-						                                	<div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
-							                                <i>Name of lifestyle rubric</i>
-							                             </label>
-						                            </div>
-					                            </div>
-					                            <div class="col-6 col-md-12">
-						                           	<div class="form-group form-group-checkbox">
-						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
-							                                <div class="img" style="background-image: url('img/interest/lifestyle2.png')"></div>
-							                                <i>Very long and simple name of lifestyle rubric</i>
-						                                </label>
-						                            </div>
-					                            </div>
-				                            </div>
-				                            <a class="more d-md-none" href="#">More lifestyle</a>
-			                            </div>
-		               				</div>
-		               			</div>
-		               			<div class="loading text-center d-none d-md-block"><a href="#" class="spin"><svg><use xlink:href="img/vectors.svg#loading"></use></svg><span>Loading...</span></a></div>
-				            </div>				            
-	               		</form>
-               		</div>
-				  </div>
-				  <div class="tab-pane fade" id="subscription" role="tabpanel" aria-labelledby="subscription-tab">
-					<div class="form subscription">
-						<div class="search-input">
-							<input type="search" placeholder="Search" />  
-							<button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
-						</div> 
-						<div class="items">
-	               		<div class="row">
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">Екатерина Болтинская</span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">Александр Гаврилов</span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">Никита Жмылев</span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon3.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon4.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               			<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-		               			<a class="item" href="unsubscribe.html">
-		               				<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
-		               				<span class="name">I.m. Khankishiev </span>
-		               				<span class="unsubscribe">Unsubscribe</span>
-		               			</a>
-	               			</div>
-	               		   </div>
-	               		</div>
-	               	</div>
-				  </div>
-				  <div class="tab-pane fade" id="servicecatalog" role="tabpanel" aria-labelledby="servicecatalog-tab">
-					<div class="form services-catalog">
-	               		<form data-toggle="validator"> 
-	               		 <div class="form-group cat-name" aria-required="true">
-                                <input type="text" class="form-control" required placeholder="Enter catalog name">
-                                <button class="btn" type="submit">Create</button>  
-                            </div>
-		               		<div class="text">
-		               			In this section, you can add service catalogs for different types of streams.<br>
-		               			By attaching catalogs to the broadcast, you can earn more.
-		               		</div>
-	               		</form>
-	               		
-	               			<div class="services">
-				                <div class="list open">
-				                    <a href="#">For dota</a>
-				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
-				                        <div class="units">
-				                           	<div class="row">
-								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img" style="background-image: url('img/live-broadcast/item1.png')"></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles from 2012's Dark Knight Rises and 1989's Batman.
-										    			</div>
-										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img" style="background-image: url('img/live-broadcast/item2.png')"></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles.
-										    			</div>
-										    			<div class="price">700 DST <em>(15.4$)</em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img" style="background-image: url('img/live-broadcast/item3.png')"></div>
-										    			<div class="text">
-										    				The DC Super Heroes.
-										    			</div>
-										    			<div class="price">2700 DST <em>(55$)</em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img" style="background-image: url('img/live-broadcast/item4.png')"></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles from 2012's Dark Knight Rises and 1989's Batman.
-										    			</div>
-										    			<div class="price">700 DST <em>(15.4$)</em></div>
-										    		</div>
-								    			</div>
-			    							</div>				                                        
-				                    </div>
-				                </div>
-
-				                <div class="list">
-				                    <a href="#">For generals</a>
-				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
-				                        <div class="units">
-				                           	<div class="row">
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item1.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles from 2012's Dark Knight Rises and 1989's Batman.
-										    			</div>
-										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item2.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles.
-										    			</div>
-										    			<div class="price">700 DST <em>(15.4$)</em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item3.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes.
-										    			</div>
-										    			<div class="price">2700 DST <em>(55$)</em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item4.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles from 2012's Dark Knight Rises and 1989's Batman.
-										    			</div>
-										    			<div class="price">700 DST <em>(15.4$)</em></div>
-										    		</div>
-								    			</div>
-			    							</div>				                                        
-				                    </div>
-				                </div>
-
-				                <div class="list">
-				                    <a href="#">For dota</a>
-				                    <button class="btn btn-transparent" data-target=".modal-addservice" data-toggle="modal">+ Add Service</button>
-				                        <div class="units">
-				                           	<div class="row">
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item1.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles from 2012's Dark Knight Rises and 1989's Batman.
-										    			</div>
-										    			<div class="price">700 DST <em><em>(15.4$)</em></em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item2.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles.
-										    			</div>
-										    			<div class="price">700 DST <em>(15.4$)</em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item3.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes.
-										    			</div>
-										    			<div class="price">2700 DST <em>(55$)</em></div>
-										    		</div>
-								    			</div>
-								    			<div class="col-12 col-sm-4 col-lg-3">
-								    				<div class="item">
-										    			<div class="img"><img src="img/live-broadcast/item4.png" width="320" height="56" alt="" /></div>
-										    			<div class="text">
-										    				The DC Super Heroes DLC Pack adds the Batmobiles from 2012's Dark Knight Rises and 1989's Batman.
-										    			</div>
-										    			<div class="price">700 DST <em>(15.4$)</em></div>
-										    		</div>
-								    			</div>
-			    							</div>				                                        
-				                    </div>
-				                </div>
-				            </div>
-	               		</div>
-				  </div>
-
-				  <div class="tab-pane fade" id="overlays" role="tabpanel" aria-labelledby="overlays-tab">
-				  		<div class="overlays">
-						  	<div class="list">
-			    				<div class="row">
-					    			<div class="col-12 col-sm-6 col-lg-4">
-					    				<div class="item">
-							    			<div class="img"><img src="img/overlays/1.png" width="2006" height="1130" alt="" /></div>
-							    			<div class="bottom">
-								    			<div class="name">
-								    				Overlay name
-								    			</div>
-								    			<div class="menu">
-								    				<a class="dropdown-toggle" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</a>
-									     			<div class="dropdown-menu" aria-labelledby="menu1">
-													    <ul>
-											    			<li><a href="#">Edit</a></li>
-											    			<li><a href="#">Copy link</a></li>
-											    			<li><a href="#">Duplicate</a></li>
-											    			<li><a href="#">Delete</a></li>
-											    		</ul>
-													</div>
-								    			</div>
-							    			</div>
-							    		</div>
-					    			</div>
-					    			<div class="col-12 col-sm-6 col-lg-4">
-					    				<div class="item">
-							    			<div class="img"><img src="img/overlays/2.png" width="2003" height="1127" alt="" /></div>
-							    			<div class="bottom">
-								    			<div class="name">
-								    				Overlay name
-								    			</div>
-								    			<div class="menu">
-								    				<a class="dropdown-toggle" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</a>
-									     			<div class="dropdown-menu" aria-labelledby="menu1">
-													    <ul>
-											    			<li><a href="#">Edit</a></li>
-											    			<li><a href="#">Copy link</a></li>
-											    			<li><a href="#">Duplicate</a></li>
-											    			<li><a href="#">Delete</a></li>
-											    		</ul>
-													</div>
-								    			</div>
-							    			</div>
-							    		</div>
-					    			</div>
-					    			<div class="col-12 col-sm-6 col-lg-4">
-					    				<div class="item">
-							    			<div class="img"><img src="img/overlays/1.png" width="2006" height="1130" alt="" /></div>
-							    			<div class="bottom">
-								    			<div class="name">
-								    				Overlay name
-								    			</div>
-								    			<div class="menu">
-								    				<a class="dropdown-toggle" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</a>
-									     			<div class="dropdown-menu" aria-labelledby="menu1">
-													    <ul>
-											    			<li><a href="#">Edit</a></li>
-											    			<li><a href="#">Copy link</a></li>
-											    			<li><a href="#">Duplicate</a></li>
-											    			<li><a href="#">Delete</a></li>
-											    		</ul>
-													</div>
-								    			</div>
-							    			</div>
-							    		</div>
-					    			</div>
-					    			<div class="col-12 col-sm-6 col-lg-4">
-					    				<div class="item">
-							    			<div class="img"><img src="img/overlays/2.png" width="2003" height="1127" alt="" /></div>
-							    			<div class="bottom">
-								    			<div class="name">
-								    				Overlay name
-								    			</div>
-								    			<div class="menu">
-								    				<a class="dropdown-toggle" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</a>
-									     			<div class="dropdown-menu" aria-labelledby="menu1">
-													    <ul>
-											    			<li><a href="#">Edit</a></li>
-											    			<li><a href="#">Copy link</a></li>
-											    			<li><a href="#">Duplicate</a></li>
-											    			<li><a href="#">Delete</a></li>
-											    		</ul>
-													</div>
-								    			</div>
-							    			</div>
-							    		</div>
-					    			</div>
-					    			<div class="col-12 col-sm-6 col-lg-4">
-					    				<a class="item add-overlay" href="#" data-target=".modal-addoverlay" data-toggle="modal">
-							    			+ New overlay
-							    		</a>
-					    			</div>
+    		<div class="list list-announcement-tile">
+    			<div class="title">Stream anons</div>
+	    				<div class="setup d-none d-md-block">
+	    					<div class="filter">
+		    					<select class="selectpicker" title="Filter">
+		    						<option value="Filt 1">Filter 1</option>
+		    						<option value="Fier 2">Filter 2</option>
+		    						<option value="Fier 3">Filter 3</option>
+		    					</select>
+	    					</div>
+	    					<div class="sort">
+	    						<select class="selectpicker" title="Sort">
+		    						<option value="viewers">Viewers</option>
+		    						<option value="popularity">Popularity</option>
+		    					</select>
+	    					</div>
+	    				</div>
+	    				<div class="setup d-md-none">
+	    					<a href="#"><svg><use xlink:href="img/vectors.svg#setup"></use></svg></a>
+	    				</div>
+	    			<div class="large">
+	    				<div class="row">
+	    					<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides d-none d-md-block">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
+	    								
+	    							<div class="description">
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+									    		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+									    		<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+									   		</span>
+										</div>	
+								    </div>							    		
 					    		</div>
-					    	</div>
-				  		</div>
-				  </div>
-				</div>
+	    					</div>
 
+							<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides d-none d-md-block">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
+	    							<div class="description">
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+									    		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+									    		<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
+	    					</div>
+
+							<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides d-none d-md-block">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
+	    							<div class="description">
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+									    		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+									    		<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
+	    					</div>
+
+							<div class="col-12 col-sm-12 col-lg-6">
+	    						<div class="item">	    							
+	    							<div class="slides d-none d-md-block">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>
+	    							<span class="img d-md-none" style="background-image: url('img/sidemenu/1.png')"></span>
+	    							<div class="description">
+		    							<span class="icon d-none d-md-block"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    								<span class="name">Soda CmonBruh</span>
+										<a class="text" href="#" data-target=".modal-announcement" data-toggle="modal">Возможность нахождения поисковых ключей в тексте и определения.</a>
+										<div class="bottom">
+											<span class="date">21.05.2018 at 21:50</span>
+											<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+									   		<span class="share">
+									 			<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+									    		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+									    		<a href="#" class="comments"><svg><use xlink:href="img/vectors.svg#comments"></use></svg>37</a>
+									   		</span>
+										</div>	
+								    </div>							    		
+					    		</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="small d-none d-md-block">
+	    				<div class="row">
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>   								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>      								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>   								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>      								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>   								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>   								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>  								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>    								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>     								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>    								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+			    						<div class="img" style="background-image: url('img/announcement/img1.png')"></div>
+	    							</div>      								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    					<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+	    						<div class="item">
+	    							<div class="slides">
+	    								<div class="img" style="background-image: url('img/news1.png')"></div>
+			    						<div class="img" style="background-image: url('img/news2.png')"></div>
+			    						<div class="img" style="background-image: url('img/news3.png')"></div>
+			    						<div class="img" style="background-image: url('img/news4.png')"></div>
+	    							</div>     								
+	    							<span class="name">Soda CmonBruh</span>
+								    <span class="date">21.05.2018 at 21:50</span>
+								   	<a class="alarm" href="#"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg></a>
+								  	<span class="share">
+								  		<a href="#" class="megaphone"><svg><use xlink:href="img/vectors.svg#megaphone"></use></svg>22</a>
+								   		<a href="#" class="likes"><svg><use xlink:href="img/vectors.svg#likes"></use></svg>22</a>
+							    	</span>
+							    </div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="loading text-center"><a href="#" class="spin"><svg><use xlink:href="img/vectors.svg#loading"></use></svg><span>Loading...</span></a></div>	    			
     		</div>
     	</section>
 
- 
+
 <!-- Popup modal window auth -->
 <div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -3095,6 +2517,9 @@
     </div>
 </div>
 <!--New overlay window end-->
+
+
+
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
     <script type='text/javascript' src="js/moment.min.js"></script>
@@ -3119,14 +2544,22 @@
 
 	<script>
      $(function () {
-        
-     	//$('.modal-change-save').modal('show');
 
-     	//$('.modal-email-change').modal('show');
+     //  $('.modal-interest').modal('show');
 
-     	//$('.modal-addservice').modal('show');
+   //   $('.modal-announcement').modal('show');
 
-        });
+   //   $('.modal-news-detail').modal('show');
+
+   //    $('.modal-recovery-password-ok').modal('show');
+
+     //  $('.modal-recovery-password').modal('show');
+
+	//  $('.modal-auth').modal('show');
+
+    // $('.modal-create-future-stream').modal('show');
+
+       });
     </script>
 
 

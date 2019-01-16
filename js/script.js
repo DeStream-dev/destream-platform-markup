@@ -233,6 +233,21 @@ $('.main-sidebar .block.lifestyle .title .search-input input[type="search"]').qu
 });
 }
 
+var promoSlider = $('.promo'); 
+var promoOptions = {
+  dots: true,
+  arrows: false,
+  infinite: false,
+  speed: 700,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: false,
+  adaptiveHeight: false,
+  autoplay: false,
+  responsive: true
+};
+promoSlider.slick(promoOptions);
+
 var smallSlider = $('.slides'); 
 var options = {
   dots: true,
@@ -329,8 +344,6 @@ var announcementliderLBOptions = {
   ]
 };
 announcementSliderLB.slick(announcementliderLBOptions);
-
-
 
 var eventsSlider = $('.events-slider'); 
 var eventsSliderOptions = {
@@ -751,6 +764,17 @@ $('.modal-create-future-stream .is-voting .add-option').on('click', function(){
 $( document ).on( "click", ".modal-create-future-stream .is-voting .field .remove", function() {
  $(this).parents('.field').remove();
   return false;
+});
+
+
+$('.settings .home .blocks .item').on("click",function(e){  
+  if(!$(this).data("link"))return;
+  if($(e.target).hasClass("btn"))return;
+  
+    $('.settings .nav .nav-link').removeClass("active");
+    $('.settings .nav .nav-link'+$(this).data("link")+'-tab').addClass("active");
+    $('.settings .tab-pane').removeClass("show").removeClass("active");
+    $('.settings .tab-pane'+$(this).data("link")).addClass("show").addClass("active");
 });
 
 
