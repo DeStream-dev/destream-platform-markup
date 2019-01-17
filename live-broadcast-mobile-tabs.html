@@ -186,7 +186,17 @@
 						    <ul>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="notifications.html">Пользователь <b>Tachat</b> упомянул вас в комментарии упомянул вас в сво комментарии <span class="more">more</span></a>
+					    			<span class="date">18 августа в 1:51</span>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии <span class="more">more</span></a>
+					    			<span class="date">18 августа в 1:51</span>
+				    			</li>
+				    			<li>
+					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+					    			<a href="notifications.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
 					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
@@ -196,17 +206,7 @@
 				    			</li>
 				    			<li>
 					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="wallet.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
-					    			<span class="date">18 августа в 1:51</span>
-				    			</li>
-				    			<li>
-					    			<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
-					    			<a href="messages.html">Пользователь <b>Tachat</b> упомянул вас в комментарии</a>
+					    			<a href="notifications.html">Пользователь <b>Tachat</b> упомянул вас в комментарии упомянул вас в сво комментарии <span class="more">more</span></a>
 					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    			<li>
@@ -215,7 +215,7 @@
 					    			<span class="date">18 августа в 1:51</span>
 				    			</li>
 				    		</ul>
-				    		<div class="view-all-cont"><a class="view-all" href="messages.html">View all</a></div>
+				    		<div class="view-all-cont"><a class="view-all" href="notifications.html">View all</a></div>
 						</div>			    		
 			    	</div>
 			    	<a class="faq-btn" href="#"><svg><use xlink:href="img/vectors.svg#quiz"></use></svg></a>
@@ -2170,12 +2170,22 @@
 					                	<div class="form-group" aria-required="true">
 									    	<label class="control-label">Donate amount of DST</label>
 									        	<div class="input input-with-label">
-									        		<div class="label">DST</div>
+									        		<div class="label">
+				                            			<select class="form-control selectpicker ds-dropdown currency-select" title="DST">
+				                            				<option>DST</option>
+					                                        <option>EST</option>
+					                                        <option>$</option>
+					                                        <option>QWE</option>
+					                                        <option>RUB</option>
+					                                        <option>ETH</option>
+				                                    	</select>
+				                            		</div>  
 					                            	<input type="text" id="dst-donate" value="8000" />
 					                            </div>
 					                            <div class="range full d-lg-none">
 										    		<input type="range" min="0" max="2500" data-rangeslider data-for="dst-donate">
 										    	</div>
+										    	<div class="info"><b>Commission 0,7%</b> 12 DST</div>
 					                    </div>
 					                    <div class="form-group" aria-required="true">
 				                                <label class="control-label">Donate message</label>
@@ -2557,6 +2567,7 @@
     <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/sly.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/script.js?v=3"></script>
 
 

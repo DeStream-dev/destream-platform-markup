@@ -233,20 +233,86 @@ $('.main-sidebar .block.lifestyle .title .search-input input[type="search"]').qu
 });
 }
 
+$('.services-catalog-owner .list .item .setup input[type="checkbox"]').change(function(){
+  var setup = $(this).parents('.setup');
+  if($(this).is(':checked')){
+    setup.find('.off').fadeOut(300);
+    setup.find('.on').fadeIn(300);
+  }
+  else{
+    setup.find('.off').fadeIn(300);
+    setup.find('.on').fadeOut(300);
+  }
+});
+$('.services-catalog-owner .list .item .setup input[type="checkbox"]').each(function(){
+  var setup = $(this).parents('.setup');
+  if($(this).is(':checked')){
+    setup.find('.off').hide();
+    setup.find('.on').show();
+  }
+  else{
+    setup.find('.off').show();
+    setup.find('.on').hide();
+  }
+});
+
+var promoSlideTime = 8;/*seconds*/
+var tl = new TimelineMax();
+$buttonColorShape = $('rect.btn-shape.btn-color');
+$buttonColorShape.css({
+        'strokeDasharray':202,
+        'strokeDashoffset':202
+      });
+
+  tl.append(TweenMax.to($buttonColorShape, promoSlideTime, {
+    strokeDashoffset:0, 
+    ease:Quad.easeIn,
+    onComplete:function(){
+      $('.promo .item .icon').removeClass('active');
+      $buttonColorShape.css({
+        'strokeDasharray':453,
+        'strokeDashoffset':0
+      });
+    }
+  }));
+tl.stop();
+
 var promoSlider = $('.promo'); 
 var promoOptions = {
   dots: true,
   arrows: false,
-  infinite: false,
+  infinite: true,
   speed: 700,
   slidesToShow: 1,
   centerMode: false,
   variableWidth: false,
   adaptiveHeight: false,
-  autoplay: false,
+  autoplay: true,
+  autoplaySpeed: (promoSlideTime-1)*1000,
   responsive: true
 };
+promoSlider.on('init', function(event, slick){
+  $('.promo .item .icon').addClass("active");
+ tl.restart();
+});
 promoSlider.slick(promoOptions);
+promoSlider.on('beforeChange', function(event, slick, currentSlide){
+  $('.promo .item .icon').removeClass("active");
+});
+promoSlider.on('afterChange', function(event, slick, currentSlide){
+  $('.promo .item .icon').addClass("active");
+    $buttonColorShape.css({
+        'strokeDasharray':202,
+        'strokeDashoffset':202
+      });
+ tl.restart();
+});
+
+
+
+
+
+
 
 var smallSlider = $('.slides'); 
 var options = {
@@ -770,12 +836,14 @@ $( document ).on( "click", ".modal-create-future-stream .is-voting .field .remov
 $('.settings .home .blocks .item').on("click",function(e){  
   if(!$(this).data("link"))return;
   if($(e.target).hasClass("btn"))return;
-  
+
     $('.settings .nav .nav-link').removeClass("active");
     $('.settings .nav .nav-link'+$(this).data("link")+'-tab').addClass("active");
     $('.settings .tab-pane').removeClass("show").removeClass("active");
     $('.settings .tab-pane'+$(this).data("link")).addClass("show").addClass("active");
 });
+
+
 
 
  var iH = $('.tournament .general-info .wrap').height(); 
