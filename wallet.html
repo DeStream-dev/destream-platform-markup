@@ -1885,8 +1885,8 @@
 	               </button>
 	            </div>
 	            <div class="modal-body">
-		            <div class="form">
-		            	<form method="post">
+			         <div class="form">
+		            	<form method="post" class="needs-validation" novalidate>
 
 			               <div class="title">Donate DST</div>
 
@@ -1913,6 +1913,11 @@
 			                <div class="donate-detail">
 				                <div class="row">
 					                <div class="col-8">
+					                 <!--label for="validationCustom05">Zip</label>
+								      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+								      <div class="invalid-feedback">
+								        Please provide a valid zip.
+								      </div-->
 					                	<div class="form-group" aria-required="true">
 									    	<label class="control-label">Donate amount of DST</label>
 									        	<div class="input input-with-label">
@@ -1926,7 +1931,10 @@
 					                                        <option>ETH</option>
 				                                    	</select>
 				                            		</div>  
-					                            	<input type="text" id="dst-donate" value="8000" />
+					                            	<input type="text" id="dst-donate" value="8000" required />
+					                            	 <div class="invalid-feedback">
+											          Please choose a username.
+											        </div>
 					                            </div>
 					                            <div class="range full d-lg-none">
 										    		<input type="range" min="0" max="2500" data-rangeslider data-for="dst-donate">
@@ -2333,7 +2341,7 @@
 
     //    $('.modal-hash').modal('show');
 
-    //   $('.modal-wallet-donate').modal('show');
+       $('.modal-wallet-donate').modal('show');
 
        });
     </script>
