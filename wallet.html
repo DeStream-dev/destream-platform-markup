@@ -796,16 +796,18 @@
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="login">Nickname or email</label>
                                 <input type="text" id="login" class="form-control" required placeholder="Login">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="password">Password</label>
-                                <input type="password" id="password" class="form-control" required placeholder="Password"> 
+                                <input type="password" id="password" class="form-control" required placeholder="Password">
+                                <div class="help-block with-errors"></div> 
                                 <div class="link forget-password"><a data-dismiss="modal" data-target=".modal-recovery-password" data-toggle="modal" href="">
                                             Forgot password?
                                         </a></div>
                             </div>
                             <div class="form-group form-group-checkbox required">
-                                <label><input type="checkbox" name="remember" required><span></span>Remember me</label>
+                                <label><input type="checkbox" name="remember"><span></span>Remember me</label>
                             </div> 
                             <div class="form-group form-group-btn">                                
                                 <button class="btn" type="submit">Log in</button>                                    
@@ -837,24 +839,29 @@
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="login">Nickname</label>
                                 <input type="text" id="login" class="form-control" required placeholder="Nickname">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="email">Email</label>
                                 <input type="email" id="email" class="form-control" required placeholder="Email">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="password">Password</label>
                                 <input type="password" id="password" class="form-control" required placeholder="Password"> 
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group" aria-required="true">
                                 <label class="control-label" for="reenterpassword">Reenter password</label>
                                 <input type="password" id="reenterpassword" class="form-control" required placeholder="Reenter password"> 
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group form-group-checkbox required">
                                 <label><input type="checkbox" name="agreement" required><span></span>
 								I have read and agree to the
 								<a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
                                 </label>
+                                <div class="help-block with-errors"></div>
                             </div> 
                             <div class="form-group form-group-btn ">
                                <button class="btn" type="submit">Register</button>
@@ -890,8 +897,8 @@
                         Check your email %% we've sent you an email with instructions on how to reset your password
                     </div>
                     <div class="form-group">
-                               <button class="btn" data-dismiss="modal">Ok</button>
-                            </div>
+                        <button class="btn" data-dismiss="modal">Ok</button>
+                    </div>
                </div>
             </div>
         </div>
@@ -916,6 +923,7 @@
                     <div class="form-group required" aria-required="true">
                       <label class="control-label" for="nickname">Nickname or email</label>
                       <input type="text" id="nickname" class="form-control" required>
+                      <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group form-group-btn">
                     <button class="btn recovery-send" data-dismiss="modal" data-target=".modal-recovery-password-ok" data-toggle="modal">Recover</button>  
@@ -1261,7 +1269,7 @@
             <div class="modal-body">
             	<div class="title">Select interest</div>
             	<div class="form interest">
-               		<form data-toggle="validator"> 
+               		<form> 
 							<div class="search-panel">   
 	               				<div class="row">
 		               				<div class="col-12 col-md-6 col-lg-4">
@@ -1819,7 +1827,6 @@
 			                <div class="title d-none d-md-block">15 000 DST will be transferred to the user</div>
 			                <div class="title d-block d-md-none">Transfer confirmation</div>
 
-
 			                <div class="comment-text d-block d-md-none">15 000 DST will be transferred to the user</div>
 							<div class="converter">
 							    <div class="half user">
@@ -1886,7 +1893,7 @@
 	            </div>
 	            <div class="modal-body">
 			         <div class="form">
-		            	<form method="post" class="needs-validation" novalidate>
+		            	<form method="post" data-toggle="validator">
 
 			               <div class="title">Donate DST</div>
 
@@ -1913,12 +1920,7 @@
 			                <div class="donate-detail">
 				                <div class="row">
 					                <div class="col-8">
-					                 <!--label for="validationCustom05">Zip</label>
-								      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-								      <div class="invalid-feedback">
-								        Please provide a valid zip.
-								      </div-->
-					                	<div class="form-group" aria-required="true">
+					                   	<div class="form-group" aria-required="true">
 									    	<label class="control-label">Donate amount of DST</label>
 									        	<div class="input input-with-label">
 									        		<div class="label">
@@ -1931,15 +1933,15 @@
 					                                        <option>ETH</option>
 				                                    	</select>
 				                            		</div>  
-					                            	<input type="text" id="dst-donate" value="8000" required />
-					                            	 <div class="invalid-feedback">
-											          Please choose a username.
-											        </div>
+					                            	<input type="text" id="dst-donate" class="form-control" value="80" data-equals="12000" data-equals-error="Minimal donate 12000" />
+					                       			<div class="help-block with-errors"></div>	     	 
 					                            </div>
 					                            <div class="range full d-lg-none">
-										    		<input type="range" min="0" max="2500" data-rangeslider data-for="dst-donate">
+										    		<input type="range" min="0" max="2500" class="form-control" data-rangeslider data-for="dst-donate">
 										    	</div>
 										    	<div class="info"><b>Commission 0,7%</b> 12 DST</div>
+
+										    	
 					                    </div>
 					                    <div class="form-group" aria-required="true">
 				                                <label class="control-label">Donate message</label>
@@ -2065,8 +2067,8 @@
                         A confirmation email has been sent to your new email address. After confirmation email will be changed.
                     </div>
                     <div class="form-group">
-                               <button class="btn" data-dismiss="modal">Ok</button>
-                            </div>
+                        <button class="btn" data-dismiss="modal">Ok</button>
+                    </div>
                </div>
             </div>
         </div>
@@ -2094,6 +2096,7 @@
                     <div class="form-group required" aria-required="true">
                       <label class="control-label" for="oldpassword">Enter old password</label>
                       <input type="password" id="oldpassword" class="form-control" required>
+                      <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group text-center" aria-required="true">
                     <button class="btn" data-dismiss="modal">Save</button>  
@@ -2181,6 +2184,7 @@
     </div>
 </div>
 <!--add-service window end-->
+
 <!--add-team window-->
 <div class="modal-form modal-addteam modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addteam" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -2193,11 +2197,12 @@
             <div class="modal-body">
                 <div class="title">Add team</div>
                 <div class="form">
-		            	<form class="dropzone" id="addteamform" action="/file-upload" method="post" enctype="multipart/form-data">
+		            	<form data-toggle="validator" class="dropzone" id="addteamform" action="/file-upload" method="post" enctype="multipart/form-data">
 			            	
 			            	<div class="form-group" aria-required="true">
                                 <label class="control-label" for="teamname">Team name</label>
                                 <input type="text" id="teamname" class="form-control" placeholder="Team name">
+                                <div class="help-block with-errors"></div>
                             </div>
 
 			            	<div class="form-group">
@@ -2248,10 +2253,11 @@
 		            </div>
 
                     <div class="form">
-		            	<form  method="post">
+		            	<form  data-toggle="validator" method="post">
 							<div class="form-group teamlink" aria-required="true">
 	                            <label class="control-label" for="teamlink">Send this link to your team members</label>
-	                            <input type="text" id="teamlink" class="form-control" placeholder="http://127.0.0.1:32767/start.html">
+	                            <input type="text" id="teamlink" class="form-control" required placeholder="http://127.0.0.1:32767/start.html">
+	                            <div class="help-block with-errors"></div>
 	                            <a class="copy" href="#"><svg><use xlink:href="img/vectors.svg#copy-s"></use></svg></a>
 	                        </div>
 	                         <div class="form-group text-center">                                
@@ -2289,9 +2295,10 @@
                     <div class="form-group required" aria-required="true">
                       <label class="control-label" for="overlayname">Overlay name</label>
                       <input type="text" id="overlayname" class="form-control" required placeholder="Enter name">
+                      <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group text-center">
-                    <button class="btn" type="submit">Create</button>    
+                    	<button class="btn" data-dismiss="modal" data-target=".modal-overlaytype" data-toggle="modal">Create</button> 
                     </div>               
                    </form>                   
                 </div>
@@ -2301,11 +2308,39 @@
 </div>
 <!--New overlay window end-->
 
+<!--Overlay type window-->
+<div class="modal-form modal-overlaytype modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addoverlay" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+                 </button>                
+            </div>
+            <div class="modal-body">
+            <div class="title">Choose overlay type</div>
+	            <div class="row">
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>Start</span></a>
+	            	</div>
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>In game</span></a>
+	            	</div>
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>Pause</span></a>
+	            	</div>
+	            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Overlay type window-->
 
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
     <script type='text/javascript' src="js/moment.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/validator.min.js"></script>
     <script type='text/javascript' src="js/jquery-ui.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-datetimepicker.js"></script>    
@@ -2341,7 +2376,7 @@
 
     //    $('.modal-hash').modal('show');
 
-       $('.modal-wallet-donate').modal('show');
+    //   $('.modal-wallet-donate').modal('show');
 
        });
     </script>

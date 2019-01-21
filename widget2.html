@@ -34,7 +34,7 @@
 				    			<li><a href="wallet.html"><span class="icon wallet"><svg><use xlink:href="img/vectors.svg#wallet"></use></svg></span> Wallet</a></li>
 				    			<li><a href="overlays.html"><span class="icon overlays"><svg><use xlink:href="img/vectors.svg#overlays"></use></svg></span> Overlays</a></li>
 				    			<li><a href="settings.html"><span class="icon settings"><svg><use xlink:href="img/vectors.svg#settings"></use></svg></span> Settings</a></li>
-				    			<li><a href="#"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
+				    			<li><a href="index-promo.html"><span class="icon exit"><svg><use xlink:href="img/vectors.svg#exit"></use></svg></span> Exit</a></li>
 				    		</ul>
 						</div>
 			     	</div>
@@ -243,10 +243,1576 @@
 	    You should rotate your device to landscape mode
     </div>
 
+    <div class="not-available">
+	    Not available for mobile screens
+    </div>
+
+
+<!-- Popup modal window auth -->
+<div class="modal fade modal-form modal-auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="authLabel">
+  <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="close">
+           <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+       </button>
+      </div>
+      <div class="modal-body"> 
+
+      <ul class="nav nav-pills nav-justified" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="#auth" id="auth-tab" data-toggle="tab" role="tab" aria-controls="auth" aria-selected="true">Log in</a>
+		  </li>
+		  <li class="nav-item">
+		   <a class="nav-link" id="registration-tab" data-toggle="tab" href="#registration" role="tab" aria-controls="profile" aria-selected="false">Registration</a>
+		  </li>		 
+		</ul>
+		<div class="tab-content auth-tab-content">
+		  <div class="tab-pane fade show active" id="auth" role="tabpanel" aria-labelledby="auth-tab">
+		  		    <div class="form">
+		  		    	<div class="social d-md-none">                            	
+                            	<div><a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a></div>
+                            </div> 
+                            <div class="or d-md-none">or</div>
+
+                        <form  data-toggle="validator" role="form" action="index.html">    
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="login">Nickname or email</label>
+                                <input type="text" id="login" class="form-control" required placeholder="Login">
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="password">Password</label>
+                                <input type="password" id="password" class="form-control" required placeholder="Password"> 
+                                <div class="link forget-password"><a data-dismiss="modal" data-target=".modal-recovery-password" data-toggle="modal" href="">
+                                            Forgot password?
+                                        </a></div>
+                            </div>
+                            <div class="form-group form-group-checkbox required">
+                                <label><input type="checkbox" name="remember" required><span></span>Remember me</label>
+                            </div> 
+                            <div class="form-group form-group-btn">                                
+                                <button class="btn" type="submit">Log in</button>                                    
+                            </div>
+                                                
+                        </form>
+                        <div class="or d-none d-md-block">or</div>
+                            <div class="social d-none d-md-block">                            	
+                            	<div><a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a></div>
+                            </div>       
+                    </div>
+		  </div>
+		   <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
+		   		    <div class="form">
+		   		     	<div class="social">                            	
+                            	<div><a href="#"><svg class="icon twitch"><use xlink:href="img/vectors.svg#twitch-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon steam"><use xlink:href="img/vectors.svg#steam-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon youtube"><use xlink:href="img/vectors.svg#youtube-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon facebook"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a></div>
+                    			<div><a href="#"><svg class="icon twitter"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a></div>
+                            </div> 
+                            <div class="or">or</div>
+                        <form data-toggle="validator" role="form" action="index.html"> 
+                           
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="login">Nickname</label>
+                                <input type="text" id="login" class="form-control" required placeholder="Nickname">
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required placeholder="Email">
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="password">Password</label>
+                                <input type="password" id="password" class="form-control" required placeholder="Password"> 
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="reenterpassword">Reenter password</label>
+                                <input type="password" id="reenterpassword" class="form-control" required placeholder="Reenter password"> 
+                            </div>
+                            <div class="form-group form-group-checkbox required">
+                                <label><input type="checkbox" name="agreement" required><span></span>
+								I have read and agree to the
+								<a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div> 
+                            <div class="form-group form-group-btn ">
+                               <button class="btn" type="submit">Register</button>
+                            </div> 
+                            
+                        </form>
+                    </div>
+		  </div>
+		</div>
+        </div>
+      </div>
+ 
+    </div>
+</div>
+<!-- Popup modal window auth end -->
+
+
+
+
+<!--Recovery password ok window-->
+<div class="modal-form modal-recovery-password-ok modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-recovery-password-ok" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Password recovery</div>
+                <div class="form">                    
+                    <div class="text">
+                        Check your email %% we've sent you an email with instructions on how to reset your password
+                    </div>
+                    <div class="form-group">
+                               <button class="btn" data-dismiss="modal">Ok</button>
+                            </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Recovery password ok window end-->
+
+
+<!--Recovery password window-->
+<div class="modal-form modal-recovery-password modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-recovery-password" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+                 </button>                
+            </div>
+            <div class="modal-body">
+            <div class="title">Password recovery</div>
+            <div class="form">
+               <form data-toggle="validator">    
+                    <div class="form-group required" aria-required="true">
+                      <label class="control-label" for="nickname">Nickname or email</label>
+                      <input type="text" id="nickname" class="form-control" required>
+                    </div>
+                    <div class="form-group form-group-btn">
+                    <button class="btn recovery-send" data-dismiss="modal" data-target=".modal-recovery-password-ok" data-toggle="modal">Recover</button>  
+                    <!--button class="btn recovery-send" type="submit">Recover</button-->
+                    </div>                          
+                   </form>
+                   <div class="links">
+                   	<a href="#" class="auth-link" data-dismiss="modal" data-target=".modal-auth" data-toggle="modal">Log in</a>
+                   	<a href="#" class="reg-link" data-dismiss="modal" data-target=".modal-auth" data-toggle="modal">Registration</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Recovery password window end-->
+
+<!--News detail window-->
+<div class="modal-form modal-news-detail modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-news-detail" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+            	<div class="img"><img src="img/news-detail.png" width="960" height="540" alt="" /></div>
+	            	<div class="inner">
+	                <div class="title">EA Teases Next Game From Halo Co-Creator's Studio</div>
+	                <div class="date">21.05.1980</div>
+	                <div class="text">
+	                    <p>
+	                    Earlier this month, mega-publisher <a href="#">Electronic Arts</a> announced that it had acquired Bungie co-founder Alex Seropian's mobile game studio Industrial Toys for an undisclosed sum. At the time, EA said Industrial Toys will work on "bringing new game concepts to life," but the company didn't offer any further specifics. We still don't know exactly what Industrial Toys is working on, but now EA CFO Blake Jorgensen has teased the project a little further.
+	                    </p>
+	                    <p>
+	                    Speaking on an earnings call, <a href="#">Jorgensen</a> said the game is "innovative," and that it may be out in the "next couple of years."
+	                    </p>
+	                    <p>
+	                    "I won't yet tell you what they're working on but you will see something in the next couple of years coming out of that studio that we think is pretty innovative in the mobile space," he said. "So we're very excited."
+	                    </p>
+	                    <p>
+	                    Jorgensen said <a href="#">EA</a> was attracted to Industrial Toys as an acquisition target because EA as a company was impressed with the team and the quality of their ideas.
+	                    </p>
+	                    <p>
+	                    Industrial Toys, which was founded in 2012, says its aim is to make "mobile games for core gamers." The studio has released two games so far: <a href="#">Midnight Star</a> and Midnight Star: Renegade, featuring music from System of a Down's Serj Tankian.
+	                    </p>
+	                </div>
+	                <div class="social">
+	                	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
+	                	<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>
+	                	<a href="#" class="facebook"><svg class="icon"><use xlink:href="img/vectors.svg#fb-white"></use></svg></a>
+                    	<a href="#" class="twitter"><svg class="icon"><use xlink:href="img/vectors.svg#twitter-white"></use></svg></a>
+	                </div>
+                </div>
+                <div class="comments">
+                	<div class="inner">
+                		<div class="title">Comments</div>
+                		<ul>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge (Season 5, Week 3)</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">"I won't yet tell you what they're working on but you will see something in the next couple of years coming out of that studio that we think is pretty innovative in the mobile space,"</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Возможность нахождения поисковых ключей в тексте и определения.</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Возможность нахождения поисковых ключей в тексте и определения.</span>
+				    			</div>
+	    					</li>
+	    				</ul>
+	    				<div class="form">
+		    				<form>
+		    					<div class="form-group" aria-required="true">
+                                	<input type="text" class="form-control" required placeholder="Add comment">
+                            	</div>
+		    				</form>
+	    				</div>
+	    			</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--News detail window end-->
+
+
+
+<!--announcement window-->
+<div class="modal-form modal-announcement modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-announcement" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+	            <div class="head">
+		            <div class="inner">
+		            	<div class="row">
+		            		<div class="col-12 col-md-4">
+				            	<div class="user">
+				            		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+				    				<span class="name">Soda CmonBruh</span>
+				    			</div>
+			    			</div>
+			    			<div class="col-12 col-md-8">
+				    			<div class="stream">
+				    			Stream start at:<b>21.05.2018 in 21:50</b>
+				    			</div>
+			    				<div class="remindme">
+				    			<a class="btn"><svg><use xlink:href="img/vectors.svg#alarm"></use></svg> Remind me</a>
+				    			</div>
+			    			</div>
+		    			</div>
+	    			</div>
+	            </div>
+	            <div class="head">
+		            <div class="inner">
+		            	<div class="row">
+		            		<div class="col-12 col-md-4">
+				            	<div class="user">
+				            		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+				    				<span class="name">Soda CmonBruh</span>
+				    			</div>
+			    			</div>
+			    			<div class="col-12 col-md-8">
+				    			<div class="stream live-now">
+				    			Stream:<b><a href="#">Live Now <svg class="right"><use xlink:href="img/vectors.svg#right"></use></svg></a></b>
+				    			</div>
+			    			</div>
+		    			</div>
+	    			</div>
+	            </div>
+	            <div class="inner">
+	            
+	    				<div class="slides d-none d-md-block">
+	    					<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
+			    			<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
+			    			<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
+			    			<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
+	    				</div>
+	    				<span class="img d-md-none" style="background-image: url('img/announcement/img1.png')"></span>
+	    			
+		    			<div class="text">	    				
+		    				Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge Fortnite Clay Pigeon Location
+		    			</div>
+		    		
+		    			<div class="voting">
+		    				<div class="title">Voting</div>
+		    				<div class="form">
+		    					<form>
+		    					    <div class="item">
+                                        <div class="radio form-group form-group-radio">
+                                            <label>
+                                        	    <input type="radio" name="contact-type" value="Vote 1"><span></span>
+                                                <i>Vote 1</i>
+                                            </label>
+                                        </div>
+                                        <div class="value">32</div>
+                     				</div>
+                     				<div class="item">
+                                        <div class="radio form-group form-group-radio">
+                                            <label>
+                                         	    <input type="radio" name="contact-type" value="Vote 2"><span></span>
+                                                <i>Vote 2</i>
+                                            </label>
+                                        </div>
+                                        <div class="value">485</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="radio form-group form-group-radio">
+                                            <label>
+                                        	    <input type="radio" name="contact-type" checked="checked" value="Vote 3"><span></span>
+                                                <i>Vote 3</i>
+                                            </label>
+                                        </div>
+                                        <div class="value">32</div>
+                     				</div>
+                     				<div class="item">
+                                        <div class="radio form-group form-group-radio">
+                                            <label>
+                                         	    <input type="radio" name="contact-type" value="Vote 4"><span></span>
+                                                <i>Vote 4</i>
+                                            </label>
+                                        </div>
+                                        <div class="value">3222</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="radio form-group form-group-radio">
+                                            <label>
+                                        	    <input type="radio" name="contact-type" value="Vote 5"><span></span>
+                                                <i>Vote 5</i>
+                                            </label>
+                                        </div>
+                                        <div class="value">32</div>
+                     				</div>                     				
+		    					</form>
+		    				</div>
+		    			</div>
+		    			<div class="overall">
+		    				<div class="row">
+		    					<div class="col-12 col-md-6">
+					    			<div class="votes">
+					    				<b>Amount of votes</b>
+					    				<div class="d-none d-lg-block quantity">
+			                                <input value="2000" maxlength="2" type="text">
+			                                <a href="#" class="increase"><svg class="icon"><use xlink:href="img/vectors.svg#up"></use></svg></a>
+			                                <a href="#" class="decrease"><svg class="icon"><use xlink:href="img/vectors.svg#down"></use></svg></a>
+			                            </div>  
+			                            <input type="number" min="1" class="d-block d-lg-none" id="votes-amount">
+			                            <button type="submit" class="btn vote-btn">Vote</button>  
+			                            <div class="range full d-lg-none">
+								    		<input type="range" min="0" max="2500" data-rangeslider data-for="votes-amount">
+								    	</div>    
+					    			</div>
+				    			</div>
+				    			<div class="col-8 offset-4 offset-sm-4 offset-md-0 col-sm-8 col-md-6">
+				    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
+			                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>
+			                	</div>
+	                		</div>
+
+	                	</div>
+		    		
+    			</div>
+
+    			<div class="inner">
+	            
+	    				<div class="slides d-none d-md-block">
+	    					<div><img src="img/announcement/img1.png" width="188" height="250" alt="" /></div>
+			    			<div><img src="img/announcement/img2.png" width="188" height="250" alt="" /></div>
+			    			<div><img src="img/announcement/img3.png" width="188" height="250" alt="" /></div>
+			    			<div><img src="img/announcement/img4.png" width="188" height="250" alt="" /></div>
+	    				</div>
+	    				<span class="img d-md-none" style="background-image: url('img/announcement/img1.png')"></span>
+	    			
+	    				<div class="head">
+				           <div class="user">
+						    	<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+						    	<span class="name">Soda CmonBruh</span>
+						    </div>
+						    <div class="stream">
+				    			Stream ended at:<b>21.05.2018 in 21:50</b>
+				    		</div>
+				    	</div>
+		    			<div class="text">	    				
+		    				Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge Fortnite Clay Pigeon Location
+		    			</div>
+
+		    			<div class="overall">		
+		    			   	<a href="#" class="likes"><svg class="icon"><use xlink:href="img/vectors.svg#likes"></use></svg>325</a>
+	                		<a href="#" class="share"><svg class="icon"><use xlink:href="img/vectors.svg#share"></use></svg>27</a>	                	
+	                	</div>
+		    		
+    			</div>
+
+
+                <div class="comments">
+                	<div class="inner">
+                		<div class="title">Comments</div>
+                		<ul>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Fortnite Clay Pigeon Location Guide: Where To Find Them For The Challenge (Season 5, Week 3)</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">"I won't yet tell you what they're working on but you will see something in the next couple of years coming out of that studio that we think is pretty innovative in the mobile space,"</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Возможность нахождения поисковых ключей в тексте и определения.</span>
+				    			</div>
+	    					</li>
+	    					<li class="item">
+	    						<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+	    						<div class="description">
+		    						<span class="name">Soda CmonBruh</span>
+		    						<span class="date">21.05.2018</span>
+					    			<span class="text">Возможность нахождения поисковых ключей в тексте и определения.</span>
+				    			</div>
+	    					</li>
+	    				</ul>
+	    				<div class="form">
+		    				<form>
+		    					<div class="form-group" aria-required="true">
+                                	<input type="text" class="form-control" required placeholder="Add comment">
+                            	</div>
+		    				</form>
+	    				</div>
+	    			</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--announcement window end-->
+
+
+<!--interest window-->
+<div class="modal-form modal-interest modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-interest" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+            	<div class="title">Select interest</div>
+            	<div class="form interest">
+               		<form data-toggle="validator"> 
+							<div class="search-panel">   
+	               				<div class="row">
+		               				<div class="col-12 col-md-6 col-lg-4">
+		               					<div class="text d-none d-md-block">Choose what you like and we will try to give you the most interesting selection.</div>
+		               				</div>
+		               				<div class="col-12 col-md-6 col-lg-3">
+			               				<div class="filter d-none d-md-block">
+			               					<div class="form-group form-group-checkbox">
+			                                	<label><input type="checkbox" checked="checked" name="game"><span></span>Game</label>
+			                            	</div>
+			                            	<div class="form-group form-group-checkbox">
+			                                	<label><input type="checkbox" checked="checked" name="lifestyle"><span></span>Life Style</label>
+			                            	</div>
+			               				</div>
+		               				</div>
+		               				<div class="d-none d-md-block col-md-6 d-lg-none"></div>
+		               				<div class="col-12 col-md-6 col-lg-5">
+			               				<div class="search-input">
+							                <input type="search" placeholder="Search" />  
+							                <button class="btn" type="submit"><svg><use xlink:href="img/vectors.svg#search"></use></svg></button>
+						            	</div> 
+					            	</div>
+				            	</div>
+				            </div>
+				            <div class="list">
+				            	<div class="row">
+		               				<div class="col-12 col-md-6 col-lg-7">
+		               					<div class="title">Game</div>
+		               					<div class="items-game">
+		               					<div class="row">
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game1" value="game1"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game2" value="game2"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game3" value="game3"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game4" value="game4"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game5" value="game5"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game6" value="game6"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game7" value="game7"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game8" value="game8"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game10" value="game10"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" checked="checked" name="game11" value="game11"><span></span><div class="img" style="background-image: url('img/interest/game1.png')"></div></label>
+			                            		</div>
+				               				</div>
+
+				               				<div class="col-4 col-md-6 col-lg-4">
+				               					<div class="form-group form-group-checkbox">
+			                                		<label><input type="checkbox" name="game9" value="game9"><span></span><div class="img" style="background-image: url('img/interest/game2.png')"></div></label>
+			                            		</div>
+				               				</div>
+			               				</div>
+			               				<a class="more d-md-none" href="#">More game</a>
+		               				  </div>
+		               				</div>
+		               				<div class="col-12 col-md-6 col-lg-5">
+		               					<div class="title">Life style</div>
+		               					<div class="items-lifestyle">
+		               						<div class="row">
+					               				<div class="col-6 col-md-12">
+					               					<div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+							                                <div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
+							                                <i>Very long and simple name of lifestyle rubric</i>
+						                                </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-md-12">
+						                            <div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+						                                	<div class="img" style="background-image: url('img/interest/lifestyle2.png')"></div>
+							                                <i>Name of lifestyle rubric</i>
+							                             </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-md-12">
+						                           	<div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+							                                <div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
+							                                <i>Very long and simple name of lifestyle rubric</i>
+						                                </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-md-12">
+						                            <div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" checked="checked" name="lifestyle2" value="lifestyle2"><span></span>
+						                                	<div class="img" style="background-image: url('img/interest/lifestyle1.png')"></div>
+							                                <i>Name of lifestyle rubric</i>
+							                             </label>
+						                            </div>
+					                            </div>
+					                            <div class="col-6 col-md-12">
+						                           	<div class="form-group form-group-checkbox">
+						                                <label><input type="checkbox" name="lifestyle1" value="lifestyle1"><span></span>
+							                                <div class="img" style="background-image: url('img/interest/lifestyle2.png')"></div>
+							                                <i>Very long and simple name of lifestyle rubric</i>
+						                                </label>
+						                            </div>
+					                            </div>
+				                            </div>
+				                            <a class="more d-md-none" href="#">More lifestyle</a>
+			                            </div>
+		               				</div>
+		               			</div>
+		               		</div>	
+			            <div class="buttons text-center">
+			            	<button type="button" class="btn btn-white btn-loadmore d-none d-md-block">Load more</button>
+			            	<button type="button" class="btn btn-finish" data-dismiss="modal">Finish</button>
+			            </div>
+               		</form>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--interest window end-->
+
+
+<!--Create future stream window-->
+<div class="modal-form modal-create-future-stream modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-create-future-stream" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+             	<div class="title">Create future stream</div>
+            	<div class="form">
+                        <form  data-toggle="validator" role="form">  
+                        	<div class="form-group datepicker-group" aria-required="true">
+                                <label class="control-label">Date</label>
+                                <input class="datepicker d-none d-md-block" type="text" placeholder="Select date & time">
+                                <input class="d-block d-md-none" type="date" placeholder="Select date">
+                                <label class="control-label d-block d-md-none">Time</label>
+                                <input class="d-block d-md-none" type="time" placeholder="Select time">
+                            </div>  
+
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label">About stream</label>
+                                <textarea>Text</textarea>
+                            </div>
+                            
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="category">Select category</label>
+                                <div class="search-input">
+							        <input type="search" name="category" id="category" placeholder="Start typing game name" />  
+						        </div>
+						        <div class="tags">
+						        	<span>Warcraft 3</span>
+						        	<span>Tetris 3D</span>
+						        </div> 
+                            </div>
+
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label">Minimal donat</label>
+                                <div class="input-with-label">
+					        		<div class="label">
+                            		<select class="form-control selectpicker ds-dropdown currency-select" title="DST">
+                                        <option>USD</option>
+                                        <option>EHT</option>
+                                        <option>DFT</option>
+                                        <option>ABC</option>
+                                        <option>RRR</option>
+                                    </select>
+                            	</div>    
+	                            	<input type="text" value="8000" id="minimal-donate" />	                            	
+	                            </div>
+	                             <div class="range full d-lg-none">
+							    		<input type="range" min="0" max="2500" data-rangeslider data-for="minimal-donate">
+							    	</div>
+                            </div>
+
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label">Attach service catalog</label>
+                                <div class="service-catalog">
+	                                <select class="selectpicker" title="Select service catalog">
+			    						<option value="cat1">Catalog 1</option>
+			    						<option value="cat2">Catalog 2</option>
+			    						<option value="cat3">Catalog 3</option>
+			    					</select>
+		    					</div>
+						        <div class="tags">
+						        	<span>For dota</span>
+						        	<span>Песенки</span>
+						        </div> 
+                            </div>
+
+                            <div class="form-group voting" aria-required="true">
+                                <label class="control-label">Voting</label>
+                                <div class="switch">                                	
+	                            	<div class="radio form-group form-group-radio">
+	                                    <label>
+	                                   	    <input type="radio" name="switch" value="0"><span></span>
+	                                        No
+	                                    </label>
+	                                </div>
+	                                <div class="radio form-group form-group-radio">
+	                                    <label>
+	                                   	    <input type="radio" name="switch" checked="checked" value="1"><span></span>
+	                                        Yes
+	                                    </label>
+	                                </div>
+                                </div>
+                            </div>
+                                <div class="is-voting">
+                                	<div class="options">
+                                		<div class="field"><input type="text" class="form-control" placeholder="Option"><a class="remove" href="#"></a></div>
+                                		<div class="field"><input type="text" class="form-control" placeholder="Option"><a class="remove" href="#"></a></div>
+                                	</div>
+                                <a href="#" class="add-option">Add option</a>
+                           
+
+                            <div class="limits">
+                            	<div class="radio form-group form-group-radio">
+                                    <label>
+                                   	    <input type="radio" name="limits" checked="checked" value="Without limits"><span></span>
+                                        Without limits
+                                    </label>
+                                </div>
+                            	<div class="radio form-group form-group-radio">
+                                    <label>
+                                   	    <input type="radio" name="limits" value="One person one vote"><span></span>
+                                        One person one vote
+                                    </label>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="form-group form-group-btn text-center">                                
+                                <button class="btn" type="submit">Create</button>                                    
+                            </div>
+                           </form>
+                           </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Create future stream window end-->
+
+
+<!--hash to translation window-->
+<div class="modal-form modal-hash modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-hash" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Hash to translation +1200 DST</div>
+                <div class="data">
+                <dl>
+                    <dd class="key">TxHash:</dd>
+                    <dd class="value">
+                    	<span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span>
+                    	0x60bc5597d81988dd5c87f29b18bd29f31809e830683172dc201b2e3bdc30a02d
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="key">TxReceipt Status:</dd>
+                    <dd class="value">Success</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Block Height:</dd>
+                    <dd class="value">5730143 (63103 block confirmations)</dd>
+                </dl>
+                <dl>
+                    <dd class="key">TimeStamp:</dd>
+                    <dd class="value">11 days 2 hrs ago (Jun-04-2018 09:57:42 AM +UTC)</dd>
+                </dl>
+                <dl>
+                    <dd class="key">From:</dd>
+                    <dd class="value">
+                    	<span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span>
+                    	0x6772c7c7d3c272b3c35c65d7074a8da10328c422
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="key">To:</dd>
+                    <dd class="value">
+                    	<span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span>
+                    	0x9182481129089f9cd11eb8eb0d1c6ea9ae23ed1a
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="key">Value:</dd>
+                    <dd class="value">0.41803558 Ether</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Gas Limit:</dd>
+                    <dd class="value">21000</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Gas Used By Txn:</dd>
+                    <dd class="value">21000</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Gas Price:</dd>
+                    <dd class="value">0.000000014 Ether (14 Gwei)</dd>
+                </dl>
+                <dl>
+                    <dd class="key">Actual Tx Cost/Fee:</dd>
+                    <dd class="value">0.000294 Ether ($0.14)</dd>
+                </dl>
+                  
+				</div>               
+            </div>
+        </div>
+    </div>
+</div>
+<!--hash to translation window end-->
+
+
+<!--buy dst window-->
+<div class="modal-form modal-buydst modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-buydst" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Buy DST</div>
+					<div class="converter">
+				        <div class="half">
+				        	<div class="name">The amount of DST</div>
+				        	<div class="input">
+				        		<div class="label">DST</div>
+                            	<input type="text" value="8000" id="amount-dst" />
+                            </div>
+                             <div class="range full d-lg-none">
+					    		<input type="range" min="0" max="2500" data-rangeslider data-for="amount-dst">
+					    	</div>
+                            <div class="info"><b>Commission 0,7%</b> 12 DST</div>
+                        </div>
+                        <a class="go" href="#"><svg class="icon"><use xlink:href="img/vectors.svg#double-arrow"></use></svg></a>
+                        <div class="half second">
+                        	<div class="name">Total $</div>
+                        	<div class="input-with-label">
+                            	<div class="label">
+                            		<select class="form-control selectpicker ds-dropdown currency-select" title="$">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                            	</div>                            	
+                            	<input type="text" value="5000" id="total-sum" />
+                            </div>
+                             <div class="range full d-lg-none">
+					    		<input type="range" min="0" max="2500" data-rangeslider data-for="total-sum">
+					    	</div>
+                            <div class="info">Exchange rate <b>1DST = 0.006$</b></div>
+                        </div>
+                 </div> 
+
+                 <div class="buttons">
+			        <button type="button" class="btn btn-transparent" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-target=".modal-equiring" data-toggle="modal">Next</button>
+			    </div>                                    
+            </div>
+        </div>
+    </div>
+</div>
+<!--buy dst window end-->
+
+
+<!--equiring window-->
+<div class="modal-form modal-equiring modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-equiring" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+               <a href="#" class="prev-step d-block d-md-none" data-dismiss="modal" data-target=".modal-buydst" data-toggle="modal"><svg class="icon"><use xlink:href="img/vectors.svg#prev-step"></use></svg></a>
+            </div>
+            <div class="modal-body">
+                <div class="title">Select equiring system</div>
+                <div class="items">
+	                <div class="row">
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/1.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+	                 		<a href="#" class="item"><img src="img/equiring/2.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/3.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/4.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/5.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/6.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/7.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/8.png" alt="" /></a>
+		                 </div>
+		                 <div class="col-6 col-sm-4">
+		                 	<a href="#" class="item"><img src="img/equiring/9.png" alt="" /></a>
+		                 </div>
+	                </div>   
+                </div>
+                <div class="buttons">
+			        <button type="button" class="btn btn-transparent d-none d-md-block" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-target=".modal-transfer" data-toggle="modal">Next</button>
+			    </div>                              
+            </div>
+        </div>
+    </div>
+</div>
+<!--equiring window end-->
+
+<!--transaction-successful window-->
+<div class="modal-form modal-transaction-successful modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-transaction-successful" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+            <div class="form">
+                <div class="title">Transaction successful</div>
+				<div class="text">A reference to a hash <span class="link"><svg><use xlink:href="img/vectors.svg#link"></use></svg></span></div> 
+				<div class="form-group">
+                    <button class="btn" data-dismiss="modal">Ok</button>
+                </div> 
+                </div>                             
+            </div>
+        </div>
+    </div>
+</div>
+<!--transaction-successful window end-->
+
+<!--transfer dst window-->
+<div class="modal-form modal-transfer modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-transfer" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+               <a href="#" class="prev-step d-block d-md-none" data-dismiss="modal" data-target=".modal-equiring" data-toggle="modal"><svg class="icon"><use xlink:href="img/vectors.svg#prev-step"></use></svg></a>
+            </div>
+            <div class="modal-body">
+                <div class="title">Transfer DST</div>
+                <div class="form">
+					<div class="form-group" aria-required="true">
+                        	<label class="control-label">Email or wallet ID</label>
+                        	<div class="input">
+                            	<input type="text" value="5000" />
+                            </div>   
+                        </div>
+				    <div class="form-group" aria-required="true">
+				    	<label class="control-label">The amount of DST</label>
+				        	<div class="input input-with-label">
+				        		<div class="label">DST</div>
+                            	<input type="text" id="dst-val" value="8000" />
+                            </div>
+                            <div class="range full d-lg-none">
+					    		<input type="range" min="0" max="2500" data-rangeslider data-for="dst-val">
+					    	</div>
+                            <div class="info"><b>Commission 0,7%</b> 12 DST</div>
+                        </div>
+                        
+                  
+
+                 <div class="buttons">
+			        <button type="button" class="btn btn-transparent d-none d-md-block" data-dismiss="modal">Cancel</button>
+			        <button type="button" class="btn btn-next" data-dismiss="modal" data-target=".modal-transfer-2" data-toggle="modal">Next</button>
+			    </div>  
+			    </div>                                  
+            </div>
+        </div>
+    </div>
+</div>
+<!--transfer dst window end-->
+
+	<!--transfer-2 dst window-->
+	<div class="modal-form modal-transfer-2 modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-transfer-2" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+	                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+	               </button>
+	               <a href="#" class="prev-step d-block d-md-none" data-dismiss="modal" data-target=".modal-transfer" data-toggle="modal"><svg class="icon"><use xlink:href="img/vectors.svg#prev-step"></use></svg></a>
+	            </div>
+	            <div class="modal-body">
+		            <div class="form">
+		            	<form class="dropzone" id="transferform" action="/file-upload" method="post" enctype="multipart/form-data">
+
+			                <div class="title d-none d-md-block">15 000 DST will be transferred to the user</div>
+			                <div class="title d-block d-md-none">Transfer confirmation</div>
+
+
+			                <div class="comment-text d-block d-md-none">15 000 DST will be transferred to the user</div>
+							<div class="converter">
+							    <div class="half user">
+							       		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							        	<div>
+								        	<div class="name">Gavr</div>
+								        	<div class="email">gavr@mutant.com</div>
+							        	</div>
+			                        </div>
+			                        <div class="half">
+			                        	<div class="name">Wallet</div>
+			                        	<div class="value">2589 9654 4425 0002</div>   
+			                        </div>
+			                </div> 
+			                <div class="confirm-transfer">
+			                	<div class="subtitle">Confirm the transfer</div>
+			                		<div class="form-group form-group-radio form-check-inline">
+		                               	<label><input type="radio" checked="checked" name="key" value="key"><span></span>Key</label>
+		                            </div>
+		                            <div class="form-group form-group-radio form-check-inline">
+		                               	<label><input type="radio" name="key" value="key-file"><span></span>Key file</label>
+		                            </div>
+		                            <div class="field key-field">
+		                            	<input type="text" />
+		                            </div>
+		                            <div class="field key-file-field">
+		                            	<div class="dz-default dz-message">
+											<span class="msg-lg d-none d-lg-block">
+											Drag your key here or select key file
+											</span>
+											<span class="msg-md d-block d-lg-none">
+												 Select key file
+											</span>
+										</div>
+										<div class="fallback">
+										    <input name="file" type="file" multiple />
+										</div>
+										<div class="preview"></div>
+										<div class="ok">Ok!</div>
+										<div class="error">Error</div>
+		                            </div>
+			                </div>
+
+			                <div class="buttons">
+						        <button type="button" class="btn btn-transparent d-none d-md-block" data-dismiss="modal">Cancel</button>
+						        <button type="submit" class="btn btn-next">Confirm Transfer</button>
+						    </div> 
+					    </form>                                   
+		            </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!--transfer-2 dst window end-->
+
+<!--wallet-donate dst window-->
+	<div class="modal-form modal-wallet-donate modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-wallet-donate" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+	                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+	               </button>
+	            </div>
+	            <div class="modal-body">
+		            <div class="form">
+		            	<form method="post">
+
+			               <div class="title">Donate DST</div>
+
+			               <div class="converter">
+							    <div class="half user">
+							       		<span class="icon"><img src="img/live-icon1.png" width="40" height="40" alt="" /></span>
+							        	<div>
+							        		<label>From</label>
+								        	<div class="name">Екатерина Болтинская</div>
+								        	<div class="form-group form-group-checkbox">
+				                                <label><input type="checkbox"><span></span>Anonymous</label>
+				                            </div>
+								        </div>
+			                    </div>
+			                    <a class="go" href="#"><svg class="icon"><use xlink:href="img/vectors.svg#donate-arrow"></use></svg></a>
+			                    <div class="half user">
+			                        	<span class="icon"><img src="img/live-icon2.png" width="40" height="40" alt="" /></span>
+			                        	<div>
+			                        		<label>To</label>
+				                        	<div class="name">Anton Dolgopolsky</div>				                        	 
+			                        	</div>  
+			                        </div>
+			                </div> 
+			                <div class="donate-detail">
+				                <div class="row">
+					                <div class="col-8">
+					                	<div class="form-group" aria-required="true">
+									    	<label class="control-label">Donate amount of DST</label>
+									        	<div class="input input-with-label">
+									        		<div class="label">
+				                            			<select class="form-control selectpicker ds-dropdown currency-select" title="DST">
+				                            				<option>DST</option>
+					                                        <option>EST</option>
+					                                        <option>$</option>
+					                                        <option>QWE</option>
+					                                        <option>RUB</option>
+					                                        <option>ETH</option>
+				                                    	</select>
+				                            		</div>  
+					                            	<input type="text" id="dst-donate" value="8000" />
+					                            </div>
+					                            <div class="range full d-lg-none">
+										    		<input type="range" min="0" max="2500" data-rangeslider data-for="dst-donate">
+										    	</div>
+										    	<div class="info"><b>Commission 0,7%</b> 12 DST</div>
+					                    </div>
+					                    <div class="form-group" aria-required="true">
+				                                <label class="control-label">Donate message</label>
+				                                <textarea>Text</textarea>
+				                            </div>
+					                </div>
+					                <div class="col-4">
+					                	<div class="img" style="background-image:url('img/interest/game1.png')"></div>
+					                </div>
+
+				                </div>
+			                </div>
+			                <div class="imgs">
+				                <div class="row">
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game1.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game2.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game1.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game1.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game2.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game2.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game1.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game1.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game2.png')"></div>
+				                	</div>
+				                	<div class="col-4 col-md-3">
+				                		<div class="img" style="background-image:url('img/interest/game2.png')"></div>
+				                	</div>
+
+				                </div>
+				                <a class="more d-md-none" href="#">More</a> 
+			                </div>
+
+			                <div class="buttons">
+						        <button type="submit" class="btn btn-next">Donate</button>
+						    </div> 
+					    </form>                                   
+		            </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!--wallet-donate window end-->
+
+	<!--add-block window-->
+<div class="modal-form modal-addblock modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addblock" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">New block / Edit block</div>
+                <div class="form">
+		            	<form class="dropzone" id="addblockform" action="/file-upload" method="post" enctype="multipart/form-data">
+			            	<div class="form-group">
+			            		<label>Image</label>
+		            	        	<div class="dz-default dz-message">
+										<span class="msg-lg d-none d-lg-block">
+											<b>Drag the image here</b> or select on computer
+										</span>
+										<span class="msg-md d-block d-lg-none">
+											Add block image
+										</span>
+									</div>
+									<div class="fallback">
+									    <input name="file" type="file" multiple />
+									</div>
+									<div class="preview"></div>
+		            		</div>
+		            		<div class="form-group" aria-required="true">
+                                <label class="control-label" for="pagelink">Image link</label>
+                                <input type="text" id="pagelink" class="form-control" placeholder="Link">
+                            </div>
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="pagelink">Block text</label>
+                                <textarea id="trumbowyg-demo" class="form-control text-editor" ></textarea>
+                            </div>
+                            <div class="form-group text-center">                                
+                                <button class="btn" type="submit">Create</button>                                    
+                            </div>
+                            <div class="delete text-center"><a href="#">Delete block</a></div>
+		            	</form>
+		            </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!--add-block window end-->
+
+<!--Email change window-->
+<div class="modal-form modal-email-change modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-email-change" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Email change</div>
+                <div class="form">                    
+                    <div class="text">
+                        A confirmation email has been sent to your new email address. After confirmation email will be changed.
+                    </div>
+                    <div class="form-group">
+                               <button class="btn" data-dismiss="modal">Ok</button>
+                            </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Email change window end-->
+
+
+<!--Change save window-->
+<div class="modal-form modal-change-save modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-change-save" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Change save</div>
+                <div class="form">    
+                <form data-toggle="validator">                
+                    <div class="text">
+                        To apply the changes, enter your password
+                    </div>
+                    <div class="form-group required" aria-required="true">
+                      <label class="control-label" for="oldpassword">Enter old password</label>
+                      <input type="password" id="oldpassword" class="form-control" required>
+                    </div>
+                    <div class="form-group text-center" aria-required="true">
+                    <button class="btn" data-dismiss="modal">Save</button>  
+                    <!--button class="btn" type="submit">Save</button-->   
+                    </div>                       
+                   </form>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Change save window end-->
+
+    <!--add-service window-->
+<div class="modal-form modal-addblock modal-addservice modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addservice" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">New service</div>
+                <div class="form">
+		            	<form class="dropzone" id="addblockform" action="/file-upload" method="post" enctype="multipart/form-data">
+			            	<div class="form-group">
+			            		<label>Image</label>
+		            	        	<div class="dz-default dz-message">
+											<span class="msg-lg d-none d-lg-block">
+											<b>Drag the image here</b> or select on computer
+											</span>
+											<span class="msg-md d-block d-lg-none">
+												Add block image
+											</span>
+										</div>
+										<div class="fallback">
+										    <input name="file" type="file" multiple />
+										</div>
+										<div class="preview"></div>
+		            		</div>
+		            		<div class="form-group" aria-required="true">
+                                <label class="control-label" for="pagelink">Cost</label>
+                                <input type="text" id="pagelink" class="form-control" placeholder="Link">
+                            </div>
+
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label" for="cost">Cost</label>
+                                <div class="input">
+									<div class="label">
+                            			<select class="form-control selectpicker ds-dropdown currency-select" title="DST">
+	                                        <option>EST</option>
+	                                        <option>$</option>
+	                                        <option>QWE</option>
+	                                        <option>RUB</option>
+	                                        <option>ETH</option>
+                                    	</select>
+                            		</div>                                	
+                            	<input type="text" id="cost" class="form-control" value="1">
+                            </div>
+                                
+                            </div>
+
+
+                            <div class="form-group" aria-required="true">
+                                <label class="control-label">Description</label>
+                                <textarea class="form-control text-editor" ></textarea>
+                            </div>
+                            <div class="form-group form-group-checkbox">
+		                        <label><input type="checkbox" checked="checked" name="showtext"><span></span>Text field when ordering</label>
+		                    </div>
+		                    <div class="form-group" aria-required="true">
+                                <label class="control-label" for="pagelink">Text field name</label>
+                                <input type="text" id="pagelink" class="form-control" placeholder="Text field name">
+                            </div>
+                            <div class="form-group form-group-btn text-center">                                
+                                <button class="btn" type="submit">Create</button>                                    
+                            </div>
+                            <div class="delete text-center"><a href="#">Delete service</a></div>
+		            	</form>
+		            </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!--add-service window end-->
+<!--add-team window-->
+<div class="modal-form modal-addteam modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addteam" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Add team</div>
+                <div class="form">
+		            	<form class="dropzone" id="addteamform" action="/file-upload" method="post" enctype="multipart/form-data">
+			            	
+			            	<div class="form-group" aria-required="true">
+                                <label class="control-label" for="teamname">Team name</label>
+                                <input type="text" id="teamname" class="form-control" placeholder="Team name">
+                            </div>
+
+			            	<div class="form-group">
+			            		<label>Team avatar</label>
+		            	        	<div class="dz-default dz-message">
+										<span class="msg-lg d-none d-lg-block">
+											<b>Drag the image here</b> or select on computer
+										</span>
+										<span class="msg-md d-block d-lg-none">
+											<i>Add avatar image</i>
+											<i class="file-added-msg">Change avatar image</i>
+										</span>
+									</div>
+									<div class="fallback">
+									    <input name="file" type="file" multiple />
+									</div>
+									<div class="preview"></div>
+		            		</div>
+		            		                            
+                            <div class="form-group text-center">                                
+                                <!--button class="btn" type="submit" data-target=".modal-sendlink" data-toggle="modal">Add team</button-->  
+                                <a class="btn" href="#" data-target=".modal-sendlink" data-dismiss="modal" data-toggle="modal">Add team</a>                                    
+                            </div>
+		            	</form>
+		            </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<!--add-team window end-->
+
+<!--send-link window-->
+<div class="modal-form modal-sendlink modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-sendlink" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+               </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">Add team</div>
+
+                  <div class="note">
+			            <span class="img"><img src="img/steam-logo.svg" alt="" /></span>
+			            <span class="text">For this tournament you must be logged in to Steam</span>
+		            </div>
+
+                    <div class="form">
+		            	<form  method="post">
+							<div class="form-group teamlink" aria-required="true">
+	                            <label class="control-label" for="teamlink">Send this link to your team members</label>
+	                            <input type="text" id="teamlink" class="form-control" placeholder="http://127.0.0.1:32767/start.html">
+	                            <a class="copy" href="#"><svg><use xlink:href="img/vectors.svg#copy-s"></use></svg></a>
+	                        </div>
+	                         <div class="form-group text-center">                                
+	                                <!--button class="btn" type="submit">Ok</button--> 
+	                                <a class="btn" href="#" data-dismiss="modal">Ok</a>                                       
+	                        </div>
+                        </form>
+		            </div>               
+            </div>
+        </div>
+    </div>
+</div>
+<!--send-link window end-->
+
+<!--New overlay window-->
+<div class="modal-form modal-addoverlay modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addoverlay" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+                 </button>                
+            </div>
+            <div class="modal-body">
+            <div class="title">New overlay</div>
+            <div class="form">
+               <form data-toggle="validator">    
+               		<div class="form-group form-group-radio form-check-inline">
+		                <label><input type="radio" checked="checked" name="overlay-type" value="game"><span></span>Game</label>
+		            </div>
+		            <div class="form-group form-group-radio form-check-inline">
+		              	<label><input type="radio" name="overlay-type" value="lifestyle"><span></span>Lifestyle</label>
+		            </div>
+
+                    <div class="form-group required" aria-required="true">
+                      <label class="control-label" for="overlayname">Overlay name</label>
+                      <input type="text" id="overlayname" class="form-control" required placeholder="Enter name">
+                    </div>
+                    <div class="form-group text-center">
+                    	<button class="btn" data-dismiss="modal" data-target=".modal-overlaytype" data-toggle="modal">Create</button> 
+                    </div>               
+                   </form>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--New overlay window end-->
+
+<!--Overlay type window-->
+<div class="modal-form modal-overlaytype modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addoverlay" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+                 </button>                
+            </div>
+            <div class="modal-body">
+            <div class="title">Choose overlay type</div>
+	            <div class="row">
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>Start</span></a>
+	            	</div>
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>In game</span></a>
+	            	</div>
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>Pause</span></a>
+	            	</div>
+	            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Overlay type window-->
+
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
     <script type='text/javascript' src="js/moment.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/validator.min.js"></script>
     <script type='text/javascript' src="js/jquery-ui.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-datetimepicker.js"></script>    
@@ -262,6 +1828,7 @@
     <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/sly.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/script.js?v=3"></script>
 
 

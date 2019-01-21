@@ -14,6 +14,83 @@ $('a[disabled]').bind("click",function(){
   $('.selectpicker').selectpicker('mobile');
 }
 
+$('.form form').validator().on('submit', function (e) {
+  if(e.isDefaultPrevented()){
+      
+    $(this).find('select:required').each(function(){
+      if($(this).val() == ""){
+        $(this).parents(".bootstrap-select").addClass("has-error");
+      }
+    });   
+
+  } 
+  else{ //submit
+
+   }
+});
+
+$('.form form').validator({
+  custom: {
+    equals: function($el) {
+      var matchValue = Number($el.data("equals")); // foo
+      if (Number($el.val()) <= matchValue) {
+        return "Hey, that's not valid! It's gotta be " + matchValue
+      }
+    }
+  }
+ });
+
+ var iH = $('.tournament .general-info .wrap').height(); 
+$('.tournament .general-info .about').on('click', function(){
+   if(!$('.tournament .general-info').hasClass("minimized")){
+    iH =  $('.tournament .general-info .wrap').height();
+   // $('.tournament .general-info > *').css("opacity",0);
+    $('.tournament .general-info .wrap').height(iH).animate({'height':'70px'},300,function(){
+      $('.tournament .general-info').addClass("minimized");
+      $('.tournament .general-info .status').css("opacity",0).delay(50).animate({"opacity":"1"});
+    //  $('.tournament .general-info > *').css("opacity",1);
+    });
+  }
+ else if($('.tournament .general-info').hasClass("minimized")){
+  // $('.tournament .general-info .status').hide();//css("opacity",0);
+   $('.tournament .general-info').removeClass("minimized");
+   $('.tournament .general-info .wrap').animate( {'height': iH+'px'},300,function(){
+      $('.tournament .general-info').removeClass("minimized");
+      $('.tournament .general-info .wrap').height("unset");
+     // $('.tournament .general-info .status').fadeIn(100);//css("opacity",1);
+    });
+  }
+ //  $(this).parents(".general-info").toggleClass("minimized");   
+   });
+
+  $(window).resize(function() {
+    $('.tournament .general-info').height('unset');
+  });
+
+
+$('.page.tournament .tabs .nav .nav-link').on('click',function(){
+  if($(this).parents('.tabs').hasClass('inner')) return;
+   $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
+   if($(this).attr("id") == "lobby-tab"){
+    $('.page.tournament .top-image').removeClass("small");
+    if($('.d-md-none').is(":visible")){
+
+     if($('.page.tournament .general-info').hasClass("minimized")){
+       $('.page.tournament .general-info').removeClass("minimized");     
+       $('.tournament .general-info .wrap').height("unset");
+     }
+   }
+  }
+  else{
+    $('.page.tournament .top-image').addClass("small");
+    if($('.d-md-none').is(":visible")){
+      if(!$('.page.tournament .general-info').hasClass("minimized")){
+        $('.page.tournament .general-info').addClass("minimized");
+       // $('.tournament .general-info').height("100px");
+     }
+   }
+  }
+});
 
 var cf;
 if($('#contentFlow').length){
@@ -96,12 +173,17 @@ $('.main-sidebar .close').on("click", function(){
 var $frameNav = null, slyOptionsNav;
 
 function setNavSliderWidth(obj){
+  if(!obj.length) return;
      var totalW = 0;
 
       obj.find('li').each(function(){
          $(this).find('a').width("auto");
     });
-    if(!$('.d-md-block').is(":visible")){
+      var pageW = $('.page').width();
+      var navW = obj.find('ul').width();
+   /* if(!$('.d-md-block').is(":visible")){
+    console.log(navW,"  ",pageW);
+    if(navW > pageW){*/
       setTimeout(function(){
      
             obj.find('li').each(function(){
@@ -120,11 +202,11 @@ function setNavSliderWidth(obj){
             itemNav: 'basic',
             mouseDragging: 1,
             touchDragging: 1,
-            releaseSwing: 1,
+            releaseSwing: 0,
             startAt: 0,
             scrollBy: 1,
             speed: 300,
-            elasticBounds: 1,
+            elasticBounds: 0,
             easing: 'easeOutExpo'
           };
           $frameNav = new Sly(obj.find('.tabs-wrap'), slyOptionsNav).init();  
@@ -134,7 +216,7 @@ function setNavSliderWidth(obj){
       }, 500);
 
 
-  }
+ /* }
   else{  
     setTimeout(function(){
       if(obj.length){
@@ -144,7 +226,7 @@ function setNavSliderWidth(obj){
         }
       }
     },1000);  
-  }
+  }*/
 }
 
 setNavSliderWidth($('.settings .tabs'));
@@ -186,7 +268,11 @@ $('.list .alarm').on("click", function(){
 function searchH(){
    var wH = $(window).height();
    var hH = $('header').outerHeight(); 
-  $('header .search-results').height((wH-hH) - 30);
+   var offset = 30;
+   if($('.d-md-none').is(":visible")){
+      offset = 20;
+   }
+  $('header .search-results').height((wH-hH) - offset);
 }
 searchH();
 function screen(){
@@ -223,6 +309,81 @@ $('.main-sidebar .block.lifestyle .title .search-input input[type="search"]').qu
    selector: 'span.name'
 });
 }
+
+$('.services-catalog-owner .list .item .setup input[type="checkbox"]').change(function(){
+  var setup = $(this).parents('.setup');
+  if($(this).is(':checked')){
+    setup.find('.off').fadeOut(300);
+    setup.find('.on').fadeIn(300);
+  }
+  else{
+    setup.find('.off').fadeIn(300);
+    setup.find('.on').fadeOut(300);
+  }
+});
+$('.services-catalog-owner .list .item .setup input[type="checkbox"]').each(function(){
+  var setup = $(this).parents('.setup');
+  if($(this).is(':checked')){
+    setup.find('.off').hide();
+    setup.find('.on').show();
+  }
+  else{
+    setup.find('.off').show();
+    setup.find('.on').hide();
+  }
+});
+
+var promoSlideTime = 8;/*seconds*/
+var tl = new TimelineMax();
+$buttonColorShape = $('rect.btn-shape.btn-color');
+$buttonColorShape.css({
+        'strokeDasharray':202,
+        'strokeDashoffset':202
+      });
+
+  tl.append(TweenMax.to($buttonColorShape, promoSlideTime, {
+    strokeDashoffset:0, 
+    ease:Quad.easeIn,
+    onComplete:function(){
+      $('.promo .item .icon').removeClass('active');
+      $buttonColorShape.css({
+        'strokeDasharray':453,
+        'strokeDashoffset':0
+      });
+    }
+  }));
+tl.stop();
+
+var promoSlider = $('.promo'); 
+var promoOptions = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 700,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: false,
+  adaptiveHeight: false,
+  autoplay: true,
+  autoplaySpeed: (promoSlideTime-1)*1000,
+  responsive: true
+};
+promoSlider.on('init', function(event, slick){
+  $('.promo .item .icon').addClass("active");
+ tl.restart();
+});
+promoSlider.slick(promoOptions);
+promoSlider.on('beforeChange', function(event, slick, currentSlide){
+  $('.promo .item .icon').removeClass("active");
+});
+promoSlider.on('afterChange', function(event, slick, currentSlide){
+  $('.promo .item .icon').addClass("active");
+    $buttonColorShape.css({
+        'strokeDasharray':202,
+        'strokeDashoffset':202
+      });
+ tl.restart();
+});
 
 var smallSlider = $('.slides'); 
 var options = {
@@ -320,7 +481,6 @@ var announcementliderLBOptions = {
   ]
 };
 announcementSliderLB.slick(announcementliderLBOptions);
-
 
 var eventsSlider = $('.events-slider'); 
 var eventsSliderOptions = {
@@ -549,6 +709,10 @@ if(!this_item.hasClass("open")){
    return false;
 });
 
+$('.chat-btn .btn').on('click',function(){
+  $('.page').toggleClass("chat-open");
+  return false;
+});
 
 $('.tournament .general-info .comments, .tournament-events .head .bottom .comments').click(function(){
    var obj =  $('div.comments');
@@ -559,25 +723,6 @@ $('.tournament .general-info .comments, .tournament-events .head .bottom .commen
      return false;
 });
 
-$('.page.tournament .tabs .nav .nav-link').on('click',function(){
-  if($(this).parents('.tabs').hasClass('inner')) return;
-   $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
-   if($(this).attr("id") == "lobby-tab"){
-    $('.page.tournament .top-image').removeClass("small");
-
-    if($('.d-md-none').is(":visible")){
-     $('.page.tournament .general-info').removeClass("minimized");     
-     $('.tournament .general-info').height("unset");
-   }
-  }
-  else{
-    $('.page.tournament .top-image').addClass("small");
-    if($('.d-md-none').is(":visible")){
-    $('.page.tournament .general-info').addClass("minimized");
-     $('.tournament .general-info').height("100px");
-   }
-  }
-});
 $('.tournament .rounds .group').on('mouseover', function(){
     var group_name = $(this).data("group");
     $('.tournament .rounds .pair').each(function(){
@@ -600,6 +745,7 @@ $('.tournament .rounds .group').on('mouseout', function(){
   });
 
 });
+
 $('.widget .side-group .colors a').each(function(){
   if($(this).data('color')){
     $(this).css("background",$(this).data('color'));
@@ -702,39 +848,96 @@ if($('.datepicker').length){
 
 }
 
+var valignTimeout;
+function playerVAlign(){
+  if(valignTimeout)clearTimeout(valignTimeout);
+    if($('body').hasClass("theatre-mode")){     
+      valignTimeout = setTimeout(function(){
+        var h1 = $('.page.live-broadcast .head .player').outerHeight();
+        var h2 = $('.page.live-broadcast .head .player .plyr').outerHeight();
+        $('.theatre-mode .page.live-broadcast .head .player .plyr').css('top',(h1-h2)/2 + "px");
+      }, 400);
+      
+    }
+    else{
+      $('.page.live-broadcast .head .player .plyr').css('top',0);
+    }
+}
+  $(window).resize(function() {
+     playerVAlign();
+  });
 
 $('.theatre-mode-toggle').on('click', function(){
-    $('body').toggleClass("theatre-mode");
+    $('body').toggleClass("theatre-mode");  
+      playerVAlign();
    });
 
- var iH = $('.tournament .general-info .wrap').height(); 
-$('.tournament .general-info .about').on('click', function(){
-   if(!$('.tournament .general-info').hasClass("minimized")){
-    iH =  $('.tournament .general-info .wrap').height();
-   // $('.tournament .general-info > *').css("opacity",0);
-    $('.tournament .general-info .wrap').height(iH).animate({'height':'70px'},500,function(){
-      $('.tournament .general-info').addClass("minimized");
-      $('.tournament .general-info .status').css("opacity",0).delay(200).animate({"opacity":"1"});
-    //  $('.tournament .general-info > *').css("opacity",1);
-    });
-  }
- else if($('.tournament .general-info').hasClass("minimized")){
-  // $('.tournament .general-info .status').hide();//css("opacity",0);
-   $('.tournament .general-info').removeClass("minimized");
-   $('.tournament .general-info .wrap').animate( {'height': iH+'px'},500,function(){
-      $('.tournament .general-info').removeClass("minimized");
-     // $('.tournament .general-info .status').fadeIn(100);//css("opacity",1);
-    });
-  }
- //  $(this).parents(".general-info").toggleClass("minimized");   
+$('.modal-create-future-stream .is-voting .add-option').on('click', function(){
+    $('<div class="field"><input type="text" class="form-control" placeholder="Option"><a class="remove" href="#"></a></div>').appendTo($('.modal-create-future-stream .is-voting .options'));
+
+   return false;
    });
 
-  $(window).resize(function() {
-    $('.tournament .general-info').height('unset');
-  });
+$( document ).on( "click", ".modal-create-future-stream .is-voting .field .remove", function() {
+ $(this).parents('.field').remove();
+  return false;
+});
+
+
+$('.settings .home .blocks .item').on("click",function(e){  
+  if(!$(this).data("link"))return;
+  if($(e.target).hasClass("btn"))return;
+
+    $('.settings .nav .nav-link').removeClass("active");
+    $('.settings .nav .nav-link'+$(this).data("link")+'-tab').addClass("active");
+    $('.settings .tab-pane').removeClass("show").removeClass("active");
+    $('.settings .tab-pane'+$(this).data("link")).addClass("show").addClass("active");
+});
+
+
+
+
 
 });
 
+(function() {
+  'use strict';
+
+  function remoteModal(idModal) {
+    var vm = this;
+    vm.modal = $(idModal);
+
+    if (vm.modal.length == 0) {
+      return false;
+    }
+
+    if (window.location.hash == idModal) {
+      openModal();
+    }
+
+    var services = {
+      open: openModal,
+      close: closeModal
+    };
+
+    return services;
+
+    function openModal() {
+      vm.modal.modal('show');
+    }
+
+    function closeModal() {
+      vm.modal.modal('hide');
+    }
+  }
+  Window.prototype.remoteModal = remoteModal;
+})();
+
+$(function() {
+  if (window.location.hash) {
+   window.remoteModal(window.location.hash);
+ }
+});
 
 
 Dropzone.options.transferform = { 

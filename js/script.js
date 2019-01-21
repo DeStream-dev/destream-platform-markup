@@ -1,20 +1,3 @@
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
 
 $(document).ready(function() { 
 
@@ -32,6 +15,83 @@ $('a[disabled]').bind("click",function(){
   $('.selectpicker').selectpicker('mobile');
 }
 
+$('.form form').validator().on('submit', function (e) {
+  if(e.isDefaultPrevented()){
+      
+    $(this).find('select:required').each(function(){
+      if($(this).val() == ""){
+        $(this).parents(".bootstrap-select").addClass("has-error");
+      }
+    });   
+
+  } 
+  else{ //submit
+
+   }
+});
+
+$('.form form').validator({
+  custom: {
+    equals: function($el) {
+      var matchValue = Number($el.data("equals")); // foo
+      if (Number($el.val()) <= matchValue) {
+        return "Hey, that's not valid! It's gotta be " + matchValue
+      }
+    }
+  }
+ });
+
+ var iH = $('.tournament .general-info .wrap').height(); 
+$('.tournament .general-info .about').on('click', function(){
+   if(!$('.tournament .general-info').hasClass("minimized")){
+    iH =  $('.tournament .general-info .wrap').height();
+   // $('.tournament .general-info > *').css("opacity",0);
+    $('.tournament .general-info .wrap').height(iH).animate({'height':'70px'},300,function(){
+      $('.tournament .general-info').addClass("minimized");
+      $('.tournament .general-info .status').css("opacity",0).delay(50).animate({"opacity":"1"});
+    //  $('.tournament .general-info > *').css("opacity",1);
+    });
+  }
+ else if($('.tournament .general-info').hasClass("minimized")){
+  // $('.tournament .general-info .status').hide();//css("opacity",0);
+   $('.tournament .general-info').removeClass("minimized");
+   $('.tournament .general-info .wrap').animate( {'height': iH+'px'},300,function(){
+      $('.tournament .general-info').removeClass("minimized");
+      $('.tournament .general-info .wrap').height("unset");
+     // $('.tournament .general-info .status').fadeIn(100);//css("opacity",1);
+    });
+  }
+ //  $(this).parents(".general-info").toggleClass("minimized");   
+   });
+
+  $(window).resize(function() {
+    $('.tournament .general-info').height('unset');
+  });
+
+
+$('.page.tournament .tabs .nav .nav-link').on('click',function(){
+  if($(this).parents('.tabs').hasClass('inner')) return;
+   $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
+   if($(this).attr("id") == "lobby-tab"){
+    $('.page.tournament .top-image').removeClass("small");
+    if($('.d-md-none').is(":visible")){
+
+     if($('.page.tournament .general-info').hasClass("minimized")){
+       $('.page.tournament .general-info').removeClass("minimized");     
+       $('.tournament .general-info .wrap').height("unset");
+     }
+   }
+  }
+  else{
+    $('.page.tournament .top-image').addClass("small");
+    if($('.d-md-none').is(":visible")){
+      if(!$('.page.tournament .general-info').hasClass("minimized")){
+        $('.page.tournament .general-info').addClass("minimized");
+       // $('.tournament .general-info').height("100px");
+     }
+   }
+  }
+});
 
 var cf;
 if($('#contentFlow').length){
@@ -325,12 +385,6 @@ promoSlider.on('afterChange', function(event, slick, currentSlide){
       });
  tl.restart();
 });
-
-
-
-
-
-
 
 var smallSlider = $('.slides'); 
 var options = {
@@ -670,26 +724,6 @@ $('.tournament .general-info .comments, .tournament-events .head .bottom .commen
      return false;
 });
 
-
-$('.page.tournament .tabs .nav .nav-link').on('click',function(){
-  if($(this).parents('.tabs').hasClass('inner')) return;
-   $('.page.tournament .top-image').attr("id", $(this).attr("id")+"-image");
-   if($(this).attr("id") == "lobby-tab"){
-    $('.page.tournament .top-image').removeClass("small");
-
-    if($('.d-md-none').is(":visible")){
-     $('.page.tournament .general-info').removeClass("minimized");     
-     $('.tournament .general-info').height("unset");
-   }
-  }
-  else{
-    $('.page.tournament .top-image').addClass("small");
-    if($('.d-md-none').is(":visible")){
-    $('.page.tournament .general-info').addClass("minimized");
-     $('.tournament .general-info').height("100px");
-   }
-  }
-});
 $('.tournament .rounds .group').on('mouseover', function(){
     var group_name = $(this).data("group");
     $('.tournament .rounds .pair').each(function(){
@@ -864,31 +898,6 @@ $('.settings .home .blocks .item').on("click",function(e){
 
 
 
- var iH = $('.tournament .general-info .wrap').height(); 
-$('.tournament .general-info .about').on('click', function(){
-   if(!$('.tournament .general-info').hasClass("minimized")){
-    iH =  $('.tournament .general-info .wrap').height();
-   // $('.tournament .general-info > *').css("opacity",0);
-    $('.tournament .general-info .wrap').height(iH).animate({'height':'70px'},500,function(){
-      $('.tournament .general-info').addClass("minimized");
-      $('.tournament .general-info .status').css("opacity",0).delay(200).animate({"opacity":"1"});
-    //  $('.tournament .general-info > *').css("opacity",1);
-    });
-  }
- else if($('.tournament .general-info').hasClass("minimized")){
-  // $('.tournament .general-info .status').hide();//css("opacity",0);
-   $('.tournament .general-info').removeClass("minimized");
-   $('.tournament .general-info .wrap').animate( {'height': iH+'px'},500,function(){
-      $('.tournament .general-info').removeClass("minimized");
-     // $('.tournament .general-info .status').fadeIn(100);//css("opacity",1);
-    });
-  }
- //  $(this).parents(".general-info").toggleClass("minimized");   
-   });
-
-  $(window).resize(function() {
-    $('.tournament .general-info').height('unset');
-  });
 
 });
 

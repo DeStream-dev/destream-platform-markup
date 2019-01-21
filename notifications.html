@@ -2214,7 +2214,7 @@
                       <input type="text" id="overlayname" class="form-control" required placeholder="Enter name">
                     </div>
                     <div class="form-group text-center">
-                    <button class="btn" type="submit">Create</button>    
+                    	<button class="btn" data-dismiss="modal" data-target=".modal-overlaytype" data-toggle="modal">Create</button>     
                     </div>               
                    </form>                   
                 </div>
@@ -2224,10 +2224,39 @@
 </div>
 <!--New overlay window end-->
 
+<!--Overlay type window-->
+<div class="modal-form modal-overlaytype modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-addoverlay" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                   <svg class="icon"><use xlink:href="img/vectors.svg#close"></use></svg>
+                 </button>                
+            </div>
+            <div class="modal-body">
+            <div class="title">Choose overlay type</div>
+	            <div class="row">
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>Start</span></a>
+	            	</div>
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>In game</span></a>
+	            	</div>
+	            	<div class="col-12 col-md-4">
+	            		<a href="widget.html" class="item"><span>Pause</span></a>
+	            	</div>
+	            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Overlay type window-->
+
     <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
     <script type='text/javascript' src="js/popper.min.js"></script>
     <script type='text/javascript' src="js/moment.min.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/validator.min.js"></script>
     <script type='text/javascript' src="js/jquery-ui.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-select.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-datetimepicker.js"></script>    
